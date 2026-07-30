@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turn Queue &amp; Tactics — a Shining Force romhack — Creed's Mansion</title>
+<meta name="description" content="A quality-of-life romhack for Shining Force (Mega Drive): visible turn order, selectable difficulty, EXP overflow and kill/death counters. IPS patch, ~3 KB, no original bytes moved.">
+<link rel="icon" href="../../../assets/img/favicon.png">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../../">Home</a>
+      <a href="../">Shining Force</a>
+      <a href="./" aria-current="page">Turn Queue</a>
+      <a href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Shining Force</a> &rsaquo; Turn Queue &amp; Tactics</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Turn Queue<br>&amp; Tactics</h1>
+    <p class="sub">A romhack for Shining Force (USA) &middot; v13</p>
+  </section>
+
+  <div class="win">
+    <p>Shining Force rolls the turn order at the start of every round, from each unit's
+    agility, and then keeps it entirely to itself. You act, something happens, and you find
+    out who moves next when they move. Thirty years of players have compensated by
+    guessing.</p>
+    <p>This patch stops the guessing. It puts a strip along the bottom of the battlefield
+    showing the next six combatants in the exact order the engine will call them &mdash;
+    drawn with their own sprites, not icons &mdash; and it keeps going into the round after
+    that. Once that was working, it turned out the game was hiding a few other things too,
+    so those got fixed as well.</p>
+    <p class="small muted">Four features, roughly three kilobytes of patch, and not one
+    original byte of the ROM moved out of place.</p>
+  </div>
+
+  <div class="btnrow">
+    <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v13.ips" download>&#9660; Download IPS patch</a>
+    <a class="btn ghost" href="#apply">How to apply it</a>
+    <span class="tag ver">v13</span>
+    <span class="tag plat">Mega Drive / Genesis</span>
+  </div>
+
+  <hr class="rule">
+
+  <h2>What it adds</h2>
+
+  <!-- 1 -->
+  <section class="feature">
+    <figure class="shot">
+      <img src="../../../assets/img/turn-queue.png" width="256" height="224"
+           alt="A Shining Force battle with a gold-framed bar along the bottom showing six unit portraits in turn order.">
+      <figcaption>The queue sits in a genuine Shining Force window frame &mdash; same gold border, same blue interior, built from the game's own window tiles.</figcaption>
+    </figure>
+    <div>
+      <h3>1 &middot; The turn queue</h3>
+      <p>Six slots, left to right, in the order the engine will actually call them. Each
+      combatant is drawn with their real battlefield sprite, so you read the bar the same
+      way you read the map: that's Tao, that's a Goblin, that's your healer standing three
+      places too late.</p>
+      <p>The unit whose turn it is <strong>blinks</strong>. Everyone in the bar keeps their
+      idle walk animation, so it never looks like a row of stickers. When the current round
+      runs out of combatants the bar keeps filling with the <strong>next</strong> round,
+      drawn <strong>mirrored</strong> so you can tell at a glance where this round ends and
+      the following one begins &mdash; and the prediction is the engine's own, not a guess.</p>
+      <p>It also knows when to get out of the way. If the command menu, a dialogue window or
+      the cursor would collide with it, the bar hides itself and comes back &mdash; with a
+      short debounce, so flipping between a menu and its submenu doesn't make it flicker.
+      When the battle ends and the game returns to walking around the map, the bar
+      disappears entirely.</p>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="feature flip">
+    <figure class="shot">
+      <img src="../../../assets/img/difficulty.png" width="256" height="224"
+           alt="Simone asking which difficulty to play, with NORMAL, HARD and OUCH! shown in speech balloons.">
+      <figcaption>Simone asks in her own dialogue window, in the game's italic font, with the same typewriter effect and speech bleeps as every other line she says.</figcaption>
+    </figure>
+    <div>
+      <h3>2 &middot; Choose your difficulty</h3>
+      <p>Start a new game, name your hero, and Simone asks one more question before she
+      sends you off. The three answers arrive in the same bouncing speech balloons the game
+      already uses to pick a save slot &mdash; because they <em>are</em> those balloons,
+      widened by two cells and repointed at new text.</p>
+      <ul class="spec">
+        <li><strong>NORMAL</strong> &mdash; the game exactly as Camelot shipped it.</li>
+        <li><strong>HARD</strong> &mdash; every enemy gets +25% attack, defense and HP.</li>
+        <li><strong>OUCH!</strong> &mdash; +50%. Runefaust stops being a formality.</li>
+      </ul>
+      <p>The scaling is applied to the enemy table each time a battle map is initialised,
+      so it holds for fresh battles and for battles you resume after a defeat. Your choice
+      lives in a spare byte <em>inside</em> the save block, which means each adventure
+      remembers its own setting, and a save made before the patch simply reads as Normal.</p>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="feature">
+    <figure class="shot">
+      <img class="smooth" src="../../../assets/img/status-kills.png" width="384" height="276"
+           alt="Shining Force character status screen showing a new KILLS / DEATHS window above the GOLD window.">
+      <figcaption>The new window uses the same frame and layout engine as GOLD directly beneath it, in the empty space the original screen never used.</figcaption>
+    </figure>
+    <div>
+      <h3>3 &middot; Kills and deaths, per character</h3>
+      <p>The status screen has always had a conspicuous gap between the portrait and the
+      GOLD box. It now holds a running tally: how many enemies this character has personally
+      put down, and how many times they've been carried to the church.</p>
+      <p>Counting turned out to be the interesting part. The engine runs its death routine
+      <em>four times</em> per casualty &mdash; once for each pass of the dissolve animation
+      &mdash; so a naive counter cheerfully reported four kills for one goblin. The patch
+      only counts the pass where the dying unit still exists.</p>
+      <p class="small muted">Known limitation: the counters live in work RAM and reset when
+      you power off. Making them survive a save means finding twenty more spare bytes inside
+      the save block, which is a job for a later version.</p>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="feature flip">
+    <figure class="shot">
+      <img src="../../../assets/img/dialogue.png" width="256" height="224"
+           alt="The difficulty question being typed out one letter at a time in the standard Shining Force message window.">
+      <figcaption>No new text was added to the ROM's compressed script &mdash; the question is typed straight into the message engine, glyph by glyph.</figcaption>
+    </figure>
+    <div>
+      <h3>4 &middot; Experience that doesn't evaporate</h3>
+      <p>In the original game, a character sitting at 99 EXP who kills something worth 20
+      does not end up at 19. They end up at 0. The overflow is thrown away, and over a full
+      campaign that's a genuinely painful amount of lost progress &mdash; entirely invisible,
+      because the game never shows you the number it discarded.</p>
+      <p>The patch stashes the surplus at the moment the level-up clamp fires, then writes it
+      back after the level has been granted. 99 + 20 now becomes level up, then 19 EXP. It
+      is the smallest change in the whole hack &mdash; six bytes at one site and eight at
+      another &mdash; and probably the one you'll feel most over a playthrough.</p>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <h2>Under the hood</h2>
+
+  <div class="win">
+    <p>Everything here is built on <a href="https://github.com/hasseily/SF1DISASM">SF1DISASM</a>,
+    a full annotated disassembly of the game that reassembles bit-for-bit into the original
+    ROM. That bit-for-bit property is the whole game: if a build stops matching for reasons
+    you didn't intend, you've broken something.</p>
+
+    <h3>The one rule: never move a byte</h3>
+    <p>Shining Force is full of pointers baked into data &mdash; sprite tables, script
+    offsets, tileset addresses &mdash; that were computed at build time in 1992 and are not
+    recalculated at runtime. Insert four bytes in the middle of a bank and everything after
+    it shifts, every baked pointer becomes wrong, and the game greets you with a beautifully
+    corrupted intro. (Ask me how I know.)</p>
+    <p>So every hook in this patch is a <strong>same-size instruction replacement</strong>:
+    a <code>jsr</code> that occupies exactly as many bytes as the instructions it displaces,
+    padded with <code>nop</code> where needed. The replaced instructions are re-executed at
+    the top of the new routine. All the actual new code lives in the <strong>free space at
+    the end of banks 02 and 08</strong>, which the original build left as padding. The result
+    is a patch that touches fourteen small regions of a 1.5 MB ROM and moves nothing.</p>
+
+    <h3>Where the new state lives</h3>
+    <p>New variables sit in a verified-unused stretch of work RAM &mdash; the queue's
+    double-buffered turn order, the visibility debounce, the tile shadow used to repair the
+    background the bar draws over, the kill and death arrays. The difficulty byte is the
+    exception: it deliberately sits in an unused byte <em>inside</em> the block the game
+    writes to SRAM, which is what makes it persist per-save for free.</p>
+
+    <h3>Borrowing the game's own engines</h3>
+    <p>Almost nothing here is drawn from scratch. The queue window is assembled from the
+    same window tiles the game uses everywhere (in mirror and flip combinations that genuine
+    windows never produce, so the bar can recognise and clean up after itself). The balloons
+    are the save-slot balloons. Simone's question is typed through the real dialogue engine:
+    the patch walks the ROM's own ASCII-to-glyph table, calls the routine that draws one
+    variable-width glyph at the current text position, and then the routine that does one
+    typewriter step &mdash; which is why it bleeps, respects the message-speed setting, and
+    fast-forwards when you hold a button, without any of that being reimplemented.</p>
+
+    <h3>How it was tested</h3>
+    <p>Blind-patching a ROM and hoping is not a workflow. Development ran against a headless
+    libretro front-end driving Genesis Plus GX: scripted controller input by frame number,
+    PNG frame captures, work RAM and VRAM dumps, and direct reads of the 68000 register file
+    to catch deadlocks. Every release is checked with a binary diff of the patched ROM
+    against the original (the changed regions must be exactly the expected ones and nothing
+    else), and with a frame-by-frame comparison of the intro against a vanilla baseline
+    &mdash; twelve reference frames that must match pixel for pixel.</p>
+    <p class="small muted">Two bugs found that way are worth mentioning, because neither
+    would have been obvious from reading the code. The window-drawing routine clobbers d6
+    and d7 &mdash; the registers I was using as loop counters &mdash; which turned a
+    three-iteration loop into a runaway. And the message engine leaves a continuation
+    routine armed in the vertical-blank handler, which deadlocks anything that waits for
+    vblank while drawing its own windows. Both produced a frozen screen and no other clue.</p>
+  </div>
+
+  <hr class="rule">
+
+  <h2 id="download">Download</h2>
+
+  <div class="win">
+    <dl class="kv">
+      <dt>Version</dt><dd>v13 &mdash; current</dd>
+      <dt>Patch</dt><dd>IPS, 2,930 bytes</dd>
+      <dt>Target</dt><dd>Shining Force (USA), Mega Drive / Genesis, 1,572,864 bytes</dd>
+      <dt>Source MD5</dt><dd><code>4b4acbe75ff7aaeb534ab78ed95910d1</code></dd>
+      <dt>Tested on</dt><dd>Genesis Plus GX, Kega Fusion</dd>
+    </dl>
+
+    <div class="btnrow">
+      <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v13.ips" download>&#9660; IPS patch</a>
+    </div>
+
+    <p class="note">No ROM is provided here, and none ever will be. Bring your own copy of
+    the US release &mdash; check the MD5 above before patching, because an IPS applied to the
+    wrong revision produces a file that boots just long enough to disappoint you.</p>
+  </div>
+
+  <h3 id="apply">Applying the patch</h3>
+
+  <div class="win win-plain">
+    <ul class="spec">
+      <li>Get an IPS patcher: <strong>Flips</strong> (Floating IPS) on Windows, macOS or
+      Linux, or <strong>Lunar IPS</strong> if you prefer the classic. Most emulator front-ends
+      can do it too.</li>
+      <li>Point it at <code>ShiningForce_TurnQueue_v13.ips</code> and at your unmodified
+      <code>Shining Force (USA).bin</code>. Let it write a <em>new</em> file rather than
+      patching in place, so you keep a clean original.</li>
+      <li>Load the result in any Mega Drive emulator, or on hardware via flash cart. The
+      patched ROM is the same size as the original and the header checksum is corrected, so
+      strict emulators and real hardware are both happy.</li>
+      <li>Start a New Game to see the difficulty prompt. Existing saves keep working and
+      play at Normal.</li>
+    </ul>
+    <p class="small muted" style="margin-top:1.2rem"><strong>Controls for the difficulty
+    prompt:</strong> Left / Right to move between the balloons, C or A to confirm.</p>
+  </div>
+
+  <h2>Version history</h2>
+
+  <div class="win win-plain">
+    <ul class="changelog">
+      <li><span class="ver-tag">v13</span> Simone's question moved to the real dialogue
+      engine (italic font, typewriter, bleeps); balloon labels back to plain black and
+      re-centred on each balloon's own interior; third difficulty renamed OUCH!.</li>
+      <li><span class="ver-tag">v11&ndash;12</span> Difficulty selection and enemy scaling;
+      the turn queue now vanishes when a battle ends.</li>
+      <li><span class="ver-tag">v9&ndash;10</span> Kill and death counters, plus the fix for
+      the four-times-per-death counting bug.</li>
+      <li><span class="ver-tag">v6&ndash;8</span> Proper Shining Force window frame for the
+      queue; EXP overflow; avatars fully inside the frame; unique mirrored tile variants so
+      hiding the bar can no longer erase a real window; ten-frame debounce on menu
+      transitions.</li>
+      <li><span class="ver-tag">v1&ndash;5</span> The queue itself: next-round preview,
+      idle animation, current-actor blink, collision-aware auto-hide &mdash; and the rewrite
+      to fully in-place hooks after the first version corrupted the intro.</li>
+    </ul>
+  </div>
+
+  <div class="center" style="margin:3rem 0">
+    <a class="btn ghost" href="../">&#9664; Back to Shining Force</a>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">Shining Force is &copy; SEGA / Camelot Software Planning. This patch
+    modifies a copy of the game you must already own; it contains no original game code or
+    data. Built on SF1DISASM by the Shining Force disassembly community.</p>
+    <p class="small"><a href="../../../">&#9664; Back to the mansion</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
