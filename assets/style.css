@@ -186,7 +186,7 @@ nav.main a[aria-current]::before { content: '\25B8 '; color: var(--accent); }
 }
 .shot { margin: 0 0 0 7px; }
 .shot img {
-  display: block; width: 100%; max-width: 512px;
+  display: block; width: 100%; max-width: 512px; height: auto;
   border: 2px solid var(--frame-in); border-radius: 4px; background: #000;
   box-shadow: 0 0 0 3px var(--gold-light), 0 0 0 5px var(--gold-dark), 0 0 0 7px var(--frame-out);
 }
