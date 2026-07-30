@@ -15,11 +15,16 @@ games/shining-force/                         the Shining Force room
 games/shining-force/turn-queue-mod/          write-up for the Turn Queue & Tactics romhack
 assets/style.css                             the whole theme, one file
 assets/img/                                  screenshots (captured from an emulator)
+assets/fonts/                                the game's dialogue typeface, traced to a webfont
 downloads/                                   the IPS patch
 ```
 
 No build step, no framework, no tracking. Plain HTML and one stylesheet: clone it, open
 `index.html` in a browser, and what you see is what ships.
+
+The body text is set in `SF Dialogue`, a webfont built for this site by tracing the
+16x14 bitmaps of the Mega Drive variable-width font into outlines. One source pixel maps
+to one CSS pixel at `font-size: 14px`, which is why the text is pixel-exact at that size.
 
 ## The Shining Force patch
 
