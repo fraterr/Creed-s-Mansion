@@ -6,6 +6,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* The game's own dialogue typeface: the 16x14 bitmaps from the Mega Drive
+   variable-width font, traced into outlines. One source pixel = 1 CSS px at
+   font-size 14px, so the text is pixel-exact at that size (and at 28px, 42px…). */
+@font-face {
+  font-family: 'SF Dialogue';
+  src: url('fonts/sf-dialogue.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
 :root {
   --bg:          #07070f;
   --bg-2:        #0d0d1c;
@@ -22,7 +31,8 @@
   --green:       #58d048;
   --red:         #e04038;
   --pixel: 'Press Start 2P', 'Courier New', monospace;
-  --body: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Consolas', 'Liberation Mono', monospace;
+  --body: 'SF Dialogue', 'Georgia', 'Times New Roman', serif;
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Consolas', 'Liberation Mono', monospace;
 }
 
 * { box-sizing: border-box; }
@@ -37,8 +47,8 @@ body {
     repeating-linear-gradient(0deg, rgba(0,0,0,.30) 0 2px, transparent 2px 4px);
   color: var(--ink);
   font-family: var(--body);
-  font-size: 16px;
-  line-height: 1.75;
+  font-size: 14px;      /* 1 game pixel = 1 screen pixel */
+  line-height: 24px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -66,11 +76,11 @@ p  { margin: 0 0 1.1em; color: #98a6d4; }
 .win p, .win li, .win dd { color: var(--ink-dim); }
 p strong, li strong { color: var(--ink); }
 code {
-  font-family: var(--body);
+  font-family: var(--mono);
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(240,192,96,.25);
   padding: .1em .4em;
-  font-size: .92em;
+  font-size: 13px;
   color: var(--gold-light);
 }
 
@@ -92,6 +102,8 @@ code {
   margin: 2rem 0;
   color: var(--ink-dim);
 }
+/* keep the measure readable: the game's font is small, the page is not */
+.win > p, .win > ul, .win > dl, .win > h3 + p { max-width: 84ch; }
 .win > :first-child { margin-top: 0; }
 .win > :last-child  { margin-bottom: 0; }
 
@@ -152,7 +164,7 @@ nav.main a[aria-current]::before { content: '\25B8 '; color: var(--accent); }
     0 0 0 13px var(--frame-out), 0 11px 0 13px rgba(0,0,0,.55);
 }
 .card h3 { margin-top: 0; color: var(--gold); }
-.card p { margin-bottom: 0; font-size: .92em; }
+.card p { margin-bottom: 0; }
 
 .tag {
   display: inline-block; font-family: var(--pixel); font-size: 8px;
@@ -193,8 +205,8 @@ ul.spec li {
 }
 ul.spec li:last-child { border-bottom: none; }
 ul.spec li::before {
-  content: '\25C6'; position: absolute; left: 0; top: .55rem;
-  color: var(--gold); font-size: .8em;
+  content: '\25C6'; position: absolute; left: 0; top: .5rem;
+  color: var(--gold); font-size: 11px;
 }
 
 dl.kv { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .5rem 1.4rem; }
@@ -217,17 +229,17 @@ dl.kv dd { margin: 0; color: var(--ink-dim); }
 /* ---------- misc ---------- */
 .note {
   border-left: 4px solid var(--accent); padding: .2rem 0 .2rem 1.1rem;
-  color: var(--ink-dim); font-size: .93em; margin: 1.4rem 0;
+  color: var(--ink-dim); margin: 1.4rem 0;
 }
 .rule { border: none; border-top: 2px dashed rgba(240,192,96,.3); margin: 3rem 0; }
 .center { text-align: center; }
-.small { font-size: .86em; }
+.small { font-size: 14px; }
 .muted { color: #7f8bb5; }
 
 footer.foot {
   border-top: 3px solid var(--gold-dark);
   margin-top: 4rem; padding: 2rem 0 3rem;
-  font-size: .85em; color: #6a7398;
+  color: #7f8bb5;
   background: linear-gradient(180deg, #05050c 0%, #000 100%);
 }
 footer.foot a { color: #93a0c8; }
