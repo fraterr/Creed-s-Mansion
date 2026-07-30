@@ -1,0 +1,244 @@
+/* ============================================================
+   Creed's Mansion — retro arcade theme
+   Palette lifted from the Shining Force window chrome:
+   deep blue interiors, double gold frames, white pixel text.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --bg:          #07070f;
+  --bg-2:        #0d0d1c;
+  --win:         #0a2a86;
+  --win-dark:    #061c5e;
+  --gold:        #f0c060;
+  --gold-dark:   #a06818;
+  --gold-light:  #ffe8a8;
+  --ink:         #ffffff;
+  --ink-dim:     #b8c4e8;
+  --accent:      #ff9c20;
+  --green:       #58d048;
+  --red:         #e04038;
+  --pixel: 'Press Start 2P', 'Courier New', monospace;
+  --body: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Consolas', 'Liberation Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 50% -10%, #16204a 0%, transparent 60%),
+    repeating-linear-gradient(0deg, rgba(0,0,0,.30) 0 2px, transparent 2px 4px);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { image-rendering: pixelated; image-rendering: crisp-edges; max-width: 100%; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted rgba(255,156,32,.5); }
+a:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+
+.wrap { width: min(1120px, 92vw); margin: 0 auto; }
+
+/* ---------- pixel headings ---------- */
+h1, h2, h3, .pixel {
+  font-family: var(--pixel);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+h1 { font-size: clamp(14px, 2.6vw, 22px); margin: 0 0 .6em; }
+h2 { font-size: clamp(12px, 1.8vw, 16px); margin: 2.6em 0 1.1em; color: var(--gold); }
+h3 { font-size: clamp(10px, 1.3vw, 13px); margin: 2em 0 .9em; color: var(--gold-light); }
+
+p  { margin: 0 0 1.1em; color: var(--ink-dim); }
+p strong, li strong { color: var(--ink); }
+code {
+  font-family: var(--body);
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(240,192,96,.25);
+  padding: .1em .4em;
+  font-size: .92em;
+  color: var(--gold-light);
+}
+
+/* ---------- the Shining Force window ---------- */
+.win {
+  position: relative;
+  background: linear-gradient(180deg, var(--win) 0%, var(--win-dark) 100%);
+  border: 4px solid var(--gold);
+  outline: 3px solid var(--gold-dark);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px #000, 0 8px 0 3px rgba(0,0,0,.45);
+  padding: 1.6rem 1.8rem;
+  margin: 1.6rem 0;
+}
+.win::before {
+  /* inner hairline, the way the game double-frames its boxes */
+  content: '';
+  position: absolute; inset: 3px;
+  border: 1px solid rgba(255,255,255,.22);
+  pointer-events: none;
+}
+.win > :first-child { margin-top: 0; }
+.win > :last-child  { margin-bottom: 0; }
+
+.win-plain { background: linear-gradient(180deg, #131327 0%, #0a0a16 100%); }
+
+/* ---------- top bar ---------- */
+header.bar {
+  border-bottom: 3px solid var(--gold-dark);
+  background: linear-gradient(180deg, #0b0b18 0%, #05050c 100%);
+  position: sticky; top: 0; z-index: 20;
+}
+header.bar .wrap {
+  display: flex; align-items: center; gap: 1.2rem;
+  padding: .9rem 0; flex-wrap: wrap;
+}
+.brand {
+  font-family: var(--pixel); font-size: 11px; color: var(--gold);
+  border: none; letter-spacing: .04em;
+}
+.brand:hover { color: var(--gold-light); }
+nav.main { margin-left: auto; display: flex; gap: 1.4rem; flex-wrap: wrap; }
+nav.main a {
+  font-family: var(--pixel); font-size: 8px; color: var(--ink-dim);
+  border: none; text-transform: uppercase; letter-spacing: .05em;
+}
+nav.main a:hover, nav.main a[aria-current] { color: var(--accent); }
+nav.main a[aria-current]::before { content: '\25B8 '; color: var(--accent); }
+
+/* ---------- hero ---------- */
+.hero { padding: 3.5rem 0 1rem; text-align: center; }
+.hero .title {
+  font-family: var(--pixel);
+  font-size: clamp(15px, 4vw, 34px);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  color: var(--gold);
+  text-shadow: 0 3px 0 var(--gold-dark), 0 6px 0 #000, 0 0 26px rgba(240,192,96,.35);
+  margin: 0 0 1rem;
+}
+.hero .sub {
+  font-family: var(--pixel); font-size: clamp(7px, 1.2vw, 10px);
+  color: var(--ink-dim); letter-spacing: .12em; margin: 0;
+}
+.cursor::after {
+  content: '\25AE'; color: var(--accent); margin-left: .35em;
+  animation: blink 1.05s steps(1) infinite;
+}
+@keyframes blink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
+
+/* ---------- cards ---------- */
+.grid { display: grid; gap: 1.4rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.card { display: block; border-bottom: none; color: inherit; }
+.card .win { margin: 0; height: 100%; transition: transform .12s steps(2), box-shadow .12s; }
+.card:hover .win { transform: translate(-2px, -4px); box-shadow: 0 0 0 3px #000, 0 12px 0 3px rgba(0,0,0,.5); }
+.card h3 { margin-top: 0; color: var(--gold); }
+.card p { margin-bottom: 0; font-size: .92em; }
+
+.tag {
+  display: inline-block; font-family: var(--pixel); font-size: 8px;
+  padding: .45em .7em; border: 2px solid currentColor; letter-spacing: .06em;
+  vertical-align: middle;
+}
+.tag.new  { color: var(--green); }
+.tag.ver  { color: var(--gold); }
+.tag.soon { color: #6a7398; }
+.tag.plat { color: var(--ink-dim); }
+
+/* ---------- feature blocks ---------- */
+.feature { display: grid; gap: 1.6rem; align-items: start; margin: 2.2rem 0; }
+@media (min-width: 1024px) {
+  /* 512px keeps every screenshot at an exact 2x of the Mega Drive's 256x224 */
+  .feature { grid-template-columns: 512px minmax(0, 1fr); gap: 2.2rem; }
+  .feature.flip { grid-template-columns: minmax(0, 1fr) 512px; }
+  .feature.flip .shot { order: 2; }
+}
+.shot { margin: 0; }
+.shot img {
+  display: block; width: 100%; max-width: 512px;
+  border: 3px solid var(--gold-dark); background: #000;
+}
+/* already-resampled captures look better smoothed than nearest-neighboured */
+.shot img.smooth { image-rendering: auto; }
+.shot figcaption {
+  font-family: var(--pixel); font-size: 8px; color: #7f8bb5;
+  margin-top: .8rem; line-height: 1.8; letter-spacing: .04em;
+}
+
+/* ---------- lists ---------- */
+ul.spec { list-style: none; padding: 0; margin: 0; }
+ul.spec li {
+  padding: .5rem 0 .5rem 1.6rem; position: relative;
+  border-bottom: 1px dotted rgba(240,192,96,.18); color: var(--ink-dim);
+}
+ul.spec li:last-child { border-bottom: none; }
+ul.spec li::before {
+  content: '\25C6'; position: absolute; left: 0; top: .55rem;
+  color: var(--gold); font-size: .8em;
+}
+
+dl.kv { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .5rem 1.4rem; }
+dl.kv dt { font-family: var(--pixel); font-size: 9px; color: var(--gold); padding-top: .35em; }
+dl.kv dd { margin: 0; color: var(--ink-dim); }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block; font-family: var(--pixel); font-size: 10px;
+  padding: 1rem 1.4rem; color: #1a1200; background: var(--gold);
+  border: 3px solid #000; box-shadow: 0 5px 0 0 var(--gold-dark), 0 5px 0 3px #000;
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.btn:hover { background: var(--gold-light); color: #1a1200; transform: translateY(2px); box-shadow: 0 3px 0 0 var(--gold-dark), 0 3px 0 3px #000; }
+.btn.ghost { background: transparent; color: var(--gold); box-shadow: none; border-color: var(--gold-dark); }
+.btn.ghost:hover { color: var(--gold-light); border-color: var(--gold); background: rgba(240,192,96,.08); }
+.btnrow { display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; margin: 1.6rem 0 .6rem; }
+
+/* ---------- misc ---------- */
+.note {
+  border-left: 4px solid var(--accent); padding: .2rem 0 .2rem 1.1rem;
+  color: var(--ink-dim); font-size: .93em; margin: 1.4rem 0;
+}
+.rule { border: none; border-top: 2px dashed rgba(240,192,96,.3); margin: 3rem 0; }
+.center { text-align: center; }
+.small { font-size: .86em; }
+.muted { color: #7f8bb5; }
+
+footer.foot {
+  border-top: 3px solid var(--gold-dark);
+  margin-top: 4rem; padding: 2rem 0 3rem;
+  font-size: .85em; color: #6a7398;
+  background: linear-gradient(180deg, #05050c 0%, #000 100%);
+}
+footer.foot a { color: #93a0c8; }
+
+.crumbs { font-family: var(--pixel); font-size: 8px; color: #6a7398; margin: 1.8rem 0 .4rem; letter-spacing: .05em; }
+.crumbs a { border: none; color: #93a0c8; }
+.crumbs a:hover { color: var(--accent); }
+
+.changelog { list-style: none; padding: 0; margin: 0; }
+.changelog li { margin-bottom: 1.2rem; }
+.changelog .ver-tag {
+  font-family: var(--pixel); font-size: 9px; color: var(--gold);
+  display: inline-block; margin-right: .6rem;
+}
+
+/* ---------- narrow screens ---------- */
+dl.kv dd, dl.kv dd code { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  dl.kv { grid-template-columns: 1fr; gap: 0; }
+  dl.kv dt { margin-top: 1rem; }
+  .win { padding: 1.2rem 1.1rem; }
+  .btn { font-size: 9px; padding: .9rem 1rem; }
+  .btnrow { gap: 1rem; }
+}
