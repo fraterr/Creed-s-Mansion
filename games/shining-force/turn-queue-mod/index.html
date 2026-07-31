@@ -29,7 +29,7 @@
 
   <section class="hero" style="padding-top:1.5rem">
     <h1 class="title">Turn Queue<br>&amp; Tactics</h1>
-    <p class="sub">A romhack for Shining Force (USA) &middot; v14</p>
+    <p class="sub">A romhack for Shining Force (USA) &middot; v15</p>
   </section>
 
   <div class="win">
@@ -47,9 +47,9 @@
   </div>
 
   <div class="btnrow">
-    <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v14.ips" download>&#9660; Download IPS patch</a>
+    <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v15.ips" download>&#9660; Download IPS patch</a>
     <a class="btn ghost" href="#apply">How to apply it</a>
-    <span class="tag ver">v14</span>
+    <span class="tag ver">v15</span>
     <span class="tag plat">Mega Drive / Genesis</span>
   </div>
 
@@ -155,15 +155,15 @@
 
   <div class="win">
     <dl class="kv">
-      <dt>Version</dt><dd>v14 &mdash; current</dd>
-      <dt>Patch</dt><dd>IPS, 3,038 bytes</dd>
+      <dt>Version</dt><dd>v15 &mdash; current</dd>
+      <dt>Patch</dt><dd>IPS, 3,142 bytes</dd>
       <dt>Target</dt><dd>Shining Force (USA), Mega Drive / Genesis, 1,572,864 bytes</dd>
       <dt>Source MD5</dt><dd><code>4b4acbe75ff7aaeb534ab78ed95910d1</code></dd>
       <dt>Tested on</dt><dd>Genesis Plus GX, Kega Fusion</dd>
     </dl>
 
     <div class="btnrow">
-      <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v14.ips" download>&#9660; IPS patch</a>
+      <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v15.ips" download>&#9660; IPS patch</a>
     </div>
 
     <p class="note">No ROM is provided here, and none ever will be. Bring your own copy of
@@ -178,7 +178,7 @@
       <li>Get an IPS patcher: <strong>Flips</strong> (Floating IPS) on Windows, macOS or
       Linux, or <strong>Lunar IPS</strong> if you prefer the classic. Most emulator front-ends
       can do it too.</li>
-      <li>Point it at <code>ShiningForce_TurnQueue_v14.ips</code> and at your unmodified
+      <li>Point it at <code>ShiningForce_TurnQueue_v15.ips</code> and at your unmodified
       <code>Shining Force (USA).bin</code>. Let it write a <em>new</em> file rather than
       patching in place, so you keep a clean original.</li>
       <li>Load the result in any Mega Drive emulator, or on hardware via flash cart. The
@@ -195,6 +195,10 @@
 
   <div class="win win-plain">
     <ul class="changelog">
+      <li><span class="ver-tag">v15</span> Fixed the bar surviving a battle and
+      reappearing over the world map. The victory sequence takes it down while a message
+      window is still covering those cells, which made it skip them, so the bar is now
+      wiped again whenever the game enters a map you walk around on.</li>
       <li><span class="ver-tag">v14</span> Kill and death counters now persist: they are
       written into the save as a second checksummed SRAM block behind each slot, and a new
       adventure starts them at zero.</li>
