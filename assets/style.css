@@ -133,6 +133,12 @@ nav.main a {
 nav.main a:hover, nav.main a[aria-current] { color: var(--accent); }
 nav.main a[aria-current]::before { content: '\25B8 '; color: var(--accent); }
 
+nav.main a.tea { display: inline-flex; align-items: center; gap: .55em; }
+nav.main a.tea img {
+  width: 16px; height: 16px; display: block;
+  image-rendering: pixelated; image-rendering: crisp-edges;
+}
+
 /* ---------- hero ---------- */
 .hero { padding: 3.2rem 0 1rem; text-align: center; }
 
