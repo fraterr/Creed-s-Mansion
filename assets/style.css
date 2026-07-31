@@ -70,6 +70,7 @@ h1, h2, h3, .pixel {
 }
 h1 { font-size: clamp(14px, 2.6vw, 24px); margin: 0 0 .6em; }
 h2 { font-size: clamp(12px, 1.9vw, 18px); margin: 2.2em 0 1em; color: var(--gold); }
+h2 .tag { margin-left: .8em; vertical-align: 2px; }
 h3 { font-size: clamp(10px, 1.4vw, 15px); margin: 1.8em 0 .8em; color: var(--gold-light); }
 
 p  { margin: 0 0 1.1em; color: #98a6d4; }
@@ -174,6 +175,7 @@ nav.main a[aria-current]::before { content: '\25B8 '; color: var(--accent); }
     0 0 0 13px var(--frame-out), 0 11px 0 13px rgba(0,0,0,.55);
 }
 .card h3 { margin-top: 0; color: var(--gold); }
+.grid + p { margin-top: 2.4rem; }   /* clear the cards' frame rings */
 .card p { margin-bottom: 0; }
 
 .tag {
