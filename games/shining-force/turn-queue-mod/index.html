@@ -18,7 +18,7 @@
       <a href="../../../#games">Games</a>
       <a href="../../../mods/">Mods</a>
       <a href="../../../#about">About</a>
-      <a href="https://buymeacoffee.com/practicalhumanism" rel="noopener">Buy me a tea</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
     </nav>
   </div>
 </header>
@@ -29,7 +29,7 @@
 
   <section class="hero" style="padding-top:1.5rem">
     <h1 class="title">Turn Queue<br>&amp; Tactics</h1>
-    <p class="sub">A romhack for Shining Force (USA) &middot; v13</p>
+    <p class="sub">A romhack for Shining Force (USA) &middot; v14</p>
   </section>
 
   <div class="win">
@@ -47,9 +47,9 @@
   </div>
 
   <div class="btnrow">
-    <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v13.ips" download>&#9660; Download IPS patch</a>
+    <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v14.ips" download>&#9660; Download IPS patch</a>
     <a class="btn ghost" href="#apply">How to apply it</a>
-    <span class="tag ver">v13</span>
+    <span class="tag ver">v14</span>
     <span class="tag plat">Mega Drive / Genesis</span>
   </div>
 
@@ -119,9 +119,13 @@
       <em>four times</em> per casualty &mdash; once for each pass of the dissolve animation
       &mdash; so a naive counter cheerfully reported four kills for one goblin. The patch
       only counts the pass where the dying unit still exists.</p>
-      <p class="small muted">Known limitation: the counters live in work RAM and reset when
-      you power off. Making them survive a save means finding twenty more spare bytes inside
-      the save block, which is a job for a later version.</p>
+      <p>The tally rides along with your save. A slot is 2,230 bytes plus a checksum byte,
+      and consecutive slots sit 2,300 bytes apart in SRAM, which leaves 69 unused bytes
+      behind every one of them &mdash; room enough for the 62 bytes of counters, written
+      there as a second checksummed block through the game's own SRAM routines. Turn the
+      console off and the numbers are still where you left them, per adventure. A save made
+      before the patch has no second block, so its checksum fails and the tally starts at
+      zero rather than at whatever happened to be in those bytes.</p>
     </div>
   </section>
 
@@ -147,75 +151,19 @@
 
   <hr class="rule">
 
-  <h2>Under the hood</h2>
-
-  <div class="win">
-    <p>Everything here is built on <a href="https://github.com/hasseily/SF1DISASM">SF1DISASM</a>,
-    a full annotated disassembly of the game that reassembles bit-for-bit into the original
-    ROM. That bit-for-bit property is the whole game: if a build stops matching for reasons
-    you didn't intend, you've broken something.</p>
-
-    <h3>The one rule: never move a byte</h3>
-    <p>Shining Force is full of pointers baked into data &mdash; sprite tables, script
-    offsets, tileset addresses &mdash; that were computed at build time in 1992 and are not
-    recalculated at runtime. Insert four bytes in the middle of a bank and everything after
-    it shifts, every baked pointer becomes wrong, and the game greets you with a beautifully
-    corrupted intro. (Ask me how I know.)</p>
-    <p>So every hook in this patch is a <strong>same-size instruction replacement</strong>:
-    a <code>jsr</code> that occupies exactly as many bytes as the instructions it displaces,
-    padded with <code>nop</code> where needed. The replaced instructions are re-executed at
-    the top of the new routine. All the actual new code lives in the <strong>free space at
-    the end of banks 02 and 08</strong>, which the original build left as padding. The result
-    is a patch that touches fourteen small regions of a 1.5 MB ROM and moves nothing.</p>
-
-    <h3>Where the new state lives</h3>
-    <p>New variables sit in a verified-unused stretch of work RAM &mdash; the queue's
-    double-buffered turn order, the visibility debounce, the tile shadow used to repair the
-    background the bar draws over, the kill and death arrays. The difficulty byte is the
-    exception: it deliberately sits in an unused byte <em>inside</em> the block the game
-    writes to SRAM, which is what makes it persist per-save for free.</p>
-
-    <h3>Borrowing the game's own engines</h3>
-    <p>Almost nothing here is drawn from scratch. The queue window is assembled from the
-    same window tiles the game uses everywhere (in mirror and flip combinations that genuine
-    windows never produce, so the bar can recognise and clean up after itself). The balloons
-    are the save-slot balloons. Simone's question is typed through the real dialogue engine:
-    the patch walks the ROM's own ASCII-to-glyph table, calls the routine that draws one
-    variable-width glyph at the current text position, and then the routine that does one
-    typewriter step &mdash; which is why it bleeps, respects the message-speed setting, and
-    fast-forwards when you hold a button, without any of that being reimplemented.</p>
-
-    <h3>How it was tested</h3>
-    <p>Blind-patching a ROM and hoping is not a workflow. Development ran against a headless
-    libretro front-end driving Genesis Plus GX: scripted controller input by frame number,
-    PNG frame captures, work RAM and VRAM dumps, and direct reads of the 68000 register file
-    to catch deadlocks. Every release is checked with a binary diff of the patched ROM
-    against the original (the changed regions must be exactly the expected ones and nothing
-    else), and with a frame-by-frame comparison of the intro against a vanilla baseline
-    &mdash; twelve reference frames that must match pixel for pixel.</p>
-    <p class="small muted">Two bugs found that way are worth mentioning, because neither
-    would have been obvious from reading the code. The window-drawing routine clobbers d6
-    and d7 &mdash; the registers I was using as loop counters &mdash; which turned a
-    three-iteration loop into a runaway. And the message engine leaves a continuation
-    routine armed in the vertical-blank handler, which deadlocks anything that waits for
-    vblank while drawing its own windows. Both produced a frozen screen and no other clue.</p>
-  </div>
-
-  <hr class="rule">
-
   <h2 id="download">Download</h2>
 
   <div class="win">
     <dl class="kv">
-      <dt>Version</dt><dd>v13 &mdash; current</dd>
-      <dt>Patch</dt><dd>IPS, 2,930 bytes</dd>
+      <dt>Version</dt><dd>v14 &mdash; current</dd>
+      <dt>Patch</dt><dd>IPS, 3,038 bytes</dd>
       <dt>Target</dt><dd>Shining Force (USA), Mega Drive / Genesis, 1,572,864 bytes</dd>
       <dt>Source MD5</dt><dd><code>4b4acbe75ff7aaeb534ab78ed95910d1</code></dd>
       <dt>Tested on</dt><dd>Genesis Plus GX, Kega Fusion</dd>
     </dl>
 
     <div class="btnrow">
-      <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v13.ips" download>&#9660; IPS patch</a>
+      <a class="btn" href="../../../downloads/ShiningForce_TurnQueue_v14.ips" download>&#9660; IPS patch</a>
     </div>
 
     <p class="note">No ROM is provided here, and none ever will be. Bring your own copy of
@@ -230,7 +178,7 @@
       <li>Get an IPS patcher: <strong>Flips</strong> (Floating IPS) on Windows, macOS or
       Linux, or <strong>Lunar IPS</strong> if you prefer the classic. Most emulator front-ends
       can do it too.</li>
-      <li>Point it at <code>ShiningForce_TurnQueue_v13.ips</code> and at your unmodified
+      <li>Point it at <code>ShiningForce_TurnQueue_v14.ips</code> and at your unmodified
       <code>Shining Force (USA).bin</code>. Let it write a <em>new</em> file rather than
       patching in place, so you keep a clean original.</li>
       <li>Load the result in any Mega Drive emulator, or on hardware via flash cart. The
@@ -247,6 +195,9 @@
 
   <div class="win win-plain">
     <ul class="changelog">
+      <li><span class="ver-tag">v14</span> Kill and death counters now persist: they are
+      written into the save as a second checksummed SRAM block behind each slot, and a new
+      adventure starts them at zero.</li>
       <li><span class="ver-tag">v13</span> Simone's question moved to the real dialogue
       engine (italic font, typewriter, bleeps). Balloon labels back to plain black and
       re-centred on each balloon's own interior. Third difficulty renamed OUCH!.</li>
