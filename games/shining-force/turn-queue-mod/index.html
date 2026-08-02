@@ -3,10 +3,190 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Turn Queue &amp; Tactics — a Shining Force romhack — Creed's Mansion</title>
-<meta name="description" content="A quality-of-life romhack for Shining Force (Mega Drive): visible turn order, selectable difficulty, EXP overflow and kill/death counters. IPS patch, ~3 KB, no original bytes moved.">
+<title>Shining Force Turn Order Mod — Turn Queue & Tactics (IPS)</title>
+<meta name="description" content="A free Shining Force romhack for Mega Drive and Genesis: turn order on screen, difficulty select, no more lost EXP, kills and deaths per character. 3 KB IPS patch.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force/turn-queue-mod/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force/turn-queue-mod/">
+<meta property="og:title" content="Shining Force Turn Order Mod — Turn Queue & Tactics (IPS)">
+<meta property="og:description" content="A free Shining Force romhack for Mega Drive and Genesis: turn order on screen, difficulty select, no more lost EXP, kills and deaths per character. 3 KB IPS patch.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-turn-queue.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Creed's Mansion — a Shining Force battle with the turn order bar along the bottom of the screen">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shining Force Turn Order Mod — Turn Queue & Tactics (IPS)">
+<meta name="twitter:description" content="A free Shining Force romhack for Mega Drive and Genesis: turn order on screen, difficulty select, no more lost EXP, kills and deaths per character. 3 KB IPS patch.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-turn-queue.png">
+
 <link rel="icon" href="../../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/img/favicon.png">
+<link rel="preload" href="../../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/sf-dialogue.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../../assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://fraterr.github.io/Creed-s-Mansion/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Shining Force",
+   "item": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Turn Queue & Tactics",
+   "item": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/turn-queue-mod/"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "Shining Force — Turn Queue & Tactics",
+ "alternateName": "Shining Force turn order mod",
+ "applicationCategory": "GameApplication",
+ "applicationSubCategory": "ROM hack",
+ "operatingSystem": "Sega Mega Drive, Sega Genesis, Genesis Plus GX, Kega Fusion",
+ "softwareVersion": "15",
+ "fileSize": "3142",
+ "datePublished": "2026-07-28",
+ "dateModified": "2026-08-02",
+ "downloadUrl": "https://fraterr.github.io/Creed-s-Mansion/downloads/ShiningForce_TurnQueue_v15.ips",
+ "installUrl": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/turn-queue-mod/#apply",
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/turn-queue-mod/",
+ "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-turn-queue.png",
+ "screenshot": [
+  "https://fraterr.github.io/Creed-s-Mansion/assets/img/turn-queue.png",
+  "https://fraterr.github.io/Creed-s-Mansion/assets/img/difficulty.png",
+  "https://fraterr.github.io/Creed-s-Mansion/assets/img/status-kills.png"
+ ],
+ "description": "A quality-of-life romhack for Shining Force on the Mega Drive and Genesis. It draws the turn order on screen, adds a difficulty choice at New Game, keeps the experience the original discards on level up, and counts kills and deaths for every member of the Force.",
+ "featureList": [
+  "Visible turn order bar with next-round preview",
+  "Difficulty selection: Normal, Hard and OUCH!",
+  "EXP overflow is kept on level up",
+  "Per-character kill and death counters"
+ ],
+ "author": {
+  "@type": "Person",
+  "name": "Creed's Mansion",
+  "url": "https://fraterr.github.io/Creed-s-Mansion/"
+ },
+ "publisher": {
+  "@type": "Person",
+  "name": "Creed's Mansion",
+  "url": "https://fraterr.github.io/Creed-s-Mansion/"
+ },
+ "isAccessibleForFree": true,
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock"
+ },
+ "about": {
+  "@type": "VideoGame",
+  "name": "Shining Force",
+  "alternateName": "Shining Force: The Legacy of Great Intention",
+  "gamePlatform": [
+   "Sega Mega Drive",
+   "Sega Genesis"
+  ],
+  "datePublished": "1992",
+  "publisher": {
+   "@type": "Organization",
+   "name": "Sega"
+  },
+  "genre": [
+   "Tactical role-playing game",
+   "Strategy RPG"
+  ],
+  "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Which version of Shining Force does the patch need?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The US Mega Drive and Genesis release, 1,572,864 bytes, MD5 4b4acbe75ff7aaeb534ab78ed95910d1. The patch is an IPS file that you apply to your own copy of that ROM. No ROM is distributed here and none ever will be."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it work on real hardware?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. The patched file is exactly the same size as the original and the header checksum is corrected, so flash carts such as the Mega Everdrive load it the same way they load the unmodified game."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do my existing save files still work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. A save made before patching keeps working and plays on Normal difficulty, because the difficulty byte reads as zero. The kill and death counters start at zero on that save and count from there."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I apply an IPS patch?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Use Flips (Floating IPS) or Lunar IPS. Point it at the patch and at your unmodified ROM, and let it write a new file rather than patching in place, so you keep a clean original."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the turn order bar get in the way of the battlefield?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It hides itself whenever the command menu, a dialogue window or the cursor would collide with it, and comes back afterwards. It also disappears entirely once a battle is over."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I combine it with other Shining Force hacks?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Usually not. Two IPS patches that touch the same regions of the same ROM will overwrite each other, and the result is unpredictable. Apply one at a time to a clean copy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it change the story, the script or the character stats?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. The script is untouched and no character is rebalanced. The only stat change is optional and comes from the difficulty setting, which scales enemy attack, defence and HP by 25 or 50 per cent."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -28,8 +208,8 @@
   <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Shining Force</a> &rsaquo; Turn Queue &amp; Tactics</p>
 
   <section class="hero" style="padding-top:1.5rem">
-    <h1 class="title">Turn Queue<br>&amp; Tactics</h1>
-    <p class="sub">A romhack for Shining Force (USA) &middot; v15</p>
+    <h1 class="title">Shining Force<br>Turn Queue &amp; Tactics</h1>
+    <p class="sub">A quality-of-life romhack for the Mega Drive and Genesis &middot; v15</p>
   </section>
 
   <div class="win">
@@ -60,8 +240,8 @@
   <!-- 1 -->
   <section class="feature">
     <figure class="shot">
-      <img src="../../../assets/img/turn-queue.png" width="256" height="224"
-           alt="A Shining Force battle with a gold-framed bar along the bottom showing six unit portraits in turn order.">
+      <img src="../../../assets/img/turn-queue.png" width="256" height="224" loading="lazy" decoding="async"
+           alt="Shining Force turn order mod: a gold-framed bar along the bottom of the battlefield showing the next six combatants in turn order.">
       <figcaption>The queue sits in a genuine Shining Force window frame &mdash; same gold border, same blue interior, built from the game's own window tiles.</figcaption>
     </figure>
     <div>
@@ -81,8 +261,8 @@
   <!-- 2 -->
   <section class="feature flip">
     <figure class="shot">
-      <img src="../../../assets/img/difficulty.png" width="256" height="224"
-           alt="Simone asking which difficulty to play, with NORMAL, HARD and OUCH! shown in speech balloons.">
+      <img src="../../../assets/img/difficulty.png" width="256" height="224" loading="lazy" decoding="async"
+           alt="Shining Force difficulty select added by the romhack: Simone asking NORMAL, HARD or OUCH! in speech balloons.">
       <figcaption>Simone asks in her own dialogue window, in the game's italic font, with the same typewriter effect and speech bleeps as every other line she says.</figcaption>
     </figure>
     <div>
@@ -106,8 +286,8 @@
   <!-- 3 -->
   <section class="feature">
     <figure class="shot">
-      <img class="smooth" src="../../../assets/img/status-kills.png" width="384" height="276"
-           alt="Shining Force character status screen showing a new KILLS / DEATHS window above the GOLD window.">
+      <img class="smooth" src="../../../assets/img/status-kills.png" width="384" height="276" loading="lazy" decoding="async"
+           alt="Shining Force status screen with the romhack KILLS and DEATHS counters shown above the GOLD window.">
       <figcaption>The new window uses the same frame and layout engine as GOLD directly beneath it, in the empty space the original screen never used.</figcaption>
     </figure>
     <div>
@@ -132,7 +312,7 @@
   <!-- 4 -->
   <section class="feature flip">
     <figure class="shot">
-      <img src="../../../assets/img/dialogue.png" width="256" height="224"
+      <img src="../../../assets/img/dialogue.png" width="256" height="224" loading="lazy" decoding="async"
            alt="The difficulty question being typed out one letter at a time in the standard Shining Force message window.">
       <figcaption>No new text was added to the ROM's compressed script &mdash; the question is typed straight into the message engine, glyph by glyph.</figcaption>
     </figure>
@@ -191,6 +371,48 @@
     prompt:</strong> Left / Right to move between the balloons, C or A to confirm.</p>
   </div>
 
+
+  <hr class="rule">
+
+  <h2 id="faq">Questions people actually ask</h2>
+
+  <div class="win win-plain">
+    <h3>Which version of Shining Force does the patch need?</h3>
+    <p>The US Mega Drive and Genesis release, 1,572,864 bytes,
+    MD5 <code>4b4acbe75ff7aaeb534ab78ed95910d1</code>. The patch is an IPS file you apply to
+    your own copy of that ROM. No ROM is distributed here and none ever will be.</p>
+
+    <h3>Does it work on real hardware?</h3>
+    <p>Yes. The patched file is exactly the same size as the original and the header checksum
+    is corrected, so a flash cart like the Mega Everdrive loads it the same way it loads the
+    unmodified game.</p>
+
+    <h3>Do my existing save files still work?</h3>
+    <p>Yes. A save made before patching keeps working and plays on Normal, because the
+    difficulty byte reads as zero. The kill and death counters start at zero on that save and
+    count from there.</p>
+
+    <h3>How do I apply an IPS patch?</h3>
+    <p>Use <strong>Flips</strong> (Floating IPS) or <strong>Lunar IPS</strong>. Point it at
+    the patch and at your unmodified ROM, and let it write a <em>new</em> file rather than
+    patching in place, so you keep a clean original. There are step-by-step notes
+    <a href="#apply">further up this page</a>.</p>
+
+    <h3>Does the turn order bar get in the way of the battlefield?</h3>
+    <p>It hides itself whenever the command menu, a dialogue window or the cursor would
+    collide with it, and comes back afterwards. Once a battle is over it disappears
+    entirely.</p>
+
+    <h3>Can I combine it with other Shining Force hacks?</h3>
+    <p>Usually not. Two IPS patches that touch the same regions of the same ROM overwrite each
+    other and the result is unpredictable. Apply one at a time, always to a clean copy.</p>
+
+    <h3>Does it change the story, the script or the character stats?</h3>
+    <p>No. The script is untouched and nobody is rebalanced. The only stat change is optional
+    and comes from the difficulty setting, which scales enemy attack, defence and HP by 25 or
+    50 per cent.</p>
+  </div>
+
   <h2>Version history</h2>
 
   <div class="win win-plain">
@@ -218,6 +440,8 @@
       to fully in-place hooks after the first version corrupted the intro.</li>
     </ul>
   </div>
+
+  <p class="small muted" style="margin-top:2rem">Last updated <time datetime="2026-08-02">2 August 2026</time> &mdash; current release v15.</p>
 
   <div class="center" style="margin:3rem 0">
     <a class="btn ghost" href="../">&#9664; Back to Shining Force</a>
