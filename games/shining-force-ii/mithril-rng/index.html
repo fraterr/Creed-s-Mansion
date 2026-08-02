@@ -104,8 +104,8 @@
   },
   {
    "@type": "Question",
-   "name": "Can I guarantee the top-tier mithril weapon every time?",
-   "acceptedAnswer": { "@type": "Answer", "text": "In an emulator, yes. Save a state on the frame before you confirm, confirm, read $FFF7A8, then reload and confirm one frame later if it is wrong. Each frame of delay is one step of the seed and one different, repeatable outcome. The best weapon is never more than 114 frames of delay away and is 15 away on average. On original hardware there is no way to count frames, so no." }
+   "name": "Can I guarantee the rarest mithril weapon every time?",
+   "acceptedAnswer": { "@type": "Answer", "text": "In an emulator, yes. Save a state on the frame before you confirm, confirm, read $FFF7A8, then reload and confirm one frame later if it is wrong. Each frame of delay is one step of the seed and one different, repeatable outcome. The first rung is never more than 114 frames of delay away and is 15 away on average. On original hardware there is no way to count frames, so no." }
   }
  ]
 }
@@ -149,8 +149,7 @@
     <strong>1 in 4</strong> and <strong>certainty</strong>, which works out at
     <strong>6.25 percent</strong> for the rarest weapon and <strong>62.39 percent</strong>
     for the common one. The community's long-standing estimate of those odds has the right
-    shape and the wrong numbers &mdash; the real ladder is steeper than anyone had
-    measured.</p>
+    shape, but the real ladder is steeper than anyone had measured.</p>
     <p>The whole thing is decided the instant you hand the mithril over. Collecting the
     weapon later is a table lookup, and what you are going to get is already sitting in
     work RAM at <code>$FFF7A8</code> where you can read it. The seed advances one step per
@@ -179,8 +178,8 @@
 
   <h2>The generator</h2>
 
-  <p>Shining Force II carries three random number generators. The one that matters for
-  mithril lives at ROM <code>$001600</code>. It is a sixteen-bit linear congruential
+  <p>Shining Force II carries two random number generators, each with a wrapper in front
+  of it. The one that matters for mithril lives at ROM <code>$001600</code>. It is a sixteen-bit linear congruential
   generator whose entire state is one word of work RAM at <code>$FFDEA4</code>.</p>
 
 <pre class="asm"><b>001600</b>  move.w  ($FFDEA4).l,d7    <i>; the current seed</i>
@@ -222,9 +221,8 @@ value  =  floor( s * range / 65536 )</pre>
   generator years ago &mdash; you will find it quoted on
   <a href="https://gamefaqs.gamespot.com/boards/563341-shining-force-ii/77987582" rel="noopener">GameFAQs</a> as
   <code>R2 = remainder((R1 * 13 + 7) / 65536)</code>, together with the observation that it
-  travels through all 65536 values. What follows is that formula read straight off the
-  instructions, and then the part that does not seem to have been published: what consumes
-  it when you hand over mithril.</p>
+  travels through all 65536 values. The listing above is that formula read straight off the
+  instructions.</p>
 
   <h2>Where the weapon is chosen</h2>
 
@@ -333,8 +331,8 @@ value  =  floor( s * range / 65536 )</pre>
   class in the game falls through the whole loop to <code>$021F00</code> and gets a coin
   flip between group 0 and group 2 &mdash; the Hero's swords or the Gladiator's axes. That
   covers every unpromoted character, and among the promoted classes it covers BRN, WFBR,
-  PHNX and RDBN. Hand your mithril to one of those and the game will happily forge a weapon
-  they cannot hold.</p>
+  PHNX and RDBN. Hand your mithril to one of those and the smith rolls on a list that was
+  built for somebody else.</p>
 
   <p>This is also where the ROM disagrees with the community list. Shining Force Central's
   guide files BRN and RDBN alongside GLDT as classes that get the Rune Axe. They can get it,
@@ -385,19 +383,18 @@ value  =  floor( s * range / 65536 )</pre>
   <div class="win">
     <dl class="kv">
       <dt>1st rung</dt><dd>6.2500 percent, the rarest</dd>
-      <dt>Second</dt><dd>11.5387 percent</dd>
-      <dt>Third</dt><dd>19.8227 percent</dd>
-      <dt>Fourth</dt><dd>62.3886 percent, and it can never fail</dd>
+      <dt>2nd rung</dt><dd>11.5387 percent</dd>
+      <dt>3rd rung</dt><dd>19.8227 percent</dd>
+      <dt>4th rung</dt><dd>62.3886 percent, and it can never fail</dd>
     </dl>
   </div>
 
-  <p>Set that against the guide's <em>"about 4%"</em> and <em>"about 48%"</em>. The shape
-  is right, and whoever arrived at those numbers was measuring something real: the rarest
-  weapon really is the rare one, and the ladder really does run in that direction. But the
-  ROM is steeper than the estimate. The guaranteed rung is 62.39 percent rather than 48,
-  both middle rungs are smaller than the guide has them, and the rarest is 6.25 rather than
-  4. Sampling a few dozen mithril by hand will get you the shape. It will not get you
-  the third decimal, and it will not tell you why the numbers are what they are.</p>
+  <p>Set that against the guide's estimate. The shape is right, and whoever arrived at
+  those numbers was measuring something real &mdash; the ladder does run in that direction,
+  and the rare weapon really is the rare one. But the ROM is steeper. The guaranteed rung
+  is 62.39 rather than 48, both middle rungs are smaller than the guide has them, and the
+  rarest is 6.25 rather than 4. Counting mithril by hand gets you the shape. It will not
+  get you the third decimal, and it will not tell you where the numbers come from.</p>
 
   <p>What that steepness means in practice: if you have ever handed over four mithril and
   walked away with four Critical Swords, nothing was wrong with your luck. The chance of
@@ -470,9 +467,8 @@ seed $F797   Random( 1) -&gt; 0    <u>hit</u></pre>
   walking a different route changed <em>when</em> you arrived at the smith's dialogue and
   <em>how many frames of text</em> went past before the roll. The step count was a clumsy
   proxy for a frame count, and that is why the trick works for the person who discovers it
-  and falls apart for everyone who copies it. The speedrunners got there before me &mdash;
-  the GameFAQs threads on mithril manipulation are already talking about frames and menu
-  timing rather than steps. What the ROM adds is the rate.</p>
+  and falls apart for everyone who copies it. The speedrunners reached the frame count
+  before me. What the ROM adds is the rate.</p>
 
   <h2>Getting the best weapon every single time</h2>
 
@@ -484,8 +480,8 @@ seed $F797   Random( 1) -&gt; 0    <u>hit</u></pre>
 
   <figure class="fig">
     <img src="../../../assets/img/sf2-mithril-timeline.png" width="1320" height="319" loading="lazy" decoding="async"
-         alt="A grid of 120 cells, one per frame of delay, coloured by which of the four mithril weapons that frame would produce. Top-tier frames are scattered throughout.">
-    <figcaption>120 consecutive frames from the seed in the savestate above. Each cell is one frame of extra delay before confirming. The gold cells are the top-tier weapon.</figcaption>
+         alt="A grid of 120 cells, one per frame of delay, coloured by which of the four mithril weapons that frame would produce. First-rung frames are scattered throughout.">
+    <figcaption>120 consecutive frames from the seed in the savestate above. Each cell is one frame of extra delay before confirming. The gold cells are the first rung.</figcaption>
   </figure>
 
   <p>You want an emulator with savestates and a RAM watch. BlastEm, Exodus, Gens KMod and
@@ -506,15 +502,15 @@ seed $F797   Random( 1) -&gt; 0    <u>hit</u></pre>
   </ol>
 
   <p>How long that takes has a hard answer. Walking the generator's entire orbit and
-  measuring the gaps between top-tier seeds: the average wait is <strong>15 frames</strong>
+  measuring the gaps between first-rung seeds: the average wait is <strong>15 frames</strong>
   and the worst case anywhere on the orbit is <strong>114 frames</strong>. There is no seed
-  from which the best weapon is unreachable, and no run of bad luck longer than about two
+  from which the first rung is unreachable, and no run of bad luck longer than about two
   seconds of held breath.</p>
 
   <figure class="fig">
     <img src="../../../assets/img/sf2-mithril-wait.png" width="1100" height="462" loading="lazy" decoding="async"
-         alt="Histogram of how many frames of delay are needed before the next top-tier result, peaking near zero, averaging 15 frames and never exceeding 114.">
-    <figcaption>How far the next top-tier result is, from every one of the 65536 possible seeds.</figcaption>
+         alt="Histogram of how many frames of delay are needed before the next first-rung result, peaking near zero, averaging 15 frames and never exceeding 114.">
+    <figcaption>How far the next first-rung result is, from every one of the 65536 possible seeds.</figcaption>
   </figure>
 
   <p>If you would rather compute than reload, put the watch on <code>$FFDEA4</code>
@@ -552,11 +548,11 @@ seed $44BE   class MMNK   group 7
 
   <h2>The debug hook they left in</h2>
 
-  <p>Of the other two generators, the second is unremarkable &mdash; it sits at
-  <code>$001652</code> with its seed at <code>$FFDFB0</code>, runs
-  <code>seed = seed * 541 + 12345</code>, and is wrapped at <code>$001628</code> with
-  rejection sampling to clean up ranges that are not powers of two. The third, at
-  <code>$001674</code>, is the interesting one:</p>
+  <p>The second generator is unremarkable &mdash; it sits at <code>$001652</code> with its
+  seed at <code>$FFDFB0</code>, runs <code>seed = seed * 541 + 12345</code>, and is wrapped
+  at <code>$001628</code> with rejection sampling to clean up ranges that are not powers of
+  two. The other wrapper, the one at <code>$001674</code> that sits in front of the mithril
+  generator, is the interesting one:</p>
 
 <pre class="asm"><b>001674</b>  movem.l d6-d7,-(sp)
 <b>001678</b>  move.w  d0,d6
@@ -589,11 +585,12 @@ seed $44BE   class MMNK   group 7
   <h2>What was already known</h2>
 
   <p>Not much of the groundwork here is mine, and it is worth being clear about which part
-  is. The Shining Force II community had the generator's formula and its full period years
-  ago. The speedrunners had worked out that the lever is frames rather than steps. Shining
-  Force Central's <a href="https://sf2.shiningforcecentral.com/weapons/mithril-weapons/" rel="noopener">mithril weapons page</a> has carried a
-  usable estimate of the odds and a per-class list of what to aim for, and that list agrees
-  with the ROM everywhere except the two cases above.</p>
+  is. The formula, the full period, the frame count instead of the step count, a usable
+  estimate of the odds and a per-class list of what to aim for were all in circulation
+  before I started, on GameFAQs and on Shining Force Central's
+  <a href="https://sf2.shiningforcecentral.com/weapons/mithril-weapons/" rel="noopener">mithril
+  weapons page</a>. That per-class list agrees with the ROM everywhere except the two cases
+  above.</p>
 
   <p>What this article adds is the routine itself at <code>$021EDA</code>, the two data
   tables behind it, exact probabilities in place of an estimate, the coin-flip branch for
@@ -648,11 +645,11 @@ seed $44BE   class MMNK   group 7
     &mdash; every unpromoted character, plus BRN, WFBR, PHNX and RDBN &mdash; gets a coin flip
     between the Hero swords and the Gladiator axes.</p>
 
-    <h3>Can I guarantee the top-tier weapon?</h3>
+    <h3>Can I guarantee the rarest weapon?</h3>
     <p>In an emulator, yes. Save a state on the frame before you press, press, read
-    <code>$FFF7A8</code>, then reload and press one frame later if it is wrong. The best
-    weapon is never more than 114 frames of delay away and is 15 away on average. On
-    original hardware there is no way to count frames, so no.</p>
+    <code>$FFF7A8</code>, then reload and press one frame later if it is wrong. The first
+    rung is never more than 114 frames of delay away and is 15 away on average. On original
+    hardware there is no way to count frames, so no.</p>
   </div>
 
   <hr class="rule">
