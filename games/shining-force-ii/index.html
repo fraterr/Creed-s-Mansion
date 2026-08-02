@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shining Force II (Mega Drive, 1993) — Notes and Teardowns</title>
+<meta name="description" content="Shining Force II on the Mega Drive: how the game works underneath, starting with a complete teardown of the mithril weapon RNG and the dwarf smith in the hidden village.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/">
+<meta property="og:title" content="Shining Force II (Mega Drive, 1993) — Notes and Teardowns">
+<meta property="og:description" content="Shining Force II on the Mega Drive: how the game works underneath, starting with a complete teardown of the mithril weapon RNG and the dwarf smith in the hidden village.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shining Force II — the mithril RNG solved.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shining Force II (Mega Drive, 1993) — Notes and Teardowns">
+<meta name="twitter:description" content="How Shining Force II works underneath, starting with the mithril weapon RNG.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
+
+<link rel="icon" href="../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon.png">
+<link rel="preload" href="../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/sf-dialogue.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fraterr.github.io/Creed-s-Mansion/" },
+  { "@type": "ListItem", "position": 2, "name": "Games", "item": "https://fraterr.github.io/Creed-s-Mansion/#games" },
+  { "@type": "ListItem", "position": 3, "name": "Shining Force II", "item": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/" }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "VideoGame",
+ "name": "Shining Force II",
+ "alternateName": "Shining Force II: Ancient Sealing",
+ "gamePlatform": ["Sega Mega Drive", "Sega Genesis"],
+ "datePublished": "1993",
+ "publisher": { "@type": "Organization", "name": "Sega" },
+ "genre": ["Tactical role-playing game", "Strategy RPG"],
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/"
+}
+</script>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../">Home</a>
+      <a href="../../#games">Games</a>
+      <a href="../../mods/">Mods</a>
+      <a href="../../#about">About</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs"><a href="../../">Home</a> &rsaquo; Shining Force II</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Shining Force II</h1>
+    <p class="sub">Sega Mega Drive &middot; 1993</p>
+  </section>
+
+  <div class="win intro">
+    <p><strong>Shining Force II</strong> arrived on the Mega Drive in 1993, built by
+    Sonic! Software Planning &mdash; the studio that would become Camelot &mdash; and
+    published by Sega. It took everything the first game did and gave it room: a larger
+    world you cross on foot instead of through a menu, thirty-odd recruits, and battles
+    that sprawl far enough that losing the left flank is a thing that can happen to you.</p>
+    <p>It is also the game this house is named after. Creed's Mansion is a real place in
+    it, and the wizard who lives there is exactly the sort of person who would let you
+    poke around in his things.</p>
+    <p>What goes in this room is not romhacks, at least not yet. It is teardowns: the
+    systems underneath the game, read out of the ROM rather than inferred from playing.
+    The first one is the dwarf smith, because thirty years of guides have been repeating
+    the wrong odds about him.</p>
+  </div>
+
+  <h2>Notes &amp; teardowns</h2>
+
+  <div class="grid">
+    <a class="card" href="mithril-rng/">
+      <article class="win">
+        <h3>The Mithril RNG <span class="tag new">New</span></h3>
+        <p>The dwarf smith rolls four times, not once, down a ladder picked by the
+        recipient's class. The top-tier weapon is a 6.25 percent outcome, not the 48
+        percent every guide claims. Here is the routine, both ROM tables, the measured
+        odds, and a method that gets you the best weapon every time.</p>
+        <p style="margin-top:1rem"><span class="tag new">Read the teardown &#9656;</span></p>
+      </article>
+    </a>
+
+    <div class="card">
+      <article class="win win-plain">
+        <h3 class="muted">Next up</h3>
+        <p class="small"><span class="tag soon">In the drawer</span></p>
+        <p>The promotion tables, the battle damage formula, and whatever that debug hook
+        in the third random number generator was really for.</p>
+      </article>
+    </div>
+  </div>
+
+  <h2>Romhacks</h2>
+
+  <div class="win win-plain">
+    <p class="muted">Nothing here yet. Taking the game apart comes first.</p>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">No ROMs are hosted here.</p>
+    <p class="small"><a href="../../">&#9664; Back to the mansion</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
