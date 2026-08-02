@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon</title>
-<meta name="description" content="The Shining Force II mithril weapon RNG, read straight out of the ROM: the routine at $021EDA, the class and weapon tables, the real odds (6.25 percent, not 48), and how to get the top-tier weapon every time.">
+<meta name="description" content="The Shining Force II mithril weapon RNG, read out of the ROM: the routine at $021EDA, the class and weapon tables, the exact odds counted over all 65,536 seeds, and how to get the rarest weapon every time.">
 <link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#002083">
@@ -15,14 +15,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/">
 <meta property="og:title" content="Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon">
-<meta property="og:description" content="The Shining Force II mithril weapon RNG, read straight out of the ROM: the routine at $021EDA, the class and weapon tables, the real odds (6.25 percent, not 48), and how to get the top-tier weapon every time.">
+<meta property="og:description" content="The Shining Force II mithril weapon RNG, read out of the ROM: the routine at $021EDA, the class and weapon tables, the exact odds counted over all 65,536 seeds, and how to get the rarest weapon every time.">
 <meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Shining Force II — the mithril RNG solved. The dwarf smithy, and the real 6.25 percent chance of a top-tier weapon.">
+<meta property="og:image:alt" content="Shining Force II — the mithril RNG disassembled. The dwarf smithy, and the 6.25 percent chance of the rarest weapon.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon">
-<meta name="twitter:description" content="The routine at $021EDA, the class and weapon tables, the real odds, and how to get the top-tier weapon every time.">
+<meta name="twitter:description" content="The routine at $021EDA, the class and weapon tables, the exact odds, and how to get the rarest weapon every time.">
 <meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
 <meta property="article:published_time" content="2026-08-02">
 <meta property="article:modified_time" content="2026-08-02">
@@ -85,12 +85,12 @@
   {
    "@type": "Question",
    "name": "What are the real odds of the best mithril weapon in Shining Force II?",
-   "acceptedAnswer": { "@type": "Answer", "text": "6.25 percent. The four entries in a group come out at 6.2500, 11.5387, 19.8227 and 62.3886 percent, counted over every one of the 65536 possible seeds. The 48 / 26 / 22 / 4 figure that circulates is wrong, and it has the ladder upside down: the rarest outcome is the best weapon, not the worst." }
+   "acceptedAnswer": { "@type": "Answer", "text": "The four entries in a group come out at 6.2500, 11.5387, 19.8227 and 62.3886 percent, counted over every one of the 65536 possible seeds. Shining Force Central's guide estimates about 4 percent for the best weapon and about 48 percent for the least powerful. The shape of that estimate is right, but the ROM is more lopsided than it: the guaranteed rung is 62.39 percent rather than 48, both middle rungs are smaller than the guide has them, and the rarest is 6.25 rather than 4." }
   },
   {
    "@type": "Question",
    "name": "Does walking a set number of steps change the mithril weapon?",
-   "acceptedAnswer": { "@type": "Answer", "text": "No, and it never did. The weapon is decided when you hand the mithril over, so anything you do afterwards is too late. What the old trick was groping at is the frame count inside the smith's text boxes, where the seed advances once per frame. Walking barely moves it at all, about one step every 28 frames." }
+   "acceptedAnswer": { "@type": "Answer", "text": "No. The weapon is decided when you hand the mithril over, so anything you do afterwards is too late, and the speedrunning community had already worked out that the real lever is frames rather than steps. The seed advances once per frame while a text box waits for a button, and only about once every 28 frames while you walk." }
   },
   {
    "@type": "Question",
@@ -100,7 +100,7 @@
   {
    "@type": "Question",
    "name": "Does it matter which character receives the mithril weapon?",
-   "acceptedAnswer": { "@type": "Answer", "text": "Enormously. The class picks the group of four weapons before any roll happens. Master Monk can only ever produce Giant Knuckles or Misty Knuckles, Sniper and Brass Gunner and Bow Knight get the Grand Cannon on two rungs instead of one, and any class outside the table, which means every unpromoted character plus BRN, WFBR and PHNX, gets a coin flip between the Hero swords and the Gladiator axes." }
+   "acceptedAnswer": { "@type": "Answer", "text": "Enormously. The class picks the group of four weapons before any roll happens. Master Monk can only ever produce Giant Knuckles or Misty Knuckles, Sniper and Brass Gunner and Bow Knight get the Grand Cannon on two rungs instead of one, and any class outside the table, which means every unpromoted character plus BRN, WFBR, PHNX and RDBN, gets a coin flip between the Hero swords and the Gladiator axes." }
   },
   {
    "@type": "Question",
@@ -147,9 +147,10 @@
     weapons chosen by the recipient's class, and stops at the first roll that comes up
     zero. The four rungs are <strong>1 in 16</strong>, <strong>1 in 8</strong>,
     <strong>1 in 4</strong> and <strong>certainty</strong>, which works out at
-    <strong>6.25 percent</strong> for the best weapon and <strong>62.39 percent</strong>
-    for the worst. The odds you have read elsewhere, 48 / 26 / 22 / 4, are not just wrong,
-    they are upside down.</p>
+    <strong>6.25 percent</strong> for the rarest weapon and <strong>62.39 percent</strong>
+    for the common one. The community's long-standing estimate of those odds has the right
+    shape and the wrong numbers &mdash; the real ladder is steeper than anyone had
+    measured.</p>
     <p>The whole thing is decided the instant you hand the mithril over. Collecting the
     weapon later is a table lookup, and what you are going to get is already sitting in
     work RAM at <code>$FFF7A8</code> where you can read it. The seed advances one step per
@@ -165,11 +166,16 @@
   turn it into a weapon. Mithril is scarce, the weapons he can make are among the best in
   the game, and he decides which one you get without asking your opinion.</p>
 
-  <p>The received wisdom about this, repeated in guides and forum threads for something
-  like thirty years, is roughly: the outcome is random, the split is about 48 / 26 / 22 / 4
-  with the rarest weapon being the one nobody wants, and you can lean on it by walking a
-  certain number of steps between handing the mithril over and coming back for it. It is
-  not superstition. But almost every detail of it is wrong.</p>
+  <p>What is known about him is a mixture of solid work and folklore. The
+  <a href="https://sf2.shiningforcecentral.com/weapons/mithril-weapons/" rel="noopener">mithril weapons page</a> of Shining Force Central's Ultimate
+  Shining Force 2 Guide gives odds &mdash; <em>"about 4%"</em> for the best weapon in a
+  class, <em>"about 48%"</em> for the least powerful, 26 for the second least and 22 for
+  the second best &mdash; and a list of which weapon to aim for per class. Alongside that
+  runs the old advice that you can lean on the outcome by walking a certain number of steps
+  between handing the mithril over and coming back for it.</p>
+
+  <p>The odds turn out to be a decent estimate of a real thing. The steps turn out to be a
+  proxy for something else entirely. Here is the machinery underneath both.</p>
 
   <h2>The generator</h2>
 
@@ -211,6 +217,14 @@ value  =  floor( s * range / 65536 )</pre>
   <p>And the result is a <strong>pure function of the seed</strong>. Not of the clock, not
   of the character, not of how many mithril you have handed over before. Know the seed and
   you know the answer. That single fact is the hook the rest of this article hangs on.</p>
+
+  <p>None of which is a discovery. The Shining Force II speedrunning community had this
+  generator years ago &mdash; you will find it quoted on
+  <a href="https://gamefaqs.gamespot.com/boards/563341-shining-force-ii/77987582" rel="noopener">GameFAQs</a> as
+  <code>R2 = remainder((R1 * 13 + 7) / 65536)</code>, together with the observation that it
+  travels through all 65536 values. What follows is that formula read straight off the
+  instructions, and then the part that does not seem to have been published: what consumes
+  it when you hand over mithril.</p>
 
   <h2>Where the weapon is chosen</h2>
 
@@ -318,9 +332,15 @@ value  =  floor( s * range / 65536 )</pre>
   <p>Then there is the branch nobody talks about. Thirteen classes are listed. Every other
   class in the game falls through the whole loop to <code>$021F00</code> and gets a coin
   flip between group 0 and group 2 &mdash; the Hero's swords or the Gladiator's axes. That
-  covers every unpromoted character, and among the promoted classes it covers BRN, WFBR
-  and PHNX. Hand your mithril to one of those and the game will happily forge a weapon
+  covers every unpromoted character, and among the promoted classes it covers BRN, WFBR,
+  PHNX and RDBN. Hand your mithril to one of those and the game will happily forge a weapon
   they cannot hold.</p>
+
+  <p>This is also where the ROM disagrees with the community list. Shining Force Central's
+  guide files BRN and RDBN alongside GLDT as classes that get the Rune Axe. They can get it,
+  but not the same way: only GLDT is in the table. BRN and RDBN reach the axe group through
+  the coin flip, which means half the time they are rolling on the Hero's sword list
+  instead.</p>
 
   <h2>Step two: four rolls down a ladder</h2>
 
@@ -348,7 +368,7 @@ value  =  floor( s * range / 65536 )</pre>
   <p>The regularity is the giveaway. <code>10 08 04 01</code> in every single row. Whoever
   wrote this wanted one dial per group and turned it the same way eight times.</p>
 
-  <h2>The odds, and why the guides are wrong</h2>
+  <h2>The odds, exactly</h2>
 
   <p>Multiply the rungs out and you get 6.25, then 11.72, then 20.51, then 61.52 percent.
   But those are the numbers you would get from four independent coin flips, and these
@@ -358,24 +378,38 @@ value  =  floor( s * range / 65536 )</pre>
 
   <figure class="fig">
     <img src="../../../assets/img/sf2-mithril-odds.png" width="1100" height="505" loading="lazy" decoding="async"
-         alt="Bar chart comparing the community's claimed 48/26/22/4 split against the theoretical independent-roll odds and the measured odds of 6.25, 11.54, 19.82 and 62.39 percent.">
-    <figcaption>Red is what the guides say. Gold is what the ROM does, counted over every possible seed.</figcaption>
+         alt="Bar chart comparing Shining Force Central's estimated 4, 22, 26 and 48 percent against the measured 6.25, 11.54, 19.82 and 62.39 percent counted from the ROM.">
+    <figcaption>Red is the estimate that has stood for years. Gold is what the ROM does, counted over every possible seed.</figcaption>
   </figure>
 
   <div class="win">
     <dl class="kv">
-      <dt>Top tier</dt><dd>6.2500 percent</dd>
+      <dt>1st rung</dt><dd>6.2500 percent, the rarest</dd>
       <dt>Second</dt><dd>11.5387 percent</dd>
       <dt>Third</dt><dd>19.8227 percent</dd>
       <dt>Fourth</dt><dd>62.3886 percent, and it can never fail</dd>
     </dl>
   </div>
 
-  <p>So the Levanter is not a 48 percent outcome and the Critical Sword is not a 4 percent
-  one. It is the other way round, and by a wide margin. If you have ever handed over four
-  mithril and walked away with four Critical Swords, nothing was wrong with your luck.
-  That is the expected result: the chance of getting no top-tier weapon at all out of four
-  mithril is a little over 77 percent.</p>
+  <p>Set that against the guide's <em>"about 4%"</em> and <em>"about 48%"</em>. The shape
+  is right, and whoever arrived at those numbers was measuring something real: the rarest
+  weapon really is the rare one, and the ladder really does run in that direction. But the
+  ROM is steeper than the estimate. The guaranteed rung is 62.39 percent rather than 48,
+  both middle rungs are smaller than the guide has them, and the rarest is 6.25 rather than
+  4. Sampling a few dozen mithril by hand will get you the shape. It will not get you
+  the third decimal, and it will not tell you why the numbers are what they are.</p>
+
+  <p>What that steepness means in practice: if you have ever handed over four mithril and
+  walked away with four Critical Swords, nothing was wrong with your luck. The chance of
+  getting no first-rung weapon at all out of four mithril is a little over 77 percent.</p>
+
+  <p>One caution about the word <em>best</em>. The ladder is ordered by rarity, and for most
+  groups the rarest weapon is also the one people want &mdash; Levanter for a Hero, Rune Axe
+  for a Gladiator, Grand Cannon for a Sniper, and SFC's per-class list agrees with the ROM
+  on all of those. Group 1 is the exception worth knowing about. The ROM makes the Holy
+  Lance the rarest thing a Paladin or Pegasus Knight can be handed, while the guide points
+  that class at the Mist Javelin, which sits on the third rung. Rarity and usefulness are
+  two different questions and this article only answers the first.</p>
 
   <h2>The weapon is already in memory before you collect it</h2>
 
@@ -432,11 +466,13 @@ seed $F797   Random( 1) -&gt; 0    <u>hit</u></pre>
   the seed advanced 2 steps over 60 frames of walking and 3 more over the next 80. That is
   one step every 28 frames, against one step every single frame inside a text box.</p>
 
-  <p>Which explains the folklore exactly. Steps never mattered. What mattered was that
+  <p>Which explains the folklore. Steps never mattered on their own. What mattered was that
   walking a different route changed <em>when</em> you arrived at the smith's dialogue and
   <em>how many frames of text</em> went past before the roll. The step count was a clumsy
   proxy for a frame count, and that is why the trick works for the person who discovers it
-  and falls apart for everyone who copies it.</p>
+  and falls apart for everyone who copies it. The speedrunners got there before me &mdash;
+  the GameFAQs threads on mithril manipulation are already talking about frames and menu
+  timing rather than steps. What the ROM adds is the rate.</p>
 
   <h2>Getting the best weapon every single time</h2>
 
@@ -550,6 +586,20 @@ seed $44BE   class MMNK   group 7
   Software Planning could hold a direction and choose the outcome of every roll in a fight.
   It is not the road to mithril, but it is worth knowing it is still in the cartridge.</p>
 
+  <h2>What was already known</h2>
+
+  <p>Not much of the groundwork here is mine, and it is worth being clear about which part
+  is. The Shining Force II community had the generator's formula and its full period years
+  ago. The speedrunners had worked out that the lever is frames rather than steps. Shining
+  Force Central's <a href="https://sf2.shiningforcecentral.com/weapons/mithril-weapons/" rel="noopener">mithril weapons page</a> has carried a
+  usable estimate of the odds and a per-class list of what to aim for, and that list agrees
+  with the ROM everywhere except the two cases above.</p>
+
+  <p>What this article adds is the routine itself at <code>$021EDA</code>, the two data
+  tables behind it, exact probabilities in place of an estimate, the coin-flip branch for
+  classes that are not in the table, and the queue at <code>$FFF7A8</code> that lets you
+  read the answer the moment it is decided.</p>
+
   <h2>How this was done</h2>
 
   <p>The subject is <strong>Shining Force II (USA)</strong>, 2 097 152 bytes,
@@ -575,15 +625,16 @@ seed $44BE   class MMNK   group 7
 
   <div class="win">
     <h3>What are the real odds of the best mithril weapon?</h3>
-    <p>6.25 percent. The four entries in a group come out at 6.2500, 11.5387, 19.8227 and
-    62.3886 percent, counted over every possible seed. The 48 / 26 / 22 / 4 figure that
-    circulates is wrong, and it has the ladder upside down.</p>
+    <p>The four rungs come out at 6.2500, 11.5387, 19.8227 and 62.3886 percent, counted over
+    every possible seed. Shining Force Central's guide estimates about 4 percent for the
+    best weapon and about 48 for the least powerful, which is the right shape but a flatter
+    ladder than the ROM actually has.</p>
 
     <h3>Does walking a set number of steps work?</h3>
-    <p>No, and it never did. The weapon is decided when you hand the mithril over, so
-    anything you do afterwards is too late. What the old trick was groping at is the frame
-    count inside the smith's text boxes, where the seed advances once per frame. Walking
-    barely moves it, about one step every 28 frames.</p>
+    <p>No. The weapon is decided when you hand the mithril over, so anything you do
+    afterwards is too late, and the speedrunning community had already established that the
+    real lever is frames rather than steps. The seed advances once per frame while a text
+    box waits for a button, and only about once every 28 frames while you walk.</p>
 
     <h3>Can I see what I am getting before I collect it?</h3>
     <p>Yes. Read the word at <code>$FFF7A8</code> in a RAM watch as soon as you have handed
@@ -594,7 +645,7 @@ seed $44BE   class MMNK   group 7
     <p>Enormously. The class picks the group before any roll happens. Master Monk can only
     ever produce Giant Knuckles or Misty Knuckles, Sniper and Brass Gunner and Bow Knight
     get the Grand Cannon on two rungs instead of one, and any class outside the table
-    &mdash; every unpromoted character, plus BRN, WFBR and PHNX &mdash; gets a coin flip
+    &mdash; every unpromoted character, plus BRN, WFBR, PHNX and RDBN &mdash; gets a coin flip
     between the Hero swords and the Gladiator axes.</p>
 
     <h3>Can I guarantee the top-tier weapon?</h3>
