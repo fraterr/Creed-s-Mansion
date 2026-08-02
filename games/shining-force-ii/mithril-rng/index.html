@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon</title>
+<meta name="description" content="The Shining Force II mithril weapon RNG, read straight out of the ROM: the routine at $021EDA, the class and weapon tables, the real odds (6.25 percent, not 48), and how to get the top-tier weapon every time.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/">
+<meta property="og:title" content="Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon">
+<meta property="og:description" content="The Shining Force II mithril weapon RNG, read straight out of the ROM: the routine at $021EDA, the class and weapon tables, the real odds (6.25 percent, not 48), and how to get the top-tier weapon every time.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shining Force II — the mithril RNG solved. The dwarf smithy, and the real 6.25 percent chance of a top-tier weapon.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon">
+<meta name="twitter:description" content="The routine at $021EDA, the class and weapon tables, the real odds, and how to get the top-tier weapon every time.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
+<meta property="article:published_time" content="2026-08-02">
+<meta property="article:modified_time" content="2026-08-02">
+
+<link rel="icon" href="../../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/img/favicon.png">
+<link rel="preload" href="../../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/sf-dialogue.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon",
+ "description": "A complete reverse engineering of the mithril weapon lottery in Shining Force II, read out of the US Mega Drive ROM.",
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/",
+ "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png",
+ "datePublished": "2026-08-02",
+ "dateModified": "2026-08-02",
+ "inLanguage": "en",
+ "author": {
+  "@type": "Person",
+  "name": "Creed's Mansion",
+  "url": "https://fraterr.github.io/Creed-s-Mansion/"
+ },
+ "publisher": {
+  "@type": "Person",
+  "name": "Creed's Mansion",
+  "url": "https://fraterr.github.io/Creed-s-Mansion/"
+ },
+ "about": {
+  "@type": "VideoGame",
+  "name": "Shining Force II",
+  "alternateName": "Shining Force II: Ancient Sealing",
+  "gamePlatform": ["Sega Mega Drive", "Sega Genesis"],
+  "datePublished": "1993",
+  "publisher": { "@type": "Organization", "name": "Sega" },
+  "genre": ["Tactical role-playing game", "Strategy RPG"]
+ },
+ "keywords": "Shining Force II, mithril, dwarf smith, RNG, random number generator, Mega Drive, Genesis, reverse engineering, 68000"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fraterr.github.io/Creed-s-Mansion/" },
+  { "@type": "ListItem", "position": 2, "name": "Games", "item": "https://fraterr.github.io/Creed-s-Mansion/#games" },
+  { "@type": "ListItem", "position": 3, "name": "Shining Force II", "item": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/" },
+  { "@type": "ListItem", "position": 4, "name": "The mithril RNG", "item": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/" }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What are the real odds of getting the best mithril weapon in Shining Force II?",
+   "acceptedAnswer": { "@type": "Answer", "text": "6.25 percent. The routine rolls Random(16) first and takes the top weapon only when it returns zero. The four entries in each group come out at 6.2500, 11.5387, 19.8227 and 62.3886 percent when you walk every one of the 65536 possible seeds. The widely repeated 48 / 26 / 22 / 4 split is wrong, and it is wrong in the wrong direction: the rarest weapon is the best one, not the worst." }
+  },
+  {
+   "@type": "Question",
+   "name": "Does walking around before returning to the dwarf smith change the weapon?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Not in the way the trick is usually described. The weapon is decided at the moment you hand the mithril over, not when you collect it, so anything you do afterwards is too late. Walking barely moves the generator at all: measured in an emulator, the seed advances about one step every 27 frames while you walk around town, against one step per frame while a text box is waiting for you to press a button." }
+  },
+  {
+   "@type": "Question",
+   "name": "Where is the weapon stored before the smith gives it to you?",
+   "acceptedAnswer": { "@type": "Answer", "text": "In work RAM at $FFF7A8, a queue of four words holding the item IDs of the weapons currently being forged. It is written the instant you hand the mithril over, so a RAM watch on that address tells you what you are going to receive before you walk out of the smithy." }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the character you give the mithril to matter?",
+   "acceptedAnswer": { "@type": "Answer", "text": "It decides the entire shortlist. A table at ROM $021F62 maps eight promoted classes to eight groups of four weapons. Classes that are not in that table, which includes every unpromoted character, get a coin flip between the Hero sword group and the Gladiator axe group. Master Monk is a special case: its group lists only two distinct weapons, so it can never roll a four-step ladder." }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you guarantee the best mithril weapon every time?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Yes, in an emulator. The result is a pure function of a 16-bit seed at $FFDEA4 that advances one step per frame while the smith's text box waits for input, so the frame on which you confirm decides the weapon. Save a state on that frame, confirm, read $FFF7A8, and reload and confirm one frame later if it is not what you wanted. A top-tier result is never more than 114 frames of extra delay away and is 15 frames away on average. On original hardware with no tools there is no reliable way to count frames." }
+  },
+  {
+   "@type": "Question",
+   "name": "Which ROM was this taken from?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Shining Force II (USA), 2097152 bytes, MD5 6473b1505334ef5620d13191c18251fe. Every address quoted in the article is an offset into that file, disassembled with Capstone in Motorola 68000 mode." }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../../">Home</a>
+      <a href="../../../#games">Games</a>
+      <a href="../../../mods/">Mods</a>
+      <a href="../../../#about">About</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Shining Force II</a> &rsaquo; The mithril RNG</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Shining Force II &mdash; The Mithril RNG</h1>
+    <p class="sub">How the dwarf smith really picks your weapon</p>
+  </section>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf2-smithy.png" width="512" height="448" fetchpriority="high" decoding="async"
+         alt="The dwarf smithy in the hidden village in Shining Force II, with the forge, the anvil and the smith standing beside the party.">
+    <figcaption>The smithy in the hidden dwarf village. Everything below was read out of the ROM that draws this room.</figcaption>
+  </figure>
+
+  <div class="win tldr">
+    <h3>The short version</h3>
+    <p>The dwarf does not roll once. He rolls up to four times, down a ladder of four
+    weapons chosen by the recipient's class, and stops at the first roll that comes up
+    zero. The four rungs are <strong>1 in 16</strong>, <strong>1 in 8</strong>,
+    <strong>1 in 4</strong> and <strong>certainty</strong>, which works out at
+    <strong>6.25 percent</strong> for the best weapon and <strong>62.39 percent</strong>
+    for the worst. The odds you have read elsewhere, 48 / 26 / 22 / 4, are not just
+    wrong, they are upside down.</p>
+    <p>The whole thing is decided the instant you hand the mithril over. Collecting the
+    weapon later is a table lookup, and what you are going to get is already sitting in
+    work RAM at <code>$FFF7A8</code> where you can read it. Because the seed advances
+    exactly one step per frame while the smith's text box waits for a button, the frame
+    you press on decides the weapon &mdash; which is what makes this exploitable rather
+    than merely interesting.</p>
+  </div>
+
+  <h2>What everybody knows</h2>
+
+  <p>Somewhere past the middle of Shining Force II there is a village of dwarves hidden
+  behind a waterfall, and in that village there is a smith who will take a lump of
+  mithril off your hands and turn it into a weapon. There are only a handful of mithril
+  in the whole game, the weapons he can make are among the best in it, and he decides
+  which one you get without asking your opinion.</p>
+
+  <p>The received wisdom about this, repeated in every guide and every forum thread for
+  something like thirty years, is roughly: the outcome is random, the split is about
+  48 / 26 / 22 / 4 with the rarest weapon being the one nobody wants, and you can lean
+  on it by walking a certain number of steps between handing the mithril over and coming
+  back for it. Some versions of the trick specify the number of steps. Some say to leave
+  town and return. Some say it is all superstition.</p>
+
+  <p>It is not superstition, but almost every detail of it is wrong. Here is what the
+  ROM actually does.</p>
+
+  <h2>The generator</h2>
+
+  <p>Shining Force II carries three random number generators. The one that matters for
+  mithril lives at ROM <code>$001600</code>. It is a sixteen-bit linear congruential
+  generator whose entire state is one word of work RAM at <code>$FFDEA4</code>.</p>
+
+<pre class="asm"><b>001600</b>  move.w  ($FFDEA4).l,d7    <i>; the current seed</i>
+<b>001606</b>  mulu.w  #13,d7
+<b>00160A</b>  addi.w  #7,d7
+<b>00160E</b>  andi.l  #$FFFF,d7
+<b>001614</b>  move.w  d7,($FFDEA4).l    <i>; the seed advances BEFORE it is used</i>
+<b>00161A</b>  move.w  d6,-(sp)
+<b>00161C</b>  add.w   d6,d6             <i>; d6 = 2 * range</i>
+<b>00161E</b>  mulu.w  d6,d7             <i>; 32-bit product</i>
+<b>001620</b>  swap    d7                <i>; keep the high word</i>
+<b>001622</b>  move.w  (sp)+,d6
+<b>001624</b>  lsr.w   #1,d7             <i>; result: 0 .. range-1</i>
+<b>001626</b>  rts</pre>
+
+  <p>In arithmetic, with the seed called <em>s</em> and the caller's range in
+  <code>d6</code>:</p>
+
+<pre class="asm">s      &#8592;  (13 * s + 7)  mod 65536
+value  =  floor( s * range / 65536 )</pre>
+
+  <p>Three properties of this thing decide everything that follows, and all three can be
+  checked by exhaustion rather than taken on faith.</p>
+
+  <p>Its period is exactly <strong>65536</strong>. It walks through every single
+  sixteen-bit value before it repeats, which it has to: the Hull-Dobell conditions hold,
+  because 7 is odd and therefore coprime with 65536, and 13 minus 1 is 12, which is
+  divisible by 4. There is no short cycle to fall into and no seed that traps you.</p>
+
+  <p>Its output is <strong>uniform</strong> for any range. Over one full cycle, with a
+  range of 4 or 16 or 100, the difference between the most common result and the least
+  common is at most one. Nothing is structurally unlucky.</p>
+
+  <p>And the result is a <strong>pure function of the seed</strong>. Not of the clock,
+  not of the character, not of how many mithril you have handed over before, not of
+  anything else. Know the seed and you know the answer. That single fact is the hook
+  that the rest of this article hangs on.</p>
+
+  <h2>Where the weapon is chosen</h2>
+
+  <p>The routine is at ROM <code>$021EDA</code>. It is ordinary 68000 code, not a script
+  command, which is why searching the ROM for the item ID of a mithril weapon never turns
+  it up &mdash; the IDs live in a packed data table, not as immediate operands.</p>
+
+  <p>It runs in two halves. The first half looks up the recipient's class and turns it
+  into a group number. The second half walks four entries of that group and stops at the
+  first roll that returns zero.</p>
+
+<pre class="asm"><b>021EDA</b>  clr.w   d0
+<b>021EDC</b>  lea     $21F62(pc),a0     <i>; class -&gt; group table</i>
+<b>021EE0</b>  move.w  #7,d7             <i>; eight groups</i>
+<b>021EE4</b>  move.w  (a0)+,d6          <i>; how many classes in this group</i>
+<b>021EE6</b>  subq.w  #1,d6
+<b>021EE8</b>  move.w  (a0)+,d1
+<b>021EEA</b>  move.w  -$18(a6),d2       <i>; the recipient's class</i>
+<b>021EEE</b>  cmp.w   d1,d2
+<b>021EF0</b>  beq.w   $21F16            <i>; found it, d0 = group index</i>
+<b>021EF4</b>  dbra    d6,$21EE8
+<b>021EF8</b>  addi.w  #1,d0
+<b>021EFC</b>  dbra    d7,$21EE4
+<b>021F00</b>  clr.w   d0                <i>; class not listed anywhere:</i>
+<b>021F02</b>  move.w  #2,d6
+<b>021F06</b>  jsr     $1600.w           <i>;   flip a coin</i>
+<b>021F0A</b>  cmpi.w  #0,d7
+<b>021F0E</b>  bne.w   $21F16            <i>;   1 -&gt; group 0 (swords)</i>
+<b>021F12</b>  move.w  #2,d0             <i>;   0 -&gt; group 2 (axes)</i>
+<b>021F16</b>  lsl.w   #3,d0             <i>; eight bytes per group</i>
+<b>021F18</b>  lea     $21F92(pc),a0     <i>; weapon table</i>
+<b>021F1C</b>  adda.w  d0,a0
+<b>021F1E</b>  move.w  #3,d5             <i>; four attempts, and no more</i>
+<b>021F22</b>  clr.w   d0
+<b>021F24</b>  clr.w   d1
+<b>021F26</b>  move.b  (a0)+,d0          <i>; probability parameter</i>
+<b>021F28</b>  move.b  (a0)+,d1          <i>; item ID</i>
+<b>021F2A</b>  move.w  d0,d6
+<u>021F2C  jsr     $1600.w           ; the roll</u>
+<b>021F30</b>  cmpi.w  #0,d7
+<b>021F34</b>  beq.w   $21F3C            <i>; zero -&gt; you get this one</i>
+<b>021F38</b>  dbra    d5,$21F22         <i>; otherwise try the next entry</i>
+<b>021F3C</b>  lea     $F7A8.w,a0        <i>; queue of weapons being forged</i>
+<b>021F40</b>  move.w  #3,d7
+<b>021F44</b>  cmpi.w  #0,(a0)
+<b>021F48</b>  bne.w   $21F52
+<b>021F4C</b>  move.w  d1,(a0)           <i>; park the item ID here</i>
+<b>021F4E</b>  bra.w   $21F5C
+<b>021F52</b>  move.w  #2,d0
+<b>021F56</b>  adda.w  d0,a0
+<b>021F58</b>  dbra    d7,$21F44
+<b>021F5C</b>  movem.l (sp)+,d0-d7/a0
+<b>021F60</b>  rts</pre>
+
+  <p>The last entry of every group carries the probability parameter 1, and
+  <code>Random(1)</code> can only ever return 0. So the fourth rung is not a roll at all
+  &mdash; it is the floor. You always walk out with something.</p>
+
+  <h2>Step one: your class picks the shortlist</h2>
+
+  <p>The table at <code>$021F62</code> is a list of eight groups. Each group starts with
+  a count and is followed by that many class IDs. Read out of the ROM it comes to
+  thirteen classes across eight groups, and it ends at <code>$021F8C</code>.</p>
+
+  <p>The four-letter labels below are the game's own, lifted from the class name table
+  at <code>$017F41</code> &mdash; they are exactly what the status screen prints. So the
+  fastest way to find out which group a character belongs to is to open their status
+  page and read the class field.</p>
+
+  <div class="scroll-x">
+  <table class="data">
+    <caption class="muted small" style="caption-side:bottom;text-align:left;padding-top:.6rem">
+      The complete mithril table, from ROM $021F62 and $021F92. Percentages are measured
+      by walking all 65536 seeds, not estimated.</caption>
+    <thead>
+      <tr>
+        <th>Group</th><th>Classes</th>
+        <th>6.25%</th><th>11.54%</th><th>19.82%</th><th>62.39%</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="n">0</td><td class="n">HERO, BDBT</td>
+        <td class="hit">Levanter</td><td>Counter Sword</td><td>Battle Sword</td><td>Critical Sword</td></tr>
+      <tr><td class="n">1</td><td class="n">PLDN, PGNT</td>
+        <td class="hit">Holy Lance</td><td>Halberd</td><td>Mist Javelin</td><td>Valkyrie</td></tr>
+      <tr><td class="n">2</td><td class="n">GLDT</td>
+        <td class="hit">Rune Axe</td><td>Ground Axe</td><td>Atlas Axe</td><td>Heat Axe</td></tr>
+      <tr><td class="n">3</td><td class="n">WIZ, SORC</td>
+        <td class="hit">Mystery Staff</td><td>Freeze Staff</td><td>Great Rod</td><td>Supply Staff</td></tr>
+      <tr><td class="n">4</td><td class="n">VICR</td>
+        <td class="hit">Mystery Staff</td><td>Goddess Staff</td><td>Great Rod</td><td>Holy Staff</td></tr>
+      <tr><td class="n">5</td><td class="n">SNIP, BRGN, BWNT</td>
+        <td class="hit">Grand Cannon</td><td>Grand Cannon</td><td>Hyper Cannon</td><td>Buster Shot</td></tr>
+      <tr><td class="n">6</td><td class="n">NINJ</td>
+        <td class="hit">Gisarme</td><td>Ninja Katana</td><td>Katana</td><td>Critical Sword</td></tr>
+      <tr><td class="n">7</td><td class="n">MMNK</td>
+        <td class="hit">Giant Knuckles</td><td>Giant Knuckles</td><td>Misty Knuckles</td><td>Misty Knuckles</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Two of those rows are not what they look like. Group 5 lists the Grand Cannon twice,
+  so a Sniper, a Brass Gunner or a Bow Knight gets it on either of the first two rungs
+  &mdash; <strong>17.79 percent</strong> rather than 6.25. Group 7 has only two distinct
+  weapons in four slots, so a Master Monk has no four-step ladder at all: Giant Knuckles
+  17.79 percent, Misty Knuckles 82.21 percent, and nothing else is possible.</p>
+
+  <p>And then there is the branch nobody talks about. Thirteen classes are listed. Every
+  other class in the game falls through the whole loop to <code>$021F00</code> and gets a
+  coin flip between group 0 and group 2 &mdash; the Hero's swords or the Gladiator's axes.
+  That covers every unpromoted character, and among the promoted classes it covers BRN,
+  WFBR and PHNX. Hand your mithril to one of those and the game will happily forge a
+  weapon they cannot hold.</p>
+
+  <h2>Step two: four rolls down a ladder</h2>
+
+  <figure class="fig">
+    <img src="../../../assets/img/sf2-mithril-cascade.png" width="1210" height="396" loading="lazy" decoding="async"
+         alt="Flow diagram of the four-step cascade at ROM $021F1E: Random(16) for the Levanter, then Random(8) for the Counter Sword, then Random(4) for the Battle Sword, then a guaranteed Critical Sword.">
+    <figcaption>The cascade at $021F1E, drawn for group 0. Every group uses the same four probabilities. Only the item IDs change.</figcaption>
+  </figure>
+
+  <p>The weapon table at <code>$021F92</code> is eight bytes per group, four pairs of
+  (probability, item ID). Here it is verbatim, straight out of the ROM:</p>
+
+<pre class="asm"><b>021F92</b>  10 45  08 44  04 42  01 41   <i>group 0</i>
+<b>021F9A</b>  10 51  08 53  04 52  01 50   <i>group 1</i>
+<b>021FA2</b>  10 2B  08 2A  04 29  01 28   <i>group 2</i>
+<b>021FAA</b>  10 64  08 62  04 5F  01 60   <i>group 3</i>
+<b>021FB2</b>  10 64  08 63  04 5F  01 61   <i>group 4</i>
+<b>021FBA</b>  10 36  08 36  04 35  01 34   <i>group 5</i>
+<b>021FC2</b>  10 6D  08 6C  04 6B  01 41   <i>group 6</i>
+<b>021FCA</b>  10 1F  08 1F  04 1E  01 1E   <i>group 7</i>
+           <i>^^ ^^</i>
+           <i>|  the item ID, indexing the table at $01788D</i>
+           <i>the argument handed to Random()</i></pre>
+
+  <p>The regularity is the giveaway. <code>10 08 04 01</code> in every single row. Whoever
+  wrote this wanted one dial per group and turned it the same way eight times.</p>
+
+  <h2>The odds, and why the guides are wrong</h2>
+
+  <p>Multiply the rungs out and you get 6.25, then 11.72, then 20.51, then 61.52 percent.
+  But those are the numbers you would get from four independent coin flips, and these
+  rolls are not independent &mdash; they come from consecutive steps of the same
+  generator, which correlates them slightly. So rather than trusting the arithmetic I
+  walked all 65536 possible seeds through the routine and counted.</p>
+
+  <figure class="fig">
+    <img src="../../../assets/img/sf2-mithril-odds.png" width="1100" height="505" loading="lazy" decoding="async"
+         alt="Bar chart comparing the community's claimed 48/26/22/4 split against the theoretical independent-roll odds and the measured odds of 6.25, 11.54, 19.82 and 62.39 percent.">
+    <figcaption>Red is what the guides say. Gold is what the ROM does, counted over every possible seed.</figcaption>
+  </figure>
+
+  <div class="win">
+    <dl class="kv">
+      <dt>Top tier</dt><dd>6.2500 percent</dd>
+      <dt>Second</dt><dd>11.5387 percent</dd>
+      <dt>Third</dt><dd>19.8227 percent</dd>
+      <dt>Fourth</dt><dd>62.3886 percent, and it can never fail</dd>
+    </dl>
+  </div>
+
+  <p>So the Levanter is not a 48 percent outcome and the Critical Sword is not a 4 percent
+  one. It is the other way round, and by a wide margin. If you have ever handed over four
+  mithril and walked away with four Critical Swords, nothing was wrong with your luck.
+  That is the expected result: the chance of getting no top-tier weapon at all from four
+  mithril is a little over 77 percent.</p>
+
+  <h2>The weapon is already in memory before you collect it</h2>
+
+  <p>The tail of the routine, from <code>$021F3C</code>, walks a queue of four words at
+  <strong><code>$FFF7A8</code></strong> and drops the item ID into the first empty slot.
+  That is the smith's work order. It is written the moment you hand the mithril over,
+  which means the lottery is over before he finishes his sentence. Coming back later,
+  walking a lap of the village, saving and reloading in between &mdash; none of it can
+  change anything, because there is nothing left to decide.</p>
+
+  <p>This also makes the whole thing falsifiable, which is the useful part. I ran the ROM
+  with the calls at <code>$001600</code> instrumented, on a savestate taken the instant
+  after the mithril changed hands. The log came back with exactly four entries, all of
+  them from the call site at <code>$021F2C</code>:</p>
+
+<pre class="asm">seed $44BE   Random(16) -&gt; 7    miss
+seed $7DAD   Random( 8) -&gt; 3    miss
+seed $61D0   Random( 4) -&gt; 3    miss
+seed $F797   Random( 1) -&gt; 0    <u>hit</u></pre>
+
+  <p>Each seed is the previous one advanced by one step, so the chain is intact. Three
+  misses and then the floor, which is the fourth entry of the group. The recipient was a
+  Master Monk, group 7, whose fourth entry is <code>$1E</code>. And the word at
+  <code>$FFF7A8</code> in that savestate reads <code>$001E</code> &mdash; Misty Knuckles.
+  Predicted from the ROM, confirmed in RAM, and confirmed again when the player collected
+  the weapon.</p>
+
+  <p>Two more savestates line up the same way. One taken before speaking to the smith
+  holds <code>$0042</code>, a Battle Sword already on order. One taken after collection
+  holds <code>$0000</code>, the queue empty again.</p>
+
+  <h2>So why does walking around seem to work</h2>
+
+  <p>Because of what the seed does while you are reading. At ROM <code>$006470</code>
+  there is the loop that waits for you to press a button to advance a text box:</p>
+
+<pre class="asm"><b>006470</b>  moveq   #$14,d2
+<b>006472</b>  movem.l d6-d7,-(sp)      <i>&lt;-- top of the loop</i>
+<b>006476</b>  move.w  #$100,d6
+<u>00647A  bsr.w   $1600            ; the seed advances HERE, once per frame</u>
+<b>00647E</b>  move.b  d7,($DFB0).w     <i>; and reseeds the second generator</i>
+<b>006482</b>  movem.l (sp)+,d6-d7
+<b>006486</b>  bsr.b   $64A8
+<b>006488</b>  bsr.w   $0EEE            <i>; wait for vblank</i>
+<b>00648C</b>  move.b  ($DE9B).w,d1     <i>; read the pad</i>
+<b>006490</b>  andi.b  #$7F,d1
+<b>006494</b>  beq.b   $6472            <i>&lt;-- nothing pressed, go round again</i></pre>
+
+  <p>One trip round that loop is one frame and one advance of the seed. Every frame a
+  text box sits on screen waiting for you, the generator moves.</p>
+
+  <p>Walking, on the other hand, barely touches it. I measured this directly, by loading
+  a savestate in a headless emulator, holding a direction, and reading
+  <code>$FFDEA4</code> at known frames: the seed advanced 2 steps over 60 frames of
+  walking, and 3 steps over the next 80. That is roughly one step every 27 frames,
+  against one step every single frame inside a text box.</p>
+
+  <p>Which explains the folklore exactly. Steps never mattered. What mattered was that
+  walking a different route changed <em>when</em> you arrived at the smith's dialogue and
+  <em>how many frames of text</em> went past before the roll. The step count was a
+  clumsy proxy for a frame count, and that is why the trick works for the person who
+  discovered it and falls apart for everyone who copies it.</p>
+
+  <h2>Getting the best weapon every single time</h2>
+
+  <p>Now the part that is actually useful. Everything above adds up to a method, and it
+  is a method rather than a trick because there is no luck left in it.</p>
+
+  <p>The result is a pure function of the seed. The seed advances one step per frame
+  while the smith's text box waits for you. Therefore <strong>the frame on which you
+  press the button decides which weapon you get</strong>, and pressing one frame later
+  gives a different, entirely repeatable result.</p>
+
+  <figure class="fig">
+    <img src="../../../assets/img/sf2-mithril-timeline.png" width="1320" height="319" loading="lazy" decoding="async"
+         alt="A grid of 120 cells, one per frame of delay, coloured by which of the four mithril weapons that frame would produce. Top-tier frames are scattered throughout.">
+    <figcaption>120 consecutive frames from the seed in the savestate above. Each cell is one frame of extra delay before confirming. The gold cells are the top-tier weapon.</figcaption>
+  </figure>
+
+  <h3>The reliable way, with an emulator</h3>
+
+  <p>You want an emulator with savestates and a RAM watch. BlastEm, Exodus, Gens KMod and
+  Regen all qualify.</p>
+
+  <ol class="steps">
+    <li>Walk up to the smith and go through the dialogue until you are one button press
+      away from confirming the recipient. That last press is the one that runs the
+      routine. <strong>Save a state right there.</strong></li>
+    <li>Press the button. As soon as the smith tells you to come back later, read the
+      word at <strong><code>$FFF7A8</code></strong> in the RAM watch. That is your
+      weapon, in item IDs, and you have not walked a single step yet.</li>
+    <li>If it is not the one you wanted, load the state and confirm <strong>one frame
+      later</strong>. One frame of delay is one step of the seed, so the outcome changes
+      and it changes the same way every time you repeat it.</li>
+    <li>Repeat until <code>$FFF7A8</code> holds the ID you want, then walk away and
+      collect it. Nothing after this point can change the result.</li>
+  </ol>
+
+  <p>The question is how long that takes, and it has a hard answer. Walking the
+  generator's entire orbit and measuring the gaps between top-tier seeds: the average
+  wait is <strong>15 frames</strong>, and the worst case anywhere on the orbit is
+  <strong>114 frames</strong>. There is no seed from which the best weapon is
+  unreachable, and there is no run of bad luck longer than about two seconds of held
+  breath.</p>
+
+  <figure class="fig">
+    <img src="../../../assets/img/sf2-mithril-wait.png" width="1100" height="462" loading="lazy" decoding="async"
+         alt="Histogram of how many frames of delay are needed before the next top-tier result, peaking near zero, averaging 15 frames and never exceeding 114.">
+    <figcaption>How far the next top-tier result is, from every one of the 65536 possible seeds.</figcaption>
+  </figure>
+
+  <h3>The version with arithmetic instead of reloading</h3>
+
+  <p>If you would rather not reload at all, put a watch on <code>$FFDEA4</code> instead.
+  While the text box is open you will see it tick once per frame. Note the value, feed it
+  to the script below, and it will tell you how many more frames to wait before pressing.
+  You need to calibrate once &mdash; the number of generator steps between your button
+  press and the first roll is a fixed constant, so measure it a single time with the
+  savestate method and it holds for the rest of the playthrough.</p>
+
+  <p><a class="btn ghost" href="../../../downloads/sf2-mithril.py" download>Download sf2-mithril.py</a></p>
+
+<pre class="asm">$ python3 sf2-mithril.py 0x44BE MMNK
+
+seed $44BE   class MMNK   group 7
+
+  what happens right now
+    seed $44BE  Random(16) -&gt; 7   Giant Knuckles
+    seed $7DAD  Random( 8) -&gt; 3   Giant Knuckles
+    seed $61D0  Random( 4) -&gt; 3   Misty Knuckles
+    seed $F797  Random( 1) -&gt; 0   Misty Knuckles   &lt;-- taken
+    result: Misty Knuckles   seed afterwards $92B2
+
+  the next 240 frames of delay
+    +0    seed $44BE  -&gt;  Misty Knuckles
+    ...
+    +27   seed $B76F  -&gt;  Giant Knuckles   TOP TIER
+
+  wait 27 frame(s) longer before confirming to get Giant Knuckles.</pre>
+
+  <p>The script carries both ROM tables, reimplements the generator instruction by
+  instruction, and can also print the exhaustive odds for every group with
+  <code>--odds</code>. It needs nothing but Python 3.</p>
+
+  <h3>Two things worth doing before you touch the frame counter</h3>
+
+  <p>Pick the recipient deliberately, because the class decides the shortlist before any
+  roll happens. Handing mithril to a Master Monk caps you at Giant Knuckles no matter how
+  perfect your timing is, and handing it to an unpromoted character throws away half the
+  outcome on a coin flip between swords and axes. Promote first, then hand over.</p>
+
+  <p>And check <code>$FFF7A8</code> even if you are not frame-stepping. It costs nothing,
+  it tells you the answer immediately, and it turns a twenty-minute round trip to the
+  smithy into a two-second glance.</p>
+
+  <div class="note">
+    <p>On original hardware, with no emulator, none of this is available. You cannot count
+    frames by eye and you cannot read <code>$FFF7A8</code>. Blind save-scumming still
+    works, but it is blind, and at 6.25 percent it will take a while.</p>
+  </div>
+
+  <h2>Odds and ends found along the way</h2>
+
+  <p>The second generator lives at <code>$001652</code> with its seed at
+  <code>$FFDFB0</code>, and runs <code>seed = seed * 541 + 12345</code>, returning the low
+  byte. The wrapper at <code>$001628</code> uses rejection sampling on top of it to get a
+  clean distribution over ranges that are not powers of two. As the listing above shows,
+  it gets reseeded from the main generator on every frame of every text box.</p>
+
+  <p>The third one, at <code>$001674</code>, is the interesting one. It is a wrapper with
+  a developer hook still wired up:</p>
+
+<pre class="asm"><b>001674</b>  move.w  d0,d6
+<b>001676</b>  tst.b   ($FFB0A9).l       <i>; debug flag</i>
+<b>00167C</b>  beq.b   @normal           <i>; zero -&gt; the real generator</i>
+<b>00167E</b>  moveq   #0,d0
+<b>001680</b>  btst.b  #3,($DE97).w      <i>; a direction on the pad -&gt; return 0</i>
+<b>001686</b>  bne.w   @done
+<b>00168A</b>  moveq   #1,d0
+<b>00168C</b>  btst.b  #0,($DE97).w      <i>;                       -&gt; return 1</i></pre>
+
+  <p>Set <code>$FFB0A9</code> to anything but zero and the random numbers stop being
+  random: four directions on the D-pad map to four fixed values from 0 to 3. All 26 calls
+  to this wrapper sit in the <code>$009F00</code> to <code>$00C300</code> range, which is
+  battle code &mdash; criticals, double attacks, damage variance. Somebody at Sonic!
+  Software Planning could hold a direction and choose the outcome of every roll in a
+  fight. It is not the road to mithril, but it is the sort of thing worth knowing is
+  still sitting in the cartridge.</p>
+
+  <h2>How this was done</h2>
+
+  <p>The subject is <strong>Shining Force II (USA)</strong>, 2 097 152 bytes,
+  MD5 <code>6473b1505334ef5620d13191c18251fe</code>. Every address quoted above is an
+  offset into that file.</p>
+
+  <p>The ROM was disassembled with Capstone in Motorola 68000 mode and read by hand. That
+  found the generator quickly and the choice routine slowly, because the useful search is
+  not for item IDs but for the shape of a table: a run of bytes alternating small powers
+  of two with values in the item-ID range. Once <code>10 xx 08 xx 04 xx 01 xx</code>
+  turned up eight times in a row at <code>$021F92</code>, the rest fell out.</p>
+
+  <p>Confirming it needed live data. The ROM was patched so that every call to
+  <code>$001600</code> wrote its return address, its range argument and the seed before
+  and after into a ring buffer in unused work RAM. Gens savestates were converted into
+  Genesis Plus GX savestates so that a headless build of the core could run them, which
+  is where the four logged rolls above and the walking measurement came from. The
+  probabilities and the wait times were then computed by brute force over the full
+  65536-seed space rather than sampled.</p>
+
+  <p>Everything here is reproducible with a copy of the ROM, Python, and any emulator
+  with a RAM watch. If you check it and something does not match, please say so.</p>
+
+  <h2>Questions people actually ask</h2>
+
+  <div class="win">
+    <h3>What are the real odds of the best mithril weapon?</h3>
+    <p>6.25 percent. The four entries in a group come out at 6.2500, 11.5387, 19.8227 and
+    62.3886 percent, measured over every possible seed. The 48 / 26 / 22 / 4 figure that
+    circulates is wrong, and it has the ladder upside down.</p>
+
+    <h3>Does walking a set number of steps work?</h3>
+    <p>No, and it never did. The weapon is decided when you hand the mithril over, so
+    anything you do afterwards is too late. What the old trick was really groping at is
+    the frame count inside the smith's text boxes, where the seed advances once per frame.</p>
+
+    <h3>Can I see what I am getting before I collect it?</h3>
+    <p>Yes. Read the word at <code>$FFF7A8</code> in a RAM watch as soon as you have
+    handed the mithril over. It is the item ID of the weapon being forged, and there are
+    four slots in case you have more than one on order.</p>
+
+    <h3>Does it matter who I give the mithril to?</h3>
+    <p>Enormously. The class picks the group before any roll happens. Master Monk can only
+    ever produce Giant Knuckles or Misty Knuckles, Sniper and Brass Gunner and Bow Knight
+    get the Grand Cannon on two rungs instead of one, and any class outside the table
+    &mdash; every unpromoted character, plus BRN, WFBR and PHNX &mdash; gets a coin flip
+    between the Hero swords and the Gladiator axes.</p>
+
+    <h3>Can I guarantee the top-tier weapon?</h3>
+    <p>In an emulator, yes. Save a state on the frame before you confirm, confirm, read
+    <code>$FFF7A8</code>, and reload and confirm one frame later if it is wrong. The best
+    weapon is never more than 114 frames of delay away and is 15 away on average. On real
+    hardware there is no way to count frames, so no.</p>
+
+    <h3>Does any of this apply to Shining Force 1?</h3>
+    <p>The first game has no mithril smith, so not directly. It does have its own
+    generator and its own quirks, and there is <a href="../../shining-force/">a room for
+    it here</a> with a romhack in it.</p>
+  </div>
+
+  <hr class="rule">
+
+  <p class="small muted">Written August 2026. No ROMs are hosted on this site. If you
+  want to check the work, the script above and your own copy of the game are all you
+  need.</p>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">No ROMs are hosted here.</p>
+    <p class="small"><a href="../">&#9664; Back to Shining Force II</a> &middot; <a href="../../../">Back to the mansion</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
