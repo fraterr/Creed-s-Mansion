@@ -370,3 +370,53 @@ ol.steps li::before {
 
 /* pixel-art figures: cap at an exact multiple of the Mega Drive's 256px */
 figure.fig.px img { max-width: 1024px; margin: 0 auto; }
+
+/* ---------- contact form ---------- */
+.form-grid { display: grid; gap: 1.2rem; margin: 0; }
+@media (min-width: 720px) { .form-grid.two { grid-template-columns: 1fr 1fr; } }
+
+.field { display: block; }
+.field > span {
+  display: block; font-family: var(--pixel); font-size: 10px; color: var(--gold);
+  letter-spacing: .05em; margin-bottom: .6rem; line-height: 1.8;
+}
+.field > span .req { color: var(--accent); }
+
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  font-family: var(--body); font-size: 19px; line-height: 28px;
+  color: var(--ink);
+  background: #06060f;
+  border: 2px solid var(--frame-in);
+  border-radius: 4px;
+  padding: .6rem .75rem;
+  outline: none;
+  -webkit-appearance: none; appearance: none;
+}
+select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%),
+                    linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position: right 1.05rem top 1.25rem, right .75rem top 1.25rem;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.2rem;
+}
+select option { background: #06060f; color: var(--ink); }
+textarea { min-height: 11rem; resize: vertical; }
+input::placeholder, textarea::placeholder { color: #5b6690; }
+input:focus, select:focus, textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(240,192,96,.18);
+}
+input:user-invalid, textarea:user-invalid { border-color: var(--red); }
+
+.form-note { font-size: 17px; color: #7f8bb5; margin: .4rem 0 0; }
+
+button.btn { font: inherit; font-family: var(--pixel); cursor: pointer; }
+button.btn[disabled] { opacity: .55; cursor: default; }
+
+.form-status { margin: 1.4rem 0 0; font-size: 19px; min-height: 1.2em; }
+.form-status.ok   { color: var(--green); }
+.form-status.err  { color: var(--red); }
+.form-status.busy { color: var(--gold-light); }
+.hp { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
