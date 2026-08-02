@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon</title>
-<meta name="description" content="The Shining Force II mithril weapon RNG, read out of the ROM: the routine at $021EDA, the class and weapon tables, the exact odds counted over all 65,536 seeds, and how to get the rarest weapon every time.">
+<title>Shining Force 2: How the Mithril Weapon RNG Actually Works</title>
+<meta name="description" content="The dwarf smith rolls four times down a ladder set by your class. The routine at $021EDA, both ROM tables, and the exact odds counted from the ROM.">
 <link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#002083">
@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="Creed's Mansion">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/">
-<meta property="og:title" content="Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon">
-<meta property="og:description" content="The Shining Force II mithril weapon RNG, read out of the ROM: the routine at $021EDA, the class and weapon tables, the exact odds counted over all 65,536 seeds, and how to get the rarest weapon every time.">
+<meta property="og:title" content="Shining Force 2: How the Mithril Weapon RNG Actually Works">
+<meta property="og:description" content="The dwarf smith rolls four times down a ladder set by your class. The routine at $021EDA, both ROM tables, and the exact odds counted from the ROM.">
 <meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Shining Force II — the mithril RNG disassembled. The dwarf smithy, and the 6.25 percent chance of the rarest weapon.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon">
+<meta name="twitter:title" content="Shining Force 2: How the Mithril Weapon RNG Actually Works">
 <meta name="twitter:description" content="The routine at $021EDA, the class and weapon tables, the exact odds, and how to get the rarest weapon every time.">
 <meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png">
 <meta property="article:published_time" content="2026-08-02">
@@ -36,7 +36,7 @@
 {
  "@context": "https://schema.org",
  "@type": "TechArticle",
- "headline": "Shining Force II Mithril RNG — How the Dwarf Smith Picks Your Weapon",
+ "headline": "Shining Force 2: How the Mithril Weapon RNG Actually Works",
  "description": "A complete reverse engineering of the mithril weapon lottery in Shining Force II, read out of the US Mega Drive ROM.",
  "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/",
  "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-mithril.png",
@@ -84,7 +84,7 @@
  "mainEntity": [
   {
    "@type": "Question",
-   "name": "What are the real odds of the best mithril weapon in Shining Force II?",
+   "name": "What are the real odds of the best mithril weapon in Shining Force 2?",
    "acceptedAnswer": { "@type": "Answer", "text": "The four entries in a group come out at 6.2500, 11.5387, 19.8227 and 62.3886 percent, counted over every one of the 65536 possible seeds. Shining Force Central's guide estimates about 4 percent for the best weapon and about 48 percent for the least powerful. The shape of that estimate is right, but the ROM is more lopsided than it: the guaranteed rung is 62.39 percent rather than 48, both middle rungs are smaller than the guide has them, and the rarest is 6.25 rather than 4." }
   },
   {
@@ -131,7 +131,7 @@
   <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Shining Force II</a> &rsaquo; The mithril RNG</p>
 
   <section class="hero" style="padding-top:1.5rem">
-    <h1 class="title">Shining Force II &mdash; The Mithril RNG</h1>
+    <h1 class="title">Shining Force II &mdash; The Mithril Weapon RNG</h1>
     <p class="sub">How the dwarf smith really picks your weapon</p>
   </section>
 
@@ -160,10 +160,11 @@
 
   <h2>What everybody knows</h2>
 
-  <p>Somewhere past the middle of Shining Force II there is a hidden village of dwarves,
-  and in that village there is a smith who will take a lump of mithril off your hands and
-  turn it into a weapon. Mithril is scarce, the weapons he can make are among the best in
-  the game, and he decides which one you get without asking your opinion.</p>
+  <p>Somewhere past the middle of Shining Force II there is a hidden village of dwarves on
+  Grans Island, opened with the Dry Stone at a bend in the river north of Galam. In it
+  there is a blacksmith who will take a lump of mithril off your hands, charge you 5000
+  gold, and turn it into a weapon. Mithril is scarce, the weapons he can make are among
+  the best in the game, and he decides which one you get without asking your opinion.</p>
 
   <p>What is known about him is a mixture of solid work and folklore. The
   <a href="https://sf2.shiningforcecentral.com/weapons/mithril-weapons/" rel="noopener">mithril weapons page</a> of Shining Force Central's Ultimate
@@ -438,7 +439,7 @@ seed $F797   Random( 1) -&gt; 0    <u>hit</u></pre>
   holds <code>$0042</code>, a Battle Sword already on order. One taken after collection
   holds <code>$0000</code>, the queue empty again.</p>
 
-  <h2>So why does walking around seem to work</h2>
+  <h2>Why walking a set number of steps seems to work</h2>
 
   <p>Because of what the seed does while you are reading. At ROM <code>$006470</code> is
   the loop that waits for you to press a button to advance a text box:</p>
@@ -470,7 +471,7 @@ seed $F797   Random( 1) -&gt; 0    <u>hit</u></pre>
   and falls apart for everyone who copies it. The speedrunners reached the frame count
   before me. What the ROM adds is the rate.</p>
 
-  <h2>Getting the best weapon every single time</h2>
+  <h2>How to get the best mithril weapon every time</h2>
 
   <p>The result is a pure function of the seed, and the seed advances one step per frame
   while the smith's text box waits for you. Therefore <strong>the frame on which you press
@@ -621,7 +622,7 @@ seed $44BE   class MMNK   group 7
   <h2>Questions people actually ask</h2>
 
   <div class="win">
-    <h3>What are the real odds of the best mithril weapon?</h3>
+    <h3>What are the real odds of the best mithril weapon in Shining Force 2?</h3>
     <p>The four rungs come out at 6.2500, 11.5387, 19.8227 and 62.3886 percent, counted over
     every possible seed. Shining Force Central's guide estimates about 4 percent for the
     best weapon and about 48 for the least powerful, which is the right shape but a flatter
