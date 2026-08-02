@@ -305,3 +305,68 @@ code { overflow-wrap: anywhere; }
   .cover { float: none; margin: 0 auto 1.4rem; }
   .cover img { width: 160px; margin: 0 auto; }
 }
+
+/* ---------- long-form technical article ---------- */
+pre.asm {
+  font-family: var(--mono);
+  font-size: 14px; line-height: 1.65;
+  background: #06060f;
+  border: 2px solid var(--frame-in);
+  border-left: 4px solid var(--gold-dark);
+  border-radius: 4px;
+  padding: 1rem 1.1rem;
+  margin: 1.4rem 0;
+  overflow-x: auto;
+  color: #b9c6f2;
+  -webkit-overflow-scrolling: touch;
+}
+pre.asm b   { color: var(--gold-light); font-weight: 400; }   /* addresses */
+pre.asm i   { color: #6f7cab; font-style: normal; }           /* comments */
+pre.asm u   { color: var(--accent); text-decoration: none; }  /* the line that matters */
+
+table.data {
+  width: 100%; border-collapse: collapse; margin: 1.4rem 0;
+  font-size: 17px; color: var(--ink-dim);
+}
+table.data th, table.data td {
+  border: 1px solid rgba(240,192,96,.22);
+  padding: .5rem .6rem; text-align: left; vertical-align: top;
+}
+table.data th {
+  font-family: var(--pixel); font-size: 9px; color: var(--gold);
+  letter-spacing: .04em; line-height: 1.8; background: rgba(0,0,0,.35);
+}
+table.data td.n { font-family: var(--mono); font-size: 14px; color: var(--gold-light); white-space: nowrap; }
+table.data tr:nth-child(even) td { background: rgba(255,255,255,.03); }
+table.data td.hit { color: var(--gold); }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+figure.fig { margin: 2rem 0; }
+figure.fig img {
+  display: block; width: 100%; height: auto;
+  border: 2px solid var(--frame-in); border-radius: 4px; background: #0d1030;
+  image-rendering: auto;
+}
+figure.fig.px img { image-rendering: pixelated; }
+figure.fig figcaption {
+  font-family: var(--pixel); font-size: 9px; color: #7f8bb5;
+  margin-top: .8rem; line-height: 1.9; letter-spacing: .04em;
+}
+
+.tldr { border-left: 4px solid var(--gold); }
+.tldr h3 { margin-top: 0; }
+
+ol.steps { counter-reset: st; list-style: none; padding: 0; margin: 1.2rem 0; }
+ol.steps li {
+  counter-increment: st; position: relative;
+  padding: .55rem 0 .55rem 2.6rem; color: var(--ink-dim);
+  border-bottom: 1px dotted rgba(240,192,96,.18);
+}
+ol.steps li:last-child { border-bottom: none; }
+ol.steps li::before {
+  content: counter(st); position: absolute; left: 0; top: .6rem;
+  font-family: var(--pixel); font-size: 11px; color: var(--gold);
+}
+
+/* pixel-art figures: cap at an exact multiple of the Mega Drive's 256px */
+figure.fig.px img { max-width: 1024px; margin: 0 auto; }
