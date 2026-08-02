@@ -287,7 +287,7 @@ value  =  floor( s * range / 65536 )</pre>
   thirteen classes across eight groups, and it ends at <code>$021F8C</code>.</p>
 
   <p>The four-letter labels below are the game's own, lifted from the class name table
-  at <code>$017F41</code> &mdash; they are exactly what the status screen prints. So the
+  at <code>$017F3E</code> &mdash; they are exactly what the status screen prints. So the
   fastest way to find out which group a character belongs to is to open their status
   page and read the class field.</p>
 
@@ -562,18 +562,30 @@ seed $44BE   class MMNK   group 7
   <p>The third one, at <code>$001674</code>, is the interesting one. It is a wrapper with
   a developer hook still wired up:</p>
 
-<pre class="asm"><b>001674</b>  move.w  d0,d6
-<b>001676</b>  tst.b   ($FFB0A9).l       <i>; debug flag</i>
-<b>00167C</b>  beq.b   @normal           <i>; zero -&gt; the real generator</i>
-<b>00167E</b>  moveq   #0,d0
-<b>001680</b>  btst.b  #3,($DE97).w      <i>; a direction on the pad -&gt; return 0</i>
-<b>001686</b>  bne.w   @done
-<b>00168A</b>  moveq   #1,d0
-<b>00168C</b>  btst.b  #0,($DE97).w      <i>;                       -&gt; return 1</i></pre>
+<pre class="asm"><b>001674</b>  movem.l d6-d7,-(sp)
+<b>001678</b>  move.w  d0,d6
+<b>00167A</b>  tst.b   ($FFB0A9).l       <i>; debug flag</i>
+<b>001680</b>  beq.b   $16B2             <i>; zero -&gt; fall through to the real generator</i>
+<b>001682</b>  moveq   #0,d0
+<b>001684</b>  btst.b  #3,($DE97).w      <i>; a direction on the pad -&gt; return 0</i>
+<b>00168A</b>  bne.w   $16B8
+<b>00168E</b>  moveq   #1,d0
+<b>001690</b>  btst.b  #0,($DE97).w      <i>;                       -&gt; return 1</i>
+<b>001696</b>  bne.w   $16B8
+<b>00169A</b>  moveq   #2,d0
+<b>00169C</b>  btst.b  #2,($DE97).w      <i>;                       -&gt; return 2</i>
+<b>0016A2</b>  bne.w   $16B8
+<b>0016A6</b>  moveq   #3,d0
+<b>0016A8</b>  btst.b  #1,($DE97).w      <i>;                       -&gt; return 3</i>
+<b>0016AE</b>  bne.w   $16B8
+<b>0016B2</b>  bsr.w   $1600             <i>; nothing held, or flag clear: roll for real</i>
+<b>0016B6</b>  move.w  d7,d0
+<b>0016B8</b>  movem.l (sp)+,d6-d7
+<b>0016BC</b>  rts</pre>
 
   <p>Set <code>$FFB0A9</code> to anything but zero and the random numbers stop being
   random: four directions on the D-pad map to four fixed values from 0 to 3. All 26 calls
-  to this wrapper sit in the <code>$009F00</code> to <code>$00C300</code> range, which is
+  to this wrapper sit between <code>$009FC0</code> and <code>$00C2B8</code>, which is
   battle code &mdash; criticals, double attacks, damage variance. Somebody at Sonic!
   Software Planning could hold a direction and choose the outcome of every roll in a
   fight. It is not the road to mithril, but it is the sort of thing worth knowing is
