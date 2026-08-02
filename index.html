@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shining Force Romhacks & RPG Notes — Creed's Mansion</title>
-<meta name="description" content="Free Shining Force romhacks and write-ups, starting with Turn Queue & Tactics: on-screen turn order, difficulty levels, an EXP overflow fix and kill counters.">
+<meta name="description" content="Shining Force romhacks and teardowns: the Turn Queue & Tactics quality-of-life patch, and how the Shining Force II mithril weapon RNG really works.">
 <link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#002083">
@@ -15,14 +15,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/">
 <meta property="og:title" content="Shining Force Romhacks & RPG Notes — Creed's Mansion">
-<meta property="og:description" content="Free Shining Force romhacks and write-ups, starting with Turn Queue & Tactics: on-screen turn order, difficulty levels, an EXP overflow fix and kill counters.">
+<meta property="og:description" content="Shining Force romhacks and teardowns: the Turn Queue & Tactics quality-of-life patch, and how the Shining Force II mithril weapon RNG really works.">
 <meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Creed's Mansion — a Shining Force battle with the turn order bar along the bottom of the screen">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Shining Force Romhacks & RPG Notes — Creed's Mansion">
-<meta name="twitter:description" content="Free Shining Force romhacks and write-ups, starting with Turn Queue & Tactics: on-screen turn order, difficulty levels, an EXP overflow fix and kill counters.">
+<meta name="twitter:description" content="Shining Force romhacks and teardowns: the Turn Queue & Tactics quality-of-life patch, and how the Shining Force II mithril weapon RNG really works.">
 <meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-home.png">
 
 <link rel="icon" href="assets/img/favicon.png">
@@ -52,7 +52,7 @@
  "@type": "CollectionPage",
  "name": "Creed's Mansion",
  "url": "https://fraterr.github.io/Creed-s-Mansion/",
- "description": "Free Shining Force romhacks and write-ups, starting with Turn Queue & Tactics: on-screen turn order, difficulty levels, an EXP overflow fix and kill counters.",
+ "description": "Shining Force romhacks and teardowns: the Turn Queue & Tactics quality-of-life patch, and how the Shining Force II mithril weapon RNG really works.",
  "inLanguage": "en",
  "isPartOf": {
   "@type": "WebSite",
@@ -129,13 +129,16 @@
       </article>
     </a>
 
-    <div class="card">
-      <article class="win win-plain">
-        <h3 class="muted">Room 2</h3>
-        <p class="small"><span class="tag soon">Vacant</span></p>
-        <p>Still deciding who gets the key. Candidates are pacing the hallway.</p>
+    <a class="card" href="games/shining-force-ii/">
+      <article class="win">
+        <h3>Shining Force II <span class="small muted">(Mega Drive)</span></h3>
+        <p class="small"><span class="tag plat">Mega Drive &middot; 1993</span></p>
+        <p>The sequel that gave the formula room to breathe: a world you cross on foot,
+        thirty-odd recruits, and battles wide enough to lose a flank in. It is also the
+        game this house takes its name from.</p>
+        <p style="margin-top:1rem"><span class="tag new">1 teardown</span></p>
       </article>
-    </div>
+    </a>
 
     <div class="card">
       <article class="win win-plain">
@@ -149,7 +152,20 @@
 
   <h2>Latest from the workshop</h2>
 
-  <a class="card" href="games/shining-force/turn-queue-mod/">
+  <a class="card" href="games/shining-force-ii/mithril-rng/">
+    <article class="win">
+      <h3>Shining Force II &mdash; The Mithril RNG <span class="tag new">New</span></h3>
+      <p>The dwarf smith in the hidden village does not roll once for your mithril weapon.
+      He rolls up to four times, down a ladder of four weapons picked by the recipient's
+      class, and stops at the first roll that comes up zero. The best weapon is a 6.25
+      percent outcome, not the 48 percent every guide repeats. Here is the routine, both
+      ROM tables, the odds measured over all 65536 seeds, and a method that gets you the
+      top-tier weapon every single time.</p>
+      <p style="margin-top:1rem"><span class="tag new">Read the teardown &#9656;</span></p>
+    </article>
+  </a>
+
+  <a class="card" href="games/shining-force/turn-queue-mod/" style="display:block;margin-top:2.8rem">
     <article class="win">
       <h3>Shining Force &mdash; Turn Queue &amp; Tactics <span class="tag ver">v15</span></h3>
       <p>A quality-of-life romhack for the US Mega Drive release. It puts the turn order

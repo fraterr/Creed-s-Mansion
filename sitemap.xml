@@ -7,6 +7,38 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-smithy.png</image:loc>
+      <image:title>The dwarf smithy in the hidden village in Shining Force II</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-mithril-cascade.png</image:loc>
+      <image:title>The four-roll cascade that picks a Shining Force II mithril weapon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-mithril-odds.png</image:loc>
+      <image:title>Real Shining Force II mithril weapon odds against the figures the guides repeat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-mithril-timeline.png</image:loc>
+      <image:title>Which mithril weapon each frame of delay produces</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-mithril-wait.png</image:loc>
+      <image:title>How many frames of delay are needed to reach a top-tier mithril weapon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force/turn-queue-mod/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
