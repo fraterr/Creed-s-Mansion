@@ -155,7 +155,7 @@
 
   <p>Shining Force does not store its dialogue as plain text. Each string is Huffman
   coded, and the tree used to decode a symbol depends on the symbol before it, so a hex
-  editor shows nothing. The US decoder sits at <code>$01F00C</code>; its table of tree
+  editor shows nothing. The US decoder sits at <code>$01EFF6</code>; its table of tree
   offsets is at <code>$01E892</code>, the trees at <code>$01EA3A</code>, and nine banks of
   text start at <code>$131A1C</code>, with a pointer table at <code>$13E906</code> that is
   itself pointed to from <code>$130000</code>. A string begins with a length byte that
@@ -163,18 +163,18 @@
   string, and anything above is a control code looked up in a small word table.</p>
 
   <p>The Japanese ROM, <em>Shining Force: Kamigami no Isan</em>, uses the very same
-  decoder, byte for byte, relocated to <code>$131A4E</code>. Its trees are at
+  decoder, byte for byte, relocated to <code>$131A38</code>. Its trees are at
   <code>$13000C</code> and <code>$1301B4</code>, its banks start at <code>$131AAA</code>.
   The alphabet is where the two part ways. The US font has 128 slots of 32 bytes each, 80 of them
   drawn, proportional, 12 pixels wide at most. The Japanese font at <code>$02C008</code> has
   192 glyphs of 24 bytes each, a fixed 16 by 12 cell advanced 10 pixels at a time:
-  digits, both kana syllabaries, small kana, and 64 kanji chosen to cover the words the
-  script needs most. Voicing marks are separate glyphs, drawn four pixels above the
+  digits, both kana syllabaries, small kana, punctuation, and 58 kanji chosen to cover
+  the words the script needs most. Voicing marks are separate glyphs, drawn four pixels above the
   kana that follows them without advancing the cursor.</p>
 
   <figure class="fig px">
     <img src="../../../assets/img/sf1-jp-font.png" width="832" height="528" loading="lazy" decoding="async"
-         alt="The complete Japanese font of Shining Force laid out as a grid with the symbol code beside each glyph: digits, hiragana, katakana, punctuation and sixty-four kanji.">
+         alt="The complete Japanese font of Shining Force laid out as a grid with the symbol code beside each glyph: digits, hiragana, katakana, punctuation and fifty-eight kanji.">
     <figcaption>The whole Japanese font, 192 glyphs, with the symbol code the Huffman decoder produces for each.</figcaption>
   </figure>
 
@@ -189,7 +189,7 @@
 
   <p>The first person you meet in the English game is Simone, a child who has found a
   book about Dark Dragon and decides it is coming back. She asks what she should call
-  you, hopes you will help, and every time you load a game she tells you to get going
+  you, hopes you will help, and once the story starts she tells you to get going
   because evil spreads across Rune with every passing day. After the credits she says
   the ending you saw is the official one, "but you and I know differently, don't we?"</p>
 
@@ -227,7 +227,7 @@
   <figure class="fig px">
     <img src="../../../assets/img/sf1-jp-epilogue.png" width="534" height="512" loading="lazy" decoding="async"
          alt="Three Japanese lines in the game font: good work, thanks to the hero the legend stayed as it was; grandpa left saying bad people were stirring somewhere; he said to come again next time, how selfish.">
-    <figcaption>Strings 0042 to 0044, Japanese. The first line ends with the hero's name placeholder.</figcaption>
+    <figcaption>Strings 0042 to 0044, Japanese. The gap in the first line is the hero's name placeholder.</figcaption>
   </figure>
 
   <p>"Good work. Thanks to [Hero], the legend didn't change." Then: "Grandpa went out
@@ -239,7 +239,8 @@
   <h2>The traveler after the credits</h2>
 
   <p>When the credits finish, the game shows one more scene before the girl closes the
-  book: a farmer, a young man, and a figure in full armor beside him, on a country road.
+  book: a farmer, a young man, and a figure in full armor beside him, in a farming
+  village.
   The ROM keeps three tile sets for it, labelled in the disassembly as Max, Adam and the
   farmer. In English the farmer remarks on the armor, the traveler says he has come "a
   long way, longer than you can imagine", accepts work in the fields, and gives his
@@ -280,7 +281,7 @@
   knights grumble that their captain wastes time on him. That is the whole backstory.</p>
 
   <p>The Japanese Guardiana has a different young man walking through it. An old man
-  by the church tells him, unprompted, not to fret about losing his memory, since
+  in town tells him, unprompted, not to fret about losing his memory, since
   everyone forgets things with age. The knights call him <span class="jp">うまれもわからぬ者</span>,
   a man of unknown birth, and <span class="jp">どこのウマのホネともわからんヤツ</span>,
   a nobody from nowhere. And the priest of the Guardiana chapel, telling Max about
@@ -322,8 +323,8 @@
   pushes Max out of the way with <span class="jp">さらば・・・我がおとうとよ!</span>,
   farewell, my brother. English: "Go, Max, run! I'll deal with Darksol!"</p>
 
-  <p>Adam ties it together in Prompt, in a speech the English version cut to a third of
-  its length.</p>
+  <p>Adam ties it together in Metapha, in a speech the English version cut down to two
+  sentences.</p>
 
   <figure class="fig px">
     <img src="../../../assets/img/sf1-jp-adam.png" width="564" height="1044" loading="lazy" decoding="async"
@@ -338,10 +339,10 @@
   the mask are one story, told in pieces across the whole game. The English script kept
   the mask.</p>
 
-  <p>One more line belongs here. In the Tower of the Ancients, when Kane arrives to save
-  Max from Darksol and dies doing it, the Japanese Kane says the Demon Breath is what
-  beat the two of them the first time, "and you don't remember." The English Kane says
-  "This is the end, Darksol! Max, get out now!"</p>
+  <p>One more line belongs here. In that same shrine scene, a moment before the push,
+  the Japanese Kane realises Max does not know him: "So you have no memory... Listen!
+  He has the Demon Breath. That is what beat the two of us before." The English Kane
+  at the same point says "This is the end, Darksol! Max, get out now!"</p>
 
   <h2>What the Ancients left</h2>
 
@@ -365,7 +366,8 @@
 
   <p>Two smaller pieces of the same puzzle. The Japanese Ramladu introduces himself with
   a full name, <span class="jp">アーク・レイ・ラムラドゥ</span>, Arc Ray Ramladu, emperor of
-  Runefaust; the English one is King Ramladu everywhere except on a bookshelf. And the
+  Runefaust; the English one is King Ramladu in every spoken line, and Emperor only on
+  the bookshelves and a sign in his own castle. And the
   name Protectora, the peaceful country Runefaust used to be, exists only in English. In
   Japanese, Guardiana and Runefaust are <span class="jp">ふたごの国</span>, twin countries
   built to guard the west and east gates of the ancient castle, and nobody gives the
@@ -458,7 +460,7 @@
   team; the English shelf has <em>Secrets of the Universe</em>. Bustoke has
   <span class="jp">シャイダク</span>, the fan abbreviation for <em>Shining in the
   Darkness</em>, and <em>Shining Spirit</em>; in English those books are "written in
-  strange languages." Prompt's school has a <em>Shining Force</em> manga. Rindo's bar
+  strange languages." Prompt has a <em>Shining Force</em> manga. Rindo's bar
   has <em>Shining Chronicle</em>. The English versions are funnier to read cold. The
   Japanese ones are a time capsule.</p>
 
@@ -498,7 +500,7 @@
   character <span class="jp">力つきた</span>, ran out of strength. Desoul reads "had his
   soul drawn out." The Laser Eye's countdown is a plain countdown, without the English
   "targeting activated." Egress in the ending is a single word, <span class="jp">リターン!!</span>,
-  which is Max's last line in the game.</p>
+  Max's last line before the castle goes under.</p>
 
   <h2>What the English writers were doing</h2>
 
@@ -520,7 +522,7 @@
   Isan (Japan)</strong>, same size, MD5 <code>3ba871d87f35feefcadfa9d4a2c06d13</code>.
   Every address above is an offset into one of those files.</p>
 
-  <p>The decoder follows the routine at <code>$01F00C</code> instruction by instruction:
+  <p>The decoder follows the routine at <code>$01EFF6</code> instruction by instruction:
   one tree per preceding symbol, leaf values stored backwards from the tree offset, a
   1 bit for a leaf and a 0 bit for a node. Control codes above <code>$C0</code> were
   named by aligning my US output with the SF1DISASM transcript and voting:
