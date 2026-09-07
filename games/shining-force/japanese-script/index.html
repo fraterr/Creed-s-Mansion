@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shining Force: What the Japanese Script Says That the English One Doesn't</title>
+<meta name="description" content="Both Shining Force ROMs decoded and laid side by side, all 2,232 lines: the girl who wants a bedtime story, Max's lost memory, the brother the US version never mentions, and the in-jokes on the bookshelves.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force/japanese-script/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force/japanese-script/">
+<meta property="og:title" content="Shining Force: What the Japanese Script Says That the English One Doesn't">
+<meta property="og:description" content="Both ROMs decoded and laid side by side, all 2,232 lines: the girl who wants a bedtime story, Max's lost memory, the brother the US version never mentions.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf1-script.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Two lines of Japanese dialogue in the Mega Drive font: a girl asking what the hero of the story is called.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shining Force: What the Japanese Script Says That the English One Doesn't">
+<meta name="twitter:description" content="Both ROMs decoded and laid side by side, all 2,232 lines: the girl who wants a bedtime story, Max's lost memory, the brother the US version never mentions.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf1-script.png">
+
+<link rel="icon" href="../../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/img/favicon.png">
+<link rel="preload" href="../../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/sf-dialogue.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>
+  .jp { font-family: 'SF Dialogue', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif; }
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.2rem 0 1.6rem; }
+  .vs > div { background: rgba(0,0,0,.25); border: 1px solid rgba(240,192,96,.25); border-radius: 6px; padding: .8rem 1rem; }
+  .vs .lbl { font-family: var(--pixel); font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+  .vs p { margin: 0 0 .6em; color: var(--ink-dim); }
+  .vs p:last-child { margin-bottom: 0; }
+  .vs .tr { color: #98a6d4; font-size: 18px; line-height: 26px; }
+  @media (max-width: 760px) { .vs { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Shining Force: What the Japanese Script Says That the English One Doesn't",
+ "description": "Both Shining Force ROMs decoded and laid side by side, all 2,232 lines: the girl who wants a bedtime story, Max's lost memory, the brother the US version never mentions, and the in-jokes on the bookshelves.",
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/japanese-script/",
+ "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf1-script.png",
+ "datePublished": "2026-09-08",
+ "dateModified": "2026-09-08",
+ "inLanguage": "en",
+ "author": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "publisher": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "about": {
+  "@type": "VideoGame",
+  "name": "Shining Force",
+  "alternateName": "Shining Force: Kamigami no Isan",
+  "gamePlatform": ["Sega Mega Drive", "Sega Genesis"],
+  "datePublished": "1992",
+  "publisher": { "@type": "Organization", "name": "Sega" },
+  "genre": ["Tactical role-playing game", "Strategy RPG"]
+ },
+ "keywords": "Shining Force, Kamigami no Isan, Japanese version, localization, script comparison, Max, Kane, Mega Drive, Genesis, ROM, Huffman"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fraterr.github.io/Creed-s-Mansion/" },
+  { "@type": "ListItem", "position": 2, "name": "Games", "item": "https://fraterr.github.io/Creed-s-Mansion/#games" },
+  { "@type": "ListItem", "position": 3, "name": "Shining Force", "item": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/" },
+  { "@type": "ListItem", "position": 4, "name": "The Japanese script", "item": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/japanese-script/" }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Are Max and Kane brothers in Shining Force?",
+   "acceptedAnswer": { "@type": "Answer", "text": "In the Japanese ROM, yes. When Kane's mask breaks he says Darksol made him fight even his younger brother, Nova repeats the word a line later, and Kane's last words before the Demon Breath are 'Farewell, my brother'. The robot Adam then explains that Max and Kane are heirs of the ancient bloodline. Every one of those lines was rewritten for the US release, which never says the two are related." }
+  },
+  {
+   "@type": "Question",
+   "name": "Does Max have amnesia in the Japanese version?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Yes. In Guardiana a townsman tells Max not to worry about having lost his memory, the chapel priest recalls that Lowe found him washed up on the shore a year earlier with no memory at all, the knights call him a man of unknown birth, and the priest says his journey is also a search for his memory. Adam later explains the cause. None of this survived into English." }
+  },
+  {
+   "@type": "Question",
+   "name": "Who is the girl who saves your game in Shining Force?",
+   "acceptedAnswer": { "@type": "Answer", "text": "In English she is Simone, a child who found a book about Dark Dragon and thinks it is coming back. In Japanese she is an unnamed little girl whose grandfather is out, and she asks you to read her the picture book until he returns. Loading a save is 'read me the continuation' and the epilogue is her telling you the legend stayed unchanged thanks to the hero." }
+  },
+  {
+   "@type": "Question",
+   "name": "What do the bookshelves say in the Japanese version?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Several shelves carry in-jokes that the US version replaced with generic titles: the Sega magazines Mega Fan and Beep! Mega Drive, a Shining comic volume one, a Shining in the Darkness volume, a Shining Force manga, and a book called The Legend of Commander Taguchi." }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../../">Home</a>
+      <a href="../../../#games">Games</a>
+      <a href="../../../mods/">Mods</a>
+      <a href="../../../#about">About</a>
+      <a href="../../../contacts/">Contact</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Shining Force</a> &rsaquo; The Japanese script</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Shining Force &mdash; The Japanese Script</h1>
+    <p class="sub">Both ROMs decoded, every line laid side by side</p>
+  </section>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-frame.png" width="534" height="606" fetchpriority="high" decoding="async"
+         alt="Four lines of Japanese dialogue rendered with the game's own font: a girl asks you to read her the book until grandpa comes home, asks what the hero of the story is called, says it is a cool name, and tells you to hurry up and read.">
+    <figcaption>Strings 002B to 002E of the Japanese ROM, drawn with the ROM's own 16 by 12 pixel font. This is the save-file screen.</figcaption>
+  </figure>
+
+  <div class="win tldr">
+    <h3>The short version</h3>
+    <p>The English Shining Force is not a shortened Japanese Shining Force. It is a
+    different telling of the same plot. The Japanese game is a picture book read to a
+    little girl; the English game makes her a character inside the world. In Japanese,
+    Max washed up on a beach a year before the game with no memory, and the masked knight
+    Kane is his older brother. In English he is a promising young fighter and Kane is
+    just a villain with a mask. The Japanese bookshelves are full of Sega in-jokes; the
+    English ones got titles like <em>How Dank Was My Dungeon</em>.</p>
+    <p>I know because I decoded both ROMs, all 2,232 English strings and 2,229 Japanese
+    ones, and read them against each other. The text below quotes the lines by their
+    index in the ROM so anyone can check.</p>
+  </div>
+
+  <h2>Two ROMs, one compression scheme</h2>
+
+  <p>Shining Force does not store its dialogue as plain text. Each string is Huffman
+  coded, and the tree used to decode a symbol depends on the symbol before it, so a hex
+  editor shows nothing. The US decoder sits at <code>$01F00C</code>; its table of tree
+  offsets is at <code>$01E892</code>, the trees at <code>$01EA3A</code>, and nine banks of
+  text start at <code>$131A1C</code>, with a pointer table at <code>$13E906</code> that is
+  itself pointed to from <code>$130000</code>. A string begins with a length byte that
+  counts itself, symbols below <code>$C0</code> are characters, <code>$C0</code> ends the
+  string, and anything above is a control code looked up in a small word table.</p>
+
+  <p>The Japanese ROM, <em>Shining Force: Kamigami no Isan</em>, uses the very same
+  decoder, byte for byte, relocated to <code>$131A4E</code>. Its trees are at
+  <code>$13000C</code> and <code>$1301B4</code>, its banks start at <code>$131AAA</code>.
+  The alphabet is where the two part ways. The US font has 128 slots of 32 bytes each, 80 of them
+  drawn, proportional, 12 pixels wide at most. The Japanese font at <code>$02C008</code> has
+  192 glyphs of 24 bytes each, a fixed 16 by 12 cell advanced 10 pixels at a time:
+  digits, both kana syllabaries, small kana, and 64 kanji chosen to cover the words the
+  script needs most. Voicing marks are separate glyphs, drawn four pixels above the
+  kana that follows them without advancing the cursor.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-font.png" width="832" height="528" loading="lazy" decoding="async"
+         alt="The complete Japanese font of Shining Force laid out as a grid with the symbol code beside each glyph: digits, hiragana, katakana, punctuation and sixty-four kanji.">
+    <figcaption>The whole Japanese font, 192 glyphs, with the symbol code the Huffman decoder produces for each.</figcaption>
+  </figure>
+
+  <p>Once you know that, the rest is bookkeeping. My US dump matches the transcript in
+  the <a href="https://github.com/ShiningForceCentral/SF1DISASM" rel="noopener">SF1DISASM</a>
+  project on all 2,231 lines, which is how I know the decoder is right. The Japanese
+  dump I checked by rendering lines with the ROM's own glyphs and reading them. The two
+  scripts line up by index for the first eight banks of 256 strings; only the ninth is
+  shuffled, and there by a few positions.</p>
+
+  <h2>The girl and the book</h2>
+
+  <p>The first person you meet in the English game is Simone, a child who has found a
+  book about Dark Dragon and decides it is coming back. She asks what she should call
+  you, hopes you will help, and every time you load a game she tells you to get going
+  because evil spreads across Rune with every passing day. After the credits she says
+  the ending you saw is the official one, "but you and I know differently, don't we?"</p>
+
+  <p>The Japanese girl has no name, and no book about dragons. Her grandfather is out.
+  She has a picture book, and she wants it read to her until he comes home.</p>
+
+  <div class="vs">
+    <div>
+      <div class="lbl">Japanese, 002B to 002E</div>
+      <p class="jp">そうだ! もしよかったら おじいちゃんが かえってくるまで ごほんを よんできかせてー!</p>
+      <p class="tr">I know! If you don't mind, read me the book until grandpa gets back!</p>
+      <p class="jp">ねえねえ このおはなしの主人公は なんていう 名まえなの?</p>
+      <p class="tr">Hey, hey, what's the hero of this story called?</p>
+      <p class="jp">それじゃ はやく よんで! はやく はやくーっ!</p>
+      <p class="tr">Then read, quick! Quick, quick!</p>
+    </div>
+    <div>
+      <div class="lbl">English, 002B to 002E</div>
+      <p>I think Dark Dragon's coming back! Will you help us? C'mon, it'll be an adventure!</p>
+      <p>Say, what shall I call you?</p>
+      <p>You need to get going! Evil spreads farther across Rune with every passing day.</p>
+    </div>
+  </div>
+
+  <p>Every menu line follows from that. "Which adventure would you like to continue?" is
+  <span class="jp">どの つづきを よんでくれるの?</span>, which continuation will you read
+  me. Deleting a save is <span class="jp">どれを なくしちゃうの?</span>, which one are you
+  losing. Quitting for the day is <span class="jp">おじいちゃん もどってこないね</span>,
+  grandpa hasn't come back yet. You are not the hero. You are the adult reading a story,
+  and the hero's name is whatever you decide the hero in the book is called.</p>
+
+  <p>The epilogue keeps the frame. The English girl tells you the official ending is a
+  lie and evil stirs somewhere else. The Japanese girl says something stranger.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-epilogue.png" width="534" height="512" loading="lazy" decoding="async"
+         alt="Three Japanese lines in the game font: good work, thanks to the hero the legend stayed as it was; grandpa left saying bad people were stirring somewhere; he said to come again next time, how selfish.">
+    <figcaption>Strings 0042 to 0044, Japanese. The first line ends with the hero's name placeholder.</figcaption>
+  </figure>
+
+  <p>"Good work. Thanks to [Hero], the legend didn't change." Then: "Grandpa went out
+  again, saying bad people are stirring somewhere. He said to come back next time.
+  How selfish of him." The grandfather who is always out when evil stirs is never
+  explained. Read it once as a child and it is a joke. Read it again and the old man
+  starts to look like Nova, or like the narrator of every Shining game since.</p>
+
+  <h2>The traveler in the prologue</h2>
+
+  <p>After the scrolling legend and before you type a name, a stranger in full armor
+  walks into a village and is offered work in the fields. In English the scene is
+  written so that the stranger can be Max after the ending: he has come "a long way,
+  longer than you can imagine", his things have seen better days, he is tired of
+  wandering. Then he gives his name, and the game begins.</p>
+
+  <p>The Japanese scene puts the same two people on the same screen and has them say
+  something else.</p>
+
+  <div class="vs">
+    <div>
+      <div class="lbl">Japanese, 005F to 0068</div>
+      <p class="jp">・・・ほほう めずらしいわい ぜんしんよろいをきているとはのう</p>
+      <p class="tr">Well now, that's unusual. Wearing a full suit of armor...</p>
+      <p class="jp">いいえ これは 私のからだです</p>
+      <p class="tr">No. This is my body.</p>
+      <p class="jp">アダム いいかもしれないな しばらく おせわになるか</p>
+      <p class="tr">Adam... this might be all right. I'll stay a while.</p>
+      <p class="jp">わたしですか? わたしの名まえは ... [Hero]!</p>
+      <p class="tr">Me? My name is... [Hero]!</p>
+    </div>
+    <div>
+      <div class="lbl">English, 005F to 0068</div>
+      <p>We don't see many folk in full armor like that. Quite a fancy getup!</p>
+      <p>I have come a long way. Longer than you can imagine.</p>
+      <p>That sounds like just what I need right now. I work hard and I'm a fast learner.</p>
+      <p>Me? You can call me... [Hero]!</p>
+    </div>
+  </div>
+
+  <p>The armor is his body. He talks to himself as Adam, the robot soldier who joins the
+  Force in Prompt. And when asked his name he answers with the hero's. I will not
+  pretend the ROM explains this. What it says is that the man who settles in the village
+  at the start of the Japanese game is a machine carrying a dead friend's name, and that
+  the US writers took the machine out and left the name.</p>
+
+  <h2>Max washed up on a beach</h2>
+
+  <p>In the English Guardiana, Max is a boy Varios has been training with a sword. The
+  knights grumble that their captain wastes time on him. That is the whole backstory.</p>
+
+  <p>The Japanese Guardiana has a different young man walking through it. An old man
+  by the church tells him, unprompted, not to fret about losing his memory, since
+  everyone forgets things with age. The knights call him <span class="jp">うまれもわからぬ者</span>,
+  a man of unknown birth, and <span class="jp">どこのウマのホネともわからんヤツ</span>,
+  a nobody from nowhere. And the priest of the Guardiana chapel, telling Max about
+  a dream, says this:</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-memory.png" width="564" height="802" loading="lazy" decoding="async"
+         alt="Two Japanese lines in the game font. The priest: you were collapsed on the shore and Lowe found you, a year ago already, you had lost all your memory, perhaps it was the gods' guidance that we took you in. The priest: I knew it, you are led by a great fate, and your journey is also a journey to find your memory.">
+    <figcaption>Strings 0336 and 03FE, Japanese. In English 0336 is "I saw our land in ruins. Evil creatures roamed our halls!" and 03FE is "May the Powers of Light be with you".</figcaption>
+  </figure>
+
+  <p>"Lowe found you collapsed on the shore. That was already a year ago. You had lost
+  all your memory. Maybe it was the gods' guidance that we took you in." The same
+  priest, when Max leaves Guardiana: "I knew it. You are led by a great fate. And this
+  journey is also a journey to find your memory. It will be a hard road."</p>
+
+  <p>A handful of lines carry the amnesia in Japanese, and every one of them was
+  rewritten. The English priest tells you about a dream of Guardiana in ruins instead, which at least foreshadows
+  the attack. The priest gets a blessing. The knights' contempt for an outsider becomes
+  ordinary jealousy of the captain's favourite.</p>
+
+  <h2>Kane's brother</h2>
+
+  <p>This is the change most people who compare the two versions already suspect, and
+  the ROM settles it. In Dragonia, when Kane's mask shatters, the English line is
+  "Darksol masked my face to control me. What have I done? He even made me fight you!"
+  The Japanese line has one more word in it.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-brother.png" width="594" height="420" loading="lazy" decoding="async"
+         alt="A long Japanese line in the game font: where am I, what have I been doing, I remember now, Darksol put a mask on me and controlled me all along, made me his puppet, and to fight even you, my younger brother, what have I done.">
+    <figcaption>String 00C7, Japanese. The word is <span class="jp">おとうと</span>, younger brother.</figcaption>
+  </figure>
+
+  <p><span class="jp">おとうとのおまえとまで戦うとは</span>: "to think I fought even you,
+  my younger brother." Nova hears it and, in the next line, asks what Kane meant by
+  calling Max his brother. In the English ROM that line of Nova's is about Darksol being
+  behind everything. Later, when Darksol turns on the two of them in the shrine, Kane
+  pushes Max out of the way with <span class="jp">さらば・・・我がおとうとよ!</span>,
+  farewell, my brother. English: "Go, Max, run! I'll deal with Darksol!"</p>
+
+  <p>Adam ties it together in Prompt, in a speech the English version cut to a third of
+  its length.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-adam.png" width="564" height="1044" loading="lazy" decoding="async"
+         alt="Adam's long Japanese speech in the game font: my name is Adam, a machine soldier born to help you and fight; you and Lord Kane are heirs of the ancient bloodline, destined from birth to fight the Black Dragon; Darksol found out about you two and schemed to use you to obtain the key and the secret book; Lord Kane fought to let you escape, lost to Darksol, and you were badly wounded, which is probably why you lost your memory; I will hand you the Chaos Breaker, this way.">
+    <figcaption>String 0632, Japanese. The English string at the same index is "You are too late. Darksol took the key to the Accursed Door."</figcaption>
+  </figure>
+
+  <p>"You and Lord Kane are heirs of the ancient bloodline, destined from birth to fight
+  the Black Dragon. Darksol learned of you both and planned to use you to get the key and
+  the Manual. Lord Kane fought so that you could escape. He lost, and you were badly
+  hurt; that is why you lost your memory." So the amnesia, the brother, the beach and
+  the mask are one story, told in pieces across the whole game. The English script kept
+  the mask.</p>
+
+  <p>One more line belongs here. In the Tower of the Ancients, when Kane arrives to save
+  Max from Darksol and dies doing it, the Japanese Kane says the Demon Breath is what
+  beat the two of them the first time, "and you don't remember." The English Kane says
+  "This is the end, Darksol! Max, get out now!"</p>
+
+  <h2>What the Ancients left</h2>
+
+  <p>The Japanese title means <em>Legacy of the Gods</em>, and the script spends some
+  effort on what the phrase means. The English game decides early: the legacy of the
+  Ancients "is an evil being that has been sealed away for 1,000 years," as the spirit in
+  the Pool tells Max in Manarina. The Japanese spirit says the opposite.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-legacy.png" width="564" height="756" loading="lazy" decoding="async"
+         alt="The Pool spirit's Japanese speech in the game font: I have been waiting for you; what you call gods were the ancient people who lived in this land long ago; the legacy of the gods is said to be a terrible thing, but that too is a mistake, it is the civilization of the ancients; what was sealed inside it, though, is truly terrible; now someone with an evil heart is trying to undo the seal, and you must stop him.">
+    <figcaption>String 0580, Japanese, the spirit of the Pool of Memory. The English version calls it the Pool of the Ancients.</figcaption>
+  </figure>
+
+  <p>"What you call gods were the ancient people who lived in this land. The legacy is
+  said to be something terrible; that too is wrong. It is their civilization. What was
+  sealed inside it, though, is terrible indeed." In Metapha the Japanese spirit closes
+  the thought: the true legacy of the gods is "you, and the companions who believed in
+  you and fought at your side." The English Metapha spirit says "The hopes of all of Rune
+  go with you!" and sends Max on his way.</p>
+
+  <p>Two smaller pieces of the same puzzle. The Japanese Ramladu introduces himself with
+  a full name, <span class="jp">アーク・レイ・ラムラドゥ</span>, Arc Ray Ramladu, emperor of
+  Runefaust; the English one is King Ramladu everywhere except on a bookshelf. And the
+  name Protectora, the peaceful country Runefaust used to be, exists only in English. In
+  Japanese, Guardiana and Runefaust are <span class="jp">ふたごの国</span>, twin countries
+  built to guard the west and east gates of the ancient castle, and nobody gives the
+  eastern one a former name.</p>
+
+  <h2>Names</h2>
+
+  <p>Some of the renamings are the usual accidents of katakana, some are choices, and a
+  couple change who a character is.</p>
+
+  <div class="scroll-x">
+  <table class="data">
+    <thead>
+      <tr><th>English</th><th>Japanese</th><th>Read as</th><th>Note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Luke</td><td class="jp">ラグ</td><td>Lug</td><td>A different name, not a transliteration.</td></tr>
+      <tr><td>Zylo</td><td class="jp">ザッパ</td><td>Zappa</td><td>The werewolf. Everyone in Bustoke calls him Lord Zappa.</td></tr>
+      <tr><td>Vankar</td><td class="jp">バンガード</td><td>Vanguard</td><td>A drunk knight named after a formation.</td></tr>
+      <tr><td>Bleu</td><td class="jp">バリュウ</td><td>Baryu</td><td>The baby dragon.</td></tr>
+      <tr><td>Rindo</td><td class="jp">リンドリンド</td><td>Rindo-rindo</td><td>Shortened, probably for the text box.</td></tr>
+      <tr><td>Rudo</td><td class="jp">ルドル</td><td>Rudol</td><td></td></tr>
+      <tr><td>Ring Reef</td><td class="jp">フライパンリーフ</td><td>Frying Pan Reef</td><td>Because it is shaped like one. The English kept the ring and lost the pan.</td></tr>
+      <tr><td>Egress</td><td class="jp">リターン</td><td>Return</td><td></td></tr>
+      <tr><td>Demon Blaze</td><td class="jp">デーモンブレス</td><td>Demon Breath</td><td></td></tr>
+      <tr><td>Lunar Dew</td><td class="jp">つきのしずく</td><td>Moon Drop</td><td></td></tr>
+      <tr><td>Orb of Light</td><td class="jp">かがやきのたま</td><td>Shining Orb</td><td></td></tr>
+      <tr><td>Pool of the Ancients</td><td class="jp">きおくの泉</td><td>Pool of Memory</td><td>Which fits a hero who has lost his.</td></tr>
+      <tr><td>Manual of the Seal</td><td class="jp">ひでんのしょ</td><td>Book of Secrets</td><td></td></tr>
+      <tr><td>Accursed Door</td><td class="jp">古えのもん</td><td>Ancient Gate</td><td>Nothing accursed about it in Japanese.</td></tr>
+      <tr><td>Shimol, Shell's aunt</td><td class="jp">シエルのいもうと</td><td>Shell's younger sister</td><td>A relative changed generation in translation.</td></tr>
+      <tr><td>Queen Koron</td><td class="jp">パオの王コロン</td><td>Koron, ruler of Pao</td><td>Also "a prophet" who reads the Paopab, the beasts that pull the town.</td></tr>
+      <tr><td>Jogurt</td><td class="jp">ヨーグルト</td><td>Yogurt</td><td>Spelled the obvious way.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Mishaela is the one to watch. In Alterone the English fortune teller greets Max with
+  "With my powers I can see the future" and never says who she is. The Japanese one
+  opens with <span class="jp">私は うらないしのミシャエラ</span>, I am Mishaela the fortune
+  teller, so the player has her name a full chapter before the circus. At the circus the
+  Japanese ringmaster is <span class="jp">ミシャエラドール</span>, the Mishaela Doll, "my
+  double," and she says the mayor's grandson's soul was to be offered to Darksol. The
+  English boy says she was going to feed him to a dragon. When she dies in Demon Castle,
+  the Japanese Mishaela warns Max about Darksol, says everything that happened to
+  Runefaust was that man's scheme, and promises to wait for him in the world of darkness
+  "until the Black Dragon wakes." The English Mishaela dies telling him he will never
+  stop Darksol.</p>
+
+  <h2>Headquarters gossip</h2>
+
+  <p>Between battles you can talk to everyone at headquarters, and this is where the
+  Japanese writers had the most fun and the English ones the least. Most English lines
+  here are variations on "I'm ready when you are." The Japanese ones are people.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-hq.png" width="534" height="656" loading="lazy" decoding="async"
+         alt="Three Japanese lines in the game font. Tao: listen, Lowe touched my bottom, next time I'll blast him to bits with Blaze. Anri: who is that priest Lowe anyway, he's been hanging around, an eyesore, can't something be done. Lowe: Bl-Blaze! ... no good, can't a priest use Blaze after all?">
+    <figcaption>Strings 012B, 012C and 0130, Japanese. English: "This constant gossiping is really getting to me", "Darksol is sure lucky I'm down here", "I'm resting and practicing my healing spell".</figcaption>
+  </figure>
+
+  <p>Tao: "Max, listen. Lowe touched my bottom. Next time he does it I'll Blaze him to
+  bits." Anri: "Who is that priest Lowe? He's been hanging around. An eyesore." Lowe, a
+  few lines later, is trying to cast Blaze and failing. Ken, on the day he joins, confides that he respects Max
+  "but don't tell Mae." Gort is drunk and wants the glass refilled. Domingo, who speaks
+  in baby talk, informs you that the sea is three times the size of the land and that
+  the world is not flat, "though this lot won't believe it." On the ship, Guntz hates the
+  sea because his engine and armor will rust; in English he says "I hate the sea!" and
+  nothing else.</p>
+
+  <h2>The bookshelves</h2>
+
+  <p>Every bookshelf in the game has a line, and the two scripts diverge on nearly all of
+  them. The English titles are jokes written for an American audience:
+  <em>How Green Was My Dragon</em>, <em>Do Witches Really Float?</em>,
+  <em>101 Ways to Cook Dragon</em>. The Japanese titles are jokes written for people who
+  bought the game in Japan in 1992.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-books.png" width="594" height="750" loading="lazy" decoding="async"
+         alt="Four Japanese bookshelf lines in the game font: Mega Fan and Beep Mega; Comic Shining volume one and The Legend of Commander Taguchi; Shai-Dark and Shining Spirit; Shining Force Manga and Prompt Made Easy.">
+    <figcaption>Strings 0251, 025C, 0294 and 02C9, Japanese.</figcaption>
+  </figure>
+
+  <p>The shelf in Alterone Castle holds <span class="jp">メガファン</span> and
+  <span class="jp">ビーメガ</span>, the magazines <em>Mega Fan</em> and <em>Beep! Mega
+  Drive</em>; the English shelf holds <em>101 Dungeon Crafts</em>. A shelf in Rindo has
+  <em>Comic Shining, Volume 1</em> next to <span class="jp">たぐちそうすいでん</span>,
+  <em>The Legend of Commander Taguchi</em>, which reads like a nod to someone on the
+  team; the English shelf has <em>Secrets of the Universe</em>. Bustoke has
+  <span class="jp">シャイダク</span>, the fan abbreviation for <em>Shining in the
+  Darkness</em>, and <em>Shining Spirit</em>; in English those books are "written in
+  strange languages." Prompt's school has a <em>Shining Force</em> manga. Rindo's bar
+  has <em>Shining Chronicle</em>. The English versions are funnier to read cold. The
+  Japanese ones are a time capsule.</p>
+
+  <p>Two signs deserve a mention. A signboard on the mountain road that reads "Travel
+  Light!" in English says <span class="jp">ヨーグルトをわらう者は ヨーグルトになく</span> in Japanese:
+  he who laughs at Yogurt will weep over Yogurt. And the weekly tally at the animal
+  experiment in Manarina, "6 hens, 2 rabbits, 3 cats" in English, ends in Japanese with
+  <span class="jp">ヨーグルト0</span>. Yogurt, zero.</p>
+
+  <h2>Odds and ends</h2>
+
+  <p>The people of Prompt speak a hick dialect, every sentence ending in
+  <span class="jp">ズラ</span>, and the schoolteacher speaks like a snob, every sentence
+  ending in <span class="jp">ザマス</span>. When the Shining Path is repaired and the town
+  turns clever overnight, the guard greets you with "Welcome to Prompt, zura! Oh, no more
+  zura, right?" The English version renders the change with jokes about school being
+  boring and then not boring, which is the best you can do without a dialect to drop.</p>
+
+  <p>Musashi's message, carved into a wall in Prompt, is written in Japanese with
+  Runefaust in hiragana, <span class="jp">るーんふぁうすと</span>, the way a samurai who has
+  never seen the word in katakana would write it.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-jp-musashi.png" width="564" height="324" loading="lazy" decoding="async"
+         alt="Musashi's wall carving in the game font: letters are carved into the wall; my name is Musashi, a samurai; hearing there was one who fights the villains called Runefaust, I hurried here; I await at the headquarters; let me too join the battle.">
+    <figcaption>String 0625, Japanese.</figcaption>
+  </figure>
+
+  <p>The ending changes its mind about Max. In both versions the castle sinks with him
+  inside. The English Nova offers a theory: "Perhaps a great hero is needed to guard the
+  seal. Perhaps he must stand as an eternal vigil to prevent Dark Dragon's return." The
+  Japanese Nova only guesses that the Chaos Breaker's power held Max inside, and the last
+  word in Japanese goes to the party: "Mae, it's all right. Max is surely alive." Then
+  the girl closes the book.</p>
+
+  <p>Battle messages are drier in Japanese and occasionally more literal. A dead
+  character <span class="jp">力つきた</span>, ran out of strength. Desoul reads "had his
+  soul drawn out." The Laser Eye's countdown is a plain countdown, without the English
+  "targeting activated." Egress in the ending is a single word, <span class="jp">リターン!!</span>,
+  which is Max's last line in the game.</p>
+
+  <h2>What the English writers were doing</h2>
+
+  <p>It would be easy to file all this under things lost in translation, and unfair. The
+  US script is not a bad translation; it is a rewrite with a plan. It removes the amnesia
+  and the brother, which means it removes the reason the plot needs Max in particular,
+  and replaces it with a hero chosen by the Orb of Light. It turns the girl with the
+  picture book into a girl inside the story, so that the player is the hero rather than
+  the reader. It gives Runefaust a former name and a fall from grace. It writes new
+  jokes rather than translating old ones, and most of the new jokes land. What it does
+  not do is tell the Japanese story, and if you only know the English one, the ending of
+  the Game Boy Advance remake, where Max and Kane are brothers on screen, looks like an
+  addition. It is a restoration.</p>
+
+  <h2>How this was done</h2>
+
+  <p>The subjects are <strong>Shining Force (USA)</strong>, 1 572 864 bytes, MD5
+  <code>4b4acbe75ff7aaeb534ab78ed95910d1</code>, and <strong>Shining Force: Kamigami no
+  Isan (Japan)</strong>, same size, MD5 <code>3ba871d87f35feefcadfa9d4a2c06d13</code>.
+  Every address above is an offset into one of those files.</p>
+
+  <p>The decoder follows the routine at <code>$01F00C</code> instruction by instruction:
+  one tree per preceding symbol, leaf values stored backwards from the tree offset, a
+  1 bit for a leaf and a 0 bit for a node. Control codes above <code>$C0</code> were
+  named by aligning my US output with the SF1DISASM transcript and voting:
+  <code>$C2</code> is a line break, <code>$C8</code> the hero's name, <code>$CD</code>
+  a wait for a button, and so on. The Japanese decoder was found by searching the ROM for
+  the same machine code with the two <code>lea</code> displacements left as wildcards; the
+  font was found by disassembling the glyph routine at <code>$001CD8</code>, which
+  multiplies the symbol by 24 and adds the pointer stored at <code>$02C000</code>. I
+  transcribed the 192 glyphs by hand from a rendered sheet, then had a script rebuild the
+  whole Japanese text as Unicode.</p>
+
+  <p>Alignment was free for the first 2,048 strings, since both ROMs keep 256 strings per
+  bank and the writers replaced lines in place rather than inserting them. The last bank,
+  184 strings in English and 181 in Japanese, was aligned on the placeholders each string
+  contains. Sixty-six English and sixty-three Japanese strings in that bank have no
+  counterpart at the same position; most are guards in Prompt Castle saying the same
+  thing in a different order.</p>
+
+  <p>Translations in this article are mine and prefer accuracy to grace. If you read a
+  line differently, tell me; the indexes are there so you can find it.</p>
+
+  <h2>Questions people actually ask</h2>
+
+  <div class="win">
+    <h3>Are Max and Kane brothers in Shining Force?</h3>
+    <p>In the Japanese ROM, yes, and the game says so three times: when the mask breaks,
+    when Kane pushes Max away from Darksol, and in Adam's explanation. All three lines
+    were rewritten in English to leave the relationship out.</p>
+
+    <h3>Does Max have amnesia in the Japanese version?</h3>
+    <p>Yes. Lowe found him on the shore a year before the game with no memory, the
+    chapel priest tells the story, and several townspeople in Guardiana refer to it. Adam later explains that the wound came
+    from Darksol, in the fight where Kane let Max escape.</p>
+
+    <h3>Who is the girl who saves your game?</h3>
+    <p>In English, Simone, who found a book about Dark Dragon. In Japanese, an unnamed
+    girl waiting for her grandfather, who asks you to read her the story. Her menu lines
+    all describe reading a book, and the epilogue is her telling you the legend stayed
+    unchanged.</p>
+
+    <h3>What do the bookshelves say in Japanese?</h3>
+    <p>Among other things: <em>Mega Fan</em>, <em>Beep! Mega Drive</em>,
+    <em>Comic Shining Volume 1</em>, <em>Shining in the Darkness</em>, a <em>Shining
+    Force</em> manga, and <em>The Legend of Commander Taguchi</em>. The English shelves
+    replaced every one of these.</p>
+  </div>
+
+  <h2>Credits</h2>
+
+  <p>The text format and the US transcript come from
+  <a href="https://github.com/ShiningForceCentral/SF1DISASM" rel="noopener">SF1DISASM</a>,
+  the Shining Force Central disassembly. The Japanese side is read straight out of the
+  cartridge.</p>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">No ROMs are hosted here.</p>
+    <p class="small"><a href="../">&#9664; Back to Shining Force</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
