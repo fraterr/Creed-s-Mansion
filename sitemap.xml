@@ -7,6 +7,28 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/the-witch-and-mitula/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-witch-start.png</image:loc>
+      <image:title>The witch of the Shining Force II title screen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-witch-end.png</image:loc>
+      <image:title>The woman the witch becomes in the Shining Force II ending</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-witch-jewels.png</image:loc>
+      <image:title>The Jewel of Light and the Jewel of Evil falling from the woman's neck to the Fin screen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf2-witch-vs-mitula.png</image:loc>
+      <image:title>The ending woman beside Mitula's portrait</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/mithril-rng/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -34,7 +56,7 @@
   </url>
   <url>
     <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
