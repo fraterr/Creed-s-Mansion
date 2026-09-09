@@ -1,0 +1,13002 @@
+[
+ {
+  "battle": 0,
+  "map": "ch1 reg1 v1",
+  "size": [
+   16,
+   22
+  ],
+  "regions": [
+   1,
+   2,
+   3
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     8,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "DARK_DWARF",
+    "pos": [
+     9,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DARK_DWARF",
+    "pos": [
+     6,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "GOBLIN",
+    "pos": [
+     3,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "GOBLIN",
+    "pos": [
+     12,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "GOBLIN",
+    "pos": [
+     9,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       9,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "GOBLIN",
+    "pos": [
+     7,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "GOBLIN",
+    "pos": [
+     11,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       9
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 1,
+  "map": "ch1 reg0 v2",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     16,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       20
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     16,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       22
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DARK_DWARF",
+    "pos": [
+     11,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       21
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       21
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DARK_DWARF",
+    "pos": [
+     19,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "DARK_DWARF",
+    "pos": [
+     20,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       26,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "GOBLIN",
+    "pos": [
+     19,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "GOBLIN",
+    "pos": [
+     20,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       26,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "GOBLIN",
+    "pos": [
+     21,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       13
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "GOBLIN",
+    "pos": [
+     27,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "GOBLIN",
+    "pos": [
+     27,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       13
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       27,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "GOBLIN",
+    "pos": [
+     28,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       26,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       15
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 2,
+  "map": "ch1 reg0 v3",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "GIANT_BAT",
+    "pos": [
+     21,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "GIANT_BAT",
+    "pos": [
+     20,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "GIANT_BAT",
+    "pos": [
+     8,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "GIANT_BAT",
+    "pos": [
+     9,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       9,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "GIANT_BAT",
+    "pos": [
+     10,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     20,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     20,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     18,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     17,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     17,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "DARK_DWARF",
+    "pos": [
+     11,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "DARK_DWARF",
+    "pos": [
+     10,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "DARK_DWARF",
+    "pos": [
+     9,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "DARK_DWARF",
+    "pos": [
+     13,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "DARK_DWARF",
+    "pos": [
+     16,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 3,
+  "map": "ch1 reg2 v4",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "CAIN",
+    "pos": [
+     16,
+     2
+    ],
+    "spawn_flag": 15,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     15,
+     255
+    ],
+    "spawn_flag": 15,
+    "spawns": 1,
+    "region_here": null,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "GIANT_BAT",
+    "pos": [
+     21,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       197,
+       255
+      ],
+      "path": [
+       [
+        20,
+        12
+       ],
+       [
+        15,
+        13
+       ],
+       [
+        16,
+        16
+       ],
+       [
+        21,
+        15
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "GIANT_BAT",
+    "pos": [
+     20,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       190,
+       255
+      ],
+      "path": [
+       [
+        15,
+        13
+       ],
+       [
+        16,
+        16
+       ],
+       [
+        21,
+        15
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "GIANT_BAT",
+    "pos": [
+     15,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       183,
+       255
+      ],
+      "path": [
+       [
+        16,
+        16
+       ],
+       [
+        21,
+        15
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "GIANT_BAT",
+    "pos": [
+     16,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       176,
+       255
+      ],
+      "path": [
+       [
+        21,
+        15
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "DARK_DWARF",
+    "pos": [
+     20,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       14
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       18
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "DARK_DWARF",
+    "pos": [
+     21,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       14
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       18
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "DARK_DWARF",
+    "pos": [
+     22,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       14
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       18
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "DARK_DWARF",
+    "pos": [
+     23,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       14
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       17
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       21
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     12,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "2+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       5
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     13,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       9
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       5
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     14,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       9
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       5
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "RUNE_KNIGHT",
+    "pos": [
+     15,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "2+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       5
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "SNIPER",
+    "pos": [
+     16,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       15
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       11
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "SNIPER",
+    "pos": [
+     18,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       15
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       13
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     17,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       15
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       6
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 4,
+  "map": "ch2 reg0 v3",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     6,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     4,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       6
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       4,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "ZOMBIE_1",
+    "pos": [
+     6,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       4
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "ZOMBIE_1",
+    "pos": [
+     8,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       5
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "ZOMBIE_1",
+    "pos": [
+     7,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       6
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "ZOMBIE_1",
+    "pos": [
+     4,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       7
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       4,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     11,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "SNIPER",
+    "pos": [
+     13,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "SNIPER",
+    "pos": [
+     9,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       9,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "GIANT_BAT",
+    "pos": [
+     15,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       57,
+       255
+      ],
+      "path": [
+       [
+        11,
+        13
+       ],
+       [
+        9,
+        14
+       ],
+       [
+        11,
+        17
+       ],
+       [
+        13,
+        14
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "GIANT_BAT",
+    "pos": [
+     6,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       50,
+       255
+      ],
+      "path": [
+       [
+        9,
+        14
+       ],
+       [
+        11,
+        17
+       ],
+       [
+        13,
+        14
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "GIANT_BAT",
+    "pos": [
+     7,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       43,
+       255
+      ],
+      "path": [
+       [
+        11,
+        17
+       ],
+       [
+        13,
+        14
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "GIANT_BAT",
+    "pos": [
+     16,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       36,
+       255
+      ],
+      "path": [
+       [
+        13,
+        14
+       ],
+       [
+        "jump",
+        -9
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "DARK_DWARF",
+    "pos": [
+     12,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "DARK_DWARF",
+    "pos": [
+     13,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       23
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "DARK_DWARF",
+    "pos": [
+     12,
+     24
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       24
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 5,
+  "map": "ch2 reg3 v2",
+  "size": [
+   28,
+   24
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "SKELETON_3",
+    "pos": [
+     24,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     23,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       7
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     24,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       7
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     25,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       6
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "GIANT_BAT",
+    "pos": [
+     21,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "GIANT_BAT",
+    "pos": [
+     20,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "GIANT_BAT",
+    "pos": [
+     22,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "GIANT_BAT",
+    "pos": [
+     19,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "GIANT_BAT",
+    "pos": [
+     21,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "DARK_MAGE_2",
+    "pos": [
+     14,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "SNIPER",
+    "pos": [
+     14,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "SNIPER",
+    "pos": [
+     14,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "ZOMBIE_1",
+    "pos": [
+     13,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "ZOMBIE_1",
+    "pos": [
+     7,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "ZOMBIE_1",
+    "pos": [
+     8,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       13
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 6,
+  "map": "ch2 reg4 v3",
+  "size": [
+   32,
+   28
+  ],
+  "regions": [
+   1,
+   2
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "MISHAELA",
+    "pos": [
+     16,
+     8
+    ],
+    "spawn_flag": 15,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "MARIONETTE",
+    "pos": [
+     15,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DIRE_CLOWN",
+    "pos": [
+     13,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       9
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DIRE_CLOWN",
+    "pos": [
+     17,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       9
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "EVIL_PUPPET",
+    "pos": [
+     12,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "MANNEQUIN",
+    "pos": [
+     16,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "EVIL_PUPPET",
+    "pos": [
+     19,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "EVIL_PUPPET",
+    "pos": [
+     10,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "MANNEQUIN",
+    "pos": [
+     10,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "MANNEQUIN",
+    "pos": [
+     11,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "GIANT_BAT",
+    "pos": [
+     25,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "GIANT_BAT",
+    "pos": [
+     26,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "GIANT_BAT",
+    "pos": [
+     25,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 7,
+  "map": "ch2 reg5 v4",
+  "size": [
+   16,
+   16
+  ],
+  "regions": [
+   1,
+   2
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "DARKSOL",
+    "pos": [
+     8,
+     11
+    ],
+    "spawn_flag": 14,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "GHOUL",
+    "pos": [
+     3,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       3,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "SKELETON_1",
+    "pos": [
+     6,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "SKELETON_1",
+    "pos": [
+     2,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "SKELETON_1",
+    "pos": [
+     4,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "ZOMBIE_2",
+    "pos": [
+     10,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "ZOMBIE_2",
+    "pos": [
+     11,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "ZOMBIE_2",
+    "pos": [
+     9,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "ZOMBIE_2",
+    "pos": [
+     11,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "ZOMBIE_1",
+    "pos": [
+     3,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "ZOMBIE_1",
+    "pos": [
+     11,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 8,
+  "map": "ch3 reg1 v1",
+  "size": [
+   24,
+   42
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "LIZARDMAN",
+    "pos": [
+     10,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       23
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "SKELETON_1",
+    "pos": [
+     8,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "MASTER_MAGE",
+    "pos": [
+     8,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       23
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       21
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     7,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       24
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       21
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "DARK_MAGE_1",
+    "pos": [
+     14,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       21
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       19
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "SKELETON_1",
+    "pos": [
+     16,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       20
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     17,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "SKELETON_1",
+    "pos": [
+     18,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     15,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       15
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "SKELETON_1",
+    "pos": [
+     18,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       15
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "DARK_ELF",
+    "pos": [
+     14,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       8
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "DARK_ELF",
+    "pos": [
+     15,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       9
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "DARK_MAGE_1",
+    "pos": [
+     17,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     17,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "SKELETON_1",
+    "pos": [
+     10,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "SKELETON_1",
+    "pos": [
+     10,
+     25
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       25
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 9,
+  "map": "ch3 reg0 v2",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "SKELETON_1",
+    "pos": [
+     13,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "SKELETON_1",
+    "pos": [
+     12,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       23
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "SKELETON_1",
+    "pos": [
+     15,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       23
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DARK_ELF",
+    "pos": [
+     15,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       21
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "DARK_ELF",
+    "pos": [
+     17,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     16,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "LIZARDMAN",
+    "pos": [
+     16,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       18
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "SKELETON_1",
+    "pos": [
+     15,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       18
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "SKELETON_1",
+    "pos": [
+     17,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       19
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     23,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       11
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     24,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     27,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       9,
+       7
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       11
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     26,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       8
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     23,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       3
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "LIZARDMAN",
+    "pos": [
+     22,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       3
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 10,
+  "map": "ch3 reg2 v3",
+  "size": [
+   48,
+   20
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "GOBLIN",
+    "pos": [
+     36,
+     16
+    ],
+    "spawn_flag": 15,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "LASER_EYE",
+    "pos": [
+     32,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       32,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     37,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "MOVE_TO",
+      "p": [
+       36,
+       15
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       35,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "LIZARDMAN",
+    "pos": [
+     35,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       35,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     34,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "MOVE_TO",
+      "p": [
+       36,
+       16
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       34,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     32,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       29,
+       7
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       32,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "LIZARDMAN",
+    "pos": [
+     22,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "LIZARDMAN",
+    "pos": [
+     22,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     16,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     17,
+     2
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     20,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     16,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "LIZARDMAN",
+    "pos": [
+     20,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "DARK_ELF",
+    "pos": [
+     18,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       27,
+       10
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "DARK_ELF",
+    "pos": [
+     19,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       11
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "DARK_ELF",
+    "pos": [
+     21,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       30,
+       11
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "LIZARDMAN",
+    "pos": [
+     9,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 11,
+  "map": "ch4 reg0 v1",
+  "size": [
+   48,
+   20
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "ELLIOTT",
+    "pos": [
+     41,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       41,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "ARTILLERY_3",
+    "pos": [
+     40,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       40,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     40,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       41,
+       10
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       40,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     39,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       39,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     39,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       39,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     39,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       39,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     39,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       39,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     38,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     38,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       26,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     38,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     34,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       0,
+       7
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       30,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     34,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       0,
+       9
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       30,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     36,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "LIZARDMAN",
+    "pos": [
+     34,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       27,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "LIZARDMAN",
+    "pos": [
+     35,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       27,
+       7
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "LIZARDMAN",
+    "pos": [
+     35,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       27,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "LIZARDMAN",
+    "pos": [
+     35,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "LIZARDMAN",
+    "pos": [
+     34,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       10
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 12,
+  "map": "ch4 reg2 v2",
+  "size": [
+   24,
+   40
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "HELLHOUND",
+    "pos": [
+     9,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       9,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     8,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       8
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     10,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     3,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       13
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       3,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     5,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       12
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       4,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "ARTILLERY_3",
+    "pos": [
+     16,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     12,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4+5",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       15
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     12,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     14,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     16,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       18
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     7,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       19
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     11,
+     26
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       26
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "HELLHOUND",
+    "pos": [
+     9,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       9,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     7,
+     31
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       32
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     6,
+     33
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 13,
+  "map": "ch4 reg5 v3",
+  "size": [
+   20,
+   20
+  ],
+  "regions": [
+   1
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "BALBAZAK",
+    "pos": [
+     11,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "EVIL_PUPPET",
+    "pos": [
+     7,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       6
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "HELLHOUND",
+    "pos": [
+     8,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "ARTILLERY_3",
+    "pos": [
+     5,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "ARTILLERY_3",
+    "pos": [
+     6,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "ARTILLERY_3",
+    "pos": [
+     7,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "HELLHOUND",
+    "pos": [
+     4,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "DARK_PRIEST_1",
+    "pos": [
+     6,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     5,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "SILVER_KNIGHT",
+    "pos": [
+     6,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "SEABAT",
+    "pos": [
+     10,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "SEABAT",
+    "pos": [
+     14,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "SEABAT",
+    "pos": [
+     12,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "SEABAT",
+    "pos": [
+     11,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "SEABAT",
+    "pos": [
+     15,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 14,
+  "map": "ch5 reg1 v1",
+  "size": [
+   28,
+   36
+  ],
+  "regions": [
+   1,
+   2
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "SEABAT",
+    "pos": [
+     6,
+     2
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "SEABAT",
+    "pos": [
+     8,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "SEABAT",
+    "pos": [
+     3,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "SEABAT",
+    "pos": [
+     23,
+     2
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     24,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "CONCH",
+    "pos": [
+     5,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "CONCH",
+    "pos": [
+     7,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "SHELLFISH",
+    "pos": [
+     7,
+     24
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     21,
+     29
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     22,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "CONCH",
+    "pos": [
+     23,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "SHELLFISH",
+    "pos": [
+     25,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       15
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 15,
+  "map": "ch5 reg2 v2",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "MASTER_MAGE",
+    "pos": [
+     15,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       3
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "HELLHOUND",
+    "pos": [
+     14,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "HELLHOUND",
+    "pos": [
+     16,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "WORM",
+    "pos": [
+     14,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "5",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       3
+      ]
+     },
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       7
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "SKELETON_3",
+    "pos": [
+     15,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "5",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       4
+      ]
+     },
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       7
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "WORM",
+    "pos": [
+     17,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 5,
+    "cmds": [
+     {
+      "regions": "5",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       3
+      ]
+     },
+     {
+      "regions": "4",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       7
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       9
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "HELLHOUND",
+    "pos": [
+     6,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       16
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "SKELETON_3",
+    "pos": [
+     8,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       14
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       19
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "SKELETON_3",
+    "pos": [
+     14,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "WORM",
+    "pos": [
+     15,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "SKELETON_3",
+    "pos": [
+     16,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "HELLHOUND",
+    "pos": [
+     15,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       18
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "SKELETON_3",
+    "pos": [
+     25,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       15
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "HELLHOUND",
+    "pos": [
+     22,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4+5",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       16
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "SEABAT",
+    "pos": [
+     29,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "SEABAT",
+    "pos": [
+     29,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "SEABAT",
+    "pos": [
+     2,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "SEABAT",
+    "pos": [
+     3,
+     26
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 16,
+  "map": "ch5 reg3 v3",
+  "size": [
+   28,
+   36
+  ],
+  "regions": [
+   1,
+   2,
+   3
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "GARGOYLE",
+    "pos": [
+     14,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       23
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     4,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "PEGASUS_KNIGHT_1",
+    "pos": [
+     24,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "SEABAT",
+    "pos": [
+     13,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "SEABAT",
+    "pos": [
+     15,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "SEABAT",
+    "pos": [
+     14,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "SEABAT",
+    "pos": [
+     13,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "SEABAT",
+    "pos": [
+     15,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "CONCH",
+    "pos": [
+     14,
+     26
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       84,
+       255
+      ],
+      "path": [
+       [
+        17,
+        24
+       ],
+       [
+        17,
+        19
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "CONCH",
+    "pos": [
+     13,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       81,
+       255
+      ],
+      "path": [
+       [
+        12,
+        23
+       ],
+       [
+        13,
+        19
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "CONCH",
+    "pos": [
+     15,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       78,
+       255
+      ],
+      "path": [
+       [
+        18,
+        25
+       ],
+       [
+        18,
+        20
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "CONCH",
+    "pos": [
+     14,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       75,
+       255
+      ],
+      "path": [
+       [
+        13,
+        23
+       ],
+       [
+        13,
+        18
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "CONCH",
+    "pos": [
+     12,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "CONCH",
+    "pos": [
+     19,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "SHELLFISH",
+    "pos": [
+     14,
+     26
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       30,
+       255
+      ],
+      "path": [
+       [
+        17,
+        24
+       ],
+       [
+        17,
+        19
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "SHELLFISH",
+    "pos": [
+     13,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       27,
+       255
+      ],
+      "path": [
+       [
+        12,
+        23
+       ],
+       [
+        13,
+        19
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "SHELLFISH",
+    "pos": [
+     15,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       24,
+       255
+      ],
+      "path": [
+       [
+        18,
+        25
+       ],
+       [
+        18,
+        20
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "SHELLFISH",
+    "pos": [
+     14,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       21,
+       255
+      ],
+      "path": [
+       [
+        13,
+        23
+       ],
+       [
+        13,
+        18
+       ],
+       "end"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 17,
+  "map": "ch6 reg0 v1",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "DURAHAN_1",
+    "pos": [
+     27,
+     2
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       27,
+       2
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     28,
+     2
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       2
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "MASTER_MAGE",
+    "pos": [
+     28,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       3
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "ARTILLERY_2",
+    "pos": [
+     27,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       27,
+       3
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "ARTILLERY_2",
+    "pos": [
+     28,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3",
+      "cmd": "MOVE_TO",
+      "p": [
+       28,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "GOLEM",
+    "pos": [
+     22,
+     3
+    ],
+    "spawn_flag": 3,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "GOLEM",
+    "pos": [
+     23,
+     3
+    ],
+    "spawn_flag": 3,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "GOLEM",
+    "pos": [
+     24,
+     4
+    ],
+    "spawn_flag": 3,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "GOLEM",
+    "pos": [
+     25,
+     5
+    ],
+    "spawn_flag": 3,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "GOLEM",
+    "pos": [
+     25,
+     6
+    ],
+    "spawn_flag": 3,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "MASTER_MAGE",
+    "pos": [
+     17,
+     5
+    ],
+    "spawn_flag": 2,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "MASTER_MAGE",
+    "pos": [
+     19,
+     6
+    ],
+    "spawn_flag": 2,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "MASTER_MAGE",
+    "pos": [
+     20,
+     7
+    ],
+    "spawn_flag": 2,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "WORM",
+    "pos": [
+     18,
+     5
+    ],
+    "spawn_flag": 2,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "WORM",
+    "pos": [
+     20,
+     6
+    ],
+    "spawn_flag": 2,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "WORM",
+    "pos": [
+     20,
+     8
+    ],
+    "spawn_flag": 2,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "ARTILLERY_2",
+    "pos": [
+     15,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "ARTILLERY_2",
+    "pos": [
+     16,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 18,
+    "class": "ARTILLERY_2",
+    "pos": [
+     17,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 18,
+  "map": "ch6 reg2 v2",
+  "size": [
+   40,
+   24
+  ],
+  "regions": [
+   1,
+   2,
+   3
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "CAIN",
+    "pos": [
+     24,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     25,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DURAHAN_1",
+    "pos": [
+     23,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DURAHAN_1",
+    "pos": [
+     26,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       16
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "MASTER_MAGE",
+    "pos": [
+     25,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       16
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     15,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "MASTER_MAGE",
+    "pos": [
+     15,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "MASTER_MAGE",
+    "pos": [
+     16,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "GOLEM",
+    "pos": [
+     13,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "GOLEM",
+    "pos": [
+     13,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "GOLEM",
+    "pos": [
+     13,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "GOLEM",
+    "pos": [
+     13,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "GARGOYLE",
+    "pos": [
+     4,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "GARGOYLE",
+    "pos": [
+     5,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "GARGOYLE",
+    "pos": [
+     6,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       10
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 19,
+  "map": "ch6 reg0 v3",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "BOWRIDER",
+    "pos": [
+     15,
+     29
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     15,
+     30
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "GOLEM",
+    "pos": [
+     17,
+     30
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "MASTER_MAGE",
+    "pos": [
+     26,
+     29
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "MASTER_MAGE",
+    "pos": [
+     28,
+     30
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "GOLEM",
+    "pos": [
+     30,
+     25
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "MASTER_MAGE",
+    "pos": [
+     18,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "MASTER_MAGE",
+    "pos": [
+     24,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "GOLEM",
+    "pos": [
+     25,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     21,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "GOLEM",
+    "pos": [
+     19,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "BOWRIDER",
+    "pos": [
+     18,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "GARGOYLE",
+    "pos": [
+     12,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "GARGOYLE",
+    "pos": [
+     23,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "GARGOYLE",
+    "pos": [
+     25,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "BELIAL",
+    "pos": [
+     12,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "BELIAL",
+    "pos": [
+     15,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "BELIAL",
+    "pos": [
+     19,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 20,
+  "map": "ch6 reg3 v4",
+  "size": [
+   28,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "MISHAELA",
+    "pos": [
+     14,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       135,
+       255
+      ],
+      "path": [
+       [
+        20,
+        15
+       ],
+       [
+        20,
+        11
+       ],
+       [
+        14,
+        11
+       ],
+       [
+        14,
+        4
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "DURAHAN_2",
+    "pos": [
+     13,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       136,
+       255
+      ],
+      "path": [
+       [
+        19,
+        15
+       ],
+       [
+        21,
+        11
+       ],
+       [
+        15,
+        11
+       ],
+       [
+        13,
+        5
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DURAHAN_2",
+    "pos": [
+     15,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       137,
+       255
+      ],
+      "path": [
+       [
+        21,
+        15
+       ],
+       [
+        19,
+        11
+       ],
+       [
+        14,
+        10
+       ],
+       [
+        16,
+        4
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     21,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "MASTER_MAGE",
+    "pos": [
+     22,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "MASTER_MAGE",
+    "pos": [
+     23,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       23,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "MASTER_MAGE",
+    "pos": [
+     22,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "MASTER_MAGE",
+    "pos": [
+     23,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       22,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "BOWRIDER",
+    "pos": [
+     17,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "BOWRIDER",
+    "pos": [
+     18,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "BOWRIDER",
+    "pos": [
+     19,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "BELIAL",
+    "pos": [
+     10,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       66,
+       255
+      ],
+      "path": [
+       [
+        14,
+        3
+       ],
+       [
+        10,
+        4
+       ],
+       [
+        10,
+        6
+       ],
+       [
+        14,
+        7
+       ],
+       [
+        18,
+        6
+       ],
+       [
+        18,
+        4
+       ],
+       [
+        "jump",
+        -13
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "BELIAL",
+    "pos": [
+     14,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       61,
+       255
+      ],
+      "path": [
+       [
+        10,
+        6
+       ],
+       [
+        14,
+        7
+       ],
+       [
+        18,
+        6
+       ],
+       [
+        18,
+        4
+       ],
+       [
+        "jump",
+        -13
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "BELIAL",
+    "pos": [
+     18,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       56,
+       255
+      ],
+      "path": [
+       [
+        18,
+        6
+       ],
+       [
+        18,
+        4
+       ],
+       [
+        "jump",
+        -13
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "GARGOYLE",
+    "pos": [
+     8,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "GARGOYLE",
+    "pos": [
+     9,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "GARGOYLE",
+    "pos": [
+     10,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 21,
+  "map": "ch7 reg0 v1",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "MINOTAUR_1",
+    "pos": [
+     27,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "TORCH_EYE",
+    "pos": [
+     25,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "TORCH_EYE",
+    "pos": [
+     25,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DURAHAN_2",
+    "pos": [
+     22,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "DURAHAN_2",
+    "pos": [
+     20,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "DURAHAN_2",
+    "pos": [
+     18,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "DURAHAN_2",
+    "pos": [
+     17,
+     6
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "WYVERN",
+    "pos": [
+     29,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "WYVERN",
+    "pos": [
+     28,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "JET",
+    "pos": [
+     17,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "JET",
+    "pos": [
+     21,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "BELIAL",
+    "pos": [
+     16,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "BELIAL",
+    "pos": [
+     15,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 22,
+  "map": "ch7 reg2 v2",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "DEMON_MASTER_2",
+    "pos": [
+     15,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       4
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "WYVERN",
+    "pos": [
+     20,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       139,
+       255
+      ],
+      "path": [
+       [
+        11,
+        2
+       ],
+       [
+        20,
+        3
+       ],
+       [
+        19,
+        6
+       ],
+       [
+        10,
+        5
+       ],
+       [
+        "jump",
+        -9
+       ],
+       [
+        25,
+        8
+       ],
+       [
+        24,
+        11
+       ],
+       [
+        19,
+        9
+       ],
+       [
+        "jump",
+        -7
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "WYVERN",
+    "pos": [
+     10,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2+3",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       134,
+       255
+      ],
+      "path": [
+       [
+        19,
+        6
+       ],
+       [
+        10,
+        5
+       ],
+       [
+        "jump",
+        -9
+       ],
+       [
+        25,
+        8
+       ],
+       [
+        24,
+        11
+       ],
+       [
+        19,
+        9
+       ],
+       [
+        "jump",
+        -7
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "STEEL_CLAW",
+    "pos": [
+     18,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       14
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "STEEL_CLAW",
+    "pos": [
+     5,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       10
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "STEEL_CLAW",
+    "pos": [
+     5,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "STEEL_CLAW",
+    "pos": [
+     12,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       19
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "TORCH_EYE",
+    "pos": [
+     8,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       11
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "TORCH_EYE",
+    "pos": [
+     18,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       13
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "TORCH_EYE",
+    "pos": [
+     3,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       4,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "JET",
+    "pos": [
+     25,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       68,
+       255
+      ],
+      "path": [
+       [
+        25,
+        8
+       ],
+       [
+        24,
+        11
+       ],
+       [
+        19,
+        9
+       ],
+       [
+        "jump",
+        -7
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "JET",
+    "pos": [
+     24,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       61,
+       255
+      ],
+      "path": [
+       [
+        24,
+        11
+       ],
+       [
+        19,
+        9
+       ],
+       [
+        "jump",
+        -7
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "JET",
+    "pos": [
+     19,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 4,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       54,
+       255
+      ],
+      "path": [
+       [
+        19,
+        9
+       ],
+       [
+        "jump",
+        -7
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "ICE_WORM",
+    "pos": [
+     25,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       26,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "ICE_WORM",
+    "pos": [
+     5,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "ICE_WORM",
+    "pos": [
+     5,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       21
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "ICE_WORM",
+    "pos": [
+     12,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       20
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "ICE_WORM",
+    "pos": [
+     17,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3+4",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       18
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 23,
+  "map": "ch7 reg3 v3",
+  "size": [
+   28,
+   16
+  ],
+  "regions": [
+   1
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "CHAOS",
+    "pos": [
+     7,
+     1
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "MINOTAUR_1",
+    "pos": [
+     6,
+     1
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "MINOTAUR_1",
+    "pos": [
+     8,
+     1
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "DEMON_MASTER_2",
+    "pos": [
+     5,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "ICE_WORM",
+    "pos": [
+     6,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "ICE_WORM",
+    "pos": [
+     7,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "DEMON_MASTER_2",
+    "pos": [
+     8,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "TORCH_EYE",
+    "pos": [
+     12,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "TORCH_EYE",
+    "pos": [
+     13,
+     4
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "TORCH_EYE",
+    "pos": [
+     14,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "ICE_WORM",
+    "pos": [
+     6,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "DEMON_MASTER_2",
+    "pos": [
+     4,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "ICE_WORM",
+    "pos": [
+     3,
+     7
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "TORCH_EYE",
+    "pos": [
+     2,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "JET",
+    "pos": [
+     13,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "JET",
+    "pos": [
+     9,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "JET",
+    "pos": [
+     21,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "JET",
+    "pos": [
+     21,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 24,
+  "map": "ch7 reg0 v7",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     15,
+     30
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       30
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "CERBERUS",
+    "pos": [
+     8,
+     25
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "HIGH_PRIEST_2",
+    "pos": [
+     12,
+     24
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "MINOTAUR_1",
+    "pos": [
+     13,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     8,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     11,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "CERBERUS",
+    "pos": [
+     19,
+     24
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "CERBERUS",
+    "pos": [
+     17,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "MINOTAUR_1",
+    "pos": [
+     12,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "MINOTAUR_1",
+    "pos": [
+     14,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "DEMON_MASTER_1",
+    "pos": [
+     9,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "DEMON_MASTER_1",
+    "pos": [
+     11,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "HORSEMAN",
+    "pos": [
+     11,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "HORSEMAN",
+    "pos": [
+     13,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "HORSEMAN",
+    "pos": [
+     15,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     26,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "CERBERUS",
+    "pos": [
+     25,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     24,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 25,
+  "map": "ch8 reg1 v1",
+  "size": [
+   24,
+   30
+  ],
+  "regions": [
+   1,
+   2
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "RAMLADU",
+    "pos": [
+     16,
+     2
+    ],
+    "spawn_flag": 14,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "HIGH_PRIEST_2",
+    "pos": [
+     7,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "CERBERUS",
+    "pos": [
+     6,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "CERBERUS",
+    "pos": [
+     7,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       7,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "CERBERUS",
+    "pos": [
+     8,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "HIGH_PRIEST_2",
+    "pos": [
+     19,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     18,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     19,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       19,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     20,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "HORSEMAN",
+    "pos": [
+     12,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "HORSEMAN",
+    "pos": [
+     13,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "HORSEMAN",
+    "pos": [
+     14,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     11,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       11,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     13,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     15,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "CHIMAERA_2",
+    "pos": [
+     9,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "CHIMAERA_2",
+    "pos": [
+     12,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "CHIMAERA_2",
+    "pos": [
+     15,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 18,
+    "class": "CHIMAERA_2",
+    "pos": [
+     8,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 19,
+    "class": "CHIMAERA_2",
+    "pos": [
+     11,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       14
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 26,
+  "map": "ch8 reg2 v2",
+  "size": [
+   24,
+   40
+  ],
+  "regions": [
+   0,
+   1,
+   2
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "RAMLADU",
+    "pos": [
+     16,
+     5
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       5
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "STEEL_CLAW",
+    "pos": [
+     10,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "STEEL_CLAW",
+    "pos": [
+     10,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "STEEL_CLAW",
+    "pos": [
+     10,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "STEEL_CLAW",
+    "pos": [
+     16,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "STEEL_CLAW",
+    "pos": [
+     16,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "STEEL_CLAW",
+    "pos": [
+     16,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "TORCH_EYE",
+    "pos": [
+     12,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "TORCH_EYE",
+    "pos": [
+     12,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "TORCH_EYE",
+    "pos": [
+     12,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "TORCH_EYE",
+    "pos": [
+     14,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "TORCH_EYE",
+    "pos": [
+     14,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "TORCH_EYE",
+    "pos": [
+     14,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 0,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 27,
+  "map": "ch8 reg4 v3",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "COLOSSUS_1",
+    "pos": [
+     16,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       3
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "COLOSSUS_2",
+    "pos": [
+     15,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       121,
+       255
+      ],
+      "path": [
+       [
+        11,
+        7
+       ],
+       [
+        8,
+        10
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "COLOSSUS_3",
+    "pos": [
+     17,
+     3
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "FOLLOW_PATH",
+      "p": [
+       118,
+       255
+      ],
+      "path": [
+       [
+        20,
+        7
+       ],
+       [
+        22,
+        10
+       ],
+       "end"
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "JET",
+    "pos": [
+     16,
+     11
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "JET",
+    "pos": [
+     16,
+     12
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "JET",
+    "pos": [
+     16,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "HORSEMAN",
+    "pos": [
+     10,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       18
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "HORSEMAN",
+    "pos": [
+     12,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       18
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "CHIMAERA_2",
+    "pos": [
+     20,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "CHIMAERA_2",
+    "pos": [
+     21,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "CHIMAERA_2",
+    "pos": [
+     22,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     11,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     11,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     10,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "2+3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     25,
+     20
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     24,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     23,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "CHIMAERA_2",
+    "pos": [
+     8,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 18,
+    "class": "CHIMAERA_2",
+    "pos": [
+     7,
+     23
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 19,
+    "class": "CHIMAERA_2",
+    "pos": [
+     6,
+     24
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 28,
+  "map": "ch8 reg6 v4",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1,
+   2,
+   3
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "DARKSOL",
+    "pos": [
+     15,
+     13
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       13
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     13,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "BLUE_DRAGON",
+    "pos": [
+     17,
+     14
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       14
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "STEEL_CLAW",
+    "pos": [
+     3,
+     27
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 2,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "STEEL_CLAW",
+    "pos": [
+     27,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 5,
+    "class": "TORCH_EYE",
+    "pos": [
+     14,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       14
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 6,
+    "class": "STEEL_CLAW",
+    "pos": [
+     15,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       14
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 7,
+    "class": "TORCH_EYE",
+    "pos": [
+     16,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "MOVE_TO",
+      "p": [
+       16,
+       14
+      ]
+     },
+     {
+      "regions": "1+2",
+      "cmd": "MOVE_TO",
+      "p": [
+       14,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 8,
+    "class": "STEEL_CLAW",
+    "pos": [
+     9,
+     16
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       17
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       9,
+       16
+      ]
+     }
+    ]
+   },
+   {
+    "i": 9,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     8,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       6,
+       18
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       8,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 10,
+    "class": "TORCH_EYE",
+    "pos": [
+     10,
+     15
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       5,
+       19
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       10,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "i": 11,
+    "class": "STEEL_CLAW",
+    "pos": [
+     28,
+     19
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       16
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       17
+      ]
+     }
+    ]
+   },
+   {
+    "i": 12,
+    "class": "HIGH_PRIEST_1",
+    "pos": [
+     28,
+     18
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       21,
+       15
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       24,
+       18
+      ]
+     }
+    ]
+   },
+   {
+    "i": 13,
+    "class": "TORCH_EYE",
+    "pos": [
+     28,
+     17
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 3,
+    "cmds": [
+     {
+      "regions": "3",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     },
+     {
+      "regions": "2",
+      "cmd": "MOVE_TO",
+      "p": [
+       20,
+       15
+      ]
+     },
+     {
+      "regions": "1",
+      "cmd": "MOVE_TO",
+      "p": [
+       25,
+       19
+      ]
+     }
+    ]
+   },
+   {
+    "i": 14,
+    "class": "TORCH_EYE",
+    "pos": [
+     10,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 15,
+    "class": "TORCH_EYE",
+    "pos": [
+     10,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       13,
+       24
+      ]
+     }
+    ]
+   },
+   {
+    "i": 16,
+    "class": "TORCH_EYE",
+    "pos": [
+     21,
+     21
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       22
+      ]
+     }
+    ]
+   },
+   {
+    "i": 17,
+    "class": "TORCH_EYE",
+    "pos": [
+     20,
+     22
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       17,
+       24
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "battle": 29,
+  "map": "ch8 reg7 v5",
+  "size": [
+   32,
+   32
+  ],
+  "regions": [
+   1
+  ],
+  "enemies": [
+   {
+    "i": 0,
+    "class": "DARK_DRAGON_1",
+    "pos": [
+     15,
+     10
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       15,
+       12
+      ]
+     }
+    ]
+   },
+   {
+    "i": 1,
+    "class": "DARK_DRAGON_2",
+    "pos": [
+     12,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       12,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 2,
+    "class": "DARK_DRAGON_2",
+    "pos": [
+     18,
+     8
+    ],
+    "spawn_flag": 0,
+    "spawns": 1,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "MOVE_TO",
+      "p": [
+       18,
+       11
+      ]
+     }
+    ]
+   },
+   {
+    "i": 3,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     10,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 15,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   },
+   {
+    "i": 4,
+    "class": "ARMED_SKELETON",
+    "pos": [
+     20,
+     9
+    ],
+    "spawn_flag": 0,
+    "spawns": 15,
+    "region_here": 1,
+    "cmds": [
+     {
+      "regions": "1+2+3+4+5+6+7",
+      "cmd": "CHARGE",
+      "p": [
+       255,
+       255
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

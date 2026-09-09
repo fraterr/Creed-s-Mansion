@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fraterr.github.io/Creed-s-Mansion/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,6 +61,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force/enemy-ai/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf1-ai-b00-gate.png</image:loc>
+      <image:title>The Ancient Gate battle of Shining Force coloured by AI region</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://fraterr.github.io/Creed-s-Mansion/assets/img/sf1-ai-all-battles.png</image:loc>
+      <image:title>All thirty Shining Force battle maps coloured by AI region</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force/japanese-script/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -98,7 +112,7 @@
   </url>
   <url>
     <loc>https://fraterr.github.io/Creed-s-Mansion/games/shining-force/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
