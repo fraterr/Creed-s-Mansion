@@ -332,13 +332,16 @@
 
   <div class="win tldr">
     <h3>Testing status</h3>
-    <p>The patched ROM has been verified by re-decoding every one of the 2,232 strings out
-    of the finished image with an independent decoder, on the vanilla ROM and on a ROM
-    already carrying Turn Queue &amp; Tactics v16. It has not yet had a full playthrough in
-    an emulator. If a line looks wrong, wraps oddly, or a menu shows something strange,
-    quote the text and where you saw it on the <a href="../../../contacts/">contact
-    page</a> and it will be fixed in the next version. The full script is published above so
-    anyone can read it without playing.</p>
+    <p>Every one of the 1,905 non-empty strings has been pushed through the game's own text
+    engine in BizHawk, on a test build that loops the text routine over the whole script
+    with an eight-letter hero name, while a Lua hook logged the pixel position of every
+    line break: 4,584 line ends, all at the position the wrapper predicted, and no word
+    split at the edge. The item, magic and member menus, the shop and church prompts and
+    the save screen were checked by hand in the emulator, on the plain ROM and on the Turn
+    Queue build. What has not been done is a full playthrough, so a line that reads
+    strangely in context is still possible. If you see one, quote the text and where you
+    saw it on the <a href="../../../contacts/">contact page</a>. The full script is
+    published above so anyone can read it without playing.</p>
   </div>
 
   <hr class="rule">
@@ -379,8 +382,8 @@
 
     <h3>Does it work on real hardware?</h3>
     <p>It should: the ROM is a plain 2 MB image with the header size field updated, and
-    Shining Force never verifies its own checksum. It has not been tried on a cartridge
-    yet.</p>
+    Shining Force never verifies its own checksum. It runs in BizHawk's Genesis Plus GX
+    core, which is strict about such things; it has not been tried on a cartridge yet.</p>
 
     <h3>Will there be an Italian version?</h3>
     <p>The tooling is language-agnostic as long as the language fits the ROM's font, which
