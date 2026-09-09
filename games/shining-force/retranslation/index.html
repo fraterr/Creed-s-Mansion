@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shining Force Retranslation Patch: The Japanese Script in English (IPS)</title>
+<meta name="description" content="A retranslation romhack for Shining Force on the Mega Drive and Genesis: 1,734 lines of dialogue translated fresh from the Japanese ROM, the original names restored, delivered as an IPS patch for the US ROM that also works on top of Turn Queue &amp; Tactics.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force/retranslation/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force/retranslation/">
+<meta property="og:title" content="Shining Force Retranslation Patch: The Japanese Script in English">
+<meta property="og:description" content="1,734 lines translated fresh from the Japanese ROM, the original names restored, as an IPS patch for the US ROM. Works on top of Turn Queue &amp; Tactics too.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf1-retranslation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Two Shining Force dialogue windows in the game's italic font: a girl asking what the hero of the story is called, and saying Max is a cool name.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shining Force Retranslation Patch: The Japanese Script in English">
+<meta name="twitter:description" content="1,734 lines translated fresh from the Japanese ROM, the original names restored, as an IPS patch for the US ROM. Works on top of Turn Queue &amp; Tactics too.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf1-retranslation.png">
+
+<link rel="icon" href="../../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/img/favicon.png">
+<link rel="preload" href="../../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>
+  .names { width: 100%; }
+  .names td.n { text-align: left; }
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.2rem 0 1.6rem; }
+  .vs > div { background: rgba(0,0,0,.25); border: 1px solid rgba(240,192,96,.25); border-radius: 6px; padding: .8rem 1rem; }
+  .vs .lbl { font-family: var(--pixel); font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: var(--gold); margin-bottom: .5rem; }
+  .vs p { margin: 0 0 .6em; color: var(--ink-dim); }
+  .vs p:last-child { margin-bottom: 0; }
+  @media (max-width: 760px) { .vs { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "Shining Force — Retranslation",
+ "alternateName": "Shining Force Japanese script retranslation patch",
+ "applicationCategory": "GameApplication",
+ "applicationSubCategory": "ROM hack",
+ "operatingSystem": "Sega Mega Drive, Sega Genesis, Genesis Plus GX, Kega Fusion, BlastEm",
+ "softwareVersion": "1.0",
+ "fileSize": "196818",
+ "datePublished": "2026-09-09",
+ "dateModified": "2026-09-09",
+ "downloadUrl": "https://fraterr.github.io/Creed-s-Mansion/downloads/ShiningForce_Retranslation_v1.0.ips",
+ "installUrl": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/retranslation/#apply",
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/retranslation/",
+ "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf1-retranslation.png",
+ "screenshot": [
+  "https://fraterr.github.io/Creed-s-Mansion/assets/img/sf1-rt-simone.png",
+  "https://fraterr.github.io/Creed-s-Mansion/assets/img/sf1-rt-cain.png",
+  "https://fraterr.github.io/Creed-s-Mansion/assets/img/sf1-rt-adam.png"
+ ],
+ "description": "A retranslation romhack for Shining Force on the Mega Drive and Genesis. Every story, town, shop and church line is translated fresh from the Japanese ROM, the original Japanese names are restored, and the whole thing is delivered as an IPS patch for the US ROM.",
+ "featureList": [
+  "1,734 dialogue strings translated from the Japanese script",
+  "Original Japanese names for characters, items, spells and enemies",
+  "Applies to the vanilla US ROM or on top of Turn Queue & Tactics v16",
+  "Full script published as a text file for review"
+ ],
+ "author": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "publisher": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "isAccessibleForFree": true,
+ "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+ "about": {
+  "@type": "VideoGame",
+  "name": "Shining Force",
+  "alternateName": "Shining Force: Kamigami no Isan",
+  "gamePlatform": ["Sega Mega Drive", "Sega Genesis"],
+  "datePublished": "1992",
+  "publisher": { "@type": "Organization", "name": "Sega" },
+  "genre": ["Tactical role-playing game", "Strategy RPG"],
+  "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force/"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Which ROM does the retranslation patch need?",
+   "acceptedAnswer": { "@type": "Answer", "text": "The US Mega Drive and Genesis release of Shining Force, 1,572,864 bytes, MD5 4b4acbe75ff7aaeb534ab78ed95910d1. It also applies cleanly on top of a ROM already patched with Turn Queue & Tactics v16. No ROM is distributed here." }
+  },
+  {
+   "@type": "Question",
+   "name": "Why is the patched ROM 2 MB?",
+   "acceptedAnswer": { "@type": "Answer", "text": "English written to say what the Japanese says takes about forty percent more bytes than the 1993 script, and the original text banks have no room to grow. The patch expands the ROM to 2 MB and moves the text, its Huffman trees and the decoder into the new area. Nothing else in the original ROM moves." }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it change gameplay?",
+   "acceptedAnswer": { "@type": "Answer", "text": "No. Only text and names change. Stats, maps, battles, item effects and the save format are untouched, and existing saves keep working." }
+  },
+  {
+   "@type": "Question",
+   "name": "Are the character names the Japanese ones?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Yes. Zylo is Zappa, Luke is Lug, Bleu is Baryu, Khris is Chip, Vankar is Vanguard, Jogurt is Yogurt, Kane is Cain, Rindo is Rindorindo, Egress is Return, Ring Reef is Frying Pan Reef, and so on. The full table is on the page." }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../../">Home</a>
+      <a href="../../../#games">Games</a>
+      <a href="../../../mods/">Mods</a>
+      <a href="../../../#about">About</a>
+      <a href="../../../contacts/">Contact</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Shining Force</a> &rsaquo; Retranslation</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Shining Force<br>Retranslation</h1>
+    <p class="sub">The Japanese script, in English, in the US ROM &middot; v1.0</p>
+  </section>
+
+  <div class="win">
+    <p>The English Shining Force is a rewrite. The 1993 localisation kept the plot, changed
+    the names, cut the frame story about the girl and her picture book, dropped the year
+    Max spent on a beach with no memory, and never once says that the masked knight is his
+    brother. I laid the two scripts side by side in <a href="../japanese-script/">The
+    Japanese Script</a>; this patch is the follow-up. It puts the Japanese text into the US
+    game, in English, line for line.</p>
+    <p>Every story scene, every townsperson, every bookshelf, shop and church line has been
+    translated fresh from the Japanese ROM. The names go back to what Camelot wrote: Zappa,
+    Lug, Baryu, Chip, Vanguard, Yogurt, Cain, Rindorindo, Frying Pan Reef. Menus and battle
+    messages keep the wording you know, with the new names substituted.</p>
+    <p class="small muted">1,734 strings translated, 171 system strings kept, 327 empty.
+    2,232 in all, same as the original.</p>
+  </div>
+
+  <div class="btnrow">
+    <a class="btn" href="../../../downloads/ShiningForce_Retranslation_v1.0.ips" download>&#9660; Download IPS patch</a>
+    <a class="btn ghost" href="../../../downloads/ShiningForce_Retranslation_v1.0_script.txt" download>Full script (text)</a>
+    <a class="btn ghost" href="#apply">How to apply it</a>
+    <span class="tag ver">v1.0</span>
+    <span class="tag plat">Mega Drive / Genesis</span>
+  </div>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-rt-simone.png" width="464" height="548" fetchpriority="high" decoding="async"
+         alt="Four Shining Force dialogue windows in the game's italic font: a girl asks you to read to her till Grandpa gets back, asks the name of the hero of this story, says Max is a cool name, and tells you to hurry up and read.">
+    <figcaption>The save screen. In the US version the girl is Simone, who lives in the world and asks
+    what she should call you. In Japanese she is a child asking you to read her a book, and the
+    hero's name is whatever you decide the hero of the story is called. Strings 002B to 002E,
+    drawn with the ROM's own font at the width the game wraps at.</figcaption>
+  </figure>
+
+  <hr class="rule">
+
+  <h2>What changes</h2>
+
+  <h3>The story you were not told</h3>
+  <p>The scenes that the US script rewrote are the reason this patch exists. Cain, the
+  masked knight who kills the king of Guardiana, takes his mask off at the Prompt gate and
+  remembers who he is:</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-rt-cain.png" width="464" height="688" loading="lazy" decoding="async"
+         alt="Five dialogue windows: Cain asks where he is, remembers that Darksol put the mask on him and made him his puppet, and realises he fought his own brother.">
+    <figcaption>String 00C7. The US version has him say "Darksol masked my face to control me" and
+    nothing about a brother.</figcaption>
+  </figure>
+
+  <p>Nova, in the headquarters at Guardiana, tells Max how he got there:</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-rt-memory.png" width="464" height="268" loading="lazy" decoding="async"
+         alt="Two dialogue windows: Lowe found you lying on the shore a whole year ago, and perhaps it was divine guidance that left you in my care with your memory gone.">
+    <figcaption>String 0336. In the US ROM this slot holds a nightmare: "I saw our land in ruins. Evil creatures roamed our halls! It seemed so real!"</figcaption>
+  </figure>
+
+  <p>And Adam, the mechanical soldier at Metapha, explains why Darksol wanted the two
+  brothers in the first place:</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-rt-adam.png" width="464" height="548" loading="lazy" decoding="async"
+         alt="Four dialogue windows: Adam introduces himself as a mechanical soldier, says you and Lord Cain are the inheritors of the bloodline of the Ancients, that you were destined from birth to battle Dark Dragon, and that Darksol sniffed out the two of you.">
+    <figcaption>The first four pages of string 0633. The full speech runs eight pages and ends with Adam
+    handing over the Chaos Breaker.</figcaption>
+  </figure>
+
+  <p>The prologue on the farm, the epilogue with the girl and her grandfather, the wall
+  carving that recruits Musashi, the Prompt villagers with their dialect, Mishaela's
+  snobbery, the robot Chaos stuttering in capitals: all of it is translated from what the
+  Japanese ROM says, not from what the US ROM says.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf1-rt-musashi.png" width="464" height="548" loading="lazy" decoding="async"
+         alt="Four dialogue windows: there are words carved into the wall; I am called Musashi, a samurai; hearing of those who fight the villains of Runefaust I have hastened here; I await at headquarters, pray let me join your battle.">
+    <figcaption>String 0626. Musashi's message in the Japanese ROM is written in hiragana with the
+    stiff grammar of an old samurai, so the English keeps him stiff.</figcaption>
+  </figure>
+
+  <h3>The names</h3>
+  <p>This is the "faithful" choice, so every name that the localisation changed goes back.
+  Names that only differ in spelling (Pelle for ペイル, Diane for ディアーネ, Torasu for
+  トーラス) stay as they are, because they are the same name. The table lists what the
+  patch actually rewrites, in the dialogue and in the menus.</p>
+
+  <div class="table-wrap">
+  <table class="data names">
+    <thead><tr><th>US name</th><th>Japanese</th><th>In this patch</th></tr></thead>
+    <tbody>
+      <tr><td>Zylo</td><td class="n">ザッパ</td><td>Zappa</td></tr>
+      <tr><td>Luke</td><td class="n">ラグ</td><td>Lug</td></tr>
+      <tr><td>Bleu</td><td class="n">バリュウ</td><td>Baryu</td></tr>
+      <tr><td>Khris</td><td class="n">チップ</td><td>Chip</td></tr>
+      <tr><td>Vankar</td><td class="n">バンガード</td><td>Vanguard</td></tr>
+      <tr><td>Jogurt</td><td class="n">ヨーグルト</td><td>Yogurt</td></tr>
+      <tr><td>Kane</td><td class="n">カイン</td><td>Cain</td></tr>
+      <tr><td>Rindo</td><td class="n">リンドリンド</td><td>Rindorindo</td></tr>
+      <tr><td>Rudo</td><td class="n">ルドル</td><td>Rudol</td></tr>
+      <tr><td>Ring Reef</td><td class="n">フライパンリーフ</td><td>Frying Pan Reef</td></tr>
+      <tr><td>Shell of Waral</td><td class="n">シエル</td><td>Ciel</td></tr>
+      <tr><td>Egress</td><td class="n">リターン</td><td>Return</td></tr>
+      <tr><td>Bolt</td><td class="n">スパーク</td><td>Spark</td></tr>
+      <tr><td>Boost</td><td class="n">アタック</td><td>Attack</td></tr>
+      <tr><td>Orb of Light</td><td class="n">かがやきのたま</td><td>Shining Orb</td></tr>
+      <tr><td>Lunar Dew</td><td class="n">つきのしずく</td><td>Moon Drop</td></tr>
+      <tr><td>Shower of Cure</td><td class="n">めぐみのあめ</td><td>Blessed Rain</td></tr>
+      <tr><td>Power Potion</td><td class="n">ちからのワイン</td><td>Power Wine</td></tr>
+      <tr><td>Defense Potion</td><td class="n">まもりのミルク</td><td>Guard Milk</td></tr>
+      <tr><td>Legs of Haste</td><td class="n">はやてのチキン</td><td>Swift Chicken</td></tr>
+      <tr><td>Turbo Pepper</td><td class="n">いだてんピーマン</td><td>Dash Pepper</td></tr>
+      <tr><td>Bread of Life</td><td class="n">げんきのパン</td><td>Vigor Bread</td></tr>
+      <tr><td>Shield / Speed / Mobility Ring</td><td class="n">まもり / はやて / いだてん</td><td>Guard / Swift / Dash Ring</td></tr>
+      <tr><td>Sugoi Mizugi</td><td class="n">すごいみずぎ</td><td>Super Swimsuit</td></tr>
+      <tr><td>Kitui Huku</td><td class="n">きついふく</td><td>Tight Clothes</td></tr>
+      <tr><td>Teppou / Youji</td><td class="n">てっぽう / ようじ</td><td>Musket / Tooth Pick</td></tr>
+      <tr><td>Kindan NoHako</td><td class="n">きんだんのはこ</td><td>Taboo Box</td></tr>
+      <tr><td>Katana</td><td class="n">きくいちもんじ</td><td>Kikuichimonji</td></tr>
+      <tr><td>Elven Arrow</td><td class="n">ロビンのや</td><td>Robin's Arrow</td></tr>
+      <tr><td>Atlas</td><td class="n">アトラスのおの</td><td>Atlas Axe</td></tr>
+      <tr><td>Guardian / Holy / Power Staff</td><td class="n">まもり / せいじゃ / パワースティック</td><td>Guard Staff / Saint's Staff / Power Stick</td></tr>
+      <tr><td>Dark Dwarf, Dark Elf, Dark Priest</td><td class="n">ドワーフ, ハンターエルフ, プリースト</td><td>Dwarf, Hunter Elf, Priest</td></tr>
+      <tr><td>Weed, Ice Worm, Minotaur</td><td class="n">グリンゴーレム, イビルロープ, アーマーウロス</td><td>Green Golem, Evil Rope, Armor Uros</td></tr>
+      <tr><td>Artillery, Mannequin, Evil Puppet, Dire Clown</td><td class="n">ブラスローダー, ドール, パペット, ヘルピエロ</td><td>Blast Loader, Doll, Puppet, Hell Pierrot</td></tr>
+      <tr><td>Marionette, Conch, Shellfish, Steel Claw</td><td class="n">ミシャエラドール, ミサイルシェル, ストームローパー, プレインメタル</td><td>Mishaela Doll, Missile Shell, Storm Roper, Plain Metal</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Spell names in the magic menu are limited to six letters by the window, so Detox,
+  Dispel, Shield, Muddle and Desoul keep their US names even though the Japanese are
+  Antidote, Anti-Spell, Spell Wall, Illute and Soul Steal. Class abbreviations on the
+  status screen are unchanged. Item names are two rows of eight letters each in the item
+  window, which is why the toothpick became "Tooth Pick".</p>
+
+  <h3>What stays</h3>
+  <p>The battle messages ("Lowe attacks!", "Inflicts 12 points of damage"), the menu prompts
+  ("Use whose item?"), the treasure-chest messages and the debug flag strings keep the US
+  text. They say the same thing in both languages, and they are the strings whose tags the
+  engine is fussiest about. The only edits there are the name substitutions above.</p>
+
+  <hr class="rule">
+
+  <h2>How it was made</h2>
+
+  <p>Shining Force stores its text Huffman-compressed, one tree per preceding symbol, in
+  nine banks of 256 strings, with a single length byte in front of each string. The US ROM
+  is 1,572,864 bytes and its text area is full: the English of 1993 was written to fit the
+  space, which is one of the reasons it is so much shorter than the Japanese. English that
+  says what the Japanese says needs about forty percent more room.</p>
+
+  <p>So the patch expands the ROM to 2 MB and moves the script into the new space. The
+  decoder is copied to <code>$180000</code> with its two PC-relative pointers rewritten, the
+  212-entry tree table and the tree data follow it, the nine text banks follow those, and
+  the jump at <code>$010048</code> that every text call goes through is repointed at the
+  copy. The bank pointer table at <code>$13E906</code> gets nine new addresses, the header's
+  ROM-end field becomes <code>$1FFFFF</code>, and that is every byte of the original ROM
+  that the script relocation touches. The item, spell and enemy name tables are rebuilt at
+  <code>$1F0000</code> and reached through the game's own pointer block at
+  <code>$0203B0</code>, and six ally names are rewritten in place in the character table.</p>
+
+  <div class="table-wrap">
+  <table class="data">
+    <thead><tr><th>Measure</th><th>US ROM</th><th>This patch</th></tr></thead>
+    <tbody>
+      <tr><td>Compressed text</td><td class="n">52,970 bytes</td><td class="n">73,893 bytes</td></tr>
+      <tr><td>Huffman tree data</td><td class="n">1,446 bytes</td><td class="n">1,846 bytes</td></tr>
+      <tr><td>Contexts with a tree</td><td class="n">83</td><td class="n">84</td></tr>
+      <tr><td>ROM size</td><td class="n">1,572,864</td><td class="n">2,097,152</td></tr>
+      <tr><td>Patch size (IPS)</td><td class="n"></td><td class="n">196,818 bytes</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Two things about the text engine shaped the translation. The dialogue window is three
+  lines of 196 pixels in a proportional font, and the engine wraps a word only when a glyph
+  crosses the edge, so line breaks have to be placed by hand or the words split. Every
+  translated line was re-wrapped from the width of each glyph in the ROM's font table. And
+  each string has one length byte, so no string can compress to more than 255 bytes; the
+  Japanese speech at the spring in Metapha, eleven pages long, had to be tightened twice to
+  get under it.</p>
+
+  <p>The other trap was alignment. The US script is not the Japanese one with the text
+  swapped: the localisers inserted two strings, at 0621 and 07A9, so from there on the
+  Japanese line for any US slot is one, then two, indices behind. Translate by index and the
+  last third of the game would have every townsperson saying the previous townsperson's
+  line. The mapping was worked out by matching names and tag patterns and then checked by
+  hand at every place it shifts.</p>
+
+  <p>The translation itself was done in twelve batches against a shared glossary of names,
+  places and terms, with the US line beside the Japanese for context only. Each batch was
+  then checked mechanically: same placeholders as the Japanese ([Hero], [Name], [Item],
+  [Num]), same number of timed pauses in cutscenes, every page short enough for the window,
+  every character present in the font. A handful of pages that wrapped to four lines were
+  rewritten by hand, and the opening prologue was cut to the two lines its box allows.</p>
+
+  <div class="win tldr">
+    <h3>Testing status</h3>
+    <p>The patched ROM has been verified by re-decoding every one of the 2,232 strings out
+    of the finished image with an independent decoder, on the vanilla ROM and on a ROM
+    already carrying Turn Queue &amp; Tactics v16. It has not yet had a full playthrough in
+    an emulator. If a line looks wrong, wraps oddly, or a menu shows something strange,
+    quote the text and where you saw it on the <a href="../../../contacts/">contact
+    page</a> and it will be fixed in the next version. The full script is published above so
+    anyone can read it without playing.</p>
+  </div>
+
+  <hr class="rule">
+
+  <h3 id="apply">Applying the patch</h3>
+
+  <div class="win win-plain">
+    <ul class="spec">
+      <li>Get an IPS patcher: <strong>Flips</strong> (Floating IPS) on Windows, macOS or
+      Linux, or <strong>Lunar IPS</strong>. Most emulator front-ends can do it too.</li>
+      <li>Point it at <code>ShiningForce_Retranslation_v1.0.ips</code> and at your
+      <code>Shining Force (USA).bin</code>, 1,572,864 bytes, MD5
+      <code>4b4acbe75ff7aaeb534ab78ed95910d1</code>. Let it write a <em>new</em> file. The
+      output is 2,097,152 bytes; that is expected.</li>
+      <li>Want both mods? Apply <a href="../turn-queue-mod/">Turn Queue &amp; Tactics
+      v16</a> first, then this patch on the result. The two never write the same bytes, so
+      the order only matters for the header checksum, which the game does not check.</li>
+      <li>Load the result in any Mega Drive emulator or on a flash cart that accepts 2 MB
+      images. Existing saves keep working; the save format is untouched.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <h2 id="faq">Questions</h2>
+
+  <div class="win win-plain">
+    <h3>Is this a translation or a "faithful" translation?</h3>
+    <p>Both. The aim was natural English that says what the Japanese says, in the register
+    the Japanese uses: Nova calls the hero "Sir", the Prompt villagers speak like villagers,
+    Mishaela talks down to everyone. Nothing was added, and nothing that the Japanese script
+    says was left out to fit the window; where a page was too long it became two pages.</p>
+
+    <h3>Why keep Detox and Dispel when the Japanese says Antidote and Anti-Spell?</h3>
+    <p>The magic window draws spell names in a six-tile field. The Japanese names are six
+    kana, the US names six letters, and "Antidote" is eight. Attack, Spark and Return fit,
+    so those changed.</p>
+
+    <h3>Does it work on real hardware?</h3>
+    <p>It should: the ROM is a plain 2 MB image with the header size field updated, and
+    Shining Force never verifies its own checksum. It has not been tried on a cartridge
+    yet.</p>
+
+    <h3>Will there be an Italian version?</h3>
+    <p>The tooling is language-agnostic as long as the language fits the ROM's font, which
+    has no accented letters. Italian would need a few glyphs added first. It is on the
+    list.</p>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">No ROMs are hosted here.</p>
+    <p class="small"><a href="../">&#9664; Back to Shining Force</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
