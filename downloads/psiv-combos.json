@@ -1,0 +1,537 @@
+{
+ "source": "ps4disasm ComboData / ComboSetupData, US ROM",
+ "combos": [
+  {
+   "id": 0,
+   "label": "None",
+   "effect": 0,
+   "target": 0,
+   "hit": 0,
+   "resist_stat": 0,
+   "element": 0,
+   "effect_name": "none",
+   "element_name": "none",
+   "resist_stat_name": "none",
+   "target_name": "none"
+  },
+  {
+   "id": 1,
+   "label": "Paradinblw",
+   "effect": 1,
+   "target": 1,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 6,
+   "effect_name": "damage",
+   "element_name": "anti-evil",
+   "resist_stat_name": "magic defense",
+   "target_name": "one enemy",
+   "triggers": [
+    [
+     "skill:Rayblade",
+     "skill:Astral"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 2,
+   "label": "Firestorm",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 3,
+   "effect_name": "damage",
+   "element_name": "fire",
+   "resist_stat_name": "magic defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "tech:Foi",
+     "tech:Zan"
+    ],
+    [
+     "tech:Foi",
+     "tech:Gizan"
+    ],
+    [
+     "tech:Foi",
+     "tech:Nazan"
+    ],
+    [
+     "tech:Foi",
+     "skill:Hewn"
+    ],
+    [
+     "tech:Foi",
+     "skill:Hewn2"
+    ],
+    [
+     "tech:Gifoi",
+     "tech:Zan"
+    ],
+    [
+     "tech:Gifoi",
+     "tech:Gizan"
+    ],
+    [
+     "tech:Gifoi",
+     "tech:Nazan"
+    ],
+    [
+     "tech:Gifoi",
+     "skill:Hewn"
+    ],
+    [
+     "tech:Gifoi",
+     "skill:Hewn2"
+    ],
+    [
+     "tech:Nafoi",
+     "tech:Zan"
+    ],
+    [
+     "tech:Nafoi",
+     "tech:Gizan"
+    ],
+    [
+     "tech:Nafoi",
+     "tech:Nazan"
+    ],
+    [
+     "tech:Nafoi",
+     "skill:Hewn"
+    ],
+    [
+     "tech:Nafoi",
+     "skill:Hewn2"
+    ],
+    [
+     "skill:Flaeli",
+     "tech:Zan"
+    ],
+    [
+     "skill:Flaeli",
+     "tech:Gizan"
+    ],
+    [
+     "skill:Flaeli",
+     "tech:Nazan"
+    ],
+    [
+     "skill:Flaeli",
+     "skill:Hewn2"
+    ],
+    [
+     "skill:Flaeli2",
+     "tech:Zan"
+    ],
+    [
+     "skill:Flaeli2",
+     "tech:Gizan"
+    ],
+    [
+     "skill:Flaeli2",
+     "tech:Nazan"
+    ],
+    [
+     "skill:Flaeli2",
+     "skill:Hewn"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 3,
+   "label": "Blizzard",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 5,
+   "effect_name": "damage",
+   "element_name": "water",
+   "resist_stat_name": "magic defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "tech:Wat",
+     "tech:Zan"
+    ],
+    [
+     "tech:Wat",
+     "tech:Gizan"
+    ],
+    [
+     "tech:Wat",
+     "tech:Nazan"
+    ],
+    [
+     "tech:Wat",
+     "skill:Hewn"
+    ],
+    [
+     "tech:Wat",
+     "skill:Hewn2"
+    ],
+    [
+     "tech:Giwat",
+     "tech:Zan"
+    ],
+    [
+     "tech:Giwat",
+     "tech:Gizan"
+    ],
+    [
+     "tech:Giwat",
+     "tech:Nazan"
+    ],
+    [
+     "tech:Giwat",
+     "skill:Hewn"
+    ],
+    [
+     "tech:Giwat",
+     "skill:Hewn2"
+    ],
+    [
+     "tech:Nawat",
+     "tech:Zan"
+    ],
+    [
+     "tech:Nawat",
+     "tech:Gizan"
+    ],
+    [
+     "tech:Nawat",
+     "tech:Nazan"
+    ],
+    [
+     "tech:Nawat",
+     "skill:Hewn"
+    ],
+    [
+     "tech:Nawat",
+     "skill:Hewn2"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 4,
+   "label": "Condctthnd",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 7,
+   "effect_name": "damage",
+   "element_name": "lightning",
+   "resist_stat_name": "magic defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "tech:Wat",
+     "skill:Tandle"
+    ],
+    [
+     "tech:Giwat",
+     "skill:Tandle"
+    ],
+    [
+     "tech:Nawat",
+     "skill:Tandle"
+    ],
+    [
+     "tech:Wat",
+     "skill:Tandle2"
+    ],
+    [
+     "tech:Giwat",
+     "skill:Tandle2"
+    ],
+    [
+     "tech:Nawat",
+     "skill:Tandle2"
+    ]
+   ],
+   "count": 2,
+   "ordered": true
+  },
+  {
+   "id": 5,
+   "label": "Grandcross",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 13,
+   "effect_name": "damage",
+   "element_name": "efess",
+   "resist_stat_name": "magic defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "skill:Crosscut",
+     "skill:Efess"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 6,
+   "label": "Silentwave",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 6,
+   "element": 1,
+   "effect_name": "damage",
+   "element_name": "physical",
+   "resist_stat_name": "defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "skill:Airslash",
+     "skill:Phonon"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 7,
+   "label": "Shootnstar",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 3,
+   "effect_name": "damage",
+   "element_name": "fire",
+   "resist_stat_name": "magic defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "skill:Burstroc",
+     "tech:Foi"
+    ],
+    [
+     "skill:Burstroc",
+     "tech:Gifoi"
+    ],
+    [
+     "skill:Burstroc",
+     "tech:Nafoi"
+    ],
+    [
+     "skill:Burstroc",
+     "skill:Flaeli"
+    ],
+    [
+     "skill:Burstroc",
+     "skill:Flaeli2"
+    ]
+   ],
+   "count": 2,
+   "ordered": true
+  },
+  {
+   "id": 8,
+   "label": "Triblaster",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 2,
+   "effect_name": "damage",
+   "element_name": "energy",
+   "resist_stat_name": "magic defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "tech:Foi",
+     "tech:Wat",
+     "tech:Tsu"
+    ]
+   ],
+   "count": 3,
+   "ordered": false
+  },
+  {
+   "id": 9,
+   "label": "Holocaust",
+   "effect": 2,
+   "target": 2,
+   "hit": 64,
+   "resist_stat": 2,
+   "element": 10,
+   "effect_name": "instant death",
+   "element_name": "biological",
+   "resist_stat_name": "mental",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "tech:Savol",
+     "skill:Diem"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 10,
+   "label": "BlackHole",
+   "effect": 2,
+   "target": 2,
+   "hit": 64,
+   "resist_stat": 2,
+   "element": 14,
+   "effect_name": "instant death",
+   "element_name": "destroy",
+   "resist_stat_name": "mental",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "tech:Gra",
+     "skill:Negatis"
+    ],
+    [
+     "tech:Gigra",
+     "skill:Negatis"
+    ],
+    [
+     "tech:Nagra",
+     "skill:Negatis"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 11,
+   "label": "Circuitbrk",
+   "effect": 2,
+   "target": 2,
+   "hit": 64,
+   "resist_stat": 1,
+   "element": 12,
+   "effect_name": "instant death",
+   "element_name": "mechanical",
+   "resist_stat_name": "strength",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "skill:Tandle",
+     "skill:Hijammer"
+    ],
+    [
+     "skill:Tandle2",
+     "skill:Hijammer"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 12,
+   "label": "Purfylight",
+   "effect": 2,
+   "target": 2,
+   "hit": 64,
+   "resist_stat": 2,
+   "element": 8,
+   "effect_name": "instant death",
+   "element_name": "holy word",
+   "resist_stat_name": "mental",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "skill:Efess",
+     "skill:Holyword"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 13,
+   "label": "LethalImg",
+   "effect": 2,
+   "target": 2,
+   "hit": 64,
+   "resist_stat": 2,
+   "element": 10,
+   "effect_name": "instant death",
+   "element_name": "biological",
+   "resist_stat_name": "mental",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "skill:Illusion",
+     "skill:Death"
+    ]
+   ],
+   "count": 2,
+   "ordered": false
+  },
+  {
+   "id": 14,
+   "label": "Destruct",
+   "effect": 1,
+   "target": 2,
+   "hit": 0,
+   "resist_stat": 7,
+   "element": 6,
+   "effect_name": "damage",
+   "element_name": "anti-evil",
+   "resist_stat_name": "magic defense",
+   "target_name": "all enemies",
+   "triggers": [
+    [
+     "tech:Deban",
+     "tech:Megid",
+     "skill:Legeon",
+     "skill:Posibolt"
+    ],
+    [
+     "tech:Deban",
+     "tech:Megid",
+     "skill:Posibolt",
+     "skill:Legeon"
+    ],
+    [
+     "tech:Deban",
+     "skill:Legeon",
+     "tech:Megid",
+     "skill:Posibolt"
+    ],
+    [
+     "tech:Deban",
+     "skill:Legeon",
+     "skill:Posibolt",
+     "tech:Megid"
+    ],
+    [
+     "tech:Deban",
+     "skill:Posibolt",
+     "tech:Megid",
+     "skill:Legeon"
+    ],
+    [
+     "tech:Deban",
+     "skill:Posibolt",
+     "skill:Legeon",
+     "tech:Megid"
+    ]
+   ],
+   "count": 4,
+   "ordered": true
+  }
+ ]
+}

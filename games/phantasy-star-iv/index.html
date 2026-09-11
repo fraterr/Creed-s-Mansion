@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phantasy Star IV (Mega Drive, 1993) — Notes and Teardowns</title>
+<meta name="description" content="Phantasy Star IV taken apart from the ROM: the combination attack system, the fifteenth combo the manual promised, and what the disassembly says about how battles are decided.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/">
+<meta property="og:title" content="Phantasy Star IV — Notes and Teardowns">
+<meta property="og:description" content="Phantasy Star IV taken apart from the ROM: the combination attack system and the fifteenth combo the manual promised.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-psiv-combo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phantasy Star IV — The Fifteenth Combination.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phantasy Star IV — Notes and Teardowns">
+<meta name="twitter:description" content="Phantasy Star IV taken apart from the ROM: the combination attack system and the fifteenth combo the manual promised.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-psiv-combo.png">
+<link rel="icon" href="../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/img/favicon.png">
+<link rel="preload" href="../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Phantasy Star IV — Notes and Teardowns",
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/",
+ "description": "Phantasy Star IV taken apart from the ROM: the combination attack system, the fifteenth combo the manual promised, and what the disassembly says about how battles are decided.",
+ "about": {
+  "@type": "VideoGame",
+  "name": "Phantasy Star IV: The End of the Millennium",
+  "alternateName": "Phantasy Star: Sennenki no Owari ni",
+  "gamePlatform": ["Sega Mega Drive", "Sega Genesis"],
+  "datePublished": "1993",
+  "publisher": { "@type": "Organization", "name": "Sega" },
+  "genre": ["Role-playing game"]
+ }
+}
+</script>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../">Home</a>
+      <a href="../../#games">Games</a>
+      <a href="../../mods/">Mods</a>
+      <a href="../../#about">About</a>
+      <a href="../../contacts/">Contact</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumbs"><a href="../../">Home</a> &rsaquo; Phantasy Star IV</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Phantasy Star IV</h1>
+    <p class="sub">Sega Mega Drive &middot; 1993</p>
+  </section>
+
+  <div class="win">
+    <p><strong>Phantasy Star IV: The End of the Millennium</strong> closed the Mega Drive's
+    biggest role-playing series in December 1993 in Japan and early 1995 in the West. It is
+    a turn-based game where the turns are decided by a die roll on top of agility, five
+    fighters face up to five enemies, and the commands you queue can fuse into a
+    Combination Attack if the order works out. Sega's manual promised fifteen of those.</p>
+    <p>The ROM is three megabytes, its script is Kosinski-compressed, and there is a
+    complete disassembly that rebuilds it byte for byte, which makes it a good subject for
+    the kind of reading this house does: not what the guides say, but what the code
+    does.</p>
+  </div>
+
+  <h2>Notes &amp; teardowns</h2>
+
+  <div class="grid">
+    <a class="card" href="the-fifteenth-combo/">
+      <article class="win">
+        <h3>The Fifteenth Combination <span class="tag new">New</span></h3>
+        <p>The manual says there are fifteen Combination Attacks and players have found
+        fourteen. The tables in the ROM settle it, and on the way they show how a combo is
+        actually detected: a four-slot window on the turn order, an enemy in the wrong
+        place, and a combo whose whole window of opportunity is one dungeon long.</p>
+        <p style="margin-top:1rem"><span class="tag new">Read the teardown &#9656;</span></p>
+      </article>
+    </a>
+
+    <div class="card">
+      <article class="win win-plain">
+        <h3 class="muted">Next up</h3>
+        <p class="small"><span class="tag soon">In the drawer</span></p>
+        <p>The enemy AI instruction set, the damage formula with real numbers, and an
+        enemy HP display for the battle window.</p>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">No ROMs are hosted here.</p>
+    <p class="small"><a href="../../">&#9664; Back to the mansion</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

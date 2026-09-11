@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phantasy Star IV: The Fifteenth Combination Attack, Read from the ROM</title>
+<meta name="description" content="Sega's manual says Phantasy Star IV has 15 Combination Attacks; players found 14. The combo tables and the detection routine from the disassembled ROM: how many exist, how the game spots one on the turn order, which pairs are ordered, and the one combo with a window of a single dungeon.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/the-fifteenth-combo/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/the-fifteenth-combo/">
+<meta property="og:title" content="Phantasy Star IV: The Fifteenth Combination Attack">
+<meta property="og:description" content="The manual promised 15 combos, players found 14. The ROM's combo tables and detection code settle it, and show how a combo is really triggered.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-psiv-combo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phantasy Star IV — The Fifteenth Combination: 14 combos, 67 trigger lists, 3 ordered, 0 hidden.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phantasy Star IV: The Fifteenth Combination Attack">
+<meta name="twitter:description" content="The manual promised 15 combos, players found 14. The ROM's combo tables and detection code settle it, and show how a combo is really triggered.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-psiv-combo.png">
+
+<link rel="icon" href="../../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/img/favicon.png">
+<link rel="preload" href="../../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>
+  .combos td:first-child { white-space: nowrap; font-weight: 600; }
+  .combos td { vertical-align: top; }
+  .formula { font-family: var(--mono); font-size: 15px; background: rgba(0,0,0,.3); border: 1px solid rgba(240,192,96,.25); border-radius: 6px; padding: .8rem 1rem; margin: 1rem 0; overflow-x: auto; }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Phantasy Star IV: The Fifteenth Combination Attack, Read from the ROM",
+ "description": "Sega's manual says Phantasy Star IV has 15 Combination Attacks; players found 14. The combo tables and the detection routine from the disassembled ROM: how many exist, how the game spots one on the turn order, which pairs are ordered, and the one combo with a window of a single dungeon.",
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/the-fifteenth-combo/",
+ "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-psiv-combo.png",
+ "datePublished": "2026-09-11",
+ "dateModified": "2026-09-11",
+ "inLanguage": "en",
+ "author": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "publisher": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "about": {
+  "@type": "VideoGame",
+  "name": "Phantasy Star IV: The End of the Millennium",
+  "gamePlatform": ["Sega Mega Drive", "Sega Genesis"],
+  "datePublished": "1993",
+  "publisher": { "@type": "Organization", "name": "Sega" }
+ }
+}
+</script>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../../">Home</a>
+      <a href="../../../#games">Games</a>
+      <a href="../../../mods/">Mods</a>
+      <a href="../../../#about">About</a>
+      <a href="../../../contacts/">Contact</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Phantasy Star IV</a> &rsaquo; The fifteenth combination</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Phantasy Star IV &mdash; The Fifteenth Combination</h1>
+    <p class="sub">What the combo tables in the ROM say, and how a combo is really triggered</p>
+  </section>
+
+  <div class="win tldr">
+    <h3>The short version</h3>
+    <p>Page 19 of Sega's US manual ends its section on Combination Attacks with a dare:
+    "There are a total of 15 Combination Attacks. Can you find them all?" In thirty years
+    players have found fourteen, and the missing one has been searched for in every
+    corner of the game. It is not in the ROM. The combo data table has fifteen rows, but
+    row zero is the empty "no combo" entry; the trigger table, the name table and the
+    detection loop all count fourteen. Nothing is hidden, disabled or unfinished.</p>
+    <p>What the same code does contain is a precise account of how a combo happens, and it
+    disagrees with the manual on the part that matters. Turn order is not "descending order
+    of power": it is agility plus a random bonus, re-rolled every round. A combo is found
+    by scanning at most four consecutive entries of that order from the current actor,
+    and any enemy or plain attack in the way stops the scan. Three of the fourteen combos
+    care about the order of their pieces; the other eleven accept any permutation. One of
+    them can only be performed between one dungeon and the next.</p>
+  </div>
+
+  <h2>What the manual says</h2>
+
+  <p>The relevant paragraph is short enough to quote in full. "In order to combine the
+  moves, the attacks must occur in succession (i.e. for the Blizzard Attack, Chaz's Zan
+  must immediately follow Rune's Wat). Since characters attack in a descending order of
+  power (most powerful attacks come first), you must assign the other characters less
+  powerful attacks. As soon as you discover a Combination Attack, write it down! You can
+  even put it into a macro later." Then the dare.</p>
+
+  <p>Two of those sentences are right, one is wrong, and one is half right. Succession is
+  the whole mechanism. Macros are the practical way to get it. The order of turns has
+  nothing to do with the power of the attacks. And for Blizzard specifically, Zan does not
+  have to follow Wat; the two only have to be adjacent, in either order. The code for all
+  of this is below.</p>
+
+  <h2>The tables</h2>
+
+  <p>The disassembly by lory1990 rebuilds the US ROM byte for byte and names the data.
+  Three tables and one loop are involved.</p>
+
+  <p><strong>ComboData</strong>, at <code>$285424</code>, is fifteen rows of eight bytes.
+  Each row says what the combo does: effect (damage or instant death), targeting (one enemy
+  or all), the success threshold for the death combos, which enemy stat resists it, and its
+  element. Row zero is all zeros and is the value a fighter carries when no combo is
+  pending; the engine indexes the table with the combo number and number zero has to mean
+  "none". Rows one to fourteen are Paradin Blow to Destruction.</p>
+
+  <p><strong>ComboSetupData</strong>, at <code>$28549C</code>, is the trigger table: for
+  each of the fourteen combos, how many participants it needs, whether their order matters,
+  and a list of accepted technique and skill combinations terminated by <code>$FF</code>.
+  There are 67 accepted lists in total, most of them for Firestorm, which takes any of the
+  three Foi techniques or Flaeli on one side and any Zan or Hewn on the other.</p>
+
+  <p><strong>ComboNames</strong> holds fourteen names in the window font. And the loop that
+  walks ComboSetupData, in the routine at <code>$27DE7C</code>, is written as
+  <code>moveq #$D,d7</code> followed by a <code>dbf</code>: fourteen iterations, combo
+  number computed as fourteen minus the loop counter. There is no fifteenth entry to reach,
+  no flag that would unlock one, and no orphaned row anywhere near.</p>
+
+  <p>Where did fifteen come from? The manual was written from development material, and a
+  data table with fifteen rows, one of them blank, is the kind of thing that gets counted
+  by someone who is not reading the code. That is a guess. What is not a guess is the
+  other candidate the community has offered over the years: Feeve, a technique that exists
+  in the technique table (it raises elemental resistance for the party, costs five TP, and
+  nobody learns it) and appears in no combo trigger list at all. It is unused, but it is
+  not a combination.</p>
+
+  <h2>How a combo is detected</h2>
+
+  <p>Everything starts with the turn order. At the beginning of a round the game lists every
+  fighter that is not dead, asleep or paralysed, takes each one's battle agility, and adds
+  a random number between zero and half of the highest agility on the field. Then it sorts
+  the list, highest first, with a bubble sort. That is the order of the round. A fast
+  character usually goes first, but "usually" is doing real work: with Rika at 60 and Rune
+  at 50, Rune goes first about one round in five.</p>
+
+  <p>When a character's turn comes up, before their command is executed, the routine at
+  <code>$27DE7C</code> runs. It reads the turn order from the current position forward,
+  at most four entries, and for each one checks a list of conditions. The entry has to be a
+  party member, not an enemy. The fighter must be free of paralysis, sleep and death. The
+  queued command must be a technique or a skill, not an attack, an item or a defend. A
+  technique needs enough TP, and the caster must not be sealed; a skill needs a use left.
+  The first entry that
+  fails any of these ends the scan, and everything up to it is the candidate window.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/psiv-combo-window.png" width="980" height="500" loading="lazy" decoding="async"
+         alt="Two rows of eight turn-order slots. In the first, Rika (Wat) and Rune (Tandle) are adjacent and highlighted: Conductthnd fires. In the second, an enemy rolled between them, and the scan stops at once.">
+    <figcaption>The scan reads forward from the current actor. In the top row the two casts are adjacent
+    and the ordered pair Wat then Tandle matches Conductthnd. In the bottom row the same commands
+    were queued, but the agility roll put an enemy between them, so Wat resolves on its own.</figcaption>
+  </figure>
+
+  <p>The window is then compared against the fourteen trigger lists in table order,
+  Paradin Blow first, Destruction last, and the first combo that matches wins. For an
+  unordered two-piece combo the game tries the pair as it stands and then swapped; for an
+  unordered three-piece combo it tries all six permutations; for an ordered combo it tries
+  only the sequences written in the table. A match with N participants marks the current
+  actor's action as "combo", stores the combo number, and advances the turn counter past
+  the other N&minus;1 participants, whose own turns are consumed. Each participant still
+  pays: TP for a technique, one use for a skill.</p>
+
+  <p>Two consequences follow that guides tend to leave out. First, order in the trigger
+  table is a priority. If four consecutive actors queue Foi, Zan, Wat and Tsu, the game
+  sees Foi and Zan, matches Firestorm (combo 2), and never gets to consider Triblaster
+  (combo 8); Wat and Tsu then resolve on their own. Second, the scan is anchored to the
+  <em>first</em> participant's turn. A character whose turn has already passed cannot be
+  part of a combo with someone who acts later, even if both queued the right pieces, which
+  is why a combo you have set up carefully can vanish when the round's agility roll
+  reshuffles the order.</p>
+
+  <h2>The fourteen, from the trigger table</h2>
+
+  <p>Who can supply each piece comes from the level tables and the scripted skill grants,
+  also in the disassembly: Chaz learns Zan at level 12 and Rayblade at 27, Alys Death at
+  13, Hahn Astral at 29 and Savol at 33, Rune Diem at 24, Tandle at 27, Efess at 29,
+  Negatis at 32 and Legeon at 35, Rika Deban at 14, Kyra her Tandle at 39; Wren's Hijammer,
+  Burstroc and Posibolt and Demi's Phonon are installed by story events.</p>
+
+  <div class="table-wrap">
+  <table class="data combos">
+    <thead><tr><th>Combo</th><th>Pieces (who)</th><th>Effect</th><th>Element</th><th>Resisted by</th><th>Order</th></tr></thead>
+    <tbody>
+      <tr><td>Paradin Blow</td><td>Rayblade (Chaz) + Astral (Hahn)</td><td>damage, one enemy</td><td>anti-evil</td><td>magic def.</td><td>any</td></tr>
+      <tr><td>Firestorm</td><td>Foi, Gifoi, Nafoi (Alys, Rune, Kyra) or Flaeli (Rune, Kyra) + Zan, Gizan, Nazan (Chaz, Alys, Hahn) or Hewn (Rune, Kyra)</td><td>damage, all</td><td>fire</td><td>magic def.</td><td>any</td></tr>
+      <tr><td>Blizzard</td><td>Wat, Giwat, Nawat (Hahn, Rune) + Zan family or Hewn</td><td>damage, all</td><td>water</td><td>magic def.</td><td>any</td></tr>
+      <tr><td>Conductthnd</td><td>Wat family, then Tandle (Rune, Kyra)</td><td>damage, all</td><td>lightning</td><td>magic def.</td><td><strong>Wat first</strong></td></tr>
+      <tr><td>Grand Cross</td><td>Crosscut (Chaz) + Efess (Rune)</td><td>damage, all</td><td>efess</td><td>magic def.</td><td>any</td></tr>
+      <tr><td>Silent Wave</td><td>Airslash (Chaz) + Phonon (Demi)</td><td>damage, all</td><td>physical</td><td>defense</td><td>any</td></tr>
+      <tr><td>Shooting Star</td><td>Burstroc (Wren), then Foi family or Flaeli</td><td>damage, all</td><td>fire</td><td>magic def.</td><td><strong>Burstroc first</strong></td></tr>
+      <tr><td>Triblaster</td><td>Foi + Wat + Tsu (Chaz), base techniques only</td><td>damage, all</td><td>energy</td><td>magic def.</td><td>any</td></tr>
+      <tr><td>Holocaust</td><td>Savol (Hahn) + Diem (Rune)</td><td>instant death, all</td><td>biological</td><td>mental</td><td>any</td></tr>
+      <tr><td>Black Hole</td><td>Gra, Gigra, Nagra (Kyra) + Negatis (Rune)</td><td>instant death, all</td><td>destroy</td><td>mental</td><td>any</td></tr>
+      <tr><td>Circuit Breaker</td><td>Tandle (Rune, Kyra) + Hijammer (Wren)</td><td>instant death, all</td><td>mechanical</td><td>strength</td><td>any</td></tr>
+      <tr><td>Purify Light</td><td>Efess (Rune) + Holyword (Raja)</td><td>instant death, all</td><td>holy word</td><td>mental</td><td>any</td></tr>
+      <tr><td>Lethal Image</td><td>Illusion (Rika) + Death (Alys)</td><td>instant death, all</td><td>biological</td><td>mental</td><td>any</td></tr>
+      <tr><td>Destruction</td><td>Deban (Rika), then Megid (Chaz), Legeon (Rune), Posibolt (Wren) in any order</td><td>damage, all</td><td>anti-evil</td><td>magic def.</td><td><strong>Deban first</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Some things in that table only show up when you read the trigger lists entry by
+  entry.</p>
+
+  <ul class="spec">
+    <li><strong>The same person never pairs with themself.</strong> Rune has Flaeli and Hewn,
+    Kyra has her own copies (the ROM stores them as separate skills, and hers hit harder:
+    Hewn 64 against 112, Tandle 144 against 176). Firestorm lists Rune's Flaeli with Kyra's
+    Hewn and Kyra's Flaeli with Rune's Hewn, and omits the two pairings a single character
+    would need two turns for. Black Hole likewise lists the Gra family with Negatis, and
+    since Negatis is Rune's, the Gra has to be Kyra's.</li>
+    <li><strong>Triblaster wants the level-one techniques.</strong> Foi, Wat and Tsu, not
+    their Gi and Na upgrades. Any other three-way of the same families does nothing.</li>
+    <li><strong>Three combos are ordered.</strong> Conductthnd needs the Wat cast to come
+    before Tandle; Shooting Star needs Burstroc before the fire; Destruction needs Rika's
+    Deban to be the first of the four, after which Megid, Legeon and Posibolt may land in
+    any order. The manual's example, Wat then Zan for Blizzard, is one of the unordered
+    ones.</li>
+    <li><strong>Lethal Image has a window.</strong> Rika joins at the Bio Plant and Alys is
+    struck down at Zio's fort a dungeon later; from then until her death she is in the
+    party with the dead flag set, and the turn ordering skips her. Alys must be level 13
+    for Death, so the whole opportunity is the road from Zema to Zio's fort. It is the
+    combo the manual's dare most plausibly cost people the longest.</li>
+  </ul>
+
+  <h2>What a combo is worth</h2>
+
+  <p>A combo is not a fixed-power attack. The damage routine, entered at <code>$2864</code>
+  for combos, walks the participants and adds up two things: the casting stat of each one
+  (mental for a technique, and for a skill the stat its own data names, strength for
+  Phonon, attack power for Airslash) and the power byte of each technique or skill used.
+  Those two sums, together with the combo's element and the enemy's resistance stat, go into
+  the same formula every other attack uses:</p>
+
+  <div class="formula">
+  base  = (8 + sum of 16 rolls of 0..7) &times; STAT / 64 + STAT + 2 &times; POWER<br>
+  damage = base &times; element factor / 4 &minus; RESIST, clamped to 1 .. 999
+  </div>
+
+  <p>with STAT the participants' stats added together and POWER their tech powers added
+  together. Sixteen rolls of 0 to 7 average 56, so the first term is about STAT again: a
+  combo does, on average, roughly twice the combined stat plus twice the combined power,
+  scaled by how much the target minds the element, minus its resistance. Nafoi is worth 136
+  power points and Nazan 128; a Firestorm from those two is a single hit built on 264 power
+  and two mental stats, against every enemy, when either alone would have been one stat and
+  one power. The element factor comes from the enemy's property byte for that element
+  (immune, resistant, normal, weak, very weak), so a fire combo against a fire-immune enemy
+  is still a zero.</p>
+
+  <p>The five instant-death combos skip the damage formula. For each enemy the game rolls
+  0 to 63, adds the participants' combined casting stat minus the enemy's resisting stat,
+  multiplies by the element factor, and the result must exceed 64 (the "hit" byte in ComboData) for that
+  enemy to die. An enemy immune to the element multiplies the roll by zero and survives
+  every time, which is why Circuit Breaker, keyed to the mechanical element and resisted by
+  strength, is for machines and nothing else.</p>
+
+  <h2>Method</h2>
+
+  <p>All of this comes from the lory1990 disassembly of the US ROM, which assembles to the
+  retail image, cross-checked against the ROM itself for the table addresses given above.
+  The routines are the combo detector at <code>$27DE7C</code> (labelled by its address),
+  <code>Character_DoCombo</code> at <code>$AB98</code>, the combo branch of the damage
+  code at <code>$2864</code>, <code>Battle_OrderTurns</code> for the agility roll and
+  sort, and <code>Battle_CalculateDamage</code> and <code>Battle_CalculateChances</code>
+  for the two formulas. Who learns what is read from the per-character level tables and
+  from the event handlers that grant android skills.</p>
+
+  <p>The decoded tables, with every accepted trigger list, are in
+  <a href="../../../downloads/psiv-combos.json" download>psiv-combos.json</a>, so the
+  fourteen can be counted by anyone who would rather not take a manual's word for it,
+  or mine.</p>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">No ROMs are hosted here.</p>
+    <p class="small"><a href="../">&#9664; Back to Phantasy Star IV</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
