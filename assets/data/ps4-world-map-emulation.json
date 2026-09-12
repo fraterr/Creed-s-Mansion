@@ -1,0 +1,106 @@
+{
+  "rom_sha256": "511f35cc11f88316f8b8940e28ab298bd75a4da193672a80172884d6eb913b6a",
+  "method": "Original menu, injected FFEC27 bit 2, cancel to dispatch original map routine; unmodified ROM. Debug collision/event bypass enabled; random encounters disabled.",
+  "planets": {
+    "motavia": {
+      "before": {
+        "camera_fg": [
+          2920,
+          2984
+        ],
+        "camera_bg": [
+          2920,
+          2984
+        ],
+        "character": [
+          3072,
+          3072
+        ]
+      },
+      "map_camera_initial": [
+        0,
+        0
+      ],
+      "after_12_right": [
+        24,
+        0
+      ],
+      "after_12_down": [
+        24,
+        24
+      ],
+      "after_exit": {
+        "camera_fg": [
+          2920,
+          2984
+        ],
+        "camera_bg": [
+          2920,
+          2984
+        ],
+        "character": [
+          3072,
+          3072
+        ]
+      },
+      "restored": true,
+      "mode_after_exit": 0,
+      "map_after_exit": 0,
+      "character_after_movement": [
+        3104,
+        3072
+      ],
+      "movement_works": true
+    },
+    "dezolis": {
+      "before": {
+        "camera_fg": [
+          872,
+          936
+        ],
+        "camera_bg": [
+          872,
+          936
+        ],
+        "character": [
+          1024,
+          1024
+        ]
+      },
+      "map_camera_initial": [
+        0,
+        65488
+      ],
+      "after_12_right": [
+        24,
+        65488
+      ],
+      "after_12_down": [
+        24,
+        65488
+      ],
+      "after_exit": {
+        "camera_fg": [
+          872,
+          936
+        ],
+        "camera_bg": [
+          872,
+          936
+        ],
+        "character": [
+          1024,
+          1024
+        ]
+      },
+      "restored": true,
+      "mode_after_exit": 0,
+      "map_after_exit": 1,
+      "character_after_movement": [
+        1056,
+        1024
+      ],
+      "movement_works": true
+    }
+  }
+}

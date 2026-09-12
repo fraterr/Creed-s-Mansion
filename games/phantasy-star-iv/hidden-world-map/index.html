@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phantasy Star IV's hidden world map | Creed's Mansion</title>
+<meta name="description" content="The unused atlas in Phantasy Star IV, activated in the USA ROM: maps of Motavia and Dezolis, an inventory link, working scrolling and broken labels."><link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/hidden-world-map/">
+<meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#002083">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:title" content="Phantasy Star IV's hidden world map"><meta property="og:description" content="The unused atlas in Phantasy Star IV, activated in the USA ROM: maps of Motavia and Dezolis, an inventory link, working scrolling and broken labels.">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/hidden-world-map/"><meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/ps4-atlas-motavia.png">
+<meta property="og:image:alt" content="Motavia's unused atlas rendered by Phantasy Star IV">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Phantasy Star IV's hidden world map">
+<meta name="twitter:description" content="The unused atlas in Phantasy Star IV, activated in the USA ROM: maps of Motavia and Dezolis, an inventory link, working scrolling and broken labels."><meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/ps4-atlas-motavia.png">
+<link rel="icon" href="../../../assets/img/favicon.png"><link rel="stylesheet" href="../../../assets/style.css">
+<style>.atlas-shot{max-width:768px;margin:2rem auto}.atlas-shot img{width:100%;height:auto;image-rendering:pixelated}.atlas-table{overflow-x:auto;margin:1.5rem 0}.atlas table{width:100%;border-collapse:collapse}.atlas th,.atlas td{padding:.65rem;text-align:left;border-bottom:1px solid #555}.atlas caption{text-align:left;margin-bottom:.8rem}.atlas-method summary{cursor:pointer;color:var(--gold)}.rom-id{overflow-wrap:anywhere}.atlas code{overflow-wrap:anywhere}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Phantasy Star IV's hidden world map", "description": "The unused atlas in Phantasy Star IV, activated in the USA ROM: maps of Motavia and Dezolis, an inventory link, working scrolling and broken labels.", "url": "https://fraterr.github.io/Creed-s-Mansion/games/phantasy-star-iv/hidden-world-map/", "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/ps4-atlas-motavia.png", "inLanguage": "en", "dateModified": "2026-09-12", "author": {"@type": "Person", "name": "Creed's Mansion"}}</script>
+</head><body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../../">Home</a>
+      <a href="../../../#games">Games</a>
+      <a href="../../../mods/">Mods</a>
+      <a href="../../../#about">About</a>
+      <a href="../../../contacts/">Contact</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap atlas">
+<p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Phantasy Star IV</a> &rsaquo; Hidden world map</p>
+<article>
+<section class="hero" style="padding-top:1.5rem">
+<h1 class="title">Phantasy Star IV's hidden world map</h1>
+<p class="sub">An unused atlas, running in the USA ROM</p>
+</section>
+<div class="win">
+<p>Phantasy Star IV can draw an atlas of Motavia and Dezolis. The USA ROM still contains the routine that opens it, the controls that scroll it, and the code that returns the party to exploration. With the right menu flag set in an emulator, both maps appear.</p>
+<p>The screenshots below come from that test. The terrain is drawn by the game, using its own map data. The unreadable lettering in the corner is also the game's work.</p>
+</div>
+<figure class="shot atlas-shot">
+<img src="../../../assets/img/ps4-atlas-motavia.png" width="960" height="672" fetchpriority="high" alt="The recovered Motavia atlas, with desert, green terrain and islands surrounded by blue water">
+<figcaption>Motavia, rendered by the original USA ROM. The small label at the bottom right contains unreadable characters.</figcaption>
+</figure>
+<section class="win win-plain">
+<h2>An object with a map attached</h2>
+<p>The first link is in the item-action table. At ROM offset <code>0x5C0E0</code>, item <code>0x8C</code> points to a function at <code>0x5C118</code>. The <a href="https://github.com/squidfeatures/ps4disasm">PS4 disassembly</a> calls the item <code>ItemID_Nothing4</code> and the function <code>ItemAction_Map</code>. Those names were supplied by the disassembly's authors; they aren't names recovered from Sega's source code.</p>
+<p>The function checks where the party is. It accepts field-map IDs 0 and 1, Motavia and Dezolis, and rejects every other value. On an accepted map it sets bit 2 of the menu's exit flags. When the menu closes, another routine reads that flag and selects the world-map screen.</p>
+<p>That connection suggests an atlas opened through an inventory item. It doesn't tell us where the player would have obtained the item, what it would have been called, or why it was left unused. This investigation hasn't established an ordinary way to acquire it.</p>
+</section>
+<section class="win win-plain">
+<h2>Getting the screen to open properly</h2>
+<p>The disassembly already identifies the world-map routine as unused. The test here follows that lead into the retail USA ROM and checks what happens when the game runs it.</p>
+<p>Jumping straight into the routine gave misleading results. Opening it while a town was loaded produced the wrong colours. A direct entry on Dezolis left scraps of graphics above and below the map. Those screenshots would have made the atlas look more broken than it is.</p>
+<p>The successful test loaded each planet with the game's field loader, opened the camp menu, and set the map-request bit in RAM. Cancelling out of the menu then let the original exit code do its work, including reloading map chunks before opening the atlas. The colours were correct, and the scraps around Dezolis disappeared.</p>
+<p>The ROM itself was unchanged. These were controlled emulator states with event and collision checks bypassed and random encounters disabled. The bypass kept the early story from sending the party back to Piata during the test. We exercised the menu-exit route; we did not obtain and use item <code>0x8C</code> through normal play.</p>
+</section>
+<figure class="shot atlas-shot">
+<img src="../../../assets/img/ps4-atlas-dezolis.png" width="960" height="672" loading="lazy" alt="The recovered Dezolis atlas, a wide snowy map with black space above and below it">
+<figcaption>Dezolis uses a wide strip across the screen. Following the menu-exit route clears the surrounding area to black.</figcaption>
+</figure>
+<section class="win win-plain">
+<h2>How the game draws the terrain</h2>
+<p>The renderer begins at <code>0x66658</code>. It chooses a source address for the current planet, then processes sixteen blocks of 1,024 bytes. Each source byte selects a value from a planet-specific colour table. The routine writes the resulting tile graphics into RAM and transfers them to video memory.</p>
+<p>This explains the broad patches of desert and snow in the screenshots. The atlas reduces the map's chunk IDs, which identify pieces of terrain, to colour values. The drawing comes from that conversion rather than a separate, hand-drawn atlas illustration.</p>
+<p>Motavia and Dezolis have separate conversion tables. The renderer also treats their shapes differently: Dezolis starts with a vertical scroll offset of minus 48 pixels, placing its map in a horizontal band.</p>
+</section>
+<section class="win win-plain">
+<h2>Scrolling, then going back</h2>
+<p>On Motavia, the direction buttons move the view horizontally and vertically. Holding Right for twelve emulated frames increased the horizontal camera value by 24 pixels. Holding Down for another twelve increased the vertical value by the same amount.</p>
+<p>Dezolis accepts horizontal movement only. The code explicitly removes the Up and Down input bits for that planet. The emulator confirmed it: Right moved the view 24 pixels in twelve frames, while Down left the vertical offset unchanged.</p>
+<div class="atlas-table"><table>
+<caption>Measured behaviour in the USA ROM</caption>
+<thead><tr><th scope="col">Test</th><th scope="col">Motavia</th><th scope="col">Dezolis</th></tr></thead>
+<tbody>
+<tr><th scope="row">Right held for 12 frames</th><td>24 pixels</td><td>24 pixels</td></tr>
+<tr><th scope="row">Down held for 12 frames</th><td>24 pixels</td><td>No movement</td></tr>
+<tr><th scope="row">Cancel closes the atlas</th><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Position and cameras restored</th><td>Exact match</td><td>Exact match</td></tr>
+</tbody></table></div>
+<p>Closing the atlas restored both camera positions and the party leader's coordinates to their values before opening it. The game returned to its normal control routine. A subsequent movement input moved the leader on both planets, so the return path worked beyond simply putting the old screen back on display.</p>
+</section>
+<section class="win win-plain">
+<h2>The label still needs work</h2>
+<p>Both maps have a small text box at the bottom right. In this USA build, its characters don't form a readable planet name. The routine selects a different short string for each planet, but the test doesn't establish whether the fault lies in those strings, the font mapping, or another part of text rendering.</p>
+<p>It would be premature to call the lettering surviving Japanese text. That needs a comparison of the text bytes and the glyphs the game loads. The screenshots preserve the defect so that it can be examined.</p>
+<p>The remaining code supports a working atlas screen, with an item-action link and a functioning way back to exploration. A restoration patch would still need readable labels and an accessible way to open it, followed by tests in ordinary campaign saves with the debug bypass disabled. The reason Sega left it out remains unanswered.</p>
+</section>
+<details class="win atlas-method">
+<summary>ROM addresses, sources and test details</summary>
+<p>Tests used Genesis Plus GX and a 3,145,728-byte Phantasy Star IV (USA) ROM. All addresses below refer to that build. ROM offsets and RAM addresses are listed separately.</p>
+<p class="rom-id">ROM SHA-256: <code>511f35cc11f88316f8b8940e28ab298bd75a4da193672a80172884d6eb913b6a</code></p>
+<div class="atlas-table"><table><thead><tr><th scope="col">Location</th><th scope="col">Purpose</th></tr></thead><tbody>
+<tr><td>ROM <code>0x5C0E0</code></td><td>Item 0x8C action-table entry</td></tr>
+<tr><td>ROM <code>0x5C118</code></td><td>Map eligibility check and request flag</td></tr>
+<tr><td>ROM <code>0x66658</code></td><td>Atlas renderer</td></tr>
+<tr><td>ROM <code>0x66888</code></td><td>Scrolling and exit input loop</td></tr>
+<tr><td>ROM <code>0x668EA</code></td><td>Return to exploration</td></tr>
+<tr><td>ROM <code>0x66986</code> / <code>0x66A5A</code></td><td>Motavia / Dezolis colour tables</td></tr>
+<tr><td>RAM <code>0xFFEC27</code>, bit 2</td><td>Menu-exit map request</td></tr>
+<tr><td>RAM <code>0xFFEC28</code></td><td>Current field-map ID (word)</td></tr>
+<tr><td>RAM <code>0xFFEC20</code></td><td>Field routine (word); 0x20 selects the atlas</td></tr>
+</tbody></table></div>
+<p>The code reference is <a href="https://github.com/squidfeatures/ps4disasm/blob/8a658314850904c6888969f90177779845133a7e/ps4.asm">ps4disasm, revision 8a65831</a>, especially <code>ItemAction_Map</code>, <code>MenuExit_OpenMap</code> and <code>FieldRoutine_WorldMap</code>. The item entry and its handler were checked against the ROM bytes. This article builds on that disassembly and makes no claim of first discovery.</p>
+<p><a href="../../../assets/data/ps4-world-map-emulation.json">Read the recorded camera and position measurements (JSON)</a>. The screenshots are emulator captures enlarged with nearest-neighbour scaling. No ROM or emulator save state is distributed here.</p>
+</details>
+<p class="small"><a href="../the-fifteenth-combo/">More Phantasy Star IV: the fifteenth Combination Attack</a></p>
+</article>
+</main><footer class="foot"><div class="wrap"><p class="small"><a href="../">&#9664; Back to Phantasy Star IV</a></p><p class="small">No ROMs are hosted here.</p></div></footer></body></html>
