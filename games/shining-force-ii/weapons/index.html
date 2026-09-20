@@ -35,6 +35,7 @@
   table.wpn td.cl { font-family: var(--mono); font-size: 12px; color: var(--ink-dim); max-width: 15rem; }
   .formula { font-family: var(--mono); font-size: 15px; background: rgba(0,0,0,.3); border: 1px solid rgba(240,192,96,.25); border-radius: 6px; padding: .8rem 1rem; margin: 1rem 0; overflow-x: auto; }
   .legend { font-family: var(--mono); font-size: 13px; color: var(--ink-dim); }
+  .ico { display: inline-block; width: 32px; height: 48px; margin-right: .6rem; vertical-align: middle; background: url(../../../assets/img/sf2-weapon-icons.png) no-repeat; background-size: 3008px 48px; image-rendering: pixelated; }
 </style>
 <script type="application/ld+json">
 {
@@ -141,7 +142,7 @@
   <p>Four weapons carry that +1: the Critical Sword, the Rune Axe, the Robin Arrow and the
   Nazca Cannon. Two of them can be held by the classes they hurt. The community
   disassembly treats the ordering as a slip by the developers and offers a build option
-  that sorts the table; on a cartridge it is simply how the game works.</p>
+  that sorts the table. On a cartridge it is simply how the game works.</p>
 
   <h2>How a hit is resolved</h2>
 
@@ -240,7 +241,7 @@
 
   <p>The cursed rings are a different case. The Black Ring and the Evil Ring add +10 and
   +15 attack to classes that do not attack, and what you want from them is the free Blaze 2
-  and Bolt 2. Carry them; do not wear them.</p>
+  and Bolt 2. Carry them, and do not wear them.</p>
 
   <h2>The best weapon for each class</h2>
 
@@ -251,10 +252,10 @@
   </div>
 
   <p>B is the character's attack without a weapon minus the target's defence. Late in the
-  game a fighter's B against ordinary enemies is around 30; 60 is a strong character on a
+  game a fighter's B against ordinary enemies is around 30, and 60 is a strong character on a
   soft target. Dodge and land effect are left out because they are the same for every
   weapon, and so is the second hit's chance of finding the target already dead. Counters,
-  range, free spells and stat bonuses are not in the number; the notes cover them.
+  range, free spells and stat bonuses are not in the number. The notes cover them.
   Unpromoted classes are not ranked, because before promotion the shop weapons differ in
   attack and nothing else.</p>
 
@@ -264,12 +265,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Force Sword</td><td class="n">+46</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">82.0</td><td class="n hit">114.4</td></tr>
-      <tr><td class="n">2</td><td>Levanter</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">77.7</td><td class="n">110.1</td></tr>
-      <tr><td class="n">3</td><td>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/4</td><td class="n">74.5</td><td class="n">106.8</td></tr>
-      <tr><td class="n">4</td><td>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.1</td><td class="n">102.5</td></tr>
-      <tr><td class="n">5</td><td>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.0</td><td class="n">103.9</td></tr>
-      <tr><td class="n">6</td><td>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">64.7</td><td class="n">89.0</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1536px 0" role="img" aria-label="Force Sword icon"></span>Force Sword</td><td class="n">+46</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">82.0</td><td class="n hit">114.4</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1600px 0" role="img" aria-label="Levanter icon"></span>Levanter</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">77.7</td><td class="n">110.1</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/4</td><td class="n">74.5</td><td class="n">106.8</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.1</td><td class="n">102.5</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.0</td><td class="n">103.9</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">64.7</td><td class="n">89.0</td></tr>
     </tbody>
   </table>
   </div>
@@ -280,12 +281,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Mist Javelin</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">75.4</td><td class="n hit">106.8</td></tr>
-      <tr><td class="n">2</td><td>Holy Lance</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
-      <tr><td class="n">3</td><td>Halberd</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
-      <tr><td class="n">4</td><td>Valkyrie</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">66.0</td><td class="n">97.4</td></tr>
-      <tr><td class="n">5</td><td>Chrome Lance</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
-      <tr><td class="n">6</td><td>Evil Lance <span class="tag soon">cursed</span></td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.3</td><td class="n">84.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2016px 0" role="img" aria-label="Mist Javelin icon"></span>Mist Javelin</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">75.4</td><td class="n hit">106.8</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1984px 0" role="img" aria-label="Holy Lance icon"></span>Holy Lance</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2048px 0" role="img" aria-label="Halberd icon"></span>Halberd</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1952px 0" role="img" aria-label="Valkyrie icon"></span>Valkyrie</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">66.0</td><td class="n">97.4</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1920px 0" role="img" aria-label="Chrome Lance icon"></span>Chrome Lance</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2080px 0" role="img" aria-label="Evil Lance icon"></span>Evil Lance <span class="tag soon">cursed</span></td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.3</td><td class="n">84.8</td></tr>
     </tbody>
   </table>
   </div>
@@ -296,12 +297,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Rune Axe</td><td class="n">+42</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">78.9</td><td class="n hit">111.8</td></tr>
-      <tr><td class="n">2</td><td>Ground Axe</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
-      <tr><td class="n">3</td><td>Atlas Axe</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
-      <tr><td class="n">4</td><td>Heat Axe</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
-      <tr><td class="n">5</td><td>Evil Axe <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">6</td><td>Great Axe</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">78.9</td><td class="n hit">111.8</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-800px 0" role="img" aria-label="Evil Axe icon"></span>Evil Axe <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-640px 0" role="img" aria-label="Great Axe icon"></span>Great Axe</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
     </tbody>
   </table>
   </div>
@@ -312,12 +313,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">2</td><td>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">3</td><td>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">4</td><td>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">5</td><td>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">6</td><td>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
     </tbody>
   </table>
   </div>
@@ -328,12 +329,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">2</td><td>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">3</td><td>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/4</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">4</td><td>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">5</td><td>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">6</td><td>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/4</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
     </tbody>
   </table>
   </div>
@@ -344,12 +345,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Gisarme</td><td class="n">+42</td><td>150% at 1/4</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">86.1</td><td class="n hit">121.9</td></tr>
-      <tr><td class="n">2</td><td>Ninja Katana</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/8</td><td class="n">1/32</td><td class="n">82.5</td><td class="n">118.3</td></tr>
-      <tr><td class="n">3</td><td>Katana</td><td class="n">+34</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">72.2</td><td class="n">106.1</td></tr>
-      <tr><td class="n">4</td><td>Critical Sword</td><td class="n">+32</td><td>125% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
-      <tr><td class="n">5</td><td>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.7</td><td class="n">93.1</td></tr>
-      <tr><td class="n">6</td><td>Great Sword</td><td class="n">+29</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">66.6</td><td class="n">100.5</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2880px 0" role="img" aria-label="Gisarme icon"></span>Gisarme</td><td class="n">+42</td><td>150% at 1/4</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">86.1</td><td class="n hit">121.9</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2848px 0" role="img" aria-label="Ninja Katana icon"></span>Ninja Katana</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/8</td><td class="n">1/32</td><td class="n">82.5</td><td class="n">118.3</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2816px 0" role="img" aria-label="Katana icon"></span>Katana</td><td class="n">+34</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">72.2</td><td class="n">106.1</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>125% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.7</td><td class="n">93.1</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1440px 0" role="img" aria-label="Great Sword icon"></span>Great Sword</td><td class="n">+29</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">66.6</td><td class="n">100.5</td></tr>
     </tbody>
   </table>
   </div>
@@ -360,44 +361,44 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
-      <tr><td class="n">2</td><td>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
-      <tr><td class="n">3</td><td>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
-      <tr><td class="n">4</td><td>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">5</td><td>Great Sword</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
-      <tr><td class="n">6</td><td>Buster Sword</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1440px 0" role="img" aria-label="Great Sword icon"></span>Great Sword</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1408px 0" role="img" aria-label="Buster Sword icon"></span>Buster Sword</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
     </tbody>
   </table>
   </div>
 
   <h3>Master Monk</h3>
-  <p>Attack is all that matters here, and the Giant Knuckles have the most of it outside the cursed pair. The Evil Knuckles show +63 on the status screen and deliver less than the Iron Knuckles from the shop once the lost turns are counted. A Master Monk also has a one in sixteen chance of the spinning special attack, which the code treats as a forced critical; that is included in the numbers.</p>
+  <p>Attack is all that matters here, and the Giant Knuckles have the most of it outside the cursed pair. The Evil Knuckles show +63 on the status screen and deliver less than the Iron Knuckles from the shop once the lost turns are counted. A Master Monk also has a one in sixteen chance of the spinning special attack, which the code treats as a forced critical. That is included in the numbers.</p>
   <div class="scroll-x">
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Giant Knuckles</td><td class="n">+55</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">90.3</td><td class="n hit">122.2</td></tr>
-      <tr><td class="n">2</td><td>Misty Knuckles</td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">82.9</td><td class="n">114.7</td></tr>
-      <tr><td class="n">3</td><td>Iron Knuckles</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">77.6</td><td class="n">109.4</td></tr>
-      <tr><td class="n">4</td><td>Evil Knuckles <span class="tag soon">cursed</span></td><td class="n">+63</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">74.1</td><td class="n">98.0</td></tr>
-      <tr><td class="n">5</td><td>Brass Knuckles</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">73.3</td><td class="n">105.2</td></tr>
-      <tr><td class="n">6</td><td>Power Glove</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">66.9</td><td class="n">98.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-384px 0" role="img" aria-label="Giant Knuckles icon"></span>Giant Knuckles</td><td class="n">+55</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">90.3</td><td class="n hit">122.2</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-352px 0" role="img" aria-label="Misty Knuckles icon"></span>Misty Knuckles</td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">82.9</td><td class="n">114.7</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-320px 0" role="img" aria-label="Iron Knuckles icon"></span>Iron Knuckles</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">77.6</td><td class="n">109.4</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-416px 0" role="img" aria-label="Evil Knuckles icon"></span>Evil Knuckles <span class="tag soon">cursed</span></td><td class="n">+63</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">74.1</td><td class="n">98.0</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-288px 0" role="img" aria-label="Brass Knuckles icon"></span>Brass Knuckles</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">73.3</td><td class="n">105.2</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-256px 0" role="img" aria-label="Power Glove icon"></span>Power Glove</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">66.9</td><td class="n">98.8</td></tr>
     </tbody>
   </table>
   </div>
 
   <h3>Sniper, Brass Gunner, Bow Knight</h3>
-  <p>The Grand Cannon leads at any attack value you will see in the game. The Nazca Cannon, found in a chest on the Nazca Ship, is the interesting one: ten points under the Grand Cannon but with +1 critical. It passes the Buster Shot once B goes over 54 and the Hyper Cannon over 119; to pass the Grand Cannon it would need B=184, which no character reaches. All three gunner classes add 25% against anything that flies or hovers, and that bonus multiplies with the critical.</p>
+  <p>The Grand Cannon leads at any attack value you will see in the game. The Nazca Cannon, found in a chest on the Nazca Ship, is the interesting one: ten points under the Grand Cannon but with +1 critical. It passes the Buster Shot once B goes over 54 and the Hyper Cannon over 119. To pass the Grand Cannon it would need B=184, which no character reaches. All three gunner classes add 25% against anything that flies or hovers, and that bonus multiplies with the critical.</p>
   <div class="scroll-x">
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Grand Cannon</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.5</td><td class="n hit">107.9</td></tr>
-      <tr><td class="n">2</td><td>Hyper Cannon</td><td class="n">+40</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">73.3</td><td class="n">104.7</td></tr>
-      <tr><td class="n">3</td><td>Buster Shot</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
-      <tr><td class="n">4</td><td>Nazca Cannon</td><td class="n">+33</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">69.0</td><td class="n">101.9</td></tr>
-      <tr><td class="n">5</td><td>Evil Shot <span class="tag soon">cursed</span></td><td class="n">+51</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.6</td><td class="n">87.2</td></tr>
-      <tr><td class="n">6</td><td>Great Shot</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1120px 0" role="img" aria-label="Grand Cannon icon"></span>Grand Cannon</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.5</td><td class="n hit">107.9</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1088px 0" role="img" aria-label="Hyper Cannon icon"></span>Hyper Cannon</td><td class="n">+40</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">73.3</td><td class="n">104.7</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1056px 0" role="img" aria-label="Buster Shot icon"></span>Buster Shot</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1024px 0" role="img" aria-label="Nazca Cannon icon"></span>Nazca Cannon</td><td class="n">+33</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">69.0</td><td class="n">101.9</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1152px 0" role="img" aria-label="Evil Shot icon"></span>Evil Shot <span class="tag soon">cursed</span></td><td class="n">+51</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.6</td><td class="n">87.2</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-992px 0" role="img" aria-label="Great Shot icon"></span>Great Shot</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
     </tbody>
   </table>
   </div>
@@ -408,12 +409,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
-      <tr><td class="n">2</td><td>Freeze Staff</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
-      <tr><td class="n">3</td><td>Supply Staff</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
-      <tr><td class="n">4</td><td>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">5</td><td>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
-      <tr><td class="n">6</td><td>Mage Staff</td><td class="n">+27</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">59.7</td><td class="n">91.1</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2592px 0" role="img" aria-label="Mystery Staff icon"></span>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2528px 0" role="img" aria-label="Freeze Staff icon"></span>Freeze Staff</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2464px 0" role="img" aria-label="Supply Staff icon"></span>Supply Staff</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2624px 0" role="img" aria-label="Demon Rod icon"></span>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2368px 0" role="img" aria-label="Mage Staff icon"></span>Mage Staff</td><td class="n">+27</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">59.7</td><td class="n">91.1</td></tr>
     </tbody>
   </table>
   </div>
@@ -424,12 +425,12 @@
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
-      <tr><td class="n">2</td><td>Goddess Staff</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
-      <tr><td class="n">3</td><td>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">4</td><td>Holy Staff</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
-      <tr><td class="n">5</td><td>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
-      <tr><td class="n">6</td><td>Wish Staff</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2592px 0" role="img" aria-label="Mystery Staff icon"></span>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2560px 0" role="img" aria-label="Goddess Staff icon"></span>Goddess Staff</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2624px 0" role="img" aria-label="Demon Rod icon"></span>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2496px 0" role="img" aria-label="Holy Staff icon"></span>Holy Staff</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2400px 0" role="img" aria-label="Wish Staff icon"></span>Wish Staff</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
     </tbody>
   </table>
   </div>
@@ -439,8 +440,9 @@
 
   <p>Everything below is read from the item definitions at <code>$16EA6</code>, sixteen
   bytes each. "Where" lists the first shop that stocks the item, chests and hidden spots,
-  enemy drops, the ally who joins with it, and whether the dwarven smith can forge it;
-  how the smith picks is in <a href="../mithril-rng/">The Mithril RNG</a>.</p>
+  enemy drops, the ally who joins with it, and whether the dwarven smith can forge it.
+  The icons are the game's own, 16 by 24 pixels, read from <code>$1D8004</code>.
+  How the smith picks is in <a href="../mithril-rng/">The Mithril RNG</a>.</p>
 
   <p class="legend">SDMN swordsman &middot; KNTE knight &middot; WARR warrior &middot; MAGE mage &middot; PRST priest &middot;
   ACHR archer &middot; BDMN birdman &middot; RNGR ranger &middot; THIF thief &middot; HERO hero &middot; PLDN paladin &middot;
@@ -453,21 +455,21 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Wooden Sword</td><td class="n">+3</td><td class="n">1</td><td class="n">60</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>with Bowie</td></tr>
-      <tr><td>Short Sword</td><td class="n">+5</td><td class="n">1</td><td class="n">140</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from Granseal</td></tr>
-      <tr><td>Middle Sword</td><td class="n">+8</td><td class="n">1</td><td class="n">340</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from New Granseal; with Luke</td></tr>
-      <tr><td>Long Sword</td><td class="n">+12</td><td class="n">1</td><td class="n">620</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from Polca</td></tr>
-      <tr><td>Steel Sword</td><td class="n">+16</td><td class="n">1</td><td class="n">1,120</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shop in Hassan; chest, East Shrine</td></tr>
-      <tr><td>Achilles Sword</td><td class="n">+19</td><td class="n">1</td><td class="n">1,350</td><td>only weapon that hurts Taros</td><td></td><td class="cl">SDMN HERO</td><td>chest, Achilles Shrine</td></tr>
-      <tr><td>Broad Sword</td><td class="n">+22</td><td class="n">1</td><td class="n">1,600</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from Hassan (later stock); drop, Devil&#x27;s Tail</td></tr>
-      <tr><td>Buster Sword</td><td class="n">+26</td><td class="n">1</td><td class="n">2,600</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from New Granseal (later stock)</td></tr>
-      <tr><td>Great Sword</td><td class="n">+29</td><td class="n">1</td><td class="n">5,100</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from Pacalon; with Skreech</td></tr>
-      <tr><td>Critical Sword</td><td class="n">+32</td><td class="n">1</td><td class="n">7,200</td><td>critical +1</td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>chest, Mitula Shrine; mithril</td></tr>
-      <tr><td>Battle Sword</td><td class="n">+35</td><td class="n">1</td><td class="n">9,200</td><td></td><td></td><td class="cl">HERO BRN BDBT RDBN</td><td>drop, Prism Flowers; mithril</td></tr>
-      <tr><td>Counter Sword</td><td class="n">+39</td><td class="n">1</td><td class="n">13,000</td><td>counter +1</td><td></td><td class="cl">HERO BRN BDBT RDBN</td><td>drop, Odd Eye; mithril</td></tr>
-      <tr><td>Levanter</td><td class="n">+42</td><td class="n">1</td><td class="n">14,000</td><td>use: Blaze 3</td><td>breakable</td><td class="cl">HERO</td><td>mithril</td></tr>
-      <tr><td>Force Sword</td><td class="n">+46</td><td class="n">1</td><td class="n">10,000</td><td></td><td>cannot be sold</td><td class="cl">HERO</td><td>Force Sword Shrine, Devil&#x27;s Head</td></tr>
-      <tr><td>Dark Sword</td><td class="n">+50</td><td class="n">1</td><td class="n">17,000</td><td>DEF &minus;5, use: Desoul 1</td><td>cursed, breakable</td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>with Lemon</td></tr>
+      <tr><td><span class="ico" style="background-position:-1664px 0" role="img" aria-label="Wooden Sword icon"></span>Wooden Sword</td><td class="n">+3</td><td class="n">1</td><td class="n">60</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>with Bowie</td></tr>
+      <tr><td><span class="ico" style="background-position:-1216px 0" role="img" aria-label="Short Sword icon"></span>Short Sword</td><td class="n">+5</td><td class="n">1</td><td class="n">140</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from Granseal</td></tr>
+      <tr><td><span class="ico" style="background-position:-1248px 0" role="img" aria-label="Middle Sword icon"></span>Middle Sword</td><td class="n">+8</td><td class="n">1</td><td class="n">340</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from New Granseal / with Luke</td></tr>
+      <tr><td><span class="ico" style="background-position:-1280px 0" role="img" aria-label="Long Sword icon"></span>Long Sword</td><td class="n">+12</td><td class="n">1</td><td class="n">620</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from Polca</td></tr>
+      <tr><td><span class="ico" style="background-position:-1312px 0" role="img" aria-label="Steel Sword icon"></span>Steel Sword</td><td class="n">+16</td><td class="n">1</td><td class="n">1,120</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shop in Hassan / chest, East Shrine</td></tr>
+      <tr><td><span class="ico" style="background-position:-1344px 0" role="img" aria-label="Achilles Sword icon"></span>Achilles Sword</td><td class="n">+19</td><td class="n">1</td><td class="n">1,350</td><td>only weapon that hurts Taros</td><td></td><td class="cl">SDMN HERO</td><td>chest, Achilles Shrine</td></tr>
+      <tr><td><span class="ico" style="background-position:-1376px 0" role="img" aria-label="Broad Sword icon"></span>Broad Sword</td><td class="n">+22</td><td class="n">1</td><td class="n">1,600</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from Hassan (later stock) / drop, Devil&#x27;s Tail</td></tr>
+      <tr><td><span class="ico" style="background-position:-1408px 0" role="img" aria-label="Buster Sword icon"></span>Buster Sword</td><td class="n">+26</td><td class="n">1</td><td class="n">2,600</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-1440px 0" role="img" aria-label="Great Sword icon"></span>Great Sword</td><td class="n">+29</td><td class="n">1</td><td class="n">5,100</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from Pacalon / with Skreech</td></tr>
+      <tr><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td class="n">1</td><td class="n">7,200</td><td>critical +1</td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>chest, Mitula Shrine / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td class="n">1</td><td class="n">9,200</td><td></td><td></td><td class="cl">HERO BRN BDBT RDBN</td><td>drop, Prism Flowers / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td class="n">1</td><td class="n">13,000</td><td>counter +1</td><td></td><td class="cl">HERO BRN BDBT RDBN</td><td>drop, Odd Eye / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1600px 0" role="img" aria-label="Levanter icon"></span>Levanter</td><td class="n">+42</td><td class="n">1</td><td class="n">14,000</td><td>use: Blaze 3</td><td>breakable</td><td class="cl">HERO</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1536px 0" role="img" aria-label="Force Sword icon"></span>Force Sword</td><td class="n">+46</td><td class="n">1</td><td class="n">10,000</td><td></td><td>cannot be sold</td><td class="cl">HERO</td><td>Force Sword Shrine, Devil&#x27;s Head</td></tr>
+      <tr><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword</td><td class="n">+50</td><td class="n">1</td><td class="n">17,000</td><td>DEF &minus;5, use: Desoul 1</td><td>cursed, breakable</td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>with Lemon</td></tr>
     </tbody>
   </table>
   </div>
@@ -477,9 +479,9 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Katana</td><td class="n">+34</td><td class="n">1</td><td class="n">9,600</td><td></td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
-      <tr><td>Ninja Katana</td><td class="n">+39</td><td class="n">1</td><td class="n">11,500</td><td>double attack +1</td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
-      <tr><td>Gisarme</td><td class="n">+42</td><td class="n">1</td><td class="n">15,000</td><td>critical set to 150% at 1/4, critical becomes instant kill</td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2816px 0" role="img" aria-label="Katana icon"></span>Katana</td><td class="n">+34</td><td class="n">1</td><td class="n">9,600</td><td></td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2848px 0" role="img" aria-label="Ninja Katana icon"></span>Ninja Katana</td><td class="n">+39</td><td class="n">1</td><td class="n">11,500</td><td>double attack +1</td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2880px 0" role="img" aria-label="Gisarme icon"></span>Gisarme</td><td class="n">+42</td><td class="n">1</td><td class="n">15,000</td><td>critical set to 150% at 1/4, critical becomes instant kill</td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
     </tbody>
   </table>
   </div>
@@ -489,10 +491,10 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Short Knife</td><td class="n">+5</td><td class="n">1</td><td class="n">70</td><td></td><td></td><td class="cl">THIF</td><td>shops from Granseal; with Slade</td></tr>
-      <tr><td>Dagger</td><td class="n">+8</td><td class="n">1</td><td class="n">320</td><td></td><td></td><td class="cl">THIF</td><td>shops from Ribble</td></tr>
-      <tr><td>Knife</td><td class="n">+12</td><td class="n">1</td><td class="n">500</td><td></td><td></td><td class="cl">THIF</td><td>shops from Bedoe</td></tr>
-      <tr><td>Thieve&#x27;s Dagger</td><td class="n">+17</td><td class="n">1</td><td class="n">940</td><td>AGI +5</td><td></td><td class="cl">THIF</td><td>shop in Hassan</td></tr>
+      <tr><td><span class="ico" style="background-position:-2688px 0" role="img" aria-label="Short Knife icon"></span>Short Knife</td><td class="n">+5</td><td class="n">1</td><td class="n">70</td><td></td><td></td><td class="cl">THIF</td><td>shops from Granseal / with Slade</td></tr>
+      <tr><td><span class="ico" style="background-position:-2720px 0" role="img" aria-label="Dagger icon"></span>Dagger</td><td class="n">+8</td><td class="n">1</td><td class="n">320</td><td></td><td></td><td class="cl">THIF</td><td>shops from Ribble</td></tr>
+      <tr><td><span class="ico" style="background-position:-2752px 0" role="img" aria-label="Knife icon"></span>Knife</td><td class="n">+12</td><td class="n">1</td><td class="n">500</td><td></td><td></td><td class="cl">THIF</td><td>shops from Bedoe</td></tr>
+      <tr><td><span class="ico" style="background-position:-2784px 0" role="img" aria-label="Thieve&#x27;s Dagger icon"></span>Thieve&#x27;s Dagger</td><td class="n">+17</td><td class="n">1</td><td class="n">940</td><td>AGI +5</td><td></td><td class="cl">THIF</td><td>shop in Hassan</td></tr>
     </tbody>
   </table>
   </div>
@@ -502,18 +504,18 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Short Axe</td><td class="n">+5</td><td class="n">1</td><td class="n">120</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from Granseal; with Jaha</td></tr>
-      <tr><td>Hand Axe</td><td class="n">+9</td><td class="n">1</td><td class="n">340</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from New Granseal</td></tr>
-      <tr><td>Middle Axe</td><td class="n">+13</td><td class="n">1</td><td class="n">610</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from Bedoe</td></tr>
-      <tr><td>Power Axe</td><td class="n">+17</td><td class="n">1</td><td class="n">1,100</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shop in Hassan; with Randolf</td></tr>
-      <tr><td>Battle Axe</td><td class="n">+21</td><td class="n">1</td><td class="n">1,370</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shop in Hassan (later stock)</td></tr>
-      <tr><td>Large Axe</td><td class="n">+25</td><td class="n">1</td><td class="n">2,250</td><td></td><td></td><td class="cl">GLDT BRN RDBN</td><td>shops from New Granseal (later stock)</td></tr>
-      <tr><td>Great Axe</td><td class="n">+28</td><td class="n">1</td><td class="n">4,600</td><td></td><td></td><td class="cl">GLDT BRN RDBN</td><td>shops from Tristan; with Gyan</td></tr>
-      <tr><td>Heat Axe</td><td class="n">+32</td><td class="n">1</td><td class="n">7,200</td><td>use: Blaze 2</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>drop, road to Roft; mithril</td></tr>
-      <tr><td>Atlas Axe</td><td class="n">+35</td><td class="n">1</td><td class="n">9,600</td><td>use: Blaze 3</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
-      <tr><td>Ground Axe</td><td class="n">+39</td><td class="n">1</td><td class="n">10,000</td><td>MOV +1</td><td></td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
-      <tr><td>Rune Axe</td><td class="n">+42</td><td class="n">1</td><td class="n">10,000</td><td>critical +1, use: Detox 2</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
-      <tr><td>Evil Axe</td><td class="n">+50</td><td class="n">1</td><td class="n">15,000</td><td>DEF &minus;5</td><td>cursed</td><td class="cl">GLDT BRN RDBN</td><td>chest, Force Sword Shrine</td></tr>
+      <tr><td><span class="ico" style="background-position:-448px 0" role="img" aria-label="Short Axe icon"></span>Short Axe</td><td class="n">+5</td><td class="n">1</td><td class="n">120</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from Granseal / with Jaha</td></tr>
+      <tr><td><span class="ico" style="background-position:-480px 0" role="img" aria-label="Hand Axe icon"></span>Hand Axe</td><td class="n">+9</td><td class="n">1</td><td class="n">340</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from New Granseal</td></tr>
+      <tr><td><span class="ico" style="background-position:-512px 0" role="img" aria-label="Middle Axe icon"></span>Middle Axe</td><td class="n">+13</td><td class="n">1</td><td class="n">610</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from Bedoe</td></tr>
+      <tr><td><span class="ico" style="background-position:-544px 0" role="img" aria-label="Power Axe icon"></span>Power Axe</td><td class="n">+17</td><td class="n">1</td><td class="n">1,100</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shop in Hassan / with Randolf</td></tr>
+      <tr><td><span class="ico" style="background-position:-576px 0" role="img" aria-label="Battle Axe icon"></span>Battle Axe</td><td class="n">+21</td><td class="n">1</td><td class="n">1,370</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shop in Hassan (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-608px 0" role="img" aria-label="Large Axe icon"></span>Large Axe</td><td class="n">+25</td><td class="n">1</td><td class="n">2,250</td><td></td><td></td><td class="cl">GLDT BRN RDBN</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-640px 0" role="img" aria-label="Great Axe icon"></span>Great Axe</td><td class="n">+28</td><td class="n">1</td><td class="n">4,600</td><td></td><td></td><td class="cl">GLDT BRN RDBN</td><td>shops from Tristan / with Gyan</td></tr>
+      <tr><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td class="n">1</td><td class="n">7,200</td><td>use: Blaze 2</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>drop, road to Roft / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td class="n">1</td><td class="n">9,600</td><td>use: Blaze 3</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td class="n">1</td><td class="n">10,000</td><td>MOV +1</td><td></td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td class="n">1</td><td class="n">10,000</td><td>critical +1, use: Detox 2</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-800px 0" role="img" aria-label="Evil Axe icon"></span>Evil Axe</td><td class="n">+50</td><td class="n">1</td><td class="n">15,000</td><td>DEF &minus;5</td><td>cursed</td><td class="cl">GLDT BRN RDBN</td><td>chest, Force Sword Shrine</td></tr>
     </tbody>
   </table>
   </div>
@@ -523,20 +525,20 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Wooden Stick</td><td class="n">+3</td><td class="n">1</td><td class="n">70</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>with Chester</td></tr>
-      <tr><td>Short Spear</td><td class="n">+6</td><td class="n">1&ndash;2</td><td class="n">120</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Granseal</td></tr>
-      <tr><td>Bronze Lance</td><td class="n">+9</td><td class="n">1</td><td class="n">260</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Galam</td></tr>
-      <tr><td>Spear</td><td class="n">+12</td><td class="n">1&ndash;2</td><td class="n">460</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from New Granseal</td></tr>
-      <tr><td>Steel Lance</td><td class="n">+16</td><td class="n">1</td><td class="n">810</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Bedoe; with Eric; with Rick</td></tr>
-      <tr><td>Power Spear</td><td class="n">+20</td><td class="n">1&ndash;2</td><td class="n">1,270</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shop in Hassan (later stock)</td></tr>
-      <tr><td>Heavy Lance</td><td class="n">+23</td><td class="n">1</td><td class="n">1,600</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from New Granseal (later stock)</td></tr>
-      <tr><td>Javelin</td><td class="n">+26</td><td class="n">1&ndash;2</td><td class="n">3,400</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from Ketto; with Higins</td></tr>
-      <tr><td>Chrome Lance</td><td class="n">+31</td><td class="n">1</td><td class="n">6,900</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from Tristan; with Jaro</td></tr>
-      <tr><td>Valkyrie</td><td class="n">+33</td><td class="n">1&ndash;2</td><td class="n">7,700</td><td>use: Attack 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>chest, Prism Flowers battlefield; mithril</td></tr>
-      <tr><td>Halberd</td><td class="n">+37</td><td class="n">1</td><td class="n">7,300</td><td>use: Bolt 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
-      <tr><td>Holy Lance</td><td class="n">+39</td><td class="n">1</td><td class="n">9,300</td><td>DEF +5, use: Heal (item) 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
-      <tr><td>Mist Javelin</td><td class="n">+42</td><td class="n">1&ndash;2</td><td class="n">9,900</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
-      <tr><td>Evil Lance</td><td class="n">+48</td><td class="n">1</td><td class="n">11,000</td><td>MOV &minus;2</td><td>cursed</td><td class="cl">PLDN PGNT</td><td>hidden, Devil&#x27;s Head</td></tr>
+      <tr><td><span class="ico" style="background-position:-1184px 0" role="img" aria-label="Wooden Stick icon"></span>Wooden Stick</td><td class="n">+3</td><td class="n">1</td><td class="n">70</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>with Chester</td></tr>
+      <tr><td><span class="ico" style="background-position:-1696px 0" role="img" aria-label="Short Spear icon"></span>Short Spear</td><td class="n">+6</td><td class="n">1&ndash;2</td><td class="n">120</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Granseal</td></tr>
+      <tr><td><span class="ico" style="background-position:-1728px 0" role="img" aria-label="Bronze Lance icon"></span>Bronze Lance</td><td class="n">+9</td><td class="n">1</td><td class="n">260</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Galam</td></tr>
+      <tr><td><span class="ico" style="background-position:-1760px 0" role="img" aria-label="Spear icon"></span>Spear</td><td class="n">+12</td><td class="n">1&ndash;2</td><td class="n">460</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from New Granseal</td></tr>
+      <tr><td><span class="ico" style="background-position:-1792px 0" role="img" aria-label="Steel Lance icon"></span>Steel Lance</td><td class="n">+16</td><td class="n">1</td><td class="n">810</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Bedoe / with Eric / with Rick</td></tr>
+      <tr><td><span class="ico" style="background-position:-1824px 0" role="img" aria-label="Power Spear icon"></span>Power Spear</td><td class="n">+20</td><td class="n">1&ndash;2</td><td class="n">1,270</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shop in Hassan (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-1856px 0" role="img" aria-label="Heavy Lance icon"></span>Heavy Lance</td><td class="n">+23</td><td class="n">1</td><td class="n">1,600</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-1888px 0" role="img" aria-label="Javelin icon"></span>Javelin</td><td class="n">+26</td><td class="n">1&ndash;2</td><td class="n">3,400</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from Ketto / with Higins</td></tr>
+      <tr><td><span class="ico" style="background-position:-1920px 0" role="img" aria-label="Chrome Lance icon"></span>Chrome Lance</td><td class="n">+31</td><td class="n">1</td><td class="n">6,900</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from Tristan / with Jaro</td></tr>
+      <tr><td><span class="ico" style="background-position:-1952px 0" role="img" aria-label="Valkyrie icon"></span>Valkyrie</td><td class="n">+33</td><td class="n">1&ndash;2</td><td class="n">7,700</td><td>use: Attack 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>chest, Prism Flowers battlefield / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2048px 0" role="img" aria-label="Halberd icon"></span>Halberd</td><td class="n">+37</td><td class="n">1</td><td class="n">7,300</td><td>use: Bolt 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1984px 0" role="img" aria-label="Holy Lance icon"></span>Holy Lance</td><td class="n">+39</td><td class="n">1</td><td class="n">9,300</td><td>DEF +5, use: Heal (item) 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2016px 0" role="img" aria-label="Mist Javelin icon"></span>Mist Javelin</td><td class="n">+42</td><td class="n">1&ndash;2</td><td class="n">9,900</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2080px 0" role="img" aria-label="Evil Lance icon"></span>Evil Lance</td><td class="n">+48</td><td class="n">1</td><td class="n">11,000</td><td>MOV &minus;2</td><td>cursed</td><td class="cl">PLDN PGNT</td><td>hidden, Devil&#x27;s Head</td></tr>
     </tbody>
   </table>
   </div>
@@ -546,17 +548,17 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Wooden Arrow</td><td class="n">+7</td><td class="n">2</td><td class="n">250</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shops from Ribble; with May</td></tr>
-      <tr><td>Iron Arrow</td><td class="n">+12</td><td class="n">2</td><td class="n">600</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shops from Bedoe</td></tr>
-      <tr><td>Steel Arrow</td><td class="n">+17</td><td class="n">2</td><td class="n">1,270</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shop in Hassan; with Elric; with Janet</td></tr>
-      <tr><td>Robin Arrow</td><td class="n">+21</td><td class="n">2&ndash;3</td><td class="n">1,480</td><td>critical +1</td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from Hassan (later stock)</td></tr>
-      <tr><td>Assault Shell</td><td class="n">+25</td><td class="n">2&ndash;3</td><td class="n">2,500</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from New Granseal (later stock); with Rohde</td></tr>
-      <tr><td>Great Shot</td><td class="n">+29</td><td class="n">2&ndash;3</td><td class="n">5,000</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from Pacalon</td></tr>
-      <tr><td>Nazca Cannon</td><td class="n">+33</td><td class="n">2&ndash;3</td><td class="n">3,000</td><td>critical +1</td><td></td><td class="cl">SNIP BRGN BWNT</td><td>chest, Nazca Ship</td></tr>
-      <tr><td>Buster Shot</td><td class="n">+37</td><td class="n">2&ndash;3</td><td class="n">6,800</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>drop, Geshp; mithril</td></tr>
-      <tr><td>Hyper Cannon</td><td class="n">+40</td><td class="n">2&ndash;3</td><td class="n">8,700</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>mithril</td></tr>
-      <tr><td>Grand Cannon</td><td class="n">+43</td><td class="n">2&ndash;3</td><td class="n">9,800</td><td>use: Dispel 1</td><td>breakable</td><td class="cl">SNIP BRGN BWNT</td><td>mithril</td></tr>
-      <tr><td>Evil Shot</td><td class="n">+51</td><td class="n">2&ndash;3</td><td class="n">13,000</td><td>DEF &minus;5</td><td>cursed</td><td class="cl">SNIP BRGN BWNT</td><td>hidden, Galam Castle</td></tr>
+      <tr><td><span class="ico" style="background-position:-832px 0" role="img" aria-label="Wooden Arrow icon"></span>Wooden Arrow</td><td class="n">+7</td><td class="n">2</td><td class="n">250</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shops from Ribble / with May</td></tr>
+      <tr><td><span class="ico" style="background-position:-864px 0" role="img" aria-label="Iron Arrow icon"></span>Iron Arrow</td><td class="n">+12</td><td class="n">2</td><td class="n">600</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shops from Bedoe</td></tr>
+      <tr><td><span class="ico" style="background-position:-896px 0" role="img" aria-label="Steel Arrow icon"></span>Steel Arrow</td><td class="n">+17</td><td class="n">2</td><td class="n">1,270</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shop in Hassan / with Elric / with Janet</td></tr>
+      <tr><td><span class="ico" style="background-position:-928px 0" role="img" aria-label="Robin Arrow icon"></span>Robin Arrow</td><td class="n">+21</td><td class="n">2&ndash;3</td><td class="n">1,480</td><td>critical +1</td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from Hassan (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-960px 0" role="img" aria-label="Assault Shell icon"></span>Assault Shell</td><td class="n">+25</td><td class="n">2&ndash;3</td><td class="n">2,500</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from New Granseal (later stock) / with Rohde</td></tr>
+      <tr><td><span class="ico" style="background-position:-992px 0" role="img" aria-label="Great Shot icon"></span>Great Shot</td><td class="n">+29</td><td class="n">2&ndash;3</td><td class="n">5,000</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from Pacalon</td></tr>
+      <tr><td><span class="ico" style="background-position:-1024px 0" role="img" aria-label="Nazca Cannon icon"></span>Nazca Cannon</td><td class="n">+33</td><td class="n">2&ndash;3</td><td class="n">3,000</td><td>critical +1</td><td></td><td class="cl">SNIP BRGN BWNT</td><td>chest, Nazca Ship</td></tr>
+      <tr><td><span class="ico" style="background-position:-1056px 0" role="img" aria-label="Buster Shot icon"></span>Buster Shot</td><td class="n">+37</td><td class="n">2&ndash;3</td><td class="n">6,800</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>drop, Geshp / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1088px 0" role="img" aria-label="Hyper Cannon icon"></span>Hyper Cannon</td><td class="n">+40</td><td class="n">2&ndash;3</td><td class="n">8,700</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1120px 0" role="img" aria-label="Grand Cannon icon"></span>Grand Cannon</td><td class="n">+43</td><td class="n">2&ndash;3</td><td class="n">9,800</td><td>use: Dispel 1</td><td>breakable</td><td class="cl">SNIP BRGN BWNT</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-1152px 0" role="img" aria-label="Evil Shot icon"></span>Evil Shot</td><td class="n">+51</td><td class="n">2&ndash;3</td><td class="n">13,000</td><td>DEF &minus;5</td><td>cursed</td><td class="cl">SNIP BRGN BWNT</td><td>hidden, Galam Castle</td></tr>
     </tbody>
   </table>
   </div>
@@ -566,23 +568,23 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Wooden Rod</td><td class="n">+3</td><td class="n">1</td><td class="n">60</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Granseal; with Kazin; with Sarah</td></tr>
-      <tr><td>Short Rod</td><td class="n">+5</td><td class="n">1</td><td class="n">130</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Galam; drop, Galam Castle</td></tr>
-      <tr><td>Bronze Rod</td><td class="n">+8</td><td class="n">1</td><td class="n">360</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Polca</td></tr>
-      <tr><td>Iron Rod</td><td class="n">+12</td><td class="n">1</td><td class="n">560</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shop in Hassan</td></tr>
-      <tr><td>Power Stick</td><td class="n">+15</td><td class="n">1</td><td class="n">1,050</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shop in Hassan; drop, southeast desert; with Karna; with Tyrin</td></tr>
-      <tr><td>Flail</td><td class="n">+19</td><td class="n">1</td><td class="n">1,490</td><td></td><td></td><td class="cl">WIZ SORC VICR</td><td>shops from Hassan (later stock)</td></tr>
-      <tr><td>Guardian Staff</td><td class="n">+22</td><td class="n">1</td><td class="n">2,380</td><td>DEF +5</td><td></td><td class="cl">WIZ SORC VICR</td><td>shops from New Granseal (later stock)</td></tr>
-      <tr><td>Indra Staff</td><td class="n">+25</td><td class="n">1</td><td class="n">3,200</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">WIZ SORC VICR</td><td>shops from Ketto; with Frayja; with Taya</td></tr>
-      <tr><td>Wish Staff</td><td class="n">+26</td><td class="n">1</td><td class="n">6,100</td><td>use: Attack 1</td><td>breakable</td><td class="cl">VICR</td><td>drop, Cameela</td></tr>
-      <tr><td>Mage Staff</td><td class="n">+27</td><td class="n">1</td><td class="n">6,300</td><td>use: Blaze 2</td><td>breakable</td><td class="cl">WIZ SORC</td><td>drop, inside Moun; with Chaz</td></tr>
-      <tr><td>Great Rod</td><td class="n">+28</td><td class="n">1</td><td class="n">7,900</td><td></td><td></td><td class="cl">WIZ SORC VICR</td><td>mithril</td></tr>
-      <tr><td>Holy Staff</td><td class="n">+29</td><td class="n">1</td><td class="n">9,000</td><td>+3 HP every turn</td><td></td><td class="cl">VICR</td><td>drop, outside the Ancient Tower; mithril</td></tr>
-      <tr><td>Goddess Staff</td><td class="n">+31</td><td class="n">1</td><td class="n">9,700</td><td>use: Aura 2</td><td>breakable</td><td class="cl">VICR</td><td>mithril</td></tr>
-      <tr><td>Supply Staff</td><td class="n">+32</td><td class="n">1</td><td class="n">8,500</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
-      <tr><td>Freeze Staff</td><td class="n">+37</td><td class="n">1</td><td class="n">9,500</td><td>use: Freeze 3</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
-      <tr><td>Mystery Staff</td><td class="n">+39</td><td class="n">1</td><td class="n">10,000</td><td>+2 MP every turn</td><td></td><td class="cl">WIZ SORC VICR</td><td>mithril</td></tr>
-      <tr><td>Demon Rod</td><td class="n">+50</td><td class="n">1</td><td class="n">12,500</td><td>AGI &minus;10, use: Magic Drain 1</td><td>cursed, breakable</td><td class="cl">WIZ SORC VICR</td><td>hidden, Dwarven Village</td></tr>
+      <tr><td><span class="ico" style="background-position:-2112px 0" role="img" aria-label="Wooden Rod icon"></span>Wooden Rod</td><td class="n">+3</td><td class="n">1</td><td class="n">60</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Granseal / with Kazin / with Sarah</td></tr>
+      <tr><td><span class="ico" style="background-position:-2144px 0" role="img" aria-label="Short Rod icon"></span>Short Rod</td><td class="n">+5</td><td class="n">1</td><td class="n">130</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Galam / drop, Galam Castle</td></tr>
+      <tr><td><span class="ico" style="background-position:-2176px 0" role="img" aria-label="Bronze Rod icon"></span>Bronze Rod</td><td class="n">+8</td><td class="n">1</td><td class="n">360</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Polca</td></tr>
+      <tr><td><span class="ico" style="background-position:-2208px 0" role="img" aria-label="Iron Rod icon"></span>Iron Rod</td><td class="n">+12</td><td class="n">1</td><td class="n">560</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shop in Hassan</td></tr>
+      <tr><td><span class="ico" style="background-position:-2240px 0" role="img" aria-label="Power Stick icon"></span>Power Stick</td><td class="n">+15</td><td class="n">1</td><td class="n">1,050</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shop in Hassan / drop, southeast desert / with Karna / with Tyrin</td></tr>
+      <tr><td><span class="ico" style="background-position:-2272px 0" role="img" aria-label="Flail icon"></span>Flail</td><td class="n">+19</td><td class="n">1</td><td class="n">1,490</td><td></td><td></td><td class="cl">WIZ SORC VICR</td><td>shops from Hassan (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-2304px 0" role="img" aria-label="Guardian Staff icon"></span>Guardian Staff</td><td class="n">+22</td><td class="n">1</td><td class="n">2,380</td><td>DEF +5</td><td></td><td class="cl">WIZ SORC VICR</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-2336px 0" role="img" aria-label="Indra Staff icon"></span>Indra Staff</td><td class="n">+25</td><td class="n">1</td><td class="n">3,200</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">WIZ SORC VICR</td><td>shops from Ketto / with Frayja / with Taya</td></tr>
+      <tr><td><span class="ico" style="background-position:-2400px 0" role="img" aria-label="Wish Staff icon"></span>Wish Staff</td><td class="n">+26</td><td class="n">1</td><td class="n">6,100</td><td>use: Attack 1</td><td>breakable</td><td class="cl">VICR</td><td>drop, Cameela</td></tr>
+      <tr><td><span class="ico" style="background-position:-2368px 0" role="img" aria-label="Mage Staff icon"></span>Mage Staff</td><td class="n">+27</td><td class="n">1</td><td class="n">6,300</td><td>use: Blaze 2</td><td>breakable</td><td class="cl">WIZ SORC</td><td>drop, inside Moun / with Chaz</td></tr>
+      <tr><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td class="n">1</td><td class="n">7,900</td><td></td><td></td><td class="cl">WIZ SORC VICR</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2496px 0" role="img" aria-label="Holy Staff icon"></span>Holy Staff</td><td class="n">+29</td><td class="n">1</td><td class="n">9,000</td><td>+3 HP every turn</td><td></td><td class="cl">VICR</td><td>drop, outside the Ancient Tower / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2560px 0" role="img" aria-label="Goddess Staff icon"></span>Goddess Staff</td><td class="n">+31</td><td class="n">1</td><td class="n">9,700</td><td>use: Aura 2</td><td>breakable</td><td class="cl">VICR</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2464px 0" role="img" aria-label="Supply Staff icon"></span>Supply Staff</td><td class="n">+32</td><td class="n">1</td><td class="n">8,500</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2528px 0" role="img" aria-label="Freeze Staff icon"></span>Freeze Staff</td><td class="n">+37</td><td class="n">1</td><td class="n">9,500</td><td>use: Freeze 3</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2592px 0" role="img" aria-label="Mystery Staff icon"></span>Mystery Staff</td><td class="n">+39</td><td class="n">1</td><td class="n">10,000</td><td>+2 MP every turn</td><td></td><td class="cl">WIZ SORC VICR</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2624px 0" role="img" aria-label="Demon Rod icon"></span>Demon Rod</td><td class="n">+50</td><td class="n">1</td><td class="n">12,500</td><td>AGI &minus;10, use: Magic Drain 1</td><td>cursed, breakable</td><td class="cl">WIZ SORC VICR</td><td>hidden, Dwarven Village</td></tr>
     </tbody>
   </table>
   </div>
@@ -592,13 +594,13 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Leather Glove</td><td class="n">+26</td><td class="n">1</td><td class="n">1,300</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Hassan (later stock)</td></tr>
-      <tr><td>Power Glove</td><td class="n">+33</td><td class="n">1</td><td class="n">1,800</td><td></td><td></td><td class="cl">MMNK</td><td>shops from New Granseal (later stock)</td></tr>
-      <tr><td>Brass Knuckles</td><td class="n">+39</td><td class="n">1</td><td class="n">2,900</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Tristan; with Sheela</td></tr>
-      <tr><td>Iron Knuckles</td><td class="n">+43</td><td class="n">1</td><td class="n">4,800</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Moun</td></tr>
-      <tr><td>Misty Knuckles</td><td class="n">+48</td><td class="n">1</td><td class="n">5,500</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">MMNK</td><td>mithril</td></tr>
-      <tr><td>Giant Knuckles</td><td class="n">+55</td><td class="n">1</td><td class="n">7,500</td><td>use: Muddle 1</td><td>breakable</td><td class="cl">MMNK</td><td>mithril</td></tr>
-      <tr><td>Evil Knuckles</td><td class="n">+63</td><td class="n">1</td><td class="n">9,500</td><td></td><td>cursed</td><td class="cl">MMNK</td><td>chest, Yeel</td></tr>
+      <tr><td><span class="ico" style="background-position:-224px 0" role="img" aria-label="Leather Glove icon"></span>Leather Glove</td><td class="n">+26</td><td class="n">1</td><td class="n">1,300</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Hassan (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-256px 0" role="img" aria-label="Power Glove icon"></span>Power Glove</td><td class="n">+33</td><td class="n">1</td><td class="n">1,800</td><td></td><td></td><td class="cl">MMNK</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td><span class="ico" style="background-position:-288px 0" role="img" aria-label="Brass Knuckles icon"></span>Brass Knuckles</td><td class="n">+39</td><td class="n">1</td><td class="n">2,900</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Tristan / with Sheela</td></tr>
+      <tr><td><span class="ico" style="background-position:-320px 0" role="img" aria-label="Iron Knuckles icon"></span>Iron Knuckles</td><td class="n">+43</td><td class="n">1</td><td class="n">4,800</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Moun</td></tr>
+      <tr><td><span class="ico" style="background-position:-352px 0" role="img" aria-label="Misty Knuckles icon"></span>Misty Knuckles</td><td class="n">+48</td><td class="n">1</td><td class="n">5,500</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">MMNK</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-384px 0" role="img" aria-label="Giant Knuckles icon"></span>Giant Knuckles</td><td class="n">+55</td><td class="n">1</td><td class="n">7,500</td><td>use: Muddle 1</td><td>breakable</td><td class="cl">MMNK</td><td>mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-416px 0" role="img" aria-label="Evil Knuckles icon"></span>Evil Knuckles</td><td class="n">+63</td><td class="n">1</td><td class="n">9,500</td><td></td><td>cursed</td><td class="cl">MMNK</td><td>chest, Yeel</td></tr>
     </tbody>
   </table>
   </div>
@@ -608,8 +610,8 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Taros Sword</td><td class="n">+32</td><td class="n">1&ndash;2</td><td class="n">10,000</td><td>use: Bolt 2</td><td>breakable</td><td class="cl">nobody</td><td>drop, Taros</td></tr>
-      <tr><td>Iron Ball</td><td class="n">+44</td><td class="n">1</td><td class="n">3,800</td><td>use: Blaze 3</td><td>cursed, breakable</td><td class="cl">nobody</td><td>drop, Cameela</td></tr>
+      <tr><td><span class="ico" style="background-position:-2912px 0" role="img" aria-label="Taros Sword icon"></span>Taros Sword</td><td class="n">+32</td><td class="n">1&ndash;2</td><td class="n">10,000</td><td>use: Bolt 2</td><td>breakable</td><td class="cl">nobody</td><td>drop, Taros</td></tr>
+      <tr><td><span class="ico" style="background-position:-2656px 0" role="img" aria-label="Iron Ball icon"></span>Iron Ball</td><td class="n">+44</td><td class="n">1</td><td class="n">3,800</td><td>use: Blaze 3</td><td>cursed, breakable</td><td class="cl">nobody</td><td>drop, Cameela</td></tr>
     </tbody>
   </table>
   </div>
@@ -619,14 +621,14 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
-      <tr><td>Protect Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>DEF +5, use: Boost 1</td><td>breakable</td><td class="cl">everyone</td><td>drop, Devil&#x27;s Tail</td></tr>
-      <tr><td>Quick Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>AGI +5</td><td>breakable</td><td class="cl">everyone</td><td>hidden, Bedoe</td></tr>
-      <tr><td>Running Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>MOV +2</td><td></td><td class="cl">everyone</td><td>hidden, Creed&#x27;s Mansion</td></tr>
-      <tr><td>White Ring</td><td class="n"></td><td class="n"></td><td class="n">5,000</td><td>DEF +10, use: Aura 2</td><td>breakable</td><td class="cl">HERO VICR</td><td>chest, Dwarven Village</td></tr>
-      <tr><td>Life Ring</td><td class="n"></td><td class="n"></td><td class="n">5,000</td><td>+5 HP every turn</td><td></td><td class="cl">HERO PLDN PGNT GLDT BRN WIZ SORC VICR MMNK SNIP BRGN BDBT WFBR BWNT PHNX NINJ MNST RBT GLM RDBN</td><td>chest, Elven Village battlefield</td></tr>
-      <tr><td>Power Ring</td><td class="n">+5</td><td class="n"></td><td class="n">3,000</td><td>use: Attack 1</td><td>breakable</td><td class="cl">everyone</td><td>drop, road east of Ribble</td></tr>
-      <tr><td>Black Ring</td><td class="n">+10</td><td class="n"></td><td class="n">5,000</td><td>use: Blaze 2</td><td>cursed, breakable</td><td class="cl">WIZ SORC</td><td>drop, outside Ketto</td></tr>
-      <tr><td>Evil Ring</td><td class="n">+15</td><td class="n"></td><td class="n">5,000</td><td>use: Bolt 2</td><td>cursed, breakable</td><td class="cl">WIZ SORC VICR</td><td>drop, road to the Ancient Shrine</td></tr>
+      <tr><td><span class="ico" style="background-position:-32px 0" role="img" aria-label="Protect Ring icon"></span>Protect Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>DEF +5, use: Boost 1</td><td>breakable</td><td class="cl">everyone</td><td>drop, Devil&#x27;s Tail</td></tr>
+      <tr><td><span class="ico" style="background-position:-64px 0" role="img" aria-label="Quick Ring icon"></span>Quick Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>AGI +5</td><td>breakable</td><td class="cl">everyone</td><td>hidden, Bedoe</td></tr>
+      <tr><td><span class="ico" style="background-position:-96px 0" role="img" aria-label="Running Ring icon"></span>Running Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>MOV +2</td><td></td><td class="cl">everyone</td><td>hidden, Creed&#x27;s Mansion</td></tr>
+      <tr><td><span class="ico" style="background-position:-128px 0" role="img" aria-label="White Ring icon"></span>White Ring</td><td class="n"></td><td class="n"></td><td class="n">5,000</td><td>DEF +10, use: Aura 2</td><td>breakable</td><td class="cl">HERO VICR</td><td>chest, Dwarven Village</td></tr>
+      <tr><td><span class="ico" style="background-position:-2944px 0" role="img" aria-label="Life Ring icon"></span>Life Ring</td><td class="n"></td><td class="n"></td><td class="n">5,000</td><td>+5 HP every turn</td><td></td><td class="cl">HERO PLDN PGNT GLDT BRN WIZ SORC VICR MMNK SNIP BRGN BDBT WFBR BWNT PHNX NINJ MNST RBT GLM RDBN</td><td>chest, Elven Village battlefield</td></tr>
+      <tr><td><span class="ico" style="background-position:-0px 0" role="img" aria-label="Power Ring icon"></span>Power Ring</td><td class="n">+5</td><td class="n"></td><td class="n">3,000</td><td>use: Attack 1</td><td>breakable</td><td class="cl">everyone</td><td>drop, road east of Ribble</td></tr>
+      <tr><td><span class="ico" style="background-position:-160px 0" role="img" aria-label="Black Ring icon"></span>Black Ring</td><td class="n">+10</td><td class="n"></td><td class="n">5,000</td><td>use: Blaze 2</td><td>cursed, breakable</td><td class="cl">WIZ SORC</td><td>drop, outside Ketto</td></tr>
+      <tr><td><span class="ico" style="background-position:-192px 0" role="img" aria-label="Evil Ring icon"></span>Evil Ring</td><td class="n">+15</td><td class="n"></td><td class="n">5,000</td><td>use: Bolt 2</td><td>cursed, breakable</td><td class="cl">WIZ SORC VICR</td><td>drop, road to the Ancient Shrine</td></tr>
     </tbody>
   </table>
   </div>

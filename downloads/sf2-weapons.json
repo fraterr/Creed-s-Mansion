@@ -543,7 +543,7 @@
     "MMNK"
    ],
    "extra": "",
-   "where": "shops from Tristan; with Sheela"
+   "where": "shops from Tristan / with Sheela"
   },
   {
    "id": 29,
@@ -641,7 +641,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "shops from Granseal; with Jaha"
+   "where": "shops from Granseal / with Jaha"
   },
   {
    "id": 34,
@@ -707,7 +707,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "shop in Hassan; with Randolf"
+   "where": "shop in Hassan / with Randolf"
   },
   {
    "id": 37,
@@ -771,7 +771,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "shops from Tristan; with Gyan"
+   "where": "shops from Tristan / with Gyan"
   },
   {
    "id": 40,
@@ -792,7 +792,7 @@
     "RDBN"
    ],
    "extra": "use: Blaze 2",
-   "where": "drop, road to Roft; mithril"
+   "where": "drop, road to Roft / mithril"
   },
   {
    "id": 41,
@@ -899,7 +899,7 @@
     "BWNT"
    ],
    "extra": "",
-   "where": "shops from Ribble; with May"
+   "where": "shops from Ribble / with May"
   },
   {
    "id": 46,
@@ -945,7 +945,7 @@
     "BWNT"
    ],
    "extra": "",
-   "where": "shop in Hassan; with Elric; with Janet"
+   "where": "shop in Hassan / with Elric / with Janet"
   },
   {
    "id": 48,
@@ -987,7 +987,7 @@
     "BWNT"
    ],
    "extra": "",
-   "where": "shops from New Granseal (later stock); with Rohde"
+   "where": "shops from New Granseal (later stock) / with Rohde"
   },
   {
    "id": 50,
@@ -1050,7 +1050,7 @@
     "BWNT"
    ],
    "extra": "",
-   "where": "drop, Geshp; mithril"
+   "where": "drop, Geshp / mithril"
   },
   {
    "id": 53,
@@ -1184,7 +1184,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "shops from New Granseal; with Luke"
+   "where": "shops from New Granseal / with Luke"
   },
   {
    "id": 59,
@@ -1234,7 +1234,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "shop in Hassan; chest, East Shrine"
+   "where": "shop in Hassan / chest, East Shrine"
   },
   {
    "id": 61,
@@ -1277,7 +1277,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "shops from Hassan (later stock); drop, Devil's Tail"
+   "where": "shops from Hassan (later stock) / drop, Devil's Tail"
   },
   {
    "id": 63,
@@ -1323,7 +1323,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "shops from Pacalon; with Skreech"
+   "where": "shops from Pacalon / with Skreech"
   },
   {
    "id": 65,
@@ -1346,7 +1346,7 @@
     "RDBN"
    ],
    "extra": "critical +1",
-   "where": "chest, Mitula Shrine; mithril"
+   "where": "chest, Mitula Shrine / mithril"
   },
   {
    "id": 66,
@@ -1368,7 +1368,7 @@
     "RDBN"
    ],
    "extra": "",
-   "where": "drop, Prism Flowers; mithril"
+   "where": "drop, Prism Flowers / mithril"
   },
   {
    "id": 67,
@@ -1409,7 +1409,7 @@
     "RDBN"
    ],
    "extra": "counter +1",
-   "where": "drop, Odd Eye; mithril"
+   "where": "drop, Odd Eye / mithril"
   },
   {
    "id": 69,
@@ -1560,7 +1560,7 @@
     "PGNT"
    ],
    "extra": "",
-   "where": "shops from Bedoe; with Eric; with Rick"
+   "where": "shops from Bedoe / with Eric / with Rick"
   },
   {
    "id": 76,
@@ -1621,7 +1621,7 @@
     "PGNT"
    ],
    "extra": "",
-   "where": "shops from Ketto; with Higins"
+   "where": "shops from Ketto / with Higins"
   },
   {
    "id": 79,
@@ -1641,7 +1641,7 @@
     "PGNT"
    ],
    "extra": "",
-   "where": "shops from Tristan; with Jaro"
+   "where": "shops from Tristan / with Jaro"
   },
   {
    "id": 80,
@@ -1661,7 +1661,7 @@
     "PGNT"
    ],
    "extra": "use: Attack 1",
-   "where": "chest, Prism Flowers battlefield; mithril"
+   "where": "chest, Prism Flowers battlefield / mithril"
   },
   {
    "id": 81,
@@ -1764,7 +1764,7 @@
     "VICR"
    ],
    "extra": "",
-   "where": "shops from Granseal; with Kazin; with Sarah"
+   "where": "shops from Granseal / with Kazin / with Sarah"
   },
   {
    "id": 86,
@@ -1787,7 +1787,7 @@
     "VICR"
    ],
    "extra": "",
-   "where": "shops from Galam; drop, Galam Castle"
+   "where": "shops from Galam / drop, Galam Castle"
   },
   {
    "id": 87,
@@ -1856,7 +1856,7 @@
     "VICR"
    ],
    "extra": "",
-   "where": "shop in Hassan; drop, southeast desert; with Karna; with Tyrin"
+   "where": "shop in Hassan / drop, southeast desert / with Karna / with Tyrin"
   },
   {
    "id": 90,
@@ -1919,7 +1919,7 @@
     "VICR"
    ],
    "extra": "use: Magic Drain 1",
-   "where": "shops from Ketto; with Frayja; with Taya"
+   "where": "shops from Ketto / with Frayja / with Taya"
   },
   {
    "id": 93,
@@ -1939,7 +1939,7 @@
     "SORC"
    ],
    "extra": "use: Blaze 2",
-   "where": "drop, inside Moun; with Chaz"
+   "where": "drop, inside Moun / with Chaz"
   },
   {
    "id": 94,
@@ -2018,7 +2018,7 @@
     "VICR"
    ],
    "extra": "+3 HP every turn",
-   "where": "drop, outside the Ancient Tower; mithril"
+   "where": "drop, outside the Ancient Tower / mithril"
   },
   {
    "id": 98,
@@ -2135,7 +2135,7 @@
     "THIF"
    ],
    "extra": "",
-   "where": "shops from Granseal; with Slade"
+   "where": "shops from Granseal / with Slade"
   },
   {
    "id": 104,
