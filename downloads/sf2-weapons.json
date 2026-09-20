@@ -1,0 +1,2360 @@
+{
+ "source": "Shining Force II (USA) ROM, item definitions at $16EA6, class definitions at $1EE890",
+ "classes": [
+  {
+   "abbr": "SDMN",
+   "name": "Swordsman",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "KNTE",
+   "name": "Knight",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "WARR",
+   "name": "Warrior",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "MAGE",
+   "name": "Mage",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "PRST",
+   "name": "Priest",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "ACHR",
+   "name": "Archer",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "BDMN",
+   "name": "Birdman",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "WFMN",
+   "name": "Wolfman",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "RNGR",
+   "name": "Ranger",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "PHNK",
+   "name": "Phoenik",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "THIF",
+   "name": "Thief",
+   "critical": "125% at 1/16",
+   "double": "1/16",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "TORT",
+   "name": "Tortoise",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/32"
+  },
+  {
+   "abbr": "HERO",
+   "name": "Hero",
+   "critical": "125% at 1/16",
+   "double": "1/16",
+   "counter": "1/8"
+  },
+  {
+   "abbr": "PLDN",
+   "name": "Paladin",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "PGNT",
+   "name": "Pegasus Knight",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "GLDT",
+   "name": "Gladiator",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "BRN",
+   "name": "Baron",
+   "critical": "150% at 1/8",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "WIZ",
+   "name": "Wizard",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "SORC",
+   "name": "Sorcerer",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "VICR",
+   "name": "Vicar",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "MMNK",
+   "name": "Master Monk",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/8"
+  },
+  {
+   "abbr": "SNIP",
+   "name": "Sniper",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "BRGN",
+   "name": "Brass Gunner",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "BDBT",
+   "name": "Bird Battler",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "WFBR",
+   "name": "Wolf Baron",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/8"
+  },
+  {
+   "abbr": "BWNT",
+   "name": "Bow Knight",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "PHNX",
+   "name": "Phoenix",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "NINJ",
+   "name": "Ninja",
+   "critical": "150% at 1/8",
+   "double": "1/16",
+   "counter": "1/8"
+  },
+  {
+   "abbr": "MNST",
+   "name": "Monster",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "RBT",
+   "name": "Robot",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "GLM",
+   "name": "Golem",
+   "critical": "125% at 1/16",
+   "double": "1/32",
+   "counter": "1/16"
+  },
+  {
+   "abbr": "RDBN",
+   "name": "Red Baron",
+   "critical": "150% at 1/8",
+   "double": "1/32",
+   "counter": "1/8"
+  }
+ ],
+ "equipment": [
+  {
+   "id": 19,
+   "name": "Power Ring",
+   "kind": "ring",
+   "attack": 5,
+   "range": [
+    0,
+    0
+   ],
+   "price": 3000,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "SDMN",
+    "KNTE",
+    "WARR",
+    "MAGE",
+    "PRST",
+    "ACHR",
+    "BDMN",
+    "WFMN",
+    "RNGR",
+    "PHNK",
+    "THIF",
+    "TORT",
+    "HERO",
+    "PLDN",
+    "PGNT",
+    "GLDT",
+    "BRN",
+    "WIZ",
+    "SORC",
+    "VICR",
+    "MMNK",
+    "SNIP",
+    "BRGN",
+    "BDBT",
+    "WFBR",
+    "BWNT",
+    "PHNX",
+    "NINJ",
+    "MNST",
+    "RBT",
+    "GLM",
+    "RDBN"
+   ],
+   "extra": "use: Attack 1",
+   "where": "drop, road east of Ribble"
+  },
+  {
+   "id": 20,
+   "name": "Protect Ring",
+   "kind": "ring",
+   "attack": 0,
+   "range": [
+    0,
+    0
+   ],
+   "price": 3000,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "SDMN",
+    "KNTE",
+    "WARR",
+    "MAGE",
+    "PRST",
+    "ACHR",
+    "BDMN",
+    "WFMN",
+    "RNGR",
+    "PHNK",
+    "THIF",
+    "TORT",
+    "HERO",
+    "PLDN",
+    "PGNT",
+    "GLDT",
+    "BRN",
+    "WIZ",
+    "SORC",
+    "VICR",
+    "MMNK",
+    "SNIP",
+    "BRGN",
+    "BDBT",
+    "WFBR",
+    "BWNT",
+    "PHNX",
+    "NINJ",
+    "MNST",
+    "RBT",
+    "GLM",
+    "RDBN"
+   ],
+   "extra": "DEF +5, use: Boost 1",
+   "where": "drop, Devil's Tail"
+  },
+  {
+   "id": 21,
+   "name": "Quick Ring",
+   "kind": "ring",
+   "attack": 0,
+   "range": [
+    0,
+    0
+   ],
+   "price": 3000,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "SDMN",
+    "KNTE",
+    "WARR",
+    "MAGE",
+    "PRST",
+    "ACHR",
+    "BDMN",
+    "WFMN",
+    "RNGR",
+    "PHNK",
+    "THIF",
+    "TORT",
+    "HERO",
+    "PLDN",
+    "PGNT",
+    "GLDT",
+    "BRN",
+    "WIZ",
+    "SORC",
+    "VICR",
+    "MMNK",
+    "SNIP",
+    "BRGN",
+    "BDBT",
+    "WFBR",
+    "BWNT",
+    "PHNX",
+    "NINJ",
+    "MNST",
+    "RBT",
+    "GLM",
+    "RDBN"
+   ],
+   "extra": "AGI +5",
+   "where": "hidden, Bedoe"
+  },
+  {
+   "id": 22,
+   "name": "Running Ring",
+   "kind": "ring",
+   "attack": 0,
+   "range": [
+    0,
+    0
+   ],
+   "price": 3000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "SDMN",
+    "KNTE",
+    "WARR",
+    "MAGE",
+    "PRST",
+    "ACHR",
+    "BDMN",
+    "WFMN",
+    "RNGR",
+    "PHNK",
+    "THIF",
+    "TORT",
+    "HERO",
+    "PLDN",
+    "PGNT",
+    "GLDT",
+    "BRN",
+    "WIZ",
+    "SORC",
+    "VICR",
+    "MMNK",
+    "SNIP",
+    "BRGN",
+    "BDBT",
+    "WFBR",
+    "BWNT",
+    "PHNX",
+    "NINJ",
+    "MNST",
+    "RBT",
+    "GLM",
+    "RDBN"
+   ],
+   "extra": "MOV +2",
+   "where": "hidden, Creed's Mansion"
+  },
+  {
+   "id": 23,
+   "name": "White Ring",
+   "kind": "ring",
+   "attack": 0,
+   "range": [
+    0,
+    0
+   ],
+   "price": 5000,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "HERO",
+    "VICR"
+   ],
+   "extra": "DEF +10, use: Aura 2",
+   "where": "chest, Dwarven Village"
+  },
+  {
+   "id": 24,
+   "name": "Black Ring",
+   "kind": "ring",
+   "attack": 10,
+   "range": [
+    0,
+    0
+   ],
+   "price": 5000,
+   "cursed": true,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC"
+   ],
+   "extra": "use: Blaze 2",
+   "where": "drop, outside Ketto"
+  },
+  {
+   "id": 25,
+   "name": "Evil Ring",
+   "kind": "ring",
+   "attack": 15,
+   "range": [
+    0,
+    0
+   ],
+   "price": 5000,
+   "cursed": true,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "use: Bolt 2",
+   "where": "drop, road to the Ancient Shrine"
+  },
+  {
+   "id": 26,
+   "name": "Leather Glove",
+   "kind": "weapon",
+   "attack": 26,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1300,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MMNK"
+   ],
+   "extra": "",
+   "where": "shops from Hassan (later stock)"
+  },
+  {
+   "id": 27,
+   "name": "Power Glove",
+   "kind": "weapon",
+   "attack": 33,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1800,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MMNK"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal (later stock)"
+  },
+  {
+   "id": 28,
+   "name": "Brass Knuckles",
+   "kind": "weapon",
+   "attack": 39,
+   "range": [
+    1,
+    1
+   ],
+   "price": 2900,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MMNK"
+   ],
+   "extra": "",
+   "where": "shops from Tristan; with Sheela"
+  },
+  {
+   "id": 29,
+   "name": "Iron Knuckles",
+   "kind": "weapon",
+   "attack": 43,
+   "range": [
+    1,
+    1
+   ],
+   "price": 4800,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MMNK"
+   ],
+   "extra": "",
+   "where": "shops from Moun"
+  },
+  {
+   "id": 30,
+   "name": "Misty Knuckles",
+   "kind": "weapon",
+   "attack": 48,
+   "range": [
+    1,
+    1
+   ],
+   "price": 5500,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "MMNK"
+   ],
+   "extra": "use: Magic Drain 1",
+   "where": "mithril"
+  },
+  {
+   "id": 31,
+   "name": "Giant Knuckles",
+   "kind": "weapon",
+   "attack": 55,
+   "range": [
+    1,
+    1
+   ],
+   "price": 7500,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "MMNK"
+   ],
+   "extra": "use: Muddle 1",
+   "where": "mithril"
+  },
+  {
+   "id": 32,
+   "name": "Evil Knuckles",
+   "kind": "weapon",
+   "attack": 63,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9500,
+   "cursed": true,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "MMNK"
+   ],
+   "extra": "",
+   "where": "chest, Yeel"
+  },
+  {
+   "id": 33,
+   "name": "Short Axe",
+   "kind": "weapon",
+   "attack": 5,
+   "range": [
+    1,
+    1
+   ],
+   "price": 120,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "WARR",
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from Granseal; with Jaha"
+  },
+  {
+   "id": 34,
+   "name": "Hand Axe",
+   "kind": "weapon",
+   "attack": 9,
+   "range": [
+    1,
+    1
+   ],
+   "price": 340,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "WARR",
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal"
+  },
+  {
+   "id": 35,
+   "name": "Middle Axe",
+   "kind": "weapon",
+   "attack": 13,
+   "range": [
+    1,
+    1
+   ],
+   "price": 610,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "WARR",
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from Bedoe"
+  },
+  {
+   "id": 36,
+   "name": "Power Axe",
+   "kind": "weapon",
+   "attack": 17,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1100,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "WARR",
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shop in Hassan; with Randolf"
+  },
+  {
+   "id": 37,
+   "name": "Battle Axe",
+   "kind": "weapon",
+   "attack": 21,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1370,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "WARR",
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shop in Hassan (later stock)"
+  },
+  {
+   "id": 38,
+   "name": "Large Axe",
+   "kind": "weapon",
+   "attack": 25,
+   "range": [
+    1,
+    1
+   ],
+   "price": 2250,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal (later stock)"
+  },
+  {
+   "id": 39,
+   "name": "Great Axe",
+   "kind": "weapon",
+   "attack": 28,
+   "range": [
+    1,
+    1
+   ],
+   "price": 4600,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from Tristan; with Gyan"
+  },
+  {
+   "id": 40,
+   "name": "Heat Axe",
+   "kind": "weapon",
+   "attack": 32,
+   "range": [
+    1,
+    1
+   ],
+   "price": 7200,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "use: Blaze 2",
+   "where": "drop, road to Roft; mithril"
+  },
+  {
+   "id": 41,
+   "name": "Atlas Axe",
+   "kind": "weapon",
+   "attack": 35,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9600,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "use: Blaze 3",
+   "where": "mithril"
+  },
+  {
+   "id": 42,
+   "name": "Ground Axe",
+   "kind": "weapon",
+   "attack": 39,
+   "range": [
+    1,
+    1
+   ],
+   "price": 10000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "MOV +1",
+   "where": "mithril"
+  },
+  {
+   "id": 43,
+   "name": "Rune Axe",
+   "kind": "weapon",
+   "attack": 42,
+   "range": [
+    1,
+    1
+   ],
+   "price": 10000,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "critical +1, use: Detox 2",
+   "where": "mithril"
+  },
+  {
+   "id": 44,
+   "name": "Evil Axe",
+   "kind": "weapon",
+   "attack": 50,
+   "range": [
+    1,
+    1
+   ],
+   "price": 15000,
+   "cursed": true,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "GLDT",
+    "BRN",
+    "RDBN"
+   ],
+   "extra": "DEF -5",
+   "where": "chest, Force Sword Shrine"
+  },
+  {
+   "id": 45,
+   "name": "Wooden Arrow",
+   "kind": "weapon",
+   "attack": 7,
+   "range": [
+    2,
+    2
+   ],
+   "price": 250,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "ACHR",
+    "RNGR",
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "",
+   "where": "shops from Ribble; with May"
+  },
+  {
+   "id": 46,
+   "name": "Iron Arrow",
+   "kind": "weapon",
+   "attack": 12,
+   "range": [
+    2,
+    2
+   ],
+   "price": 600,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "ACHR",
+    "RNGR",
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "",
+   "where": "shops from Bedoe"
+  },
+  {
+   "id": 47,
+   "name": "Steel Arrow",
+   "kind": "weapon",
+   "attack": 17,
+   "range": [
+    2,
+    2
+   ],
+   "price": 1270,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "ACHR",
+    "RNGR",
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "",
+   "where": "shop in Hassan; with Elric; with Janet"
+  },
+  {
+   "id": 48,
+   "name": "Robin Arrow",
+   "kind": "weapon",
+   "attack": 21,
+   "range": [
+    2,
+    3
+   ],
+   "price": 1480,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "critical +1",
+   "where": "shops from Hassan (later stock)"
+  },
+  {
+   "id": 49,
+   "name": "Assault Shell",
+   "kind": "weapon",
+   "attack": 25,
+   "range": [
+    2,
+    3
+   ],
+   "price": 2500,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal (later stock); with Rohde"
+  },
+  {
+   "id": 50,
+   "name": "Great Shot",
+   "kind": "weapon",
+   "attack": 29,
+   "range": [
+    2,
+    3
+   ],
+   "price": 5000,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "",
+   "where": "shops from Pacalon"
+  },
+  {
+   "id": 51,
+   "name": "Nazca Cannon",
+   "kind": "weapon",
+   "attack": 33,
+   "range": [
+    2,
+    3
+   ],
+   "price": 3000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "critical +1",
+   "where": "chest, Nazca Ship"
+  },
+  {
+   "id": 52,
+   "name": "Buster Shot",
+   "kind": "weapon",
+   "attack": 37,
+   "range": [
+    2,
+    3
+   ],
+   "price": 6800,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "",
+   "where": "drop, Geshp; mithril"
+  },
+  {
+   "id": 53,
+   "name": "Hyper Cannon",
+   "kind": "weapon",
+   "attack": 40,
+   "range": [
+    2,
+    3
+   ],
+   "price": 8700,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "",
+   "where": "mithril"
+  },
+  {
+   "id": 54,
+   "name": "Grand Cannon",
+   "kind": "weapon",
+   "attack": 43,
+   "range": [
+    2,
+    3
+   ],
+   "price": 9800,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "use: Dispel 1",
+   "where": "mithril"
+  },
+  {
+   "id": 55,
+   "name": "Evil Shot",
+   "kind": "weapon",
+   "attack": 51,
+   "range": [
+    2,
+    3
+   ],
+   "price": 13000,
+   "cursed": true,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "SNIP",
+    "BRGN",
+    "BWNT"
+   ],
+   "extra": "DEF -5",
+   "where": "hidden, Galam Castle"
+  },
+  {
+   "id": 56,
+   "name": "Wooden Stick",
+   "kind": "weapon",
+   "attack": 3,
+   "range": [
+    1,
+    1
+   ],
+   "price": 70,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "KNTE",
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "with Chester"
+  },
+  {
+   "id": 57,
+   "name": "Short Sword",
+   "kind": "weapon",
+   "attack": 5,
+   "range": [
+    1,
+    1
+   ],
+   "price": 140,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SDMN",
+    "BDMN",
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from Granseal"
+  },
+  {
+   "id": 58,
+   "name": "Middle Sword",
+   "kind": "weapon",
+   "attack": 8,
+   "range": [
+    1,
+    1
+   ],
+   "price": 340,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SDMN",
+    "BDMN",
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal; with Luke"
+  },
+  {
+   "id": 59,
+   "name": "Long Sword",
+   "kind": "weapon",
+   "attack": 12,
+   "range": [
+    1,
+    1
+   ],
+   "price": 620,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SDMN",
+    "BDMN",
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from Polca"
+  },
+  {
+   "id": 60,
+   "name": "Steel Sword",
+   "kind": "weapon",
+   "attack": 16,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1120,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SDMN",
+    "BDMN",
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shop in Hassan; chest, East Shrine"
+  },
+  {
+   "id": 61,
+   "name": "Achilles Sword",
+   "kind": "weapon",
+   "attack": 19,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1350,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "SDMN",
+    "HERO"
+   ],
+   "extra": "only weapon that hurts Taros",
+   "where": "chest, Achilles Shrine"
+  },
+  {
+   "id": 62,
+   "name": "Broad Sword",
+   "kind": "weapon",
+   "attack": 22,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1600,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from Hassan (later stock); drop, Devil's Tail"
+  },
+  {
+   "id": 63,
+   "name": "Buster Sword",
+   "kind": "weapon",
+   "attack": 26,
+   "range": [
+    1,
+    1
+   ],
+   "price": 2600,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal (later stock)"
+  },
+  {
+   "id": 64,
+   "name": "Great Sword",
+   "kind": "weapon",
+   "attack": 29,
+   "range": [
+    1,
+    1
+   ],
+   "price": 5100,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "shops from Pacalon; with Skreech"
+  },
+  {
+   "id": 65,
+   "name": "Critical Sword",
+   "kind": "weapon",
+   "attack": 32,
+   "range": [
+    1,
+    1
+   ],
+   "price": 7200,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "critical +1",
+   "where": "chest, Mitula Shrine; mithril"
+  },
+  {
+   "id": 66,
+   "name": "Battle Sword",
+   "kind": "weapon",
+   "attack": 35,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9200,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "HERO",
+    "BRN",
+    "BDBT",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "drop, Prism Flowers; mithril"
+  },
+  {
+   "id": 67,
+   "name": "Force Sword",
+   "kind": "weapon",
+   "attack": 46,
+   "range": [
+    1,
+    1
+   ],
+   "price": 10000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "HERO"
+   ],
+   "extra": "",
+   "where": "Force Sword Shrine, Devil's Head"
+  },
+  {
+   "id": 68,
+   "name": "Counter Sword",
+   "kind": "weapon",
+   "attack": 39,
+   "range": [
+    1,
+    1
+   ],
+   "price": 13000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "HERO",
+    "BRN",
+    "BDBT",
+    "RDBN"
+   ],
+   "extra": "counter +1",
+   "where": "drop, Odd Eye; mithril"
+  },
+  {
+   "id": 69,
+   "name": "Levanter",
+   "kind": "weapon",
+   "attack": 42,
+   "range": [
+    1,
+    1
+   ],
+   "price": 14000,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "HERO"
+   ],
+   "extra": "use: Blaze 3",
+   "where": "mithril"
+  },
+  {
+   "id": 70,
+   "name": "Dark Sword",
+   "kind": "weapon",
+   "attack": 50,
+   "range": [
+    1,
+    1
+   ],
+   "price": 17000,
+   "cursed": true,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "DEF -5, use: Desoul 1",
+   "where": "with Lemon"
+  },
+  {
+   "id": 71,
+   "name": "Wooden Sword",
+   "kind": "weapon",
+   "attack": 3,
+   "range": [
+    1,
+    1
+   ],
+   "price": 60,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "SDMN",
+    "BDMN",
+    "HERO",
+    "BRN",
+    "BDBT",
+    "NINJ",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "with Bowie"
+  },
+  {
+   "id": 72,
+   "name": "Short Spear",
+   "kind": "weapon",
+   "attack": 6,
+   "range": [
+    1,
+    2
+   ],
+   "price": 120,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "KNTE",
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shops from Granseal"
+  },
+  {
+   "id": 73,
+   "name": "Bronze Lance",
+   "kind": "weapon",
+   "attack": 9,
+   "range": [
+    1,
+    1
+   ],
+   "price": 260,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "KNTE",
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shops from Galam"
+  },
+  {
+   "id": 74,
+   "name": "Spear",
+   "kind": "weapon",
+   "attack": 12,
+   "range": [
+    1,
+    2
+   ],
+   "price": 460,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "KNTE",
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal"
+  },
+  {
+   "id": 75,
+   "name": "Steel Lance",
+   "kind": "weapon",
+   "attack": 16,
+   "range": [
+    1,
+    1
+   ],
+   "price": 810,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "KNTE",
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shops from Bedoe; with Eric; with Rick"
+  },
+  {
+   "id": 76,
+   "name": "Power Spear",
+   "kind": "weapon",
+   "attack": 20,
+   "range": [
+    1,
+    2
+   ],
+   "price": 1270,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "KNTE",
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shop in Hassan (later stock)"
+  },
+  {
+   "id": 77,
+   "name": "Heavy Lance",
+   "kind": "weapon",
+   "attack": 23,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1600,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shops from New Granseal (later stock)"
+  },
+  {
+   "id": 78,
+   "name": "Javelin",
+   "kind": "weapon",
+   "attack": 26,
+   "range": [
+    1,
+    2
+   ],
+   "price": 3400,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shops from Ketto; with Higins"
+  },
+  {
+   "id": 79,
+   "name": "Chrome Lance",
+   "kind": "weapon",
+   "attack": 31,
+   "range": [
+    1,
+    1
+   ],
+   "price": 6900,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "shops from Tristan; with Jaro"
+  },
+  {
+   "id": 80,
+   "name": "Valkyrie",
+   "kind": "weapon",
+   "attack": 33,
+   "range": [
+    1,
+    2
+   ],
+   "price": 7700,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "use: Attack 1",
+   "where": "chest, Prism Flowers battlefield; mithril"
+  },
+  {
+   "id": 81,
+   "name": "Holy Lance",
+   "kind": "weapon",
+   "attack": 39,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9300,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "DEF +5, use: Heal (item) 1",
+   "where": "mithril"
+  },
+  {
+   "id": 82,
+   "name": "Mist Javelin",
+   "kind": "weapon",
+   "attack": 42,
+   "range": [
+    1,
+    2
+   ],
+   "price": 9900,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "",
+   "where": "mithril"
+  },
+  {
+   "id": 83,
+   "name": "Halberd",
+   "kind": "weapon",
+   "attack": 37,
+   "range": [
+    1,
+    1
+   ],
+   "price": 7300,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "use: Bolt 1",
+   "where": "mithril"
+  },
+  {
+   "id": 84,
+   "name": "Evil Lance",
+   "kind": "weapon",
+   "attack": 48,
+   "range": [
+    1,
+    1
+   ],
+   "price": 11000,
+   "cursed": true,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "PLDN",
+    "PGNT"
+   ],
+   "extra": "MOV -2",
+   "where": "hidden, Devil's Head"
+  },
+  {
+   "id": 85,
+   "name": "Wooden Rod",
+   "kind": "weapon",
+   "attack": 3,
+   "range": [
+    1,
+    1
+   ],
+   "price": 60,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MAGE",
+    "PRST",
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "",
+   "where": "shops from Granseal; with Kazin; with Sarah"
+  },
+  {
+   "id": 86,
+   "name": "Short Rod",
+   "kind": "weapon",
+   "attack": 5,
+   "range": [
+    1,
+    1
+   ],
+   "price": 130,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MAGE",
+    "PRST",
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "",
+   "where": "shops from Galam; drop, Galam Castle"
+  },
+  {
+   "id": 87,
+   "name": "Bronze Rod",
+   "kind": "weapon",
+   "attack": 8,
+   "range": [
+    1,
+    1
+   ],
+   "price": 360,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MAGE",
+    "PRST",
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "",
+   "where": "shops from Polca"
+  },
+  {
+   "id": 88,
+   "name": "Iron Rod",
+   "kind": "weapon",
+   "attack": 12,
+   "range": [
+    1,
+    1
+   ],
+   "price": 560,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MAGE",
+    "PRST",
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "",
+   "where": "shop in Hassan"
+  },
+  {
+   "id": 89,
+   "name": "Power Stick",
+   "kind": "weapon",
+   "attack": 15,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1050,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "MAGE",
+    "PRST",
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "",
+   "where": "shop in Hassan; drop, southeast desert; with Karna; with Tyrin"
+  },
+  {
+   "id": 90,
+   "name": "Flail",
+   "kind": "weapon",
+   "attack": 19,
+   "range": [
+    1,
+    1
+   ],
+   "price": 1490,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "",
+   "where": "shops from Hassan (later stock)"
+  },
+  {
+   "id": 91,
+   "name": "Guardian Staff",
+   "kind": "weapon",
+   "attack": 22,
+   "range": [
+    1,
+    1
+   ],
+   "price": 2380,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "DEF +5",
+   "where": "shops from New Granseal (later stock)"
+  },
+  {
+   "id": 92,
+   "name": "Indra Staff",
+   "kind": "weapon",
+   "attack": 25,
+   "range": [
+    1,
+    1
+   ],
+   "price": 3200,
+   "cursed": false,
+   "breakable": true,
+   "rare": false,
+   "classes": [
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "use: Magic Drain 1",
+   "where": "shops from Ketto; with Frayja; with Taya"
+  },
+  {
+   "id": 93,
+   "name": "Mage Staff",
+   "kind": "weapon",
+   "attack": 27,
+   "range": [
+    1,
+    1
+   ],
+   "price": 6300,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC"
+   ],
+   "extra": "use: Blaze 2",
+   "where": "drop, inside Moun; with Chaz"
+  },
+  {
+   "id": 94,
+   "name": "Wish Staff",
+   "kind": "weapon",
+   "attack": 26,
+   "range": [
+    1,
+    1
+   ],
+   "price": 6100,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "VICR"
+   ],
+   "extra": "use: Attack 1",
+   "where": "drop, Cameela"
+  },
+  {
+   "id": 95,
+   "name": "Great Rod",
+   "kind": "weapon",
+   "attack": 28,
+   "range": [
+    1,
+    1
+   ],
+   "price": 7900,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "",
+   "where": "mithril"
+  },
+  {
+   "id": 96,
+   "name": "Supply Staff",
+   "kind": "weapon",
+   "attack": 32,
+   "range": [
+    1,
+    1
+   ],
+   "price": 8500,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC"
+   ],
+   "extra": "use: Magic Drain 1",
+   "where": "mithril"
+  },
+  {
+   "id": 97,
+   "name": "Holy Staff",
+   "kind": "weapon",
+   "attack": 29,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "VICR"
+   ],
+   "extra": "+3 HP every turn",
+   "where": "drop, outside the Ancient Tower; mithril"
+  },
+  {
+   "id": 98,
+   "name": "Freeze Staff",
+   "kind": "weapon",
+   "attack": 37,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9500,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC"
+   ],
+   "extra": "use: Freeze 3",
+   "where": "mithril"
+  },
+  {
+   "id": 99,
+   "name": "Goddess Staff",
+   "kind": "weapon",
+   "attack": 31,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9700,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "VICR"
+   ],
+   "extra": "use: Aura 2",
+   "where": "mithril"
+  },
+  {
+   "id": 100,
+   "name": "Mystery Staff",
+   "kind": "weapon",
+   "attack": 39,
+   "range": [
+    1,
+    1
+   ],
+   "price": 10000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "+2 MP every turn",
+   "where": "mithril"
+  },
+  {
+   "id": 101,
+   "name": "Demon Rod",
+   "kind": "weapon",
+   "attack": 50,
+   "range": [
+    1,
+    1
+   ],
+   "price": 12500,
+   "cursed": true,
+   "breakable": true,
+   "rare": true,
+   "classes": [
+    "WIZ",
+    "SORC",
+    "VICR"
+   ],
+   "extra": "AGI -10, use: Magic Drain 1",
+   "where": "hidden, Dwarven Village"
+  },
+  {
+   "id": 102,
+   "name": "Iron Ball",
+   "kind": "weapon",
+   "attack": 44,
+   "range": [
+    1,
+    1
+   ],
+   "price": 3800,
+   "cursed": true,
+   "breakable": true,
+   "rare": true,
+   "classes": [],
+   "extra": "use: Blaze 3",
+   "where": "drop, Cameela"
+  },
+  {
+   "id": 103,
+   "name": "Short Knife",
+   "kind": "weapon",
+   "attack": 5,
+   "range": [
+    1,
+    1
+   ],
+   "price": 70,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "THIF"
+   ],
+   "extra": "",
+   "where": "shops from Granseal; with Slade"
+  },
+  {
+   "id": 104,
+   "name": "Dagger",
+   "kind": "weapon",
+   "attack": 8,
+   "range": [
+    1,
+    1
+   ],
+   "price": 320,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "THIF"
+   ],
+   "extra": "",
+   "where": "shops from Ribble"
+  },
+  {
+   "id": 105,
+   "name": "Knife",
+   "kind": "weapon",
+   "attack": 12,
+   "range": [
+    1,
+    1
+   ],
+   "price": 500,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "THIF"
+   ],
+   "extra": "",
+   "where": "shops from Bedoe"
+  },
+  {
+   "id": 106,
+   "name": "Thieve's Dagger",
+   "kind": "weapon",
+   "attack": 17,
+   "range": [
+    1,
+    1
+   ],
+   "price": 940,
+   "cursed": false,
+   "breakable": false,
+   "rare": false,
+   "classes": [
+    "THIF"
+   ],
+   "extra": "AGI +5",
+   "where": "shop in Hassan"
+  },
+  {
+   "id": 107,
+   "name": "Katana",
+   "kind": "weapon",
+   "attack": 34,
+   "range": [
+    1,
+    1
+   ],
+   "price": 9600,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "NINJ"
+   ],
+   "extra": "",
+   "where": "mithril"
+  },
+  {
+   "id": 108,
+   "name": "Ninja Katana",
+   "kind": "weapon",
+   "attack": 39,
+   "range": [
+    1,
+    1
+   ],
+   "price": 11500,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "NINJ"
+   ],
+   "extra": "double attack +1",
+   "where": "mithril"
+  },
+  {
+   "id": 109,
+   "name": "Gisarme",
+   "kind": "weapon",
+   "attack": 42,
+   "range": [
+    1,
+    1
+   ],
+   "price": 15000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "NINJ"
+   ],
+   "extra": "critical set to 150% at 1/4, critical becomes instant kill",
+   "where": "mithril"
+  },
+  {
+   "id": 110,
+   "name": "Taros Sword",
+   "kind": "weapon",
+   "attack": 32,
+   "range": [
+    1,
+    2
+   ],
+   "price": 10000,
+   "cursed": false,
+   "breakable": true,
+   "rare": true,
+   "classes": [],
+   "extra": "use: Bolt 2",
+   "where": "drop, Taros"
+  },
+  {
+   "id": 124,
+   "name": "Life Ring",
+   "kind": "ring",
+   "attack": 0,
+   "range": [
+    0,
+    0
+   ],
+   "price": 5000,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "HERO",
+    "PLDN",
+    "PGNT",
+    "GLDT",
+    "BRN",
+    "WIZ",
+    "SORC",
+    "VICR",
+    "MMNK",
+    "SNIP",
+    "BRGN",
+    "BDBT",
+    "WFBR",
+    "BWNT",
+    "PHNX",
+    "NINJ",
+    "MNST",
+    "RBT",
+    "GLM",
+    "RDBN"
+   ],
+   "extra": "+5 HP every turn",
+   "where": "chest, Elven Village battlefield"
+  },
+  {
+   "id": 126,
+   "name": "Chirrup Sandals",
+   "kind": "ring",
+   "attack": 0,
+   "range": [
+    0,
+    0
+   ],
+   "price": 5,
+   "cursed": false,
+   "breakable": false,
+   "rare": true,
+   "classes": [
+    "SDMN",
+    "KNTE",
+    "WARR",
+    "MAGE",
+    "PRST",
+    "ACHR",
+    "BDMN",
+    "WFMN",
+    "RNGR",
+    "PHNK",
+    "THIF",
+    "TORT",
+    "HERO",
+    "PLDN",
+    "PGNT",
+    "GLDT",
+    "BRN",
+    "WIZ",
+    "SORC",
+    "VICR",
+    "MMNK",
+    "SNIP",
+    "BRGN",
+    "BDBT",
+    "WFBR",
+    "BWNT",
+    "PHNX",
+    "NINJ",
+    "MNST",
+    "RBT",
+    "GLM",
+    "RDBN"
+   ],
+   "extra": "",
+   "where": "hidden, Galam Castle interiors"
+  }
+ ]
+}

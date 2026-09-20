@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shining Force II: Every Weapon, Its Hidden Properties, and the Best One for Each Class</title>
+<meta name="description" content="All 85 weapons and 9 rings of Shining Force II read out of the ROM: attack, range, hidden critical, double and counter settings, the Critical Sword that weakens Barons, the Gisarme's instant kill, the Ninja Katana bug, why cursed gear never pays, and the best weapon for every promoted class.">
+<link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/weapons/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#002083">
+<meta name="author" content="Creed's Mansion">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Creed's Mansion">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/weapons/">
+<meta property="og:title" content="Shining Force II: Every Weapon, and What the Game Doesn't Tell You">
+<meta property="og:description" content="85 weapons and 9 rings read out of the ROM: hidden critical settings, a sword that weakens Barons, a katana with a bug, and the best weapon for every class.">
+<meta property="og:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf2-weapons.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shining Force II: Every Weapon, and What the Game Doesn't Tell You.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shining Force II: Every Weapon, and What the Game Doesn't Tell You">
+<meta name="twitter:description" content="85 weapons and 9 rings read out of the ROM: hidden critical settings, a sword that weakens Barons, a katana with a bug, and the best weapon for every class.">
+<meta name="twitter:image" content="https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf2-weapons.png">
+
+<link rel="icon" href="../../../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../../../assets/img/favicon.png">
+<link rel="preload" href="../../../assets/fonts/press-start-2p.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>
+  table.wpn td, table.rank td { vertical-align: top; }
+  table.wpn td:first-child, table.rank td:nth-child(2) { white-space: nowrap; font-weight: 600; }
+  table.wpn td.cl { font-family: var(--mono); font-size: 12px; color: var(--ink-dim); max-width: 15rem; }
+  .formula { font-family: var(--mono); font-size: 15px; background: rgba(0,0,0,.3); border: 1px solid rgba(240,192,96,.25); border-radius: 6px; padding: .8rem 1rem; margin: 1rem 0; overflow-x: auto; }
+  .legend { font-family: var(--mono); font-size: 13px; color: var(--ink-dim); }
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TechArticle",
+ "headline": "Shining Force II: Every Weapon, Its Hidden Properties, and the Best One for Each Class",
+ "description": "All 85 weapons and 9 rings of Shining Force II read out of the ROM: attack, range, hidden critical, double and counter settings, the Critical Sword that weakens Barons, the Gisarme's instant kill, the Ninja Katana bug, why cursed gear never pays, and the best weapon for every promoted class.",
+ "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/weapons/",
+ "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf2-weapons.png",
+ "datePublished": "2026-09-20",
+ "dateModified": "2026-09-20",
+ "inLanguage": "en",
+ "author": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "publisher": { "@type": "Person", "name": "Creed's Mansion", "url": "https://fraterr.github.io/Creed-s-Mansion/" },
+ "about": {
+  "@type": "VideoGame",
+  "name": "Shining Force II",
+  "gamePlatform": ["Sega Mega Drive", "Sega Genesis"],
+  "datePublished": "1993",
+  "publisher": { "@type": "Organization", "name": "Sega" }
+ }
+}
+</script>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="../../../">&#9670; Creed's Mansion</a>
+    <nav class="main">
+      <a href="../../../">Home</a>
+      <a href="../../../#games">Games</a>
+      <a href="../../../mods/">Mods</a>
+      <a href="../../../#about">About</a>
+      <a href="../../../contacts/">Contact</a>
+      <a class="tea" href="https://buymeacoffee.com/practicalhumanism" rel="noopener"><img src="../../../assets/img/tea.png" width="16" height="16" alt="">Buy me a tea</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumbs"><a href="../../../">Home</a> &rsaquo; <a href="../">Shining Force II</a> &rsaquo; Every weapon</p>
+
+  <section class="hero" style="padding-top:1.5rem">
+    <h1 class="title">Shining Force II &mdash; Every Weapon</h1>
+    <p class="sub">What each one really does, and the best pick for every class</p>
+  </section>
+
+  <div class="win tldr">
+    <h3>The short version</h3>
+    <p>The status screen shows one number for a weapon, its attack. The ROM stores more: a
+    range, up to three equip effects, a spell it can cast, and flags for cursed and
+    breakable. Every class also carries three settings the game never shows, for critical
+    hits, double attacks and counters, and a handful of weapons move them.</p>
+    <p>Read together, the tables say things the game does not. The Critical Sword and the
+    Rune Axe make a Baron, a Red Baron or a Ninja hit <em>weaker</em> criticals. The Gisarme
+    kills outright one hit in four, with no resistance roll. The Ninja Katana has a bug
+    that wipes out its owner's counterattacks. Cursed weapons lose a quarter of your turns,
+    and once that is counted none of them beats the best clean weapon of its family. The
+    Nazca Cannon is good, and not as good as its reputation.</p>
+    <p>All 85 weapons and the nine rings are listed below with everything the ROM knows
+    about them, followed by a ranking for each promoted class.</p>
+  </div>
+
+  <h2>The three settings nobody shows you</h2>
+
+  <p>Each class definition in the ROM, five bytes at <code>$1EE890</code>, ends with a
+  byte the disassembly calls <em>prowess</em>. Its low four bits pick a critical-hit
+  setting, the next two a double-attack chance, the top two a counter chance. Double and
+  counter are simple: four steps, 1/32, 1/16, 1/8 and 1/4.</p>
+
+  <div class="scroll-x">
+  <table class="data">
+    <thead><tr><th>Class</th><th>Critical</th><th>Double attack</th><th>Counter</th></tr></thead>
+    <tbody>
+      <tr><td>Ninja</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td></tr>
+      <tr><td>Red Baron</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td></tr>
+      <tr><td>Baron</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td></tr>
+      <tr><td>Hero</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td></tr>
+      <tr><td>Thief</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/32</td></tr>
+      <tr><td>Master Monk, Wolf Baron</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td></tr>
+      <tr><td>the other 14 promoted classes</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td></tr>
+      <tr><td>the other 11 unpromoted classes</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/32</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>The critical setting is where it gets strange. There are eight settings, and instead
+  of running from weak to strong they alternate: the strong critical (+50% damage) and the
+  weak one (+25%) take turns as the odds improve.</p>
+
+  <figure class="fig px">
+    <img src="../../../assets/img/sf2-weapons-crit-ladder.png" width="980" height="420" loading="lazy" decoding="async"
+         alt="Eight boxes for critical settings 0 to 7: 150% at 1/32, 125% at 1/32, 150% at 1/16, 125% at 1/16, 150% at 1/8, 125% at 1/8, 150% at 1/4, 125% at 1/4. An arrow from setting 3 to 4 is marked as an improvement, an arrow from 4 to 5 as a loss.">
+    <figcaption>The table behind it is at <code>$ACCA</code>: eight pairs of bytes, a chance and a damage shift.
+    An item with "critical +1" adds one to the setting and nothing else.</figcaption>
+  </figure>
+
+  <p>Twenty-nine classes sit on setting 3, a weak critical one time in sixteen. For them a
+  +1 weapon is a real upgrade: setting 4 is a strong critical one time in eight, worth
+  about 4.6% more damage on average. The Baron, the Red Baron and the Ninja are already on
+  setting 4. For them +1 lands on setting 5: the same one in eight, but the weak critical.
+  About 3% <em>less</em> damage, from a weapon whose name promises the opposite.</p>
+
+  <p>Four weapons carry that +1: the Critical Sword, the Rune Axe, the Robin Arrow and the
+  Nazca Cannon. Two of them can be held by the classes they hurt. The community
+  disassembly treats the ordering as a slip by the developers and offers a build option
+  that sorts the table; on a cartridge it is simply how the game works.</p>
+
+  <h2>How a hit is resolved</h2>
+
+  <p>The attack routine at <code>$ABBE</code> and its neighbours run in a fixed order, and
+  the order explains most of what follows.</p>
+
+  <ul class="spec">
+    <li><strong>Dodge.</strong> One chance in 32. One in 8 if the target flies or hovers,
+    unless the attacker is an archer-type, in which case it stays at one in 32.</li>
+    <li><strong>Damage.</strong> Attacker's ATT minus target's DEF, never less than 1. Land
+    effect then keeps 230/256 of it at "15%" and 205/256 at "30%". An archer, sniper,
+    ranger, bow knight or brass gunner shooting at something airborne adds a quarter.</li>
+    <li><strong>Critical.</strong> Rolled from the attacker's setting. A strong critical adds
+    half the damage, a weak one a quarter. Master Monks and the Robot also have a separate
+    one in sixteen chance of their special attack animation, which forces a critical.</li>
+    <li><strong>Double attack and counter.</strong> Rolled after the hit, from the attacker's
+    and the target's settings. A counter also needs the attacker to be inside the
+    defender's weapon range, which is why spears that reach two squares answer archers and
+    lances do not.</li>
+  </ul>
+
+  <p>Because the archer bonus is applied before the critical, the two multiply: a Sniper's
+  strong critical on a Wyvern is the base damage times 1.25 times 1.5.</p>
+
+  <h2>Weapons with something extra</h2>
+
+  <h3>The Gisarme</h3>
+  <p>Its equip effect sets the critical to setting 6, a strong critical one time in four.
+  Then the critical routine checks, by item number, whether the attacker holds a Gisarme,
+  and if so replaces the critical with the cut-off: the target dies. The only test is
+  whether the target is immune to Desoul. There is no resistance roll, so an enemy with
+  "major" resistance to status spells dies as easily as a Gizmo. Of the 103 enemy types in
+  the ROM, 23 are immune: the undead, the chess pieces, golems, and nearly every boss. On
+  those the Gisarme is still a +42 sword with the best critical in the game.</p>
+
+  <h3>The Ninja Katana, and its bug</h3>
+  <p>"Double attack +1" takes the Ninja from 1/16 to 1/8. The routine that writes the new
+  value back is meant to keep the other two settings and replace only the double-attack
+  bits. It keeps the critical bits and nothing else, so the counter setting is zeroed:
+  while he holds the Ninja Katana, a Ninja counters one time in 32 where he should counter
+  one time in 8. The extra double attacks are worth more than the lost counters, so it is
+  still the second-best weapon he can hold. It is the only item in the game with this
+  effect, so nobody else is affected.</p>
+
+  <h3>The Counter Sword</h3>
+  <p>"Counter +1" works as written. On a Hero or a Red Baron, who start at 1/8, it gives
+  1/4, the highest counter rate an ally can have. On a Baron or a Bird Battler it gives
+  1/8.</p>
+
+  <h3>Staves and a ring that pay every turn</h3>
+  <p>The Holy Staff, the Mystery Staff and the Life Ring have an equip effect that the
+  effect table maps to an empty routine. Their real behaviour is written into the
+  end-of-turn code, again by item number: the Holy Staff restores 3 HP to its holder each
+  turn, the Mystery Staff 2 MP, the Life Ring 5 HP.</p>
+
+  <h3>Weapons that cast</h3>
+  <p>Twenty weapons and five rings cast a spell from the Use command, for no MP. Two
+  rules apply. You can only use a weapon your class could equip, so a Valkyrie in a
+  Wizard's bag does nothing. And you do not have to equip it, so a Paladin can fight with
+  the Mist Javelin and cast Attack from a Valkyrie he is only carrying. Every casting
+  weapon is breakable: each use has one chance in four of cracking it, a cracked item is
+  destroyed by its next use, and the repair man will fix a cracked one for a fee.</p>
+
+  <h3>The Achilles Sword</h3>
+  <p>Taros ignores every attack unless the attacker is an ally holding the Achilles Sword.
+  The check runs at the start of every action and only a plain attack with that sword
+  passes it, so spells and every other weapon do nothing to him, whoever uses them.</p>
+
+  <h3>Two weapons for nobody</h3>
+  <p>The Iron Ball (+44, cursed, Blaze 3) and the Taros Sword (+32, reach of two, Bolt 2)
+  are dropped by Cameela and Taros. Their class list is empty. Since Use is limited to
+  classes that can equip, nobody can cast from them either. They sell for a good price.</p>
+
+  <h2>Cursed weapons, with the sums done</h2>
+
+  <p>Seven weapons and two rings are cursed, and one of the seven is the Iron Ball that
+  nobody can hold. They have the highest attack in their families, and five of them take
+  something on top: five points of defence, ten of agility or two of movement.
+  What the curse itself does is in two places in the code.</p>
+
+  <ul class="spec">
+    <li>At the start of any action, attack, spell or item, a cursed character has one
+    chance in four of being "cursed and stunned". The turn is lost.</li>
+    <li>After landing a hit that does not kill, there is one chance in two of recoil: the
+    attacker loses an eighth of the damage dealt, plus one.</li>
+  </ul>
+
+  <p>A quarter of all turns gone means a cursed weapon delivers three quarters of what its
+  attack suggests. Take the Gladiator. With B as his attack without a weapon minus the
+  target's defence, the Evil Axe averages (B+50) &times; 0.76 and the Rune Axe (B+42)
+  &times; 1.06. The Evil Axe is behind at every value of B. Against the plain Great Axe
+  from the shop it is ahead only while B is under 38. The same holds in every family: the
+  Evil Knuckles lose to the Giant Knuckles, the Evil Shot to the Grand Cannon, the Evil
+  Lance to the Mist Javelin, the Dark Sword to anything mithril. And the recoil and the
+  stat penalties are not even in those numbers.</p>
+
+  <p>The cursed rings are a different case. The Black Ring and the Evil Ring add +10 and
+  +15 attack to classes that do not attack, and what you want from them is the free Blaze 2
+  and Bolt 2. Carry them; do not wear them.</p>
+
+  <h2>The best weapon for each class</h2>
+
+  <p>The tables below rank weapons by average damage per attack:</p>
+
+  <div class="formula">
+  average = (B + weapon ATT) &times; (1 + critical chance &times; critical bonus) &times; (1 + double chance) &times; 0.75 if cursed
+  </div>
+
+  <p>B is the character's attack without a weapon minus the target's defence. Late in the
+  game a fighter's B against ordinary enemies is around 30; 60 is a strong character on a
+  soft target. Dodge and land effect are left out because they are the same for every
+  weapon, and so is the second hit's chance of finding the target already dead. Counters,
+  range, free spells and stat bonuses are not in the number; the notes cover them.
+  Unpromoted classes are not ranked, because before promotion the shop weapons differ in
+  attack and nothing else.</p>
+
+  <h3>Hero</h3>
+  <p>Bowie has a sword nobody else can hold, and it is the right answer: the Force Sword is +46 with no strings attached. The Levanter is four points behind and casts Blaze 3 for free, with a one in four chance of cracking each time. The Counter Sword takes his counter rate from 1/8 to 1/4, which the table below does not price in. The Critical Sword passes the Battle Sword once B goes over 33 and never gets near the top three.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Force Sword</td><td class="n">+46</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">82.0</td><td class="n hit">114.4</td></tr>
+      <tr><td class="n">2</td><td>Levanter</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">77.7</td><td class="n">110.1</td></tr>
+      <tr><td class="n">3</td><td>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/4</td><td class="n">74.5</td><td class="n">106.8</td></tr>
+      <tr><td class="n">4</td><td>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.1</td><td class="n">102.5</td></tr>
+      <tr><td class="n">5</td><td>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.0</td><td class="n">103.9</td></tr>
+      <tr><td class="n">6</td><td>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">64.7</td><td class="n">89.0</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Paladin and Pegasus Knight</h3>
+  <p>The Mist Javelin is the highest attack in the family, reaches two squares, and has no drawback. The Holy Lance gives up three points for +5 DEF and a small free heal. The Halberd casts Bolt 1. The Valkyrie is the weakest of the four mithril lances, but it casts Attack on an ally up to three squares away, and you do not have to equip it to use it: carry one in the bag. The Evil Lance loses a quarter of your turns and two squares of movement on a class whose whole point is movement.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Mist Javelin</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">75.4</td><td class="n hit">106.8</td></tr>
+      <tr><td class="n">2</td><td>Holy Lance</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
+      <tr><td class="n">3</td><td>Halberd</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
+      <tr><td class="n">4</td><td>Valkyrie</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">66.0</td><td class="n">97.4</td></tr>
+      <tr><td class="n">5</td><td>Chrome Lance</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
+      <tr><td class="n">6</td><td>Evil Lance <span class="tag soon">cursed</span></td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.3</td><td class="n">84.8</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Gladiator</h3>
+  <p>The one class where the answer is unambiguous. The Rune Axe has the highest attack of any axe that is not cursed, and its +1 moves the Gladiator from 125% at 1/16 to 150% at 1/8. The Ground Axe is three points behind and adds a square of movement, which on a class that moves five matters more than it sounds.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Rune Axe</td><td class="n">+42</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">78.9</td><td class="n hit">111.8</td></tr>
+      <tr><td class="n">2</td><td>Ground Axe</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
+      <tr><td class="n">3</td><td>Atlas Axe</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
+      <tr><td class="n">4</td><td>Heat Axe</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
+      <tr><td class="n">5</td><td>Evil Axe <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">6</td><td>Great Axe</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Baron</h3>
+  <p>Here the Rune Axe backfires. A Baron already crits at 150% one time in eight, and the +1 turns that into 125% one time in eight. Its three extra points of attack keep it a hair ahead of the Ground Axe while B is under 60 and behind it above that, and the Ground Axe also gives +1 MOV, so the Ground Axe wins. A Baron can hold swords as well: the Counter Sword has the same +39 and doubles the counter rate to 1/8.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">2</td><td>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">3</td><td>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">4</td><td>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">5</td><td>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">6</td><td>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Red Baron</h3>
+  <p>Lemon joins with the Dark Sword equipped, which means he joins cursed. Take it off. His class counters at 1/8 where a Baron counters at 1/16, and the Counter Sword makes that 1/4, the highest counter rate any ally can reach. Everything said about the Baron and the Rune Axe applies to him too.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">2</td><td>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">3</td><td>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/4</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
+      <tr><td class="n">4</td><td>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">5</td><td>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
+      <tr><td class="n">6</td><td>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Ninja</h3>
+  <p>The Gisarme sets the critical rate to one in four, and with this one weapon a critical is not extra damage: the target is cut down on the spot unless it is immune to Desoul. There is no resistance roll. The Ninja Katana doubles the double-attack rate to 1/8 and works on bosses, but it silently resets the Ninja's counter from 1/8 to 1/32 (the bug described above). The Critical Sword is the worst thing you can hand Slade: it weakens his criticals.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Gisarme</td><td class="n">+42</td><td>150% at 1/4</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">86.1</td><td class="n hit">121.9</td></tr>
+      <tr><td class="n">2</td><td>Ninja Katana</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/8</td><td class="n">1/32</td><td class="n">82.5</td><td class="n">118.3</td></tr>
+      <tr><td class="n">3</td><td>Katana</td><td class="n">+34</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">72.2</td><td class="n">106.1</td></tr>
+      <tr><td class="n">4</td><td>Critical Sword</td><td class="n">+32</td><td>125% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">5</td><td>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.7</td><td class="n">93.1</td></tr>
+      <tr><td class="n">6</td><td>Great Sword</td><td class="n">+29</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">66.6</td><td class="n">100.5</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Bird Battler</h3>
+  <p>Birdmen share the sword list minus the Hero's exclusives. The Counter Sword is the top non-cursed attack and takes the counter rate to 1/8. The Critical Sword passes the Battle Sword once B goes over 33.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
+      <tr><td class="n">2</td><td>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
+      <tr><td class="n">3</td><td>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">4</td><td>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">5</td><td>Great Sword</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
+      <tr><td class="n">6</td><td>Buster Sword</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Master Monk</h3>
+  <p>Attack is all that matters here, and the Giant Knuckles have the most of it outside the cursed pair. The Evil Knuckles show +63 on the status screen and deliver less than the Iron Knuckles from the shop once the lost turns are counted. A Master Monk also has a one in sixteen chance of the spinning special attack, which the code treats as a forced critical; that is included in the numbers.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Giant Knuckles</td><td class="n">+55</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">90.3</td><td class="n hit">122.2</td></tr>
+      <tr><td class="n">2</td><td>Misty Knuckles</td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">82.9</td><td class="n">114.7</td></tr>
+      <tr><td class="n">3</td><td>Iron Knuckles</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">77.6</td><td class="n">109.4</td></tr>
+      <tr><td class="n">4</td><td>Evil Knuckles <span class="tag soon">cursed</span></td><td class="n">+63</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">74.1</td><td class="n">98.0</td></tr>
+      <tr><td class="n">5</td><td>Brass Knuckles</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">73.3</td><td class="n">105.2</td></tr>
+      <tr><td class="n">6</td><td>Power Glove</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">66.9</td><td class="n">98.8</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sniper, Brass Gunner, Bow Knight</h3>
+  <p>The Grand Cannon leads at any attack value you will see in the game. The Nazca Cannon, found in a chest on the Nazca Ship, is the interesting one: ten points under the Grand Cannon but with +1 critical. It passes the Buster Shot once B goes over 54 and the Hyper Cannon over 119; to pass the Grand Cannon it would need B=184, which no character reaches. All three gunner classes add 25% against anything that flies or hovers, and that bonus multiplies with the critical.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Grand Cannon</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.5</td><td class="n hit">107.9</td></tr>
+      <tr><td class="n">2</td><td>Hyper Cannon</td><td class="n">+40</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">73.3</td><td class="n">104.7</td></tr>
+      <tr><td class="n">3</td><td>Buster Shot</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
+      <tr><td class="n">4</td><td>Nazca Cannon</td><td class="n">+33</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">69.0</td><td class="n">101.9</td></tr>
+      <tr><td class="n">5</td><td>Evil Shot <span class="tag soon">cursed</span></td><td class="n">+51</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.6</td><td class="n">87.2</td></tr>
+      <tr><td class="n">6</td><td>Great Shot</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Wizard and Sorcerer</h3>
+  <p>A mage's weapon attack is close to irrelevant, so ignore the damage columns and look at the extras. The Mystery Staff gives back 2 MP every turn, which over a long battle is several extra casts. The Freeze Staff casts Freeze 3 for nothing, with the usual one in four chance of cracking. Until the mithril ones turn up, the Guardian Staff from the shop is +5 DEF for 2,380 gold. The Demon Rod takes ten points of agility and a quarter of your turns.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
+      <tr><td class="n">2</td><td>Freeze Staff</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
+      <tr><td class="n">3</td><td>Supply Staff</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
+      <tr><td class="n">4</td><td>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">5</td><td>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
+      <tr><td class="n">6</td><td>Mage Staff</td><td class="n">+27</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">59.7</td><td class="n">91.1</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Vicar</h3>
+  <p>Same logic as the mages. The Mystery Staff is the best staff for a healer who casts every turn. The Holy Staff restores 3 HP a turn to its holder and the Goddess Staff casts Aura 2 for free. The Wish Staff, dropped by Cameela, casts Attack.</p>
+  <div class="scroll-x">
+  <table class="data rank">
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
+      <tr><td class="n">2</td><td>Goddess Staff</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
+      <tr><td class="n">3</td><td>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
+      <tr><td class="n">4</td><td>Holy Staff</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
+      <tr><td class="n">5</td><td>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
+      <tr><td class="n">6</td><td>Wish Staff</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+
+  <h2>All weapons and rings</h2>
+
+  <p>Everything below is read from the item definitions at <code>$16EA6</code>, sixteen
+  bytes each. "Where" lists the first shop that stocks the item, chests and hidden spots,
+  enemy drops, the ally who joins with it, and whether the dwarven smith can forge it;
+  how the smith picks is in <a href="../mithril-rng/">The Mithril RNG</a>.</p>
+
+  <p class="legend">SDMN swordsman &middot; KNTE knight &middot; WARR warrior &middot; MAGE mage &middot; PRST priest &middot;
+  ACHR archer &middot; BDMN birdman &middot; RNGR ranger &middot; THIF thief &middot; HERO hero &middot; PLDN paladin &middot;
+  PGNT pegasus knight &middot; GLDT gladiator &middot; BRN baron &middot; RDBN red baron &middot; WIZ wizard &middot;
+  SORC sorcerer &middot; VICR vicar &middot; MMNK master monk &middot; SNIP sniper &middot; BRGN brass gunner &middot;
+  BWNT bow knight &middot; BDBT bird battler &middot; NINJ ninja</p>
+
+  <h3>Swords</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Wooden Sword</td><td class="n">+3</td><td class="n">1</td><td class="n">60</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>with Bowie</td></tr>
+      <tr><td>Short Sword</td><td class="n">+5</td><td class="n">1</td><td class="n">140</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from Granseal</td></tr>
+      <tr><td>Middle Sword</td><td class="n">+8</td><td class="n">1</td><td class="n">340</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from New Granseal; with Luke</td></tr>
+      <tr><td>Long Sword</td><td class="n">+12</td><td class="n">1</td><td class="n">620</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shops from Polca</td></tr>
+      <tr><td>Steel Sword</td><td class="n">+16</td><td class="n">1</td><td class="n">1,120</td><td></td><td></td><td class="cl">SDMN BDMN HERO BRN BDBT NINJ RDBN</td><td>shop in Hassan; chest, East Shrine</td></tr>
+      <tr><td>Achilles Sword</td><td class="n">+19</td><td class="n">1</td><td class="n">1,350</td><td>only weapon that hurts Taros</td><td></td><td class="cl">SDMN HERO</td><td>chest, Achilles Shrine</td></tr>
+      <tr><td>Broad Sword</td><td class="n">+22</td><td class="n">1</td><td class="n">1,600</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from Hassan (later stock); drop, Devil&#x27;s Tail</td></tr>
+      <tr><td>Buster Sword</td><td class="n">+26</td><td class="n">1</td><td class="n">2,600</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td>Great Sword</td><td class="n">+29</td><td class="n">1</td><td class="n">5,100</td><td></td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>shops from Pacalon; with Skreech</td></tr>
+      <tr><td>Critical Sword</td><td class="n">+32</td><td class="n">1</td><td class="n">7,200</td><td>critical +1</td><td></td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>chest, Mitula Shrine; mithril</td></tr>
+      <tr><td>Battle Sword</td><td class="n">+35</td><td class="n">1</td><td class="n">9,200</td><td></td><td></td><td class="cl">HERO BRN BDBT RDBN</td><td>drop, Prism Flowers; mithril</td></tr>
+      <tr><td>Counter Sword</td><td class="n">+39</td><td class="n">1</td><td class="n">13,000</td><td>counter +1</td><td></td><td class="cl">HERO BRN BDBT RDBN</td><td>drop, Odd Eye; mithril</td></tr>
+      <tr><td>Levanter</td><td class="n">+42</td><td class="n">1</td><td class="n">14,000</td><td>use: Blaze 3</td><td>breakable</td><td class="cl">HERO</td><td>mithril</td></tr>
+      <tr><td>Force Sword</td><td class="n">+46</td><td class="n">1</td><td class="n">10,000</td><td></td><td>cannot be sold</td><td class="cl">HERO</td><td>Force Sword Shrine, Devil&#x27;s Head</td></tr>
+      <tr><td>Dark Sword</td><td class="n">+50</td><td class="n">1</td><td class="n">17,000</td><td>DEF &minus;5, use: Desoul 1</td><td>cursed, breakable</td><td class="cl">HERO BRN BDBT NINJ RDBN</td><td>with Lemon</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Katanas</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Katana</td><td class="n">+34</td><td class="n">1</td><td class="n">9,600</td><td></td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
+      <tr><td>Ninja Katana</td><td class="n">+39</td><td class="n">1</td><td class="n">11,500</td><td>double attack +1</td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
+      <tr><td>Gisarme</td><td class="n">+42</td><td class="n">1</td><td class="n">15,000</td><td>critical set to 150% at 1/4, critical becomes instant kill</td><td></td><td class="cl">NINJ</td><td>mithril</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Knives</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Short Knife</td><td class="n">+5</td><td class="n">1</td><td class="n">70</td><td></td><td></td><td class="cl">THIF</td><td>shops from Granseal; with Slade</td></tr>
+      <tr><td>Dagger</td><td class="n">+8</td><td class="n">1</td><td class="n">320</td><td></td><td></td><td class="cl">THIF</td><td>shops from Ribble</td></tr>
+      <tr><td>Knife</td><td class="n">+12</td><td class="n">1</td><td class="n">500</td><td></td><td></td><td class="cl">THIF</td><td>shops from Bedoe</td></tr>
+      <tr><td>Thieve&#x27;s Dagger</td><td class="n">+17</td><td class="n">1</td><td class="n">940</td><td>AGI +5</td><td></td><td class="cl">THIF</td><td>shop in Hassan</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Axes</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Short Axe</td><td class="n">+5</td><td class="n">1</td><td class="n">120</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from Granseal; with Jaha</td></tr>
+      <tr><td>Hand Axe</td><td class="n">+9</td><td class="n">1</td><td class="n">340</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from New Granseal</td></tr>
+      <tr><td>Middle Axe</td><td class="n">+13</td><td class="n">1</td><td class="n">610</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shops from Bedoe</td></tr>
+      <tr><td>Power Axe</td><td class="n">+17</td><td class="n">1</td><td class="n">1,100</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shop in Hassan; with Randolf</td></tr>
+      <tr><td>Battle Axe</td><td class="n">+21</td><td class="n">1</td><td class="n">1,370</td><td></td><td></td><td class="cl">WARR GLDT BRN RDBN</td><td>shop in Hassan (later stock)</td></tr>
+      <tr><td>Large Axe</td><td class="n">+25</td><td class="n">1</td><td class="n">2,250</td><td></td><td></td><td class="cl">GLDT BRN RDBN</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td>Great Axe</td><td class="n">+28</td><td class="n">1</td><td class="n">4,600</td><td></td><td></td><td class="cl">GLDT BRN RDBN</td><td>shops from Tristan; with Gyan</td></tr>
+      <tr><td>Heat Axe</td><td class="n">+32</td><td class="n">1</td><td class="n">7,200</td><td>use: Blaze 2</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>drop, road to Roft; mithril</td></tr>
+      <tr><td>Atlas Axe</td><td class="n">+35</td><td class="n">1</td><td class="n">9,600</td><td>use: Blaze 3</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
+      <tr><td>Ground Axe</td><td class="n">+39</td><td class="n">1</td><td class="n">10,000</td><td>MOV +1</td><td></td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
+      <tr><td>Rune Axe</td><td class="n">+42</td><td class="n">1</td><td class="n">10,000</td><td>critical +1, use: Detox 2</td><td>breakable</td><td class="cl">GLDT BRN RDBN</td><td>mithril</td></tr>
+      <tr><td>Evil Axe</td><td class="n">+50</td><td class="n">1</td><td class="n">15,000</td><td>DEF &minus;5</td><td>cursed</td><td class="cl">GLDT BRN RDBN</td><td>chest, Force Sword Shrine</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Lances and spears</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Wooden Stick</td><td class="n">+3</td><td class="n">1</td><td class="n">70</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>with Chester</td></tr>
+      <tr><td>Short Spear</td><td class="n">+6</td><td class="n">1&ndash;2</td><td class="n">120</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Granseal</td></tr>
+      <tr><td>Bronze Lance</td><td class="n">+9</td><td class="n">1</td><td class="n">260</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Galam</td></tr>
+      <tr><td>Spear</td><td class="n">+12</td><td class="n">1&ndash;2</td><td class="n">460</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from New Granseal</td></tr>
+      <tr><td>Steel Lance</td><td class="n">+16</td><td class="n">1</td><td class="n">810</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shops from Bedoe; with Eric; with Rick</td></tr>
+      <tr><td>Power Spear</td><td class="n">+20</td><td class="n">1&ndash;2</td><td class="n">1,270</td><td></td><td></td><td class="cl">KNTE PLDN PGNT</td><td>shop in Hassan (later stock)</td></tr>
+      <tr><td>Heavy Lance</td><td class="n">+23</td><td class="n">1</td><td class="n">1,600</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td>Javelin</td><td class="n">+26</td><td class="n">1&ndash;2</td><td class="n">3,400</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from Ketto; with Higins</td></tr>
+      <tr><td>Chrome Lance</td><td class="n">+31</td><td class="n">1</td><td class="n">6,900</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>shops from Tristan; with Jaro</td></tr>
+      <tr><td>Valkyrie</td><td class="n">+33</td><td class="n">1&ndash;2</td><td class="n">7,700</td><td>use: Attack 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>chest, Prism Flowers battlefield; mithril</td></tr>
+      <tr><td>Halberd</td><td class="n">+37</td><td class="n">1</td><td class="n">7,300</td><td>use: Bolt 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
+      <tr><td>Holy Lance</td><td class="n">+39</td><td class="n">1</td><td class="n">9,300</td><td>DEF +5, use: Heal (item) 1</td><td>breakable</td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
+      <tr><td>Mist Javelin</td><td class="n">+42</td><td class="n">1&ndash;2</td><td class="n">9,900</td><td></td><td></td><td class="cl">PLDN PGNT</td><td>mithril</td></tr>
+      <tr><td>Evil Lance</td><td class="n">+48</td><td class="n">1</td><td class="n">11,000</td><td>MOV &minus;2</td><td>cursed</td><td class="cl">PLDN PGNT</td><td>hidden, Devil&#x27;s Head</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Arrows and shells</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Wooden Arrow</td><td class="n">+7</td><td class="n">2</td><td class="n">250</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shops from Ribble; with May</td></tr>
+      <tr><td>Iron Arrow</td><td class="n">+12</td><td class="n">2</td><td class="n">600</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shops from Bedoe</td></tr>
+      <tr><td>Steel Arrow</td><td class="n">+17</td><td class="n">2</td><td class="n">1,270</td><td></td><td></td><td class="cl">ACHR RNGR SNIP BRGN BWNT</td><td>shop in Hassan; with Elric; with Janet</td></tr>
+      <tr><td>Robin Arrow</td><td class="n">+21</td><td class="n">2&ndash;3</td><td class="n">1,480</td><td>critical +1</td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from Hassan (later stock)</td></tr>
+      <tr><td>Assault Shell</td><td class="n">+25</td><td class="n">2&ndash;3</td><td class="n">2,500</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from New Granseal (later stock); with Rohde</td></tr>
+      <tr><td>Great Shot</td><td class="n">+29</td><td class="n">2&ndash;3</td><td class="n">5,000</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>shops from Pacalon</td></tr>
+      <tr><td>Nazca Cannon</td><td class="n">+33</td><td class="n">2&ndash;3</td><td class="n">3,000</td><td>critical +1</td><td></td><td class="cl">SNIP BRGN BWNT</td><td>chest, Nazca Ship</td></tr>
+      <tr><td>Buster Shot</td><td class="n">+37</td><td class="n">2&ndash;3</td><td class="n">6,800</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>drop, Geshp; mithril</td></tr>
+      <tr><td>Hyper Cannon</td><td class="n">+40</td><td class="n">2&ndash;3</td><td class="n">8,700</td><td></td><td></td><td class="cl">SNIP BRGN BWNT</td><td>mithril</td></tr>
+      <tr><td>Grand Cannon</td><td class="n">+43</td><td class="n">2&ndash;3</td><td class="n">9,800</td><td>use: Dispel 1</td><td>breakable</td><td class="cl">SNIP BRGN BWNT</td><td>mithril</td></tr>
+      <tr><td>Evil Shot</td><td class="n">+51</td><td class="n">2&ndash;3</td><td class="n">13,000</td><td>DEF &minus;5</td><td>cursed</td><td class="cl">SNIP BRGN BWNT</td><td>hidden, Galam Castle</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Rods and staves</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Wooden Rod</td><td class="n">+3</td><td class="n">1</td><td class="n">60</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Granseal; with Kazin; with Sarah</td></tr>
+      <tr><td>Short Rod</td><td class="n">+5</td><td class="n">1</td><td class="n">130</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Galam; drop, Galam Castle</td></tr>
+      <tr><td>Bronze Rod</td><td class="n">+8</td><td class="n">1</td><td class="n">360</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shops from Polca</td></tr>
+      <tr><td>Iron Rod</td><td class="n">+12</td><td class="n">1</td><td class="n">560</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shop in Hassan</td></tr>
+      <tr><td>Power Stick</td><td class="n">+15</td><td class="n">1</td><td class="n">1,050</td><td></td><td></td><td class="cl">MAGE PRST WIZ SORC VICR</td><td>shop in Hassan; drop, southeast desert; with Karna; with Tyrin</td></tr>
+      <tr><td>Flail</td><td class="n">+19</td><td class="n">1</td><td class="n">1,490</td><td></td><td></td><td class="cl">WIZ SORC VICR</td><td>shops from Hassan (later stock)</td></tr>
+      <tr><td>Guardian Staff</td><td class="n">+22</td><td class="n">1</td><td class="n">2,380</td><td>DEF +5</td><td></td><td class="cl">WIZ SORC VICR</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td>Indra Staff</td><td class="n">+25</td><td class="n">1</td><td class="n">3,200</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">WIZ SORC VICR</td><td>shops from Ketto; with Frayja; with Taya</td></tr>
+      <tr><td>Wish Staff</td><td class="n">+26</td><td class="n">1</td><td class="n">6,100</td><td>use: Attack 1</td><td>breakable</td><td class="cl">VICR</td><td>drop, Cameela</td></tr>
+      <tr><td>Mage Staff</td><td class="n">+27</td><td class="n">1</td><td class="n">6,300</td><td>use: Blaze 2</td><td>breakable</td><td class="cl">WIZ SORC</td><td>drop, inside Moun; with Chaz</td></tr>
+      <tr><td>Great Rod</td><td class="n">+28</td><td class="n">1</td><td class="n">7,900</td><td></td><td></td><td class="cl">WIZ SORC VICR</td><td>mithril</td></tr>
+      <tr><td>Holy Staff</td><td class="n">+29</td><td class="n">1</td><td class="n">9,000</td><td>+3 HP every turn</td><td></td><td class="cl">VICR</td><td>drop, outside the Ancient Tower; mithril</td></tr>
+      <tr><td>Goddess Staff</td><td class="n">+31</td><td class="n">1</td><td class="n">9,700</td><td>use: Aura 2</td><td>breakable</td><td class="cl">VICR</td><td>mithril</td></tr>
+      <tr><td>Supply Staff</td><td class="n">+32</td><td class="n">1</td><td class="n">8,500</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
+      <tr><td>Freeze Staff</td><td class="n">+37</td><td class="n">1</td><td class="n">9,500</td><td>use: Freeze 3</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
+      <tr><td>Mystery Staff</td><td class="n">+39</td><td class="n">1</td><td class="n">10,000</td><td>+2 MP every turn</td><td></td><td class="cl">WIZ SORC VICR</td><td>mithril</td></tr>
+      <tr><td>Demon Rod</td><td class="n">+50</td><td class="n">1</td><td class="n">12,500</td><td>AGI &minus;10, use: Magic Drain 1</td><td>cursed, breakable</td><td class="cl">WIZ SORC VICR</td><td>hidden, Dwarven Village</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Knuckles</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Leather Glove</td><td class="n">+26</td><td class="n">1</td><td class="n">1,300</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Hassan (later stock)</td></tr>
+      <tr><td>Power Glove</td><td class="n">+33</td><td class="n">1</td><td class="n">1,800</td><td></td><td></td><td class="cl">MMNK</td><td>shops from New Granseal (later stock)</td></tr>
+      <tr><td>Brass Knuckles</td><td class="n">+39</td><td class="n">1</td><td class="n">2,900</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Tristan; with Sheela</td></tr>
+      <tr><td>Iron Knuckles</td><td class="n">+43</td><td class="n">1</td><td class="n">4,800</td><td></td><td></td><td class="cl">MMNK</td><td>shops from Moun</td></tr>
+      <tr><td>Misty Knuckles</td><td class="n">+48</td><td class="n">1</td><td class="n">5,500</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">MMNK</td><td>mithril</td></tr>
+      <tr><td>Giant Knuckles</td><td class="n">+55</td><td class="n">1</td><td class="n">7,500</td><td>use: Muddle 1</td><td>breakable</td><td class="cl">MMNK</td><td>mithril</td></tr>
+      <tr><td>Evil Knuckles</td><td class="n">+63</td><td class="n">1</td><td class="n">9,500</td><td></td><td>cursed</td><td class="cl">MMNK</td><td>chest, Yeel</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Weapons nobody can equip</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Taros Sword</td><td class="n">+32</td><td class="n">1&ndash;2</td><td class="n">10,000</td><td>use: Bolt 2</td><td>breakable</td><td class="cl">nobody</td><td>drop, Taros</td></tr>
+      <tr><td>Iron Ball</td><td class="n">+44</td><td class="n">1</td><td class="n">3,800</td><td>use: Blaze 3</td><td>cursed, breakable</td><td class="cl">nobody</td><td>drop, Cameela</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Rings</h3>
+  <div class="scroll-x">
+  <table class="data wpn">
+    <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td>Protect Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>DEF +5, use: Boost 1</td><td>breakable</td><td class="cl">everyone</td><td>drop, Devil&#x27;s Tail</td></tr>
+      <tr><td>Quick Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>AGI +5</td><td>breakable</td><td class="cl">everyone</td><td>hidden, Bedoe</td></tr>
+      <tr><td>Running Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>MOV +2</td><td></td><td class="cl">everyone</td><td>hidden, Creed&#x27;s Mansion</td></tr>
+      <tr><td>White Ring</td><td class="n"></td><td class="n"></td><td class="n">5,000</td><td>DEF +10, use: Aura 2</td><td>breakable</td><td class="cl">HERO VICR</td><td>chest, Dwarven Village</td></tr>
+      <tr><td>Life Ring</td><td class="n"></td><td class="n"></td><td class="n">5,000</td><td>+5 HP every turn</td><td></td><td class="cl">HERO PLDN PGNT GLDT BRN WIZ SORC VICR MMNK SNIP BRGN BDBT WFBR BWNT PHNX NINJ MNST RBT GLM RDBN</td><td>chest, Elven Village battlefield</td></tr>
+      <tr><td>Power Ring</td><td class="n">+5</td><td class="n"></td><td class="n">3,000</td><td>use: Attack 1</td><td>breakable</td><td class="cl">everyone</td><td>drop, road east of Ribble</td></tr>
+      <tr><td>Black Ring</td><td class="n">+10</td><td class="n"></td><td class="n">5,000</td><td>use: Blaze 2</td><td>cursed, breakable</td><td class="cl">WIZ SORC</td><td>drop, outside Ketto</td></tr>
+      <tr><td>Evil Ring</td><td class="n">+15</td><td class="n"></td><td class="n">5,000</td><td>use: Bolt 2</td><td>cursed, breakable</td><td class="cl">WIZ SORC VICR</td><td>drop, road to the Ancient Shrine</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+
+  <h2>Method</h2>
+
+  <p>The item, class and enemy tables were parsed straight from the US ROM; the routines
+  were read in the ShiningForceCentral disassembly, which assembles back to the retail
+  image. The ones quoted are the damage calculation at <code>$ABBE</code>, the critical
+  routine at <code>$AC4E</code> with its table at <code>$ACCA</code>, double and counter at
+  <code>$B00E</code>, the equip effects around <code>$8B22</code>, item breakage at
+  <code>$BBE6</code> and the end-of-turn effects in the battle loop. Where the disassembly
+  offers "standard build" fixes, this page describes the unpatched game.</p>
+
+  <p>The full table, with the class settings, is in
+  <a href="../../../downloads/sf2-weapons.json" download>sf2-weapons.json</a>.</p>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="small">No ROMs are hosted here.</p>
+    <p class="small"><a href="../">&#9664; Back to Shining Force II</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
