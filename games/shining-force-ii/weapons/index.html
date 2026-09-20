@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shining Force II: Every Weapon, Its Hidden Properties, and the Best One for Each Class</title>
-<meta name="description" content="All 85 weapons and 9 rings of Shining Force II read out of the ROM: attack, range, hidden critical, double and counter settings, the Critical Sword that weakens Barons, the Gisarme's instant kill, the Ninja Katana bug, why cursed gear never pays, and the best weapon for every promoted class.">
+<meta name="description" content="All 85 weapons and 9 rings of Shining Force II read out of the ROM: attack, range, hidden critical, double and counter settings, the Critical Sword that weakens Barons, the Gisarme's instant kill, the Ninja Katana bug, what cursed gear really costs, and the best weapon for every promoted class.">
 <link rel="canonical" href="https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/weapons/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#002083">
@@ -42,7 +42,7 @@
  "@context": "https://schema.org",
  "@type": "TechArticle",
  "headline": "Shining Force II: Every Weapon, Its Hidden Properties, and the Best One for Each Class",
- "description": "All 85 weapons and 9 rings of Shining Force II read out of the ROM: attack, range, hidden critical, double and counter settings, the Critical Sword that weakens Barons, the Gisarme's instant kill, the Ninja Katana bug, why cursed gear never pays, and the best weapon for every promoted class.",
+ "description": "All 85 weapons and 9 rings of Shining Force II read out of the ROM: attack, range, hidden critical, double and counter settings, the Critical Sword that weakens Barons, the Gisarme's instant kill, the Ninja Katana bug, what cursed gear really costs, and the best weapon for every promoted class.",
  "url": "https://fraterr.github.io/Creed-s-Mansion/games/shining-force-ii/weapons/",
  "image": "https://fraterr.github.io/Creed-s-Mansion/assets/img/og-sf2-weapons.png",
  "datePublished": "2026-09-20",
@@ -228,11 +228,16 @@
   <p>A quarter of all turns gone means a cursed weapon delivers three quarters of what its
   attack suggests. Take the Gladiator. With B as his attack without a weapon minus the
   target's defence, the Evil Axe averages (B+50) &times; 0.76 and the Rune Axe (B+42)
-  &times; 1.06. The Evil Axe is behind at every value of B. Against the plain Great Axe
-  from the shop it is ahead only while B is under 38. The same holds in every family: the
-  Evil Knuckles lose to the Giant Knuckles, the Evil Shot to the Grand Cannon, the Evil
-  Lance to the Mist Javelin, the Dark Sword to anything mithril. And the recoil and the
-  stat penalties are not even in those numbers.</p>
+  &times; 1.06. The Rune Axe is ahead for any B above &minus;22, which is the whole game.
+  Further down the list it changes: the Evil Axe beats the Atlas Axe while B is under 10,
+  the Heat Axe under 22, and the Great Axe from the shop under 38. Late in the game B is
+  usually that low.</p>
+
+  <p>Every family follows the same pattern. The cursed weapon loses to the best mithril
+  weapon or two (Giant Knuckles, Grand Cannon, Mist Javelin and Holy Lance, Force Sword,
+  Levanter and Counter Sword) and beats the rest. So a cursed weapon is a stopgap until
+  the smith delivers, and the price is a quarter of your turns, the recoil, and whatever
+  stat it takes. Those last two are not in the numbers above.</p>
 
   <p>The cursed rings are a different case. The Black Ring and the Evil Ring add +10 and
   +15 attack to classes that do not attack, and what you want from them is the free Blaze 2
@@ -246,26 +251,31 @@
   average = (B + weapon ATT) &times; (1 + critical chance &times; critical bonus) &times; (1 + double chance) &times; 0.75 if cursed
   </div>
 
-  <p>B is the character's attack without a weapon minus the target's defence. Late in the
-  game a fighter's B against ordinary enemies is around 30, and 60 is a strong character on a
-  soft target. Dodge and land effect are left out because they are the same for every
+  <p>B is the character's attack without a weapon minus the target's defence, and it is
+  smaller than most players assume. The growth tables project the weapon-using promoted
+  classes to an unarmed attack between 32 and 60 by promoted level 30, and late enemies
+  have 45 to 60 defence. So B sits around zero for most of the late game, can go negative,
+  and 20 is a strong fighter on a soft target. The weapon's own attack is most of the
+  damage, which is why a few points of it outweigh a better critical.</p>
+
+  <p> Dodge and land effect are left out because they are the same for every
   weapon, and so is the second hit's chance of finding the target already dead. Counters,
   range, free spells and stat bonuses are not in the number. The notes cover them.
   Unpromoted classes are not ranked, because before promotion the shop weapons differ in
   attack and nothing else.</p>
 
   <h3>Hero</h3>
-  <p>Bowie has a sword nobody else can hold, and it is the right answer: the Force Sword is +46 with no strings attached. The Levanter is four points behind and casts Blaze 3 for free, with a one in four chance of cracking each time. The Counter Sword takes his counter rate from 1/8 to 1/4, which the table below does not price in. The Critical Sword passes the Battle Sword once B goes over 33 and never gets near the top three.</p>
+  <p>Bowie has a sword nobody else can hold, and it is the right answer: the Force Sword is +46 with no strings attached. The Levanter is four points behind and casts Blaze 3 for free, with a one in four chance of cracking each time. The Counter Sword takes his counter rate from 1/8 to 1/4, which the table below does not price in. The Critical Sword passes the Battle Sword only once B goes over 33, which Bowie rarely sees, so treat it as the weakest of the mithril swords.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1536px 0" role="img" aria-label="Force Sword icon"></span>Force Sword</td><td class="n">+46</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">82.0</td><td class="n hit">114.4</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1600px 0" role="img" aria-label="Levanter icon"></span>Levanter</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">77.7</td><td class="n">110.1</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/4</td><td class="n">74.5</td><td class="n">106.8</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.1</td><td class="n">102.5</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">70.0</td><td class="n">103.9</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">64.7</td><td class="n">89.0</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1536px 0" role="img" aria-label="Force Sword icon"></span>Force Sword</td><td class="n">+46</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">49.6</td><td class="n hit">71.2</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1600px 0" role="img" aria-label="Levanter icon"></span>Levanter</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">45.3</td><td class="n">66.9</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/4</td><td class="n">42.1</td><td class="n">63.7</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">40.5</td><td class="n">56.7</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">37.8</td><td class="n">59.4</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">36.1</td><td class="n">58.7</td></tr>
     </tbody>
   </table>
   </div>
@@ -274,14 +284,14 @@
   <p>The Mist Javelin is the highest attack in the family, reaches two squares, and has no drawback. The Holy Lance gives up three points for +5 DEF and a small free heal. The Halberd casts Bolt 1. The Valkyrie is the weakest of the four mithril lances, but it casts Attack on an ally up to three squares away, and you do not have to equip it to use it: carry one in the bag. The Evil Lance loses a quarter of your turns and two squares of movement on a class whose whole point is movement.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2016px 0" role="img" aria-label="Mist Javelin icon"></span>Mist Javelin</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">75.4</td><td class="n hit">106.8</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1984px 0" role="img" aria-label="Holy Lance icon"></span>Holy Lance</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2048px 0" role="img" aria-label="Halberd icon"></span>Halberd</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1952px 0" role="img" aria-label="Valkyrie icon"></span>Valkyrie</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">66.0</td><td class="n">97.4</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1920px 0" role="img" aria-label="Chrome Lance icon"></span>Chrome Lance</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2080px 0" role="img" aria-label="Evil Lance icon"></span>Evil Lance <span class="tag soon">cursed</span></td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.3</td><td class="n">84.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2016px 0" role="img" aria-label="Mist Javelin icon"></span>Mist Javelin</td><td class="n">+42</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">44.0</td><td class="n hit">64.9</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1984px 0" role="img" aria-label="Holy Lance icon"></span>Holy Lance</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">40.8</td><td class="n">61.8</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2048px 0" role="img" aria-label="Halberd icon"></span>Halberd</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">38.8</td><td class="n">59.7</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2080px 0" role="img" aria-label="Evil Lance icon"></span>Evil Lance <span class="tag soon">cursed</span></td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">37.7</td><td class="n">53.4</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1952px 0" role="img" aria-label="Valkyrie icon"></span>Valkyrie</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">34.6</td><td class="n">55.5</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1920px 0" role="img" aria-label="Chrome Lance icon"></span>Chrome Lance</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">32.5</td><td class="n">53.4</td></tr>
     </tbody>
   </table>
   </div>
@@ -290,30 +300,30 @@
   <p>The one class where the answer is unambiguous. The Rune Axe has the highest attack of any axe that is not cursed, and its +1 moves the Gladiator from 125% at 1/16 to 150% at 1/8. The Ground Axe is three points behind and adds a square of movement, which on a class that moves five matters more than it sounds.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">78.9</td><td class="n hit">111.8</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">72.3</td><td class="n">103.7</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-800px 0" role="img" aria-label="Evil Axe icon"></span>Evil Axe <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-640px 0" role="img" aria-label="Great Axe icon"></span>Great Axe</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">46.0</td><td class="n hit">67.9</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">40.8</td><td class="n">61.8</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-800px 0" role="img" aria-label="Evil Axe icon"></span>Evil Axe <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">39.3</td><td class="n">55.0</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">36.7</td><td class="n">57.6</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">33.5</td><td class="n">54.5</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-640px 0" role="img" aria-label="Great Axe icon"></span>Great Axe</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">29.3</td><td class="n">50.3</td></tr>
     </tbody>
   </table>
   </div>
 
   <h3>Baron</h3>
-  <p>Here the Rune Axe backfires. A Baron already crits at 150% one time in eight, and the +1 turns that into 125% one time in eight. Its three extra points of attack keep it a hair ahead of the Ground Axe while B is under 60 and behind it above that, and the Ground Axe also gives +1 MOV, so the Ground Axe wins. A Baron can hold swords as well: the Counter Sword has the same +39 and doubles the counter rate to 1/8.</p>
+  <p>Here the Rune Axe loses part of its point. A Baron already crits at 150% one time in eight, and the +1 turns that into 125% one time in eight, about 3% less damage. Its three extra points of attack still cover that until B reaches 60, so it stays slightly ahead of the Ground Axe, which answers with +1 MOV. Either is a fair choice. The weapon that really backfires on a Baron is the Critical Sword: less attack than the Battle Sword, and a weaker critical than he has with no bonus at all. A Baron can also hold the Counter Sword, same +39 as the Ground Axe, which doubles his counter rate to 1/8.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">44.7</td><td class="n hit">65.9</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">42.7</td><td class="n">64.6</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">42.7</td><td class="n">64.6</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-800px 0" role="img" aria-label="Evil Axe icon"></span>Evil Axe <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">41.1</td><td class="n">57.5</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">41.1</td><td class="n">57.5</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">38.3</td><td class="n">60.3</td></tr>
     </tbody>
   </table>
   </div>
@@ -322,78 +332,78 @@
   <p>Lemon joins with the Dark Sword equipped, which means he joins cursed. Take it off. His class counters at 1/8 where a Baron counters at 1/16, and the Counter Sword makes that 1/4, the highest counter rate any ally can reach. Everything said about the Baron and the Rune Axe applies to him too.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">76.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/4</td><td class="n">75.6</td><td class="n hit">108.5</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">71.2</td><td class="n">104.1</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-672px 0" role="img" aria-label="Heat Axe icon"></span>Heat Axe</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-768px 0" role="img" aria-label="Rune Axe icon"></span>Rune Axe</td><td class="n">+42</td><td>125% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">44.7</td><td class="n hit">65.9</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-736px 0" role="img" aria-label="Ground Axe icon"></span>Ground Axe</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">42.7</td><td class="n">64.6</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/4</td><td class="n">42.7</td><td class="n">64.6</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-800px 0" role="img" aria-label="Evil Axe icon"></span>Evil Axe <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">41.1</td><td class="n">57.5</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">41.1</td><td class="n">57.5</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-704px 0" role="img" aria-label="Atlas Axe icon"></span>Atlas Axe</td><td class="n">+35</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">38.3</td><td class="n">60.3</td></tr>
     </tbody>
   </table>
   </div>
 
   <h3>Ninja</h3>
-  <p>The Gisarme sets the critical rate to one in four, and with this one weapon a critical is not extra damage: the target is cut down on the spot unless it is immune to Desoul. There is no resistance roll. The Ninja Katana doubles the double-attack rate to 1/8 and works on bosses, but it silently resets the Ninja's counter from 1/8 to 1/32 (the bug described above). The Critical Sword is the worst thing you can hand Slade: it weakens his criticals.</p>
+  <p>The Gisarme sets the critical rate to one in four, and with this one weapon a critical is not extra damage: the target is cut down on the spot unless it is immune to Desoul. There is no resistance roll. The Ninja Katana doubles the double-attack rate to 1/8 and works on bosses, but it silently resets the Ninja's counter from 1/8 to 1/32 (the bug described above). The Critical Sword is a trap for Slade: less attack than the plain Katana, and it weakens his criticals.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2880px 0" role="img" aria-label="Gisarme icon"></span>Gisarme</td><td class="n">+42</td><td>150% at 1/4</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">86.1</td><td class="n hit">121.9</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2848px 0" role="img" aria-label="Ninja Katana icon"></span>Ninja Katana</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/8</td><td class="n">1/32</td><td class="n">82.5</td><td class="n">118.3</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2816px 0" role="img" aria-label="Katana icon"></span>Katana</td><td class="n">+34</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">72.2</td><td class="n">106.1</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>125% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.9</td><td class="n">100.8</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">67.7</td><td class="n">93.1</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1440px 0" role="img" aria-label="Great Sword icon"></span>Great Sword</td><td class="n">+29</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">66.6</td><td class="n">100.5</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2880px 0" role="img" aria-label="Gisarme icon"></span>Gisarme</td><td class="n">+42</td><td>150% at 1/4</td><td class="n">1/16</td><td class="n">1/8</td><td class="n hit">50.2</td><td class="n hit">74.1</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2848px 0" role="img" aria-label="Ninja Katana icon"></span>Ninja Katana</td><td class="n">+39</td><td>150% at 1/8</td><td class="n">1/8</td><td class="n">1/32</td><td class="n">46.6</td><td class="n">70.5</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">42.3</td><td class="n">59.3</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2816px 0" role="img" aria-label="Katana icon"></span>Katana</td><td class="n">+34</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">38.4</td><td class="n">61.0</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>125% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">35.1</td><td class="n">57.0</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1440px 0" role="img" aria-label="Great Sword icon"></span>Great Sword</td><td class="n">+29</td><td>150% at 1/8</td><td class="n">1/16</td><td class="n">1/8</td><td class="n">32.7</td><td class="n">55.3</td></tr>
     </tbody>
   </table>
   </div>
 
   <h3>Bird Battler</h3>
-  <p>Birdmen share the sword list minus the Hero's exclusives. The Counter Sword is the top non-cursed attack and takes the counter rate to 1/8. The Critical Sword passes the Battle Sword once B goes over 33.</p>
+  <p>Birdmen share the sword list minus the Hero's exclusives. The Counter Sword is the top non-cursed attack and takes the counter rate to 1/8. The Critical Sword passes the Battle Sword only once B goes over 33, which is rare.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">68.1</td><td class="n">99.5</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">67.9</td><td class="n">100.8</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1440px 0" role="img" aria-label="Great Sword icon"></span>Great Sword</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1408px 0" role="img" aria-label="Buster Sword icon"></span>Buster Sword</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1568px 0" role="img" aria-label="Counter Sword icon"></span>Counter Sword</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">40.8</td><td class="n hit">61.8</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1632px 0" role="img" aria-label="Dark Sword icon"></span>Dark Sword <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">39.3</td><td class="n">55.0</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1504px 0" role="img" aria-label="Battle Sword icon"></span>Battle Sword</td><td class="n">+35</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">36.7</td><td class="n">57.6</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1472px 0" role="img" aria-label="Critical Sword icon"></span>Critical Sword</td><td class="n">+32</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">35.1</td><td class="n">57.0</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1440px 0" role="img" aria-label="Great Sword icon"></span>Great Sword</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">30.4</td><td class="n">51.3</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-1408px 0" role="img" aria-label="Buster Sword icon"></span>Buster Sword</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">27.2</td><td class="n">48.2</td></tr>
     </tbody>
   </table>
   </div>
 
   <h3>Master Monk</h3>
-  <p>Attack is all that matters here, and the Giant Knuckles have the most of it outside the cursed pair. The Evil Knuckles show +63 on the status screen and deliver less than the Iron Knuckles from the shop once the lost turns are counted. A Master Monk also has a one in sixteen chance of the spinning special attack, which the code treats as a forced critical. That is included in the numbers.</p>
+  <p>Attack is all that matters here, and the Giant Knuckles have the most of it outside the cursed pair. The Evil Knuckles show +63 on the status screen. Once the lost turns are counted they never reach the Giant Knuckles, and they beat the Iron Knuckles from the shop only while B is under 17. A Master Monk also has a one in sixteen chance of the spinning special attack, which the code treats as a forced critical. That is included in the numbers.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-384px 0" role="img" aria-label="Giant Knuckles icon"></span>Giant Knuckles</td><td class="n">+55</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">90.3</td><td class="n hit">122.2</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-352px 0" role="img" aria-label="Misty Knuckles icon"></span>Misty Knuckles</td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">82.9</td><td class="n">114.7</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-320px 0" role="img" aria-label="Iron Knuckles icon"></span>Iron Knuckles</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">77.6</td><td class="n">109.4</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-416px 0" role="img" aria-label="Evil Knuckles icon"></span>Evil Knuckles <span class="tag soon">cursed</span></td><td class="n">+63</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">74.1</td><td class="n">98.0</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-288px 0" role="img" aria-label="Brass Knuckles icon"></span>Brass Knuckles</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">73.3</td><td class="n">105.2</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-256px 0" role="img" aria-label="Power Glove icon"></span>Power Glove</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">66.9</td><td class="n">98.8</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-384px 0" role="img" aria-label="Giant Knuckles icon"></span>Giant Knuckles</td><td class="n">+55</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n hit">58.4</td><td class="n hit">79.7</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-352px 0" role="img" aria-label="Misty Knuckles icon"></span>Misty Knuckles</td><td class="n">+48</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">51.0</td><td class="n">72.2</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-416px 0" role="img" aria-label="Evil Knuckles icon"></span>Evil Knuckles <span class="tag soon">cursed</span></td><td class="n">+63</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">50.2</td><td class="n">66.1</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-320px 0" role="img" aria-label="Iron Knuckles icon"></span>Iron Knuckles</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">45.7</td><td class="n">66.9</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-288px 0" role="img" aria-label="Brass Knuckles icon"></span>Brass Knuckles</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">41.4</td><td class="n">62.7</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-256px 0" role="img" aria-label="Power Glove icon"></span>Power Glove</td><td class="n">+33</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/8</td><td class="n">35.1</td><td class="n">56.3</td></tr>
     </tbody>
   </table>
   </div>
 
   <h3>Sniper, Brass Gunner, Bow Knight</h3>
-  <p>The Grand Cannon leads at any attack value you will see in the game. The Nazca Cannon, found in a chest on the Nazca Ship, is the interesting one: ten points under the Grand Cannon but with +1 critical. It passes the Buster Shot once B goes over 54 and the Hyper Cannon over 119. To pass the Grand Cannon it would need B=184, which no character reaches. All three gunner classes add 25% against anything that flies or hovers, and that bonus multiplies with the critical.</p>
+  <p>The Grand Cannon leads at any attack value you will see in the game. The Nazca Cannon has a reputation for out-damaging it, because it carries +1 critical. It does not. A gunner's unarmed attack is projected to reach 32 to 45, which against late enemies puts B near zero, and there the gun's own attack is nearly all of the damage. The Nazca would need B over 54 to pass the Buster Shot, over 119 for the Hyper Cannon and 184 for the Grand Cannon. What it does have is certainty: it sits in a chest on the Nazca Ship, with no mithril to find and no luck at the smith's. All three gunner classes add 25% against anything that flies or hovers, and that bonus multiplies with the critical.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1120px 0" role="img" aria-label="Grand Cannon icon"></span>Grand Cannon</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">76.5</td><td class="n hit">107.9</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1088px 0" role="img" aria-label="Hyper Cannon icon"></span>Hyper Cannon</td><td class="n">+40</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">73.3</td><td class="n">104.7</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1056px 0" role="img" aria-label="Buster Shot icon"></span>Buster Shot</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1024px 0" role="img" aria-label="Nazca Cannon icon"></span>Nazca Cannon</td><td class="n">+33</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">69.0</td><td class="n">101.9</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1152px 0" role="img" aria-label="Evil Shot icon"></span>Evil Shot <span class="tag soon">cursed</span></td><td class="n">+51</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.6</td><td class="n">87.2</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-992px 0" role="img" aria-label="Great Shot icon"></span>Great Shot</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-1120px 0" role="img" aria-label="Grand Cannon icon"></span>Grand Cannon</td><td class="n">+43</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">45.0</td><td class="n hit">66.0</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-1088px 0" role="img" aria-label="Hyper Cannon icon"></span>Hyper Cannon</td><td class="n">+40</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">41.9</td><td class="n">62.8</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-1152px 0" role="img" aria-label="Evil Shot icon"></span>Evil Shot <span class="tag soon">cursed</span></td><td class="n">+51</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">40.1</td><td class="n">55.8</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-1056px 0" role="img" aria-label="Buster Shot icon"></span>Buster Shot</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">38.8</td><td class="n">59.7</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-1024px 0" role="img" aria-label="Nazca Cannon icon"></span>Nazca Cannon</td><td class="n">+33</td><td>150% at 1/8</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">36.2</td><td class="n">58.1</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-992px 0" role="img" aria-label="Great Shot icon"></span>Great Shot</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">30.4</td><td class="n">51.3</td></tr>
     </tbody>
   </table>
   </div>
@@ -402,14 +412,14 @@
   <p>A mage's weapon attack is close to irrelevant, so ignore the damage columns and look at the extras. The Mystery Staff gives back 2 MP every turn, which over a long battle is several extra casts. The Freeze Staff casts Freeze 3 for nothing, with the usual one in four chance of cracking. Until the mithril ones turn up, the Guardian Staff from the shop is +5 DEF for 2,380 gold. The Demon Rod takes ten points of agility and a quarter of your turns.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2592px 0" role="img" aria-label="Mystery Staff icon"></span>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2528px 0" role="img" aria-label="Freeze Staff icon"></span>Freeze Staff</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">70.2</td><td class="n">101.6</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2464px 0" role="img" aria-label="Supply Staff icon"></span>Supply Staff</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">64.9</td><td class="n">96.4</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2624px 0" role="img" aria-label="Demon Rod icon"></span>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2368px 0" role="img" aria-label="Mage Staff icon"></span>Mage Staff</td><td class="n">+27</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">59.7</td><td class="n">91.1</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2592px 0" role="img" aria-label="Mystery Staff icon"></span>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">40.8</td><td class="n hit">61.8</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2624px 0" role="img" aria-label="Demon Rod icon"></span>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">39.3</td><td class="n">55.0</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2528px 0" role="img" aria-label="Freeze Staff icon"></span>Freeze Staff</td><td class="n">+37</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">38.8</td><td class="n">59.7</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2464px 0" role="img" aria-label="Supply Staff icon"></span>Supply Staff</td><td class="n">+32</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">33.5</td><td class="n">54.5</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">29.3</td><td class="n">50.3</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2368px 0" role="img" aria-label="Mage Staff icon"></span>Mage Staff</td><td class="n">+27</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">28.3</td><td class="n">49.2</td></tr>
     </tbody>
   </table>
   </div>
@@ -418,14 +428,14 @@
   <p>Same logic as the mages. The Mystery Staff is the best staff for a healer who casts every turn. The Holy Staff restores 3 HP a turn to its holder and the Goddess Staff casts Aura 2 for free. The Wish Staff, dropped by Cameela, casts Attack.</p>
   <div class="scroll-x">
   <table class="data rank">
-    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=30</th><th>Avg. damage, B=60</th></tr></thead>
+    <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2592px 0" role="img" aria-label="Mystery Staff icon"></span>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">72.3</td><td class="n hit">103.7</td></tr>
-      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2560px 0" role="img" aria-label="Goddess Staff icon"></span>Goddess Staff</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">63.9</td><td class="n">95.3</td></tr>
-      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2624px 0" role="img" aria-label="Demon Rod icon"></span>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">62.8</td><td class="n">86.4</td></tr>
-      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2496px 0" role="img" aria-label="Holy Staff icon"></span>Holy Staff</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">61.8</td><td class="n">93.2</td></tr>
-      <tr><td class="n">5</td><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">60.7</td><td class="n">92.2</td></tr>
-      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2400px 0" role="img" aria-label="Wish Staff icon"></span>Wish Staff</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">58.7</td><td class="n">90.1</td></tr>
+      <tr><td class="n">1</td><td><span class="ico" style="background-position:-2592px 0" role="img" aria-label="Mystery Staff icon"></span>Mystery Staff</td><td class="n">+39</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n hit">40.8</td><td class="n hit">61.8</td></tr>
+      <tr><td class="n">2</td><td><span class="ico" style="background-position:-2624px 0" role="img" aria-label="Demon Rod icon"></span>Demon Rod <span class="tag soon">cursed</span></td><td class="n">+50</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">39.3</td><td class="n">55.0</td></tr>
+      <tr><td class="n">3</td><td><span class="ico" style="background-position:-2560px 0" role="img" aria-label="Goddess Staff icon"></span>Goddess Staff</td><td class="n">+31</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">32.5</td><td class="n">53.4</td></tr>
+      <tr><td class="n">4</td><td><span class="ico" style="background-position:-2496px 0" role="img" aria-label="Holy Staff icon"></span>Holy Staff</td><td class="n">+29</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">30.4</td><td class="n">51.3</td></tr>
+      <tr><td class="n">5</td><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">29.3</td><td class="n">50.3</td></tr>
+      <tr><td class="n">6</td><td><span class="ico" style="background-position:-2400px 0" role="img" aria-label="Wish Staff icon"></span>Wish Staff</td><td class="n">+26</td><td>125% at 1/16</td><td class="n">1/32</td><td class="n">1/16</td><td class="n">27.2</td><td class="n">48.2</td></tr>
     </tbody>
   </table>
   </div>
