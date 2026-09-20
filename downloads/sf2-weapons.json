@@ -2017,7 +2017,7 @@
    "classes": [
     "VICR"
    ],
-   "extra": "+3 HP every turn",
+   "extra": "+2 HP every turn",
    "where": "drop, outside the Ancient Tower / mithril"
   },
   {
@@ -2353,7 +2353,7 @@
     "GLM",
     "RDBN"
    ],
-   "extra": "",
+   "extra": "changes the walking sound, nothing else",
    "where": "hidden, Galam Castle interiors"
   }
  ]

@@ -86,8 +86,7 @@
   <div class="win tldr">
     <h3>The short version</h3>
     <p>The status screen shows one number for a weapon, its attack. The ROM stores more: a
-    range, up to three equip effects, a spell it can cast, and flags for cursed and
-    breakable. Every class also carries three settings the game never shows, for critical
+    range, two equip effects, a spell it can cast, and flags for cursed and breakable. Every class also carries three settings the game never shows, for critical
     hits, double attacks and counters, and a handful of weapons move them.</p>
     <p>Read together, the tables say things the game does not. The Critical Sword and the
     Rune Axe make a Baron, a Red Baron or a Ninja hit <em>weaker</em> criticals. The Gisarme
@@ -174,9 +173,10 @@
   Then the critical routine checks, by item number, whether the attacker holds a Gisarme,
   and if so replaces the critical with the cut-off: the target dies. The only test is
   whether the target is immune to Desoul. There is no resistance roll, so an enemy with
-  "major" resistance to status spells dies as easily as a Gizmo. Of the 103 enemy types in
-  the ROM, 23 are immune: the undead, the chess pieces, golems, and nearly every boss. On
-  those the Gisarme is still a +42 sword with the best critical in the game.</p>
+  "major" resistance to status spells dies as easily as a Gizmo. Of the 103 enemy
+  definitions in the ROM, 23 are immune: zombies, skeletons and necromancers, golems and
+  mud men, the chess pieces, and most bosses, Zeon included. On those the Gisarme is
+  still a +42 blade with the best critical in the game.</p>
 
   <h3>The Ninja Katana, and its bug</h3>
   <p>"Double attack +1" takes the Ninja from 1/16 to 1/8. The routine that writes the new
@@ -195,12 +195,14 @@
   <h3>Staves and a ring that pay every turn</h3>
   <p>The Holy Staff, the Mystery Staff and the Life Ring have an equip effect that the
   effect table maps to an empty routine. Their real behaviour is written into the
-  end-of-turn code, again by item number: the Holy Staff restores 3 HP to its holder each
-  turn, the Mystery Staff 2 MP, the Life Ring 5 HP.</p>
+  end-of-turn code, again by item number: the Holy Staff restores 2 HP to its holder each
+  turn, the Mystery Staff 2 MP, the Life Ring 5 HP. The numbers stored in their item
+  entries (3, 2 and 5) are never read.</p>
 
   <h3>Weapons that cast</h3>
-  <p>Twenty weapons and five rings cast a spell from the Use command, for no MP. Two
-  rules apply. You can only use a weapon your class could equip, so a Valkyrie in a
+  <p>Twenty weapons and five rings carry a spell for the Use command, at no MP cost, and
+  eighteen of those weapons can actually be used (the other two are below). Two rules
+  apply. You can only use a weapon your class could equip, so a Valkyrie in a
   Wizard's bag does nothing. And you do not have to equip it, so a Paladin can fight with
   the Mist Javelin and cast Attack from a Valkyrie he is only carrying. Every casting
   weapon is breakable: each use has one chance in four of cracking it, a cracked item is
@@ -233,10 +235,12 @@
   the Heat Axe under 22, and the Great Axe from the shop under 38. Late in the game B is
   usually that low.</p>
 
-  <p>Every family follows the same pattern. The cursed weapon loses to the best mithril
-  weapon or two (Giant Knuckles, Grand Cannon, Mist Javelin and Holy Lance, Force Sword,
-  Levanter and Counter Sword) and beats the rest. So a cursed weapon is a stopgap until
-  the smith delivers, and the price is a quarter of your turns, the recoil, and whatever
+  <p>Every family follows the same pattern. The cursed weapon never passes the best
+  mithril weapons (Giant and Misty Knuckles, Grand and Hyper Cannon, Mist Javelin, Holy
+  Lance and Halberd, Force Sword, Levanter and Counter Sword) unless B is negative. It
+  passes the weaker ones only while B is low: under 5 for the Buster Shot, 10 for the
+  Battle Sword, 12 for the Valkyrie. Shop weapons it beats comfortably. So a cursed weapon
+  is a stopgap until the smith delivers, and the price is a quarter of your turns, the recoil, and whatever
   stat it takes. Those last two are not in the numbers above.</p>
 
   <p>The cursed rings are a different case. The Black Ring and the Evil Ring add +10 and
@@ -253,8 +257,8 @@
 
   <p>B is the character's attack without a weapon minus the target's defence, and it is
   smaller than most players assume. The growth tables project the weapon-using promoted
-  classes to an unarmed attack between 32 and 60 by promoted level 30, and late enemies
-  have 45 to 60 defence. So B sits around zero for most of the late game, can go negative,
+  classes to an unarmed attack between 32 and 60 by promoted level 30 (a character
+  promoted late carries a few points more), and late enemies have 45 to 60 defence. So B sits around zero for most of the late game, can go negative,
   and 20 is a strong fighter on a soft target. The weapon's own attack is most of the
   damage, which is why a few points of it outweigh a better critical.</p>
 
@@ -329,7 +333,7 @@
   </div>
 
   <h3>Red Baron</h3>
-  <p>Lemon joins with the Dark Sword equipped, which means he joins cursed. Take it off. His class counters at 1/8 where a Baron counters at 1/16, and the Counter Sword makes that 1/4, the highest counter rate any ally can reach. Everything said about the Baron and the Rune Axe applies to him too.</p>
+  <p>Lemon joins carrying the Dark Sword but not wearing it, so he is not cursed until you equip it. Leave it in the bag. His class counters at 1/8 where a Baron counters at 1/16, and the Counter Sword makes that 1/4, the highest counter rate any ally can reach. Everything said about the Baron and the Rune Axe applies to him too.</p>
   <div class="scroll-x">
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
@@ -377,7 +381,7 @@
   </div>
 
   <h3>Master Monk</h3>
-  <p>Attack is all that matters here, and the Giant Knuckles have the most of it outside the cursed pair. The Evil Knuckles show +63 on the status screen. Once the lost turns are counted they never reach the Giant Knuckles, and they beat the Iron Knuckles from the shop only while B is under 17. A Master Monk also has a one in sixteen chance of the spinning special attack, which the code treats as a forced critical. That is included in the numbers.</p>
+  <p>Attack is all that matters here, and the Giant Knuckles have the most of it apart from the cursed Evil Knuckles. The Evil Knuckles show +63 on the status screen. Once the lost turns are counted they never reach the Giant Knuckles, and they beat the Iron Knuckles from the shop only while B is under 17. A Master Monk also has a one in sixteen chance of the spinning special attack, which the code treats as a forced critical. That is included in the numbers.</p>
   <div class="scroll-x">
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
@@ -425,7 +429,7 @@
   </div>
 
   <h3>Vicar</h3>
-  <p>Same logic as the mages. The Mystery Staff is the best staff for a healer who casts every turn. The Holy Staff restores 3 HP a turn to its holder and the Goddess Staff casts Aura 2 for free. The Wish Staff, dropped by Cameela, casts Attack.</p>
+  <p>Same logic as the mages. The Mystery Staff is the best staff for a healer who casts every turn. The Holy Staff restores 2 HP a turn to its holder and the Goddess Staff casts Aura 2 for free. The Wish Staff, dropped by Cameela, casts Attack.</p>
   <div class="scroll-x">
   <table class="data rank">
     <thead><tr><th>#</th><th>Weapon</th><th>ATT</th><th>Critical</th><th>Double</th><th>Counter</th><th>Avg. damage, B=0</th><th>Avg. damage, B=20</th></tr></thead>
@@ -584,7 +588,7 @@
       <tr><td><span class="ico" style="background-position:-2400px 0" role="img" aria-label="Wish Staff icon"></span>Wish Staff</td><td class="n">+26</td><td class="n">1</td><td class="n">6,100</td><td>use: Attack 1</td><td>breakable</td><td class="cl">VICR</td><td>drop, Cameela</td></tr>
       <tr><td><span class="ico" style="background-position:-2368px 0" role="img" aria-label="Mage Staff icon"></span>Mage Staff</td><td class="n">+27</td><td class="n">1</td><td class="n">6,300</td><td>use: Blaze 2</td><td>breakable</td><td class="cl">WIZ SORC</td><td>drop, inside Moun / with Chaz</td></tr>
       <tr><td><span class="ico" style="background-position:-2432px 0" role="img" aria-label="Great Rod icon"></span>Great Rod</td><td class="n">+28</td><td class="n">1</td><td class="n">7,900</td><td></td><td></td><td class="cl">WIZ SORC VICR</td><td>mithril</td></tr>
-      <tr><td><span class="ico" style="background-position:-2496px 0" role="img" aria-label="Holy Staff icon"></span>Holy Staff</td><td class="n">+29</td><td class="n">1</td><td class="n">9,000</td><td>+3 HP every turn</td><td></td><td class="cl">VICR</td><td>drop, outside the Ancient Tower / mithril</td></tr>
+      <tr><td><span class="ico" style="background-position:-2496px 0" role="img" aria-label="Holy Staff icon"></span>Holy Staff</td><td class="n">+29</td><td class="n">1</td><td class="n">9,000</td><td>+2 HP every turn</td><td></td><td class="cl">VICR</td><td>drop, outside the Ancient Tower / mithril</td></tr>
       <tr><td><span class="ico" style="background-position:-2560px 0" role="img" aria-label="Goddess Staff icon"></span>Goddess Staff</td><td class="n">+31</td><td class="n">1</td><td class="n">9,700</td><td>use: Aura 2</td><td>breakable</td><td class="cl">VICR</td><td>mithril</td></tr>
       <tr><td><span class="ico" style="background-position:-2464px 0" role="img" aria-label="Supply Staff icon"></span>Supply Staff</td><td class="n">+32</td><td class="n">1</td><td class="n">8,500</td><td>use: Magic Drain 1</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
       <tr><td><span class="ico" style="background-position:-2528px 0" role="img" aria-label="Freeze Staff icon"></span>Freeze Staff</td><td class="n">+37</td><td class="n">1</td><td class="n">9,500</td><td>use: Freeze 3</td><td>breakable</td><td class="cl">WIZ SORC</td><td>mithril</td></tr>
@@ -626,6 +630,7 @@
   <table class="data wpn">
     <thead><tr><th>Weapon</th><th>ATT</th><th>Range</th><th>Price</th><th>Extra</th><th>Flags</th><th>Classes</th><th>Where</th></tr></thead>
     <tbody>
+      <tr><td><span class="ico" style="background-position:-2976px 0" role="img" aria-label="Chirrup Sandals icon"></span>Chirrup Sandals</td><td class="n"></td><td class="n"></td><td class="n">5</td><td>changes the walking sound, nothing else</td><td></td><td class="cl">everyone</td><td>hidden, Galam Castle interiors</td></tr>
       <tr><td><span class="ico" style="background-position:-32px 0" role="img" aria-label="Protect Ring icon"></span>Protect Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>DEF +5, use: Boost 1</td><td>breakable</td><td class="cl">everyone</td><td>drop, Devil&#x27;s Tail</td></tr>
       <tr><td><span class="ico" style="background-position:-64px 0" role="img" aria-label="Quick Ring icon"></span>Quick Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>AGI +5</td><td>breakable</td><td class="cl">everyone</td><td>hidden, Bedoe</td></tr>
       <tr><td><span class="ico" style="background-position:-96px 0" role="img" aria-label="Running Ring icon"></span>Running Ring</td><td class="n"></td><td class="n"></td><td class="n">3,000</td><td>MOV +2</td><td></td><td class="cl">everyone</td><td>hidden, Creed&#x27;s Mansion</td></tr>
